@@ -9,6 +9,7 @@ import os
 import pandas as pd
 from prophet import Prophet
 from pandas.tseries.offsets import DateOffset
+import numpy as np
 
 class suppress_stdout_stderr(object):
     '''
@@ -112,7 +113,10 @@ def plot_optima_data(optima_data):
         m.fit(prophet_data)
     future = m.make_future_dataframe(periods=3652)
     forecast = m.predict(future)
-    print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
+    forecast["cost_rounded"] = np.exp(forecast.yhat).round()
+    forecast["cost_lower_rounded"] = np.exp(forecast.yhat_lower).round()
+    forecast["cost_upper_rounded"] = np.exp(forecast.yhat_upper).round()
+    print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper', 'cost_rounded', 'cost_lower_rounded', 'cost_upper_rounded']].tail())
 
 
 if __name__ == '__main__':
