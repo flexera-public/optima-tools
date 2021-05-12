@@ -104,18 +104,19 @@ def get_optima_data(org_id, access_token, start_month, end_month):
     total_cost = 0
     for i in r.json()["rows"]:
         total_cost = total_cost + i["metrics"]["cost_amortized_blended_adj"]
-    return total_cost
+    return int(total_cost)
 
 def plot_optima_data(optima_data,months):
     m = Prophet(seasonality_mode='multiplicative')
+    print(optima_data)
     prophet_data = pd.DataFrame.from_dict(optima_data, orient='index', columns=['ds', 'y'])
     with suppress_stdout_stderr():
         m.fit(prophet_data)
     future = m.make_future_dataframe(periods=months, freq='m', include_history=True)
     forecast = m.predict(future)
-    forecast["cost_rounded"] = np.exp(forecast.yhat).round()
-    forecast["cost_lower_rounded"] = np.exp(forecast.yhat_lower).round()
-    forecast["cost_upper_rounded"] = np.exp(forecast.yhat_upper).round()
+    forecast["cost_rounded"] = forecast.yhat.round()
+    forecast["cost_lower_rounded"] = forecast.yhat_lower.round()
+    forecast["cost_upper_rounded"] = forecast.yhat_upper.round()
     print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper', 'cost_rounded', 'cost_lower_rounded', 'cost_upper_rounded']].tail())
 
 
