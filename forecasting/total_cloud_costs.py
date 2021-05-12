@@ -58,7 +58,7 @@ def generate_cloud_cost_forecast(refresh_token, org_id, past_months, months):
         start_month = generate_time_stamp(today, month)
         end_month = generate_time_stamp(today, month-1)
         optima_data[month] = [start_month, get_optima_data(org_id, access_token, start_month, end_month)]
-    plot_optima_data(optima_data)
+    plot_optima_data(optima_data,months)
 
 def generate_access_token(refresh_token):
     token_url = "https://login.flexera.com/oidc/token"
@@ -106,12 +106,12 @@ def get_optima_data(org_id, access_token, start_month, end_month):
         total_cost = total_cost + i["metrics"]["cost_amortized_blended_adj"]
     return total_cost
 
-def plot_optima_data(optima_data):
+def plot_optima_data(optima_data,months):
     m = Prophet(seasonality_mode='multiplicative')
     prophet_data = pd.DataFrame.from_dict(optima_data, orient='index', columns=['ds', 'y'])
     with suppress_stdout_stderr():
         m.fit(prophet_data)
-    future = m.make_future_dataframe(periods=3652)
+    future = m.make_future_dataframe(periods=months, freq='m', include_history=True)
     forecast = m.predict(future)
     forecast["cost_rounded"] = np.exp(forecast.yhat).round()
     forecast["cost_lower_rounded"] = np.exp(forecast.yhat_lower).round()
