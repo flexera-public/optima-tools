@@ -18,6 +18,7 @@ packaging==20.9
 pandas==1.2.4
 Pillow==8.2.0
 pluggy==0.13.1
+prophet==1.0.1
 py==1.10.0
 PyMeeus==0.5.11
 pyparsing==2.4.7

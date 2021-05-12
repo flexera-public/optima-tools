@@ -4,7 +4,8 @@ import requests
 import sys
 import click
 from datetime import datetime
-import pandas
+import pandas as pd
+from prophet import Prophet
 from pandas.tseries.offsets import DateOffset
 
 
@@ -13,14 +14,16 @@ from pandas.tseries.offsets import DateOffset
 @click.option('--org-id', '-o', prompt="MSP Org ID", required=True)
 @click.option('--past-months', '-p', prompt="Past Months", type=int, default=3)
 @click.option('--months', '-m', prompt="Forecasted Months", type=int, default=1)
-def generate_cloud_cost_forecast(refresh_token, org_id, past_months):
+def generate_cloud_cost_forecast(refresh_token, org_id, past_months, months):
     # Tweak the destination (e.g. sys.stdout instead) and level (e.g. logging.DEBUG instead) to taste!
     logging.basicConfig(format='%(levelname)s:%(asctime)s:%(message)s', stream=sys.stderr, level=logging.INFO)
     access_token = generate_access_token(refresh_token)
     optima_data = {}
     today = datetime.now()
     for month in range(0, past_months):
-        optima_data[month] = get_optima_data(org_id, access_token, generate_cloud_cost_forecast(today, month-1), month)
+        start_month = generate_time_stamp(today, month)
+        end_month = generate_time_stamp(today, month-1)
+        optima_data[start_month] = get_optima_data(org_id, access_token, start_month, end_month)
     plot_optima_data(optima_data)
 
 def generate_access_token(refresh_token):
@@ -33,7 +36,7 @@ def generate_access_token(refresh_token):
 
 def generate_time_stamp(initial_time, months_to_subtract):
     time_delta = initial_time - DateOffset(months=months_to_subtract)
-    return time_delta.dt.strftime('%Y-%m')
+    return time_delta.strftime('%Y-%m')
 
 def get_optima_data(org_id, access_token, start_month, end_month):
     bill_analysis_url = "https://optima.rightscale.com/bill-analysis/orgs/{}/costs/aggregated".format(org_id)
@@ -62,7 +65,7 @@ def get_optima_data(org_id, access_token, start_month, end_month):
     }
 
     r = requests.post(bill_analysis_url, json.dumps(query), **kwargs)
-    logging.info("Response: {}\n{}".format(r.status_code, json.dumps(r.json(), indent=4)))
+    # logging.info("Response: {}\n{}".format(r.status_code, json.dumps(r.json(), indent=4)))
     r.raise_for_status()
     total_cost = 0
     for i in r.json()["rows"]:
@@ -71,7 +74,12 @@ def get_optima_data(org_id, access_token, start_month, end_month):
 
 def plot_optima_data(optima_data):
     click.echo(optima_data)
-
+    m = Prophet()
+    m.fit(optima_data)
+    future = m.make_future_dataframe(periods=365)
+    future.tail()
+    forecast = m.predict(future)
+    forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
 
 if __name__ == '__main__':
     # click passes no args
