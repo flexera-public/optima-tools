@@ -106,11 +106,11 @@ def get_optima_data(org_id, access_token, start_month, end_month):
     return total_cost
 
 def plot_optima_data(optima_data):
-    m = Prophet()
+    m = Prophet(seasonality_mode='multiplicative')
     prophet_data = pd.DataFrame.from_dict(optima_data, orient='index', columns=['ds', 'y'])
     with suppress_stdout_stderr():
         m.fit(prophet_data)
-    future = m.make_future_dataframe(periods=30)
+    future = m.make_future_dataframe(periods=3652)
     forecast = m.predict(future)
     print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
 
