@@ -3,6 +3,10 @@ import logging
 import requests
 import sys
 import click
+from datetime import datetime
+import pandas
+from pandas.tseries.offsets import DateOffset
+
 
 @click.command(no_args_is_help=True)
 @click.option('--refresh-token', prompt="Refresh Token", help='Refresh Token from FlexeraOne', required=True)
@@ -14,8 +18,9 @@ def generate_cloud_cost_forecast(refresh_token, org_id, past_months):
     logging.basicConfig(format='%(levelname)s:%(asctime)s:%(message)s', stream=sys.stderr, level=logging.INFO)
     access_token = generate_access_token(refresh_token)
     optima_data = {}
+    today = datetime.now()
     for month in range(0, past_months):
-        optima_data[month] = get_optima_data(org_id, access_token, (month-1), month)
+        optima_data[month] = get_optima_data(org_id, access_token, generate_cloud_cost_forecast(today, month-1), month)
     plot_optima_data(optima_data)
 
 def generate_access_token(refresh_token):
@@ -25,6 +30,10 @@ def generate_access_token(refresh_token):
     token_post_request.raise_for_status()
     access_token = token_post_request.json()["access_token"]
     return access_token
+
+def generate_time_stamp(initial_time, months_to_subtract):
+    time_delta = initial_time - DateOffset(months=months_to_subtract)
+    return time_delta.dt.strftime('%Y-%m')
 
 def get_optima_data(org_id, access_token, start_month, end_month):
     bill_analysis_url = "https://optima.rightscale.com/bill-analysis/orgs/{}/costs/aggregated".format(org_id)
@@ -61,8 +70,7 @@ def get_optima_data(org_id, access_token, start_month, end_month):
     return total_cost
 
 def plot_optima_data(optima_data):
-    plot = []
-    return plot
+    click.echo(optima_data)
 
 
 if __name__ == '__main__':
