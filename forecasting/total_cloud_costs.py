@@ -75,7 +75,9 @@ def get_optima_data(org_id, access_token, start_month, end_month):
 def plot_optima_data(optima_data):
     click.echo(optima_data)
     m = Prophet()
-    m.fit(optima_data)
+    prophet_data=pd.DataFrame.from_dict(optima_data,columns=['ds','y'])
+    click.echo(prophet_data)
+    m.fit(prophet_data)
     future = m.make_future_dataframe(periods=365)
     future.tail()
     forecast = m.predict(future)
