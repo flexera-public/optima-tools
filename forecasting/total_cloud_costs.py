@@ -58,7 +58,7 @@ def generate_cloud_cost_forecast(refresh_token, org_id, past_months, months):
         start_month = generate_time_stamp(today, month)
         end_month = generate_time_stamp(today, month-1)
         optima_data[month] = [start_month, get_optima_data(org_id, access_token, start_month, end_month)]
-    plot_optima_data(optima_data,months)
+    plot_optima_data(optima_data, months)
 
 def generate_access_token(refresh_token):
     token_url = "https://login.flexera.com/oidc/token"
@@ -106,7 +106,7 @@ def get_optima_data(org_id, access_token, start_month, end_month):
         total_cost = total_cost + i["metrics"]["cost_amortized_blended_adj"]
     return int(total_cost)
 
-def plot_optima_data(optima_data,months):
+def plot_optima_data(optima_data, months):
     m = Prophet(seasonality_mode='multiplicative')
     print(optima_data)
     prophet_data = pd.DataFrame.from_dict(optima_data, orient='index', columns=['ds', 'y'])
