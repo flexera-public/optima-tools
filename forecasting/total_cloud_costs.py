@@ -8,6 +8,7 @@ import pandas as pd
 from prophet import Prophet
 from pandas.tseries.offsets import DateOffset
 
+logging.getLogger('fbprophet').setLevel(logging.WARNING)
 
 @click.command(no_args_is_help=True)
 @click.option('--refresh-token', prompt="Refresh Token", help='Refresh Token from FlexeraOne', required=True)
@@ -23,7 +24,7 @@ def generate_cloud_cost_forecast(refresh_token, org_id, past_months, months):
     for month in range(0, past_months):
         start_month = generate_time_stamp(today, month)
         end_month = generate_time_stamp(today, month-1)
-        optima_data[start_month] = get_optima_data(org_id, access_token, start_month, end_month)
+        optima_data[month] = [start_month, get_optima_data(org_id, access_token, start_month, end_month)]
     plot_optima_data(optima_data)
 
 def generate_access_token(refresh_token):
@@ -73,17 +74,45 @@ def get_optima_data(org_id, access_token, start_month, end_month):
     return total_cost
 
 def plot_optima_data(optima_data):
-    click.echo(optima_data)
     m = Prophet()
-    prophet_data=pd.DataFrame.from_dict(optima_data,columns=['ds','y'])
-    click.echo(prophet_data)
-    m.fit(prophet_data)
-    future = m.make_future_dataframe(periods=365)
-    future.tail()
+    prophet_data=pd.DataFrame.from_dict(optima_data,orient='index',columns=['ds','y'])
+    with suppress_stdout_stderr:
+      m.fit(prophet_data)
+    future = m.make_future_dataframe(periods=30)
     forecast = m.predict(future)
-    forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
+    click.echo(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
 
 if __name__ == '__main__':
     # click passes no args
     # pylint: disable=no-value-for-parameter
     generate_cloud_cost_forecast()
+
+class suppress_stdout_stderr(object):
+    '''
+    A context manager for doing a "deep suppression" of stdout and stderr in
+    Python, i.e. will suppress all print, even if the print originates in a
+    compiled C/Fortran sub-function.
+       This will not suppress raised exceptions, since exceptions are printed
+    to stderr just before a script exits, and after the context manager has
+    exited (at least, I think that is why it lets exceptions through).
+
+    '''
+    def __init__(self):
+        # Open a pair of null files
+        self.null_fds = [os.open(os.devnull, os.O_RDWR) for x in range(2)]
+        # Save the actual stdout (1) and stderr (2) file descriptors.
+        self.save_fds = (os.dup(1), os.dup(2))
+
+    def __enter__(self):
+        # Assign the null pointers to stdout and stderr.
+        os.dup2(self.null_fds[0], 1)
+        os.dup2(self.null_fds[1], 2)
+
+    def __exit__(self, *_):
+        # Re-assign the real stdout/stderr back to (1) and (2)
+        os.dup2(self.save_fds[0], 1)
+        os.dup2(self.save_fds[1], 2)
+        # Close the null files
+        os.close(self.null_fds[0])
+        os.close(self.null_fds[1])
+
