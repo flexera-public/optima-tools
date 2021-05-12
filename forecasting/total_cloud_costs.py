@@ -112,7 +112,7 @@ def plot_optima_data(optima_data):
         m.fit(prophet_data)
     future = m.make_future_dataframe(periods=30)
     forecast = m.predict(future)
-    click.echo(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
+    print(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail())
 
 
 if __name__ == '__main__':
