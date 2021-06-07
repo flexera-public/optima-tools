@@ -20,7 +20,7 @@ if not shard == '3':
     sys.exit(1)
 
 token_url = "https://us-"+ shard +".rightscale.com/api/oauth2"
-bill_upload_url = "https://optima-bill-upload-front.indigo.rightscale.com/optima/orgs/{}/billUploads".format(org_id)
+bill_upload_url = "https://api.optima.flexeraeng.com/optima/orgs/{}/billUploads".format(org_id)
 
 # uploading files to endpoint
 dir_path =  os.path.dirname(os.path.realpath(__file__))

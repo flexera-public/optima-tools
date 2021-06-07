@@ -104,7 +104,7 @@ script "cbi_create_bill_upload", type: "javascript" do
   var request = {
     auth: "auth_rs",
     verb: "POST",
-    host: "optima-bill-upload-front.indigo.rightscale.com",
+    host: "api.optima.flexeraeng.com",
     path: "/optima/orgs/" + org_id + "/billUploads",
     body_fields: {
       "billConnectId": bill_connect_id,
@@ -131,7 +131,7 @@ script "cbi_upload", type: "javascript" do
   var request = {
     auth: "auth_rs",
     verb: "POST",
-    host: "optima-bill-upload-front.indigo.rightscale.com",
+    host: "api.optima.flexeraeng.com",
     //path: "/optima/orgs/" + org_id + "/billUploads/a6c33331-d8b2-11ea-9291-b62039d83b87/files/" + period + '.csv',
     path: "/optima/orgs/" + org_id + "/billUploads/" + create_bill_upload["id"] + '/files/' + period + '.csv',
     headers: {
@@ -155,7 +155,7 @@ script "cbi_commit", type: "javascript" do
   var request = {
     auth: "auth_rs",
     verb: "POST",
-    host: "optima-bill-upload-front.indigo.rightscale.com",
+    host: "api.optima.flexeraeng.com",
     path: "/optima/orgs/" + org_id + "/billUploads/" + create_bill_upload["id"] + '/operations',
     //path: "/optima/orgs/" + org_id + "/billUploads/4d5acb39-d8ed-11ea-8c5a-4e18226d1adc/operations",
     headers: {
