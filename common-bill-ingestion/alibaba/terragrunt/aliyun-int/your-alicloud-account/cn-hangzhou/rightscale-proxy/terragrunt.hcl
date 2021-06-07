@@ -12,7 +12,7 @@ inputs =  {
   bucket_owner_id = "[YOUR_EXPORT_BUCKET_ACCOUNT_ID]"
 
   rightscale_token_url = "https://us-4.rightscale.com/api/oauth2"
-  rightscale_base_upload_url = "https://optima-bill-upload-front.indigo.rightscale.com/optima/orgs"
+  rightscale_base_upload_url = "https://api.optima.flexeraeng.com/optima/orgs"
   rightscale_org_id = "25638"
   rightscale_bill_connect_id = "cbi-oi-alibaba-1"
   rightscale_api_version = "1.5"
