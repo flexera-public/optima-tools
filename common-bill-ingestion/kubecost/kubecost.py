@@ -26,7 +26,7 @@ logging.basicConfig(format='%(levelname)s:%(asctime)s:%(message)s',
 @click.option('--aggregation', help="Aggregation level", type=click.Choice(['deployment', 'namespace']), default='deployment')
 @click.option('--kubecost-host', prompt="Kubecost Host", required=True)
 def upload_files(refresh_token, host, org_id, bill_connect_id, aggregation, kubecost_host):
-    last_31_days = datetime.datetime.now() + relativedelta(days=-31)
+    last_31_days = datetime.datetime.now() + relativedelta(days=-1)
     invoice_year_month = last_31_days.strftime("%Y-%m")
     period = invoice_year_month
     bill_upload_url = "https://api.optima.flexeraeng.com/optima/orgs/{}/billUploads".format(
@@ -92,10 +92,10 @@ def upload_files(refresh_token, host, org_id, bill_connect_id, aggregation, kube
                             aggregation,
                             x,
                             'Kubernetes',
-                            h[x]["properties"].pop("labels", {}),
+                            json.dumps(h[x]["properties"].pop("labels", {})),
                             1,
                             c,
-                            h[x][c] * 10,
+                            h[x][c] * 1000,
                             'USD',
                             d.strftime("%Y-%m-%dT00:00:00Z"),
                             invoice_year_month,
