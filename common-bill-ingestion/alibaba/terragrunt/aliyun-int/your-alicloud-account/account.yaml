@@ -1,3 +1,0 @@
----
-account_name : "[YOUR_ACCOUNT_NAME]"
-provider_role_arn : "acs:ram::[YOUR_ACCOUNT_ID]:role/flexera-optima-infra-terraform"
