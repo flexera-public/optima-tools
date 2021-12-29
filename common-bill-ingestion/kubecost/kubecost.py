@@ -25,7 +25,8 @@ logging.basicConfig(format='%(levelname)s:%(asctime)s:%(message)s',
 @click.option('--bill-connect-id', prompt="Bill Connect ID", help="Bill Connect ID", required=True, default="cbi-oi-optima-kubecost-1")
 @click.option('--aggregation', help="Aggregation level", type=click.Choice(['deployment', 'namespace']), default='deployment')
 @click.option('--kubecost-host', prompt="Kubecost Host", required=True)
-def upload_files(refresh_token, host, org_id, bill_connect_id, aggregation, kubecost_host):
+@click.option('--multiplier', required=False, default=1)
+def upload_files(refresh_token, host, org_id, bill_connect_id, aggregation, kubecost_host, multiplier):
     last_31_days = datetime.datetime.now() + relativedelta(days=-1)
     invoice_year_month = last_31_days.strftime("%Y-%m")
     period = invoice_year_month
@@ -46,8 +47,8 @@ def upload_files(refresh_token, host, org_id, bill_connect_id, aggregation, kube
                 tomorrow.strftime("%Y-%m-%dT00:00:00Z"),
                 "&aggregate={}".format(aggregation),
                 "&idle=false",
-                "&sharedIdle=true",
-                "&sharedNamespace=kube-system,cadvisor",
+                "&shareIdle=true",
+                "&shareNamespaces=kube-system,cadvisor",
                 "&shareSplit=weighted"
             ])
             logging.info("Generating Bill from " + url)
@@ -82,6 +83,7 @@ def upload_files(refresh_token, host, org_id, bill_connect_id, aggregation, kube
 
             for h in j["data"]:
                 for x in h.keys():
+                    tags = json.dumps(h[x]["properties"].pop("labels", {}))
                     for c in ["cpuCost", "gpuCost", "ramCost", "pvCost", "networkCost", "sharedCost"]:
                         arr_cbi.append([
                             h[x]["properties"]["cluster"],
@@ -92,10 +94,10 @@ def upload_files(refresh_token, host, org_id, bill_connect_id, aggregation, kube
                             aggregation,
                             x,
                             'Kubernetes',
-                            json.dumps(h[x]["properties"].pop("labels", {})),
+                            tags,
                             1,
                             c,
-                            h[x][c] * 1000,
+                            h[x][c] * multiplier,
                             'USD',
                             d.strftime("%Y-%m-%dT00:00:00Z"),
                             invoice_year_month,
@@ -112,7 +114,7 @@ def upload_files(refresh_token, host, org_id, bill_connect_id, aggregation, kube
                     quoting=csv.QUOTE_MINIMAL)
                 for item in arr_cbi:
                     csv_writer.writerow(item)
-
+    # sys.exit(0)
     access_token = generate_access_token(refresh_token, host)
 
     # ===== Use Access Token as Bearer token from them on ===== #
