@@ -13,6 +13,9 @@
     "python.linting.enabled": true,
     // if using pylint
     "python.linting.pylintEnabled": true,
+    "cSpell.words": [
+      "pylint"
+    ],
   },
   "extensions": {
     "recommendations": [

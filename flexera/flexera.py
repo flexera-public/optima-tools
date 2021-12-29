@@ -40,6 +40,7 @@ def auth(shard, refresh_token, disable_tls_verify):
   return access_token
 
 if __name__ == '__main__':
+  global access_token
   # click passes no args
   # pylint: disable=no-value-for-parameter
   cli()
