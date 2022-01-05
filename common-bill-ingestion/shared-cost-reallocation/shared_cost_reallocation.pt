@@ -4,7 +4,7 @@ type "policy"
 short_description "Reallocate shared costs across billing centers proportionally"
 long_description ""
 severity "low"
-category "Operational"
+category "Cost"
 info(
   version: "1.0",
   provider: "Flexera",
