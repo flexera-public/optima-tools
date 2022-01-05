@@ -1,0 +1,383 @@
+name "Shared Cost Reallocation"
+rs_pt_ver 20180301
+type "policy"
+short_description "Reallocate shared costs across billing centers proportionally"
+long_description ""
+severity "low"
+category "Operational"
+info(
+  version: "1.0",
+  provider: "Flexera",
+  service: "All",
+  policy_set: "N/A"
+)
+
+###############################################################################
+# Parameters
+###############################################################################
+
+parameter "param_email" do
+  type "list"
+  label "Email addresses"
+end
+  
+parameter "param_shared_cost_bc" do
+  type "string"
+  label "Shared Cost Billing Center"
+  description "Enter Billing Center ID to specify Billing Center to take shared costs from to reallocate to other billing centers (case-sensitive)"
+end
+
+parameter "param_reallocate_cost_bc" do
+  type "string"
+  label "Billing Center/s to reallocate cost to"
+  description "Enter Billing Center ID to specify Billing Center to reallocate cost to (case-sensitive)"
+end
+
+parameter "param_excluded_bc" do
+  type "string"
+  label "Billing Center Exclusion"
+  description "Enter Billing Center ID to specify Billing Center to exclude from cost reallocation (case-sensitive)"
+  default "unallocated"
+end
+
+parameter "param_reallocate_child_bcs" do
+  type "string"
+  label "Reallocate costs to Child Billing Centers"
+  description "Choose whether to reallocate costs across Child Billing Centers"
+  allowed_values ["Yes", "No"]
+  default "Yes"
+end
+  
+parameter "param_period" do
+  type "string"
+  label "Billing Period"
+  description "Billing Period from Fastly Billing YYYY-MM"
+  allowed_pattern /20[2-9][0-9]-[0-1][0-9]/
+end
+
+###############################################################################
+# Authentication
+###############################################################################
+
+#authenticate with RighScale/Optima
+credentials "auth_rs" do
+  schemes "oauth2"
+  label "Flexera_Automation"
+  description "Select FlexeraOne OAuth2 credentials"
+  tags "provider=flexera"
+end
+
+###############################################################################
+# Datasources and Scripts
+###############################################################################
+
+#GET BILLING CENTERS FOR ORG
+datasource "ds_billing_centers" do
+  request do
+    auth $auth_rs
+    host rs_optima_host
+    path join(["/analytics/orgs/",rs_org_id,"/billing_centers"])
+    header "Api-Version", "1.0"
+    header "User-Agent", "RS Policies"
+    query "view", "allocation_table"
+  end
+  result do
+    encoding "json"
+    collect jmes_path(response,"[*]") do
+      field "href", jmes_path(col_item,"href")
+      field "id", jmes_path(col_item,"id")
+      field "name", jmes_path(col_item,"name")
+      field "parent_id", jmes_path(col_item,"parent_id")
+      field "ancestor_ids", jmes_path(col_item,"ancestor_ids")
+      field "allocation_table", jmes_path(col_item,"allocation_table")
+    end
+  end  
+end
+
+#GET GET CHILD BILLING CENTERS (IF APPLICABLE)
+datasource "ds_selected_level_billing_centers" do
+  run_script $js_get_level_bc, $ds_billing_centers, $param_reallocate_child_bcs
+end
+
+script "js_get_level_bc", type: "javascript" do
+  parameters "billing_centers", "reallocate_to_child_bcs"
+  result "filtered_billing_centers"
+  code <<-EOS
+  //does billing center have a child BC?
+  _.each(billing_centers, function(i_bc){
+    i_bc["has_child"] = []
+    _.each(billing_centers, function(j_bc){
+      if(j_bc.id != i_bc.id && j_bc.parent_id == i_bc.id){
+        i_bc.has_child.push({ "child_id": j_bc.id })
+      }
+    })
+  })
+
+  if(reallocate_to_child_bcs == "Yes"){
+    var filtered_billing_centers =
+    _.filter(billing_centers, function(bc){ return bc.has_child == [] })
+  } else {
+    var filtered_billing_centers = 
+    _.filter(billing_centers, function(bc){ return bc.parent_id == null })
+  }
+  EOS
+end
+
+#GET COST OF BILLING CENTER TO BE REALLOCATED
+datasource "ds_shared_billing_center_cost" do
+  request do
+    run_script $js_get_billing_center_cost, rs_org_id, rs_optima_host, $ds_selected_level_billing_centers, $param_period, $param_shared_cost_bc
+  end
+  result do
+    encoding "json"
+    collect jmes_path(response, "rows") do
+      #field "adjustment_rule_label", jmes_path(col_item,"dimensions.adjustment_rule_label")
+      #field "cost_center_name", jmes_path(col_item,"dimensions.rbd_cost_center")
+      field "billing_center_id", jmes_path(col_item,"dimensions.billing_center_id")
+      field "vendor_account", jmes_path(col_item,"dimensions.vendor_account")
+      field "vendor_account_name", jmes_path(col_item,"dimensions.vendor_account_name")
+      field "category", jmes_path(col_item,"dimensions.category")
+      field "region", jmes_path(col_item,"dimensions.region")
+      field "service", jmes_path(col_item,"dimensions.service")
+      field "usage_type", jmes_path(col_item,"dimensions.usage_type")
+      field "usage_unit", jmes_path(col_item,"dimensions.usage_unit")
+      field "costs", jmes_path(col_item,"metrics.cost_nonamortized_unblended_adj")
+      field "year_month", jmes_path(col_item,"timestamp")
+    end
+  end
+end
+  
+script "js_get_billing_center_cost", type: "javascript" do
+  parameters "org_id", "optima_host", "ds_top_level_billing_centers", "period", "shared_cost_bc"
+  result "request"
+  code <<-EOS
+  
+  var billing_center_ids = []
+  var i;
+  for (i = 0; i < ds_selected_level_billing_centers.length; i ++){
+    if(ds_top_level_billing_centers[i].id == shared_cost_bc){
+      billing_center_ids.push(ds_top_level_billing_centers[i].id)
+    }
+  }
+  
+  var start_date = period;
+  var time_period = period.split("-")
+   
+  var date = new Date(time_period[0], time_period[1]);
+  date.setMonth(date.getMonth() + 1)
+  var year = (date.getFullYear())
+  var end_date = (date.getFullYear()) + "-" + ("0" + (date.getMonth())).slice(-2);
+  
+  var payload = {
+    "billing_center_ids": billing_center_ids,
+    "dimensions": [
+      "billing_center_id",
+      "vendor_account",
+      "vendor_account_name",
+      "category",
+      "region",
+      "service",
+      "usage_type",
+      "usage_unit"
+    ],
+    "granularity": "month",
+    "metrics": [
+      "cost_nonamortized_unblended_adj"
+    ],
+    "end_at": end_date,
+    "start_at": start_date
+  }
+      
+  var request = {
+    auth: "auth_rs",
+    host: optima_host,
+    path: "/bill-analysis/orgs/" + org_id + "/costs/aggregated",
+    verb: 'POST',
+    body_fields: payload,
+    headers: {
+      "User-Agent": "RS Policies",
+    }
+  }
+  EOS
+end
+
+#GET ALL COST OF ALL OTHER BILLING CENTERS
+datasource "ds_other_billing_center_costs" do
+  request do
+    run_script $js_get_other_billing_center_costs, rs_org_id, rs_optima_host, $ds_top_level_billing_centers, $param_period, $param_shared_cost_bc, $param_excluded_bc
+  end
+  result do
+    encoding "json"
+    collect jmes_path(response, "rows") do
+      #field "cost_center_name", jmes_path(col_item,"dimensions.rbd_cost_center")
+      field "billing_center_id", jmes_path(col_item,"dimensions.billing_center_id")
+      field "costs", jmes_path(col_item,"metrics.cost_nonamortized_unblended_adj")
+      field "year_month", jmes_path(col_item,"timestamp")
+    end
+  end
+end
+
+script "js_get_other_billing_center_costs", type: "javascript" do
+  parameters "org_id", "optima_host", "ds_top_level_billing_centers", "period", "shared_cost_bc", "excluded_bc"
+  result "request"
+  code <<-EOS
+
+  var billing_center_ids = []
+  var i;
+  for (i = 0; i < ds_top_level_billing_centers.length; i ++){
+    if(ds_top_level_billing_centers[i].id != shared_cost_bc && ds_top_level_billing_centers[i].id != excluded_bc){
+      billing_center_ids.push(ds_top_level_billing_centers[i].id)
+    }
+  }
+
+  var start_date = period;
+  var time_period = period.split("-")
+ 
+  var date = new Date(time_period[0], time_period[1]);
+  date.setMonth(date.getMonth() + 1)
+  var year = (date.getFullYear())
+  var end_date = (date.getFullYear()) + "-" + ("0" + (date.getMonth())).slice(-2);
+
+  var payload = {
+    "billing_center_ids": billing_center_ids,
+    "dimensions": [
+      "billing_center_id"
+    ],
+    "granularity": "month",
+    "metrics": [
+        "cost_nonamortized_unblended_adj"
+    ],
+    "end_at": end_date,
+    "start_at": start_date
+  }
+    
+  var request = {
+    auth: "auth_rs",
+    host: optima_host,
+    path: "/bill-analysis/orgs/" + org_id + "/costs/aggregated",
+    verb: 'POST',
+    body_fields: payload,
+    headers: {
+      "User-Agent": "RS Policies",
+    }
+  }
+  EOS
+end
+
+#CALCULATE ALLOCATION PROPORTION
+datasource "ds_calculated_proportions" do
+  run_script $js_calculate_proportions, $ds_other_billing_center_costs, $ds_shared_billing_center_cost
+end
+
+script "js_calculate_proportions", type: "javascript" do
+  parameters "ds_other_billing_center_costs", "ds_shared_billing_center_cost"
+  result "result"
+  code <<-EOS
+  var result = [];
+
+  var total_cost = 0
+  for (var i = 0; i < ds_other_billing_center_costs.length; i++){
+    total_cost += ds_other_billing_center_costs[i].costs
+  }
+  
+  var shared_cost = 0
+  for (var j = 0; j < ds_shared_billing_center_cost.length; j++){
+    shared_cost += ds_shared_billing_center_cost[j].costs
+  }
+  
+  for (var i = 0; i < ds_other_billing_center_costs.length; i++){
+  
+    var allocation_percentage = (ds_other_billing_center_costs[i].costs/total_cost)*100
+
+    for (var j = 0; j < ds_shared_billing_center_cost.length; j++){
+      var allocated_cost = ds_shared_billing_center_cost[j].costs*(allocation_percentage/100)
+      //var total_bc_cost = ds_other_billing_center_costs[i].costs + allocated_cost
+      
+      var percentage_json = {
+        "billing_center_id": ds_other_billing_center_costs[i].billing_center_id,
+        "base_cost": ds_other_billing_center_costs[i].costs.toFixed(2),
+        "shared_cost_amount": ds_shared_billing_center_cost[j].costs.toFixed(2),
+        "allocation_percentage": allocation_percentage.toFixed(2),
+        "allocated_cost": allocated_cost.toFixed(2),
+        "vendor_account_name": ds_shared_billing_center_cost[j].vendor_account_name,
+        "category": ds_shared_billing_center_cost[j].category,
+        "region": ds_shared_billing_center_cost[j].region,
+        "service": ds_shared_billing_center_cost[j].service,
+        "usage_type": ds_shared_billing_center_cost[j].usage_type,
+        "usage_unit": ds_shared_billing_center_cost[j].usage_unit
+      }
+      result.push(percentage_json)
+    }
+  }
+  
+  result[0]["reallocated_billing_center"] =  {
+    "id": ds_shared_billing_center_cost[0].billing_center_id,
+    //"cost_center_name": ds_shared_billing_center_cost[0].cost_center_name,
+    "amount": shared_cost.toFixed(2)
+  }
+  EOS
+end
+
+###############################################################################
+# Escalations
+###############################################################################
+
+escalation "billing_center_cost_allocation_report" do
+  automatic true
+  label "Send Email"
+  description "Send incident email"
+  email $param_email
+end
+
+###############################################################################
+# Policy
+###############################################################################
+
+policy "billing_center_cost_reallocation_policy" do
+  validate_each $ds_calculated_proportions do
+    summary_template "Billing Center Cost reallocation"
+    detail_template <<-EOS
+        Source Billing Center: {{with index data 0}}{{ .reallocated_billing_center.cost_center_name }}{{end}} ({{with index data 0}}{{ .reallocated_billing_center.id }}{{end}})
+        Amount reallocated: {{with index data 0}}{{ .reallocated_billing_center.amount }}{{end}} 
+    EOS
+    escalate $billing_center_cost_allocation_report
+    check eq(0,1)
+    export do
+      # no actions so resource_level can be false
+      resource_level false
+      field "billing_center_id" do
+        label "Billing Center ID"
+      end
+      field "base_cost" do
+        label "Billing Center Base Cost"
+      end
+      field "shared_cost_amount" do
+          label "Shared Cost Total Amount"
+      end
+      field "allocation_percentage" do
+        label "Allocation Percentage"
+      end
+      field "allocated_cost" do
+        label "Reallocated Cost"
+      end
+      field "vendor_account_name" do
+        label "Cloud Vendor Account Name"
+      end      
+      field "category" do
+        label "Category"
+      end      
+      field "region" do
+        label "Region"
+      end
+      field "service" do
+        label "Service"
+      end      
+      field "usage_type" do
+        label "Usage Type"
+      end      
+      field "usage_unit" do
+        label "Usage Unit"
+      end
+    end
+  end
+end
