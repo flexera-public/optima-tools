@@ -1,0 +1,228 @@
+name "Fastly CBI Upload"
+rs_pt_ver 20180301
+type "policy"
+short_description "Fastly CBI Policy - retrieve Fastly Billing data and ingest into Flexera One platform."
+long_description ""
+severity "low"
+default_frequency "monthly"
+category "Cost"
+info(
+  version: "1.0",
+  provider: "Fastly",
+  service: "All",
+  policy_set: "N/A"
+)
+
+###############################################################################
+# Parameters
+###############################################################################
+
+parameter "param_bill_connect_id" do
+  type "string"
+  label "Bill Connect ID"
+  description "Bill Connect ID created in CBI API ex: cbi-oi-optima-fastly_*"
+  allowed_pattern /cbi-oi-optima-fastly_[a-zA-Z0-9]*/
+end
+
+parameter "param_period" do
+  type "string"
+  label "Billing Period"
+  description "Billing Period from Fastly Billing YYYY-MM"
+  allowed_pattern /20[2-9][0-9]-[0-1][0-9]/
+end
+
+parameter "param_email" do
+  type "list"
+  label "Email addresses"
+end
+
+###############################################################################
+# Authentication
+###############################################################################
+
+#authenticate with Fastly
+credentials "fastly_api_key" do
+    schemes "api_key"
+    label "Fastly"
+    description "Select the Fastly API key credentials."
+    tags "provider=fastly"
+end
+
+#authenticate with RightScale/Optima
+credentials "auth_rs" do
+  schemes "oauth2"
+  label "Optima_Bill_Data"
+  description "Select FlexeraOne OAuth2 credentials"
+  tags "provider=flexera"
+end
+
+###############################################################################
+# Datasources and Scripts
+###############################################################################
+
+#GET FASTLY INVOICE DATA
+datasource "ds_invoice_data" do
+   request do
+    auth $fastly_api_key
+    host "api.fastly.com"
+    path join(["/billing/v2/year/", first(split($param_period,"-")), "/month/", last(split($param_period,"-"))])
+   end
+   result do
+    encoding "json"
+    collect jmes_path(response, "regions") do
+    field "regions", jmes_path(response,"regions")
+    field "start_time", jmes_path(response, "start_time")
+    field "invoice_id", jmes_path(response, "invoice_id")
+    end
+   end
+end
+
+#GET FASTLY USAGE DATA
+datasource "ds_usage_data" do
+  request do
+    auth $fastly_api_key
+    host "api.fastly.com"
+    path "/stats/usage_by_month"
+    query "billable_units", "true"
+    query "month", last(split($param_period,"-"))
+    query "year", first(split($param_period,"-"))
+  end
+end
+
+#CREATE BILL UPLOAD
+datasource "ds_bill_upload" do
+  request do
+    auth $auth_rs
+    verb "POST"
+    host rs_optima_host
+    path join(["/optima/orgs/", rs_org_id, "/billUploads"])
+    header "User-Agent", "RS-Policies"
+    header "allow_redirects", "False"
+    body_field "billConnectId", $param_bill_connect_id
+    body_field "billingPeriod", $param_period
+  end
+end
+
+#PROCESS INVOICE AND USAGE DATA INTO CSV FORMAT
+#CREATE BILL UPLOAD FILE
+datasource "ds_bill_upload_file" do
+  request do
+    run_script $js_process_fastly_billing_data_cbi_upload_file, $ds_invoice_data, $ds_usage_data, $ds_bill_upload, $param_period, rs_org_id, rs_optima_host
+  end
+end
+
+script "js_process_fastly_billing_data_cbi_upload_file", type: "javascript" do
+  parameters "invoice_data", "usage_data", "bill_upload", "period", "org_id", "optima_host"
+  result "request"
+  code <<-'EOS'
+  //CONVERT DATA TO CSV
+  var invoice_csv_output = "CloudVendorAccountID,CloudVendorAccountName,Category,ManufacturerName,Region,Service,Tags,UsageAmount,UsageUnit,Cost,Currency,UsageStartTime,InvoiceYear_month,invoice_id\n";
+  var vendor_account_name = "Fastly"
+  var category_bandwidth = "Network-Bandwidth", category_requests = "Network-Requests"
+  var manufacturer = "Fastly"
+  var currency = "USD"
+  var bandwidth_usage_unit = "GB", requests_usage_unit = "Units (per 10k requests)"
+  var service = "CDN"
+  var invoice_id = invoice_data[0].invoice_id
+
+  function getValuesFromInvoiceJson(invoice_data) {
+    var date = invoice_data[0].start_time;
+
+    for (var region_name in invoice_data[0].regions) {
+      var region = invoice_data[0].regions[region_name]
+      var bandwidth_cost_total = region.bandwidth.total, bandwidth_unit_total = 0
+      var requests_cost_total = region.requests.total, requests_unit_total = 0
+
+      _.each(region.requests.tiers, function(tier){
+        requests_unit_total += tier.units
+      })
+      _.each(region.bandwidth.tiers, function(tier){
+        bandwidth_unit_total += tier.units
+      })
+
+      var bandwidth_ratio = bandwidth_cost_total / bandwidth_unit_total
+      var requests_ratio = requests_cost_total / requests_unit_total
+      getValuesFromUsageJson(usage_data, region_name, bandwidth_ratio, requests_ratio, date);
+    }
+  }
+
+  function getValuesFromUsageJson(usage_data, inv_region_name, bandwidth_ratio, requests_ratio, date) {
+    var year_month = date.split('-')[0] + date.split('-')[1];
+    var vendor_account_id = usage_data.data.customer_id;
+
+    //For loop to get Service
+    for (var service_id in usage_data.data.services) {
+      //Get Fastly Service
+      var fastly_service = usage_data.data.services[service_id];
+      for (var usg_region_name in fastly_service) {
+        //Create Fastly Service Tag
+        var fastly_service_name = "\"\"" + fastly_service.name + "\"\"";
+        var tags_object = "{\"\"fastly-service\"\": " + fastly_service_name + "}"
+        var tags = '"' + tags_object + '"';
+
+        var bandwidth_unit_cost = 0, requests_unit_cost = 0;
+        if ((((usg_region_name.indexOf(inv_region_name) !== -1) == true) || (inv_region_name == "australia" && usg_region_name == "anzac")) 
+        && ((value.bandwidth > 0) || (value.requests > 0))) {
+          _.each(usg_region_name, function(region){
+            bandwidth_unit_cost = region.bandwidth * bandwidth_ratio
+            requests_unit_cost = region.requests * requests_ratio
+          })
+          
+          invoice_csv_output +=  vendor_account_id + ',' + vendor_account_name + ',' + category_bandwidth + ',' + manufacturer + ',' + inv_region_name + ',' + service + ',' + tags + ',' + bandwidth + ',' + bandwidth_usage_unit + ',' + bandwidth_unit_cost + ',' + currency + ',' + date + ',' + year_month + ',' + invoice_id + '\n';
+          invoice_csv_output +=  vendor_account_id + ',' + vendor_account_name + ',' + category_requests + ',' + manufacturer + ',' + inv_region_name + ',' + service + ',' + tags + ',' + requests + ',' + requests_usage_unit + ',' + requests_unit_cost + ',' + currency + ',' + date + ',' + year_month + ',' + invoice_id + '\n';
+        }
+      }
+    }
+  }
+
+  getValuesFromInvoiceJson(invoice_data);
+
+  //BUILD FILE UPLOAD REQUEST
+  var request = {
+    auth: "auth_rs",
+    verb: "POST",
+    host: optima_host,
+    path: "/optima/orgs/" + org_id + "/billUploads/" + bill_upload["id"] + '/files/fastly-' + period + '.csv',
+    headers: {
+      "User-Agent": "RS Policies",
+    },
+    body: invoice_csv_output 
+  }
+  EOS
+end
+
+#COMMIT UPLOAD
+datasource "ds_bill_commit" do
+  request do
+    run_script $js_cbi_commit, $ds_bill_upload_file, $ds_bill_upload, rs_org_id, rs_optima_host
+  end
+end
+
+script "js_cbi_commit", type: "javascript" do
+  parameters "bill_upload_file", "bill_upload", "org_id", "optima_host"
+  result "request"
+  code <<-EOS
+  var request = {
+    auth: "auth_rs",
+    verb: "POST",
+    host: optima_host,
+    path: "/optima/orgs/" + org_id + "/billUploads/" + bill_upload["id"] + '/operations',
+    headers: {
+      "User-Agent": "RS Policies",
+    },
+    body_fields: {"operation": "commit"}
+  }
+  EOS
+end
+
+###############################################################################
+# Policy
+###############################################################################
+
+policy "fastly_invoiceusage_policy" do
+  validate $ds_bill_commit do
+    summary_template "Fastly CBI Bill Ingest {{parameters.param_period}}"
+    detail_template "Bill Uploaded"
+    check eq(0,1)
+  end
+end
