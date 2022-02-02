@@ -20,7 +20,7 @@ info(
 parameter "param_bill_connect_id" do
   type "string"
   label "Bill Connect ID"
-  description "Bill Connect ID created in CBI API ex: cbi-oi-optima-nia_fastly_*"
+  description "Bill Connect ID created in CBI API ex: cbi-oi-optima_fastly_*"
   allowed_pattern /cbi-oi-optima-nia_fastly_[a-zA-Z0-9]*/
 end
 
