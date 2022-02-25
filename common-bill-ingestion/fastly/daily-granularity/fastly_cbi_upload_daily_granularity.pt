@@ -1,0 +1,307 @@
+name "Fastly CBI Upload - Daily Granularity"
+rs_pt_ver 20180301
+type "policy"
+short_description "Fastly CBI Policy - retrieve Fastly Billing data and ingest into Flexera One platform."
+long_description ""
+severity "low"
+default_frequency "daily"
+category "Cost"
+info(
+  version: "1.0",
+  provider: "Fastly",
+  service: "All",
+  policy_set: "N/A"
+)
+
+###############################################################################
+# Parameters
+###############################################################################
+
+parameter "param_bill_connect_id" do
+  type "string"
+  label "Bill Connect ID"
+  description "Bill Connect ID created in CBI API ex: cbi-oi-optima-se_fastly_*"
+  allowed_pattern /cbi-oi-optima-fastly_[a-zA-Z0-9]*/
+end
+
+parameter "param_email" do
+  type "list"
+  label "Email addresses"
+end
+
+###############################################################################
+# Authentication
+###############################################################################
+
+#authenticate with Fastly
+credentials "fastly_api_key" do
+  schemes "api_key"
+  label "Fastly"
+  description "Select the Fastly API key credentials."
+  tags "provider=fastly"
+end
+
+#authenticate with RightScale/Optima
+credentials "auth_rs" do
+  schemes "oauth2"
+  label "Optima_Bill_Data"
+  description "Select FlexeraOne OAuth2 credentials"
+  tags "provider=flexera"
+end
+
+###############################################################################
+# Datasources and Scripts
+###############################################################################
+
+#GET BILLING PERIOD
+datasource "ds_billing_period" do
+  run_script $js_get_billing_period
+end
+
+script "js_get_billing_period", type: "javascript" do
+  result "result"
+  code <<-EOS
+  var current_bill_date = new Date()
+  current_bill_date.setDate(current_bill_date.getDate() - 2)
+  var days = []
+
+  for (var i = 0; i < Number(current_bill_date.toISOString().split("-")[2].split("T")[0]); i++){
+    var start_date = new Date(current_bill_date)
+    start_date.setDate(start_date.getDate() - i)
+    start_date = start_date.toISOString().split("T")[0] + "T00:00:00.000Z"
+    var end_date = new Date(current_bill_date)
+    end_date.setDate(end_date.getDate() - i + 1)
+    end_date = end_date.toISOString().split("T")[0] + "T00:00:00.000Z"
+
+    days.push({
+      "start_date": start_date,
+      "end_date": end_date
+    })
+  }
+
+  var billing_period = current_bill_date.toISOString().split("-")[0] + "-" + current_bill_date.toISOString().split("-")[1]
+  var month = new Date( billing_period.split("-")[0], (billing_period.split("-")[1] - 1))
+  month.setMonth(month.getMonth() - 1)
+  var invoice_data_month = month.toISOString().split("-")[0] + "-" + month.toISOString().split("-")[1]
+  
+  var result = { 
+    "invoice_data_month": invoice_data_month
+    "billing_period": billing_period,
+    "billing_days": days
+  }
+  EOS
+end
+
+#GET FASTLY INVOICE DATA
+datasource "ds_invoice_data" do
+  request do
+    auth $fastly_api_key
+    host "api.fastly.com"
+    path join(["/billing/v2/year/", first(split(val($ds_billing_period, "invoice_data_month"),"-")), "/month/", last(split(val($ds_billing_period, "invoice_data_month"),"-"))])
+  end
+  result do
+    encoding "json"
+    collect jmes_path(response, "regions") do
+    field "regions", jmes_path(response,"regions")
+    field "start_time", jmes_path(response, "start_time")
+    field "invoice_id", jmes_path(response, "invoice_id")
+    end
+  end
+end
+
+#GET START/END DATES FOR USAGE DATA API CALL
+datasource "ds_billing_days" do
+  run_script $js_get_bill_days_array, $ds_billing_period
+end
+
+script "js_get_bill_days_array", type: "javascript" do
+  parameters "billing_period"
+  result "result"
+  code <<-EOS
+  var result = billing_period.billing_days
+  EOS
+end
+
+#GET FASTLY USAGE DATA
+datasource "ds_usage_data" do
+  iterate $ds_billing_days
+  request do
+    auth $fastly_api_key
+    host "api.fastly.com"
+    path "/stats/usage_by_service"
+    query "by", "day"
+    query "from", val(iter_item, "start_date")
+    query "to", val(iter_item, "end_date")
+  end
+end
+
+#GET FASTLY SERVICES DATA
+datasource "ds_service_data" do
+  request do
+    auth $fastly_api_key
+    host "api.fastly.com"
+    path "/service"
+    query "per_page", 100 #replace with pagination at some point
+    query "sort", "id"
+  end
+  result do
+    encoding "json"
+    collect jmes_path(response, "[*]") do 
+      field "service_id", jmes_path(col_item, "id")
+      field "service_name", jmes_path(col_item, "name")
+      field "customer_id", jmes_path(col_item, "customer_id")
+    end
+  end
+end
+
+#CREATE BILL UPLOAD
+datasource "ds_bill_upload" do
+  request do
+    auth $auth_rs
+    verb "POST"
+    host rs_optima_host
+    path join(["/optima/orgs/", rs_org_id, "/billUploads"])
+    header "User-Agent", "RS-Policies"
+    header "allow_redirects", "False"
+    body_field "billConnectId", $param_bill_connect_id
+    body_field "billingPeriod", val($ds_billing_period, "billing_period")
+  end
+end
+
+#PROCESS INVOICE AND USAGE DATA INTO CSV FORMAT
+#CREATE BILL UPLOAD FILE
+datasource "ds_bill_upload_file" do
+  request do
+    run_script $js_process_fastly_billing_data_cbi_upload_file, $ds_invoice_data, $ds_usage_data, $ds_service_data, val($ds_bill_upload, "id"), $ds_billing_period, rs_org_id, rs_optima_host
+  end
+end
+
+script "js_process_fastly_billing_data_cbi_upload_file", type: "javascript" do
+  parameters "invoice_data", "usage_data", "service_data", "bill_upload_id", "billing_period_data", "org_id", "optima_host"
+  result "request"
+  code <<-'EOS'
+  //CONVERT DATA TO CSV
+  var invoice_csv_output = "CloudVendorAccountID,CloudVendorAccountName,Category,ManufacturerName,Region,Service,Tags,UsageAmount,UsageUnit,Cost,Currency,UsageStartTime,InvoiceYearMonth,InvoiceID\n";
+  var vendor_account_name = "Fastly"
+  var category_bandwidth = "Network-Bandwidth", category_requests = "Network-Requests"
+  var manufacturer = "Fastly"
+  var currency = "USD"
+  var bandwidth_usage_unit = "GB", requests_usage_unit = "Units (per 10k requests)"
+  var service = "CDN"
+  var invoice_id = invoice_data[0].invoice_id
+  var request = [];
+
+  function getValuesFromInvoiceJson(invoice_data) {
+    //var date = invoice_data[0].start_time;
+
+    for (var region_name in invoice_data[0].regions) {
+      var region = invoice_data[0].regions[region_name]
+      var bandwidth_cost_total = region.bandwidth.total, bandwidth_unit_total = 0
+      var requests_cost_total = region.requests.total, requests_unit_total = 0
+
+      _.each(region.requests.tiers, function(tier){
+        requests_unit_total += tier.units
+      })
+      _.each(region.bandwidth.tiers, function(tier){
+        bandwidth_unit_total += tier.units
+      })
+
+      var bandwidth_ratio = bandwidth_cost_total / bandwidth_unit_total
+      var requests_ratio = requests_cost_total / requests_unit_total
+      getValuesFromUsageJson(usage_data, region_name, bandwidth_ratio, requests_ratio);
+    }
+  }
+
+  function getValuesFromUsageJson(usage_data, inv_region_name, bandwidth_ratio, requests_ratio) {
+    var year_month = billing_period_data.billing_period.split("-")[0] + billing_period_data.billing_period.split("-")[1]
+    
+    _.each(usage_data, function(day){
+      var str_date = day.meta.from.replace(/\s+/,'T').replace(/\s+UTC/,'Z')
+      var date = new Date(str_date).toISOString()
+
+      //for loop to get Region
+      for (var usg_region_name in day.data){
+        var region = day.data[usg_region_name]
+        if (((usg_region_name.indexOf(inv_region_name) !== -1) == true) || (inv_region_name == "australia" && usg_region_name == "anzac")) {  
+          //for loop to get Service
+          for (var service_id in region){
+            var service = region[service_id]
+            var tags = ""
+            var vendor_account_id = ""
+            var bandwidth_unit_cost = 0, requests_unit_cost = 0
+  
+            _.each(service_data, function(svc){
+              if(service_id == svc.service_id){
+                vendor_account_id = svc.customer_id
+                var fastly_service_name = "\"\"" + svc.service_name + "\"\"";
+                var tags_object = "{\"\"fastly-service\"\": " + fastly_service_name + "}"
+                tags = '"' + tags_object + '"'; 
+              }
+            })
+  
+            if ((service.bandwidth > 0) || (service.requests > 0)) {
+              var bandwidth = parseFloat(service.bandwidth * Math.pow(10, -9)).toFixed(9)
+              var requests = parseFloat(service.requests * Math.pow(10,-4)).toFixed(4)
+              bandwidth_unit_cost = bandwidth * bandwidth_ratio
+              requests_unit_cost = requests * requests_ratio
+  
+              invoice_csv_output +=  vendor_account_id + ',' + vendor_account_name + ',' + category_bandwidth + ',' + manufacturer + ',' + inv_region_name + ',' + service_id + ',' + tags + ',' + bandwidth + ',' + bandwidth_usage_unit + ',' + bandwidth_unit_cost + ',' + currency + ',' + date + ',' + year_month + ',' + invoice_id + '\n';
+              invoice_csv_output +=  vendor_account_id + ',' + vendor_account_name + ',' + category_requests + ',' + manufacturer + ',' + inv_region_name + ',' + service_id + ',' + tags + ',' + requests + ',' + requests_usage_unit + ',' + requests_unit_cost + ',' + currency + ',' + date + ',' + year_month + ',' + invoice_id + '\n';
+            }
+          }
+        } 
+      }
+    })
+  }
+
+  getValuesFromInvoiceJson(invoice_data);
+
+  //BUILD FILE UPLOAD REQUEST
+  var request = {
+    auth: "auth_rs",
+    verb: "POST",
+    host: optima_host,
+    path: "/optima/orgs/" + org_id + "/billUploads/" + bill_upload_id + '/files/fastly-' + billing_period_data.billing_period + '.csv',
+    headers: {
+      "User-Agent": "RS Policies",
+    },
+    body: invoice_csv_output 
+  }
+  EOS
+end
+
+#COMMIT UPLOAD
+datasource "ds_bill_commit" do
+  request do
+    run_script $js_cbi_commit, $ds_bill_upload_file, val($ds_bill_upload, "id"), rs_org_id, rs_optima_host
+  end
+end
+
+script "js_cbi_commit", type: "javascript" do
+  parameters "bill_upload_file", "bill_upload_id", "org_id", "optima_host"
+  result "request"
+  code <<-EOS
+  var request = {
+    auth: "auth_rs",
+    verb: "POST",
+    host: optima_host,
+    path: "/optima/orgs/" + org_id + "/billUploads/" + bill_upload_id + '/operations',
+    headers: {
+      "User-Agent": "RS Policies",
+    },
+    body_fields: {"operation": "commit"}
+  }
+  EOS
+end
+
+###############################################################################
+# Policy
+###############################################################################
+
+policy "policy_fastly_cbi_upload" do
+  validate $ds_bill_commit do
+    summary_template "Fastly CBI Bill Ingest"
+    detail_template "Bill Uploaded"
+    check eq(0,1)
+  end
+end
