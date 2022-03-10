@@ -56,8 +56,15 @@ script "js_snapshots_cost_mapping", type: "javascript" do
   parameters "ds_aws_instance_map"
   code <<-EOS
   var instance_list = []
+  var monthlySavings = 0
   var result = {}
   console.log(ds_aws_instance_map["values"])
+  console.log(ds_aws_instance_map.values)
+  _.each(ds_aws_instance_map.values, function(instance){
+    console.log(instance)
+    monthlySavings = monthlySavings + instance.savings
+    instance_list.push(instance)
+  })
   var message="The total estimated monthly savings are £"+ monthlySavings;
   result={
     "instance_list": instance_list,
