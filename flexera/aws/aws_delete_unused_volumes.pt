@@ -1,7 +1,7 @@
-name "AWS Old Snapshots"
+name "AWS Unused Volumes"
 rs_pt_ver 20180301
 type "policy"
-short_description "A Mock Policy that would check for snapshots older than a specified number of days and, optionally, deletes them. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/aws/old_snapshots) and [docs.rightscale.com/policies](https://docs.rightscale.com/policies/) to learn more."
+short_description "A Mock Policy that would check for unused volumes with no read/write operations performed within a specified number of days and, optionally, deletes them. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/aws/unused_volumes) and [docs.rightscale.com/policies](https://docs.rightscale.com/policies/) to learn more."
 category "Cost"
 severity "low"
 default_frequency "daily"
@@ -9,7 +9,7 @@ info(
   version: "0.1",
   provider: "AWS",
   service: "EBS",
-  policy_set: "Old Snapshots"
+  policy_set: "Unused Volumes"
 )
 
 ###############################################################################
@@ -18,8 +18,8 @@ info(
 
 parameter "param_email" do
   type "list"
-  label "Email addresses"
-  description "A list of email addresses to notify."
+  label "Email addresses to notify"
+  description "Email addresses of the recipients you wish to notify when new incidents are created"
 end
 
 ###############################################################################
@@ -31,27 +31,27 @@ end
 ###############################################################################
 
 ###############################################################################
-# Datasources
+# Datasource
 ###############################################################################
 
 datasource "ds_aws_instance_map" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/POL-556/flexera/data/aws/aws_delete_old_snapshots.json"
+    path "/flexera-public/optima-tools/POL-556/flexera/data/aws/aws_delete_unused_volumes.json"
     header "User-Agent", "RS Policies"
   end
 end
 
-datasource "ds_snapshots_cost_mapping" do
-  run_script $js_snapshots_cost_mapping, $ds_aws_instance_map
+datasource "ds_volume_cost_mapping" do
+  run_script $js_volume_cost_mapping, $ds_aws_instance_map
 end
 
 ###############################################################################
-# Scripts
+# Script
 ###############################################################################
 
-script "js_snapshots_cost_mapping", type: "javascript" do
+script "js_volume_cost_mapping", type:"javascript" do
   result "result"
   parameters "ds_aws_instance_map"
   code <<-EOS
@@ -77,48 +77,44 @@ end
 # Policy
 ###############################################################################
 
-policy "pol_utilization" do
-  validate $ds_snapshots_cost_mapping do
-    summary_template "AWS Account ID: {{with index data.instance_list 0}}{{ data.accountID }}{{end}} - {{ len data.instance_list }} rows containing AWS old snapshot data"
+policy "policy_unattached_volumes_list" do
+  validate $ds_volume_cost_mapping do
+    summary_template "AWS Account ID: {{ data.accountID }} - {{ len data.instance_list }} Unused Volumes Found"
     detail_template <<-EOS
-The following {{ len data.instance_list }} old snapshots, for AWS Account: {{with index data.instance_list 0}}{{ data.accountID }}{{end}}, have exceeded the specified age of: 30 days old.
 {{data.message}}
 EOS
-    escalate $ese_email
+    escalate $report_unused_volumes
     check eq(size(val(data, "instance_list")), 0)
     export "instance_list" do
       resource_level true
       field "accountID" do
-        label "Account ID"
+        label "Account Id"
       end
       field "region" do
         label "Region"
       end
-      field "daysOld" do
-        label "Days Old"
-      end
-      field "volumeSize" do
-        label "Size"
-      end
       field "resourceID" do
-        label "Resource ID"
-        path "snapshotId"
+        label "Resource Id"
+        path "volumeId"
       end
-      field "snapshotImageIdFormat" do
-        label "AMI"
+      field "resourceType" do
+        label "Resource Type"
       end
-      field "savings" do
-        label "Estimated Monthly Savings"
-      end
-      field "savingsCurrency" do
-        label "Savings Currency"
+      field "size" do
+        label "Size"
       end
       field "tags" do
         label "Tags"
       end
+      field "savings" do
+        label "Estimated Monthly Savings"
+      end
+      field "savings_currency" do
+        label "Savings Currency"
+      end
       field "id" do
-        label "ID"
-        path "snapshotId"
+        label "Id"
+        path "volumeId"
       end
       field "service" do
         label "Service"
@@ -131,7 +127,7 @@ end
 # Escalations
 ###############################################################################
 
-escalation "ese_email" do
+escalation "report_unused_volumes" do
   automatic true
   label "Send Email"
   description "Send incident email"

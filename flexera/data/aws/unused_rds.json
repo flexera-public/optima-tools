@@ -1,0 +1,31 @@
+{"values":[{
+  "accountID": "279901730306",
+  "region": "us-east-1",
+  "name": "dummy-database-to-be-idle-1",
+  "arn": "arn:aws:rds:us-east-1:279901730306:db:dummy-database-to-be-idle-1",
+  "resourceID": "db-Y9A7GZ27TRG2I9OC81ZRNGAE9UV",
+  "resourceType": "db.t2.micro",
+  "privateDnsName": "dummy-database-to-be-idle-1.c12zeech0klz.us-east-1.rds.amazonaws.com",
+  "status": "available",
+  "connections": 17423,
+  "tags": [],
+  "savings": 4.91,
+  "service": "RDS",
+  "savings_currency": "£"
+},
+{
+  "accountID": "279901730306",
+  "region": "us-west-2",
+  "name": "dummy-database-to-be-idle-2",
+  "arn": "arn:aws:rds:us-west-2:279901730306:db:dummy-database-to-be-idle-2",
+  "resourceID": "db-KS7GZN7TSL2ILOW81ZRNGAEV3I",
+  "resourceType": "db.t2.medium",
+  "privateDnsName": "dummy-database-to-be-idle-2.c12zeech0klz.us-west-2.rds.amazonaws.com",
+  "status": "available",
+  "connections": 57821,
+  "tags": ["mock=true","valid=false"],
+  "savings": 571.37,
+  "service": "RDS",
+  "savings_currency": "£"
+}]
+}

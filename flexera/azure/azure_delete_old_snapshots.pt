@@ -1,0 +1,135 @@
+name "Azure Old Snapshots"
+rs_pt_ver 20180301
+type "policy"
+short_description "A mock that checks for snapshots older than specified number of days and, optionally, deletes them. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/azure/old_snapshots) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
+severity "low"
+category "Cost"
+default_frequency "daily"
+info(
+  version: "0.1",
+  provider: "Azure",
+  service: "Storage",
+  policy_set: "Old Snapshots"
+)
+
+##################
+# User inputs    #
+##################
+
+parameter "param_email" do
+  type "list"
+  label "Email Address"
+  description "Email addresses of the recipients you wish to notify"
+end
+
+###############################################################################
+# Authentication
+###############################################################################
+
+###############################################################################
+# Pagination
+###############################################################################
+
+###############################################################################
+# Datasources
+###############################################################################
+
+datasource "ds_azure_instance_map" do
+  request do
+    verb "GET"
+    host "raw.githubusercontent.com"
+    path "/flexera-public/optima-tools/POL-556/flexera/data/azure/azure_delete_old_snapshots.json"
+    header "User-Agent", "RS Policies"
+  end
+end
+
+datasource "ds_snapshot_cost_mapping" do
+  run_script $js_instance_cost_mapping, $ds_azure_instance_map
+end
+
+###############################################################################
+# Scripts
+###############################################################################
+
+###############################################################################
+# Policy
+###############################################################################
+
+policy "pol_azure_delete_old_snapshots" do
+  validate $ds_snapshot_cost_mapping do
+    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.instance_list }} Old Snapshots Found"
+    detail_template <<-EOS
+{{data.message}}.
+EOS
+    export "instances" do
+      resource_level true
+      field "id" do
+        label "ID"
+        path "resourceID"
+      end
+      field "subscriptionID" do
+        label "Subscription ID"
+      end
+      field "subscriptionName" do
+        label "Subscription Name"
+      end
+      field "resourceID" do
+        label "Resource Id"
+      end
+      field "resourceName" do
+        label "Resource Name"
+      end
+      field "resourceGroup" do
+        label "Resource Group"
+      end
+      field "resourceType" do
+        label "Resource Type"
+      end
+      field "region" do
+        label "Region"
+      end
+      field "age" do
+        label "Age In Days"
+      end
+      field "tags" do
+        label "Tags"
+      end
+      field "service" do
+        label "Service"
+      end
+      field "savings" do
+        label "Estimated Monthly Savings"
+      end
+      field "savingsCurrency" do
+        label "Savings Currency"
+      end
+      field "accountID" do
+        label "Account ID"
+        path "subscriptionID"
+      end
+      field "accountName" do
+        label "Account Name"
+        path "subscriptionName"
+      end
+    end
+    hash_include "instances"
+    # Send email report
+    escalate $send_email_report
+    check eq(size(val(data, "instances")), 0)
+  end
+end
+
+###############################################################################
+# Escalations
+###############################################################################
+
+escalation "send_email_report" do
+  automatic true
+  label "Send Email"
+  description "Send incident email"
+  email $param_email
+end
+
+###############################################################################
+# Cloud Workflow
+###############################################################################

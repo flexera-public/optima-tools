@@ -1,25 +1,26 @@
-name "AWS Old Snapshots"
+name "Azure Unused Volumes"
 rs_pt_ver 20180301
 type "policy"
-short_description "A Mock Policy that would check for snapshots older than a specified number of days and, optionally, deletes them. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/aws/old_snapshots) and [docs.rightscale.com/policies](https://docs.rightscale.com/policies/) to learn more."
-category "Cost"
+short_description "A mock policy that checks for unused volumes older than specified number of days and, optionally, deletes them. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/azure/unattached_volumes) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
+long_description ""
 severity "low"
+category "Cost"
 default_frequency "daily"
 info(
   version: "0.1",
-  provider: "AWS",
-  service: "EBS",
-  policy_set: "Old Snapshots"
+  provider: "Azure",
+  service: "Storage",
+  policy_set: "Unused Volumes"
 )
 
-###############################################################################
-# User inputs
-###############################################################################
+##################
+# User inputs    #
+##################
 
 parameter "param_email" do
   type "list"
   label "Email addresses"
-  description "A list of email addresses to notify."
+  description "A list of email addresses to notify"
 end
 
 ###############################################################################
@@ -34,31 +35,31 @@ end
 # Datasources
 ###############################################################################
 
-datasource "ds_aws_instance_map" do
+datasource "ds_azure_instance_map" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/POL-556/flexera/data/aws/aws_delete_old_snapshots.json"
+    path "/flexera-public/optima-tools/POL-556/flexera/data/azure/azure_delete_unattached_volumes.json"
     header "User-Agent", "RS Policies"
   end
 end
 
-datasource "ds_snapshots_cost_mapping" do
-  run_script $js_snapshots_cost_mapping, $ds_aws_instance_map
+datasource "ds_volume_cost_mapping" do
+  run_script $js_instance_cost_mapping, $ds_azure_instance_map
 end
 
 ###############################################################################
 # Scripts
 ###############################################################################
 
-script "js_snapshots_cost_mapping", type: "javascript" do
+script "js_instance_cost_mapping", type:"javascript" do
   result "result"
-  parameters "ds_aws_instance_map"
+  parameters "ds_azure_instance_map"
   code <<-EOS
   var instance_list = []
   var monthlySavings = 0
   var result = {}
-  _.each(ds_aws_instance_map.values, function(instance){
+  _.each(ds_azure_instance_map.values, function(instance){
     monthlySavings = monthlySavings + instance.savings
     instance_list.push(instance)
   })
@@ -66,10 +67,10 @@ script "js_snapshots_cost_mapping", type: "javascript" do
   result={
     "instance_list": instance_list,
     "message": message,
-    "accountID": ds_aws_instance_map.values[0].accountID
+    "accountID": ds_azure_instance_map.values[0].accountID
   }
   result.instance_list = _.sortBy(result.instance_list,"region");
-  result.instance_list = _.sortBy(result.instance_list,"id");
+  result.instance_list = _.sortBy(result.instance_list,"subscriptionID");
   EOS
 end
 
@@ -77,35 +78,45 @@ end
 # Policy
 ###############################################################################
 
-policy "pol_utilization" do
-  validate $ds_snapshots_cost_mapping do
-    summary_template "AWS Account ID: {{with index data.instance_list 0}}{{ data.accountID }}{{end}} - {{ len data.instance_list }} rows containing AWS old snapshot data"
+policy "pol_azure_unattached_volumes" do
+  validate $ds_volume_cost_mapping do
+    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.instance_list }} Unused Volumes Found"
     detail_template <<-EOS
-The following {{ len data.instance_list }} old snapshots, for AWS Account: {{with index data.instance_list 0}}{{ data.accountID }}{{end}}, have exceeded the specified age of: 30 days old.
+The following {{ len data.instance_list }} unused volumes, for Account: {{ rs_project_name }} (ID: {{ rs_project_id }}), have exceeded the specified age of: 30 days old.\n
 {{data.message}}
 EOS
-    escalate $ese_email
+    # Send email report
+    escalate $send_email_report
     check eq(size(val(data, "instance_list")), 0)
     export "instance_list" do
       resource_level true
-      field "accountID" do
-        label "Account ID"
+      field "subscriptionID" do
+        label "Subscription ID"
+      end
+      field "subscriptionName" do
+        label "Subscription Name"
+      end
+      field "resourceID" do
+        label "Resource ID"
+        path "disk_id"
+      end
+      field "resourceName" do
+        label "Resource Name"
+      end
+      field "resourceType" do
+        label "Resource Type"
       end
       field "region" do
         label "Region"
       end
-      field "daysOld" do
-        label "Days Old"
+      field "resourceGroup" do
+        label "Resource Group"
       end
-      field "volumeSize" do
-        label "Size"
+      field "diskSize" do
+        label "Disk Size in GB"
       end
-      field "resourceID" do
-        label "Resource ID"
-        path "snapshotId"
-      end
-      field "snapshotImageIdFormat" do
-        label "AMI"
+      field "tags" do
+        label "Tags"
       end
       field "savings" do
         label "Estimated Monthly Savings"
@@ -113,15 +124,20 @@ EOS
       field "savingsCurrency" do
         label "Savings Currency"
       end
-      field "tags" do
-        label "Tags"
-      end
       field "id" do
-        label "ID"
-        path "snapshotId"
+        label "Disk Id"
+        path "disk_id"
       end
       field "service" do
         label "Service"
+      end
+      field "accountName" do
+        label "Account Name"
+        path "subscriptionName"
+      end
+      field "accountID" do
+        label "Account Id"
+        path "subscriptionID"
       end
     end
   end
@@ -131,7 +147,7 @@ end
 # Escalations
 ###############################################################################
 
-escalation "ese_email" do
+escalation "send_email_report" do
   automatic true
   label "Send Email"
   description "Send incident email"

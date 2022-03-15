@@ -1,0 +1,23 @@
+{"value":[{
+  "accountID": "279901730306",
+  "region": "us-east-1",
+  "resourceType": "gp2",
+  "size":"20 GB",
+  "resourceID": "vol-02a1d7n1451kdb00e",
+  "tags": [],
+  "savings": 2.15,
+  "savingsCurrency": "£",
+  "service":"EBS"
+},
+{
+  "accountID": "279901730306",
+  "region": "us-west-2",
+  "resourceType": "gp2",
+  "size":"20 GB",
+  "resourceID": "vol-07c1dfb1450kdb01l",
+  "tags": ["mock=true","valid=false"],
+  "savings": 2.15,
+  "savingsCurrency": "£",
+  "service":"EBS"
+}]
+}
