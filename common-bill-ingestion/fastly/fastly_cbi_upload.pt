@@ -7,7 +7,7 @@ severity "low"
 default_frequency "monthly"
 category "Cost"
 info(
-  version: "1.0",
+  version: "1.1",
   provider: "Fastly",
   service: "All",
   policy_set: "N/A"
@@ -20,15 +20,8 @@ info(
 parameter "param_bill_connect_id" do
   type "string"
   label "Bill Connect ID"
-  description "Bill Connect ID created in CBI API ex: cbi-oi-optima-fastly_*"
-  allowed_pattern /cbi-oi-optima-fastly_[a-zA-Z0-9]*/
-end
-
-parameter "param_period" do
-  type "string"
-  label "Billing Period"
-  description "Billing Period from Fastly Billing YYYY-MM"
-  allowed_pattern /20[2-9][0-9]-[0-1][0-9]/
+  description "Bill Connect ID created in CBI API ex: cbi-oi-optima_fastly_*"
+  allowed_pattern /cbi-oi-optima-nia_fastly_[a-zA-Z0-9]*/
 end
 
 parameter "param_email" do
@@ -42,10 +35,10 @@ end
 
 #authenticate with Fastly
 credentials "fastly_api_key" do
-    schemes "api_key"
-    label "Fastly"
-    description "Select the Fastly API key credentials."
-    tags "provider=fastly"
+  schemes "api_key"
+  label "Fastly"
+  description "Select the Fastly API key credentials."
+  tags "provider=fastly"
 end
 
 #authenticate with RightScale/Optima
@@ -60,21 +53,43 @@ end
 # Datasources and Scripts
 ###############################################################################
 
+#GET BILLING PERIOD
+datasource "ds_billing_period" do
+  run_script $js_get_billing_period
+end
+
+script "js_get_billing_period", type: "javascript" do
+  result "result"
+  code <<-EOS
+  var bill_month = new Date()
+  var day = parseInt(bill_month.toLocaleDateString("en-GB").split("-")[2])
+  if (day <= 3){
+    bill_month.setMonth(bill_month.getMonth() - 2)
+    var billing_period = bill_month.toLocaleDateString("en-GB").split("-")[0] + "-" + bill_month.toLocaleDateString("en-GB").split("-")[1]
+    var result = { "billing_period": billing_period }
+  } else {
+    bill_month.setMonth(bill_month.getMonth() - 1)
+    var billing_period = bill_month.toLocaleDateString("en-GB").split("-")[0] + "-" + bill_month.toLocaleDateString("en-GB").split("-")[1]
+    var result = { "billing_period": billing_period }
+  }
+  EOS
+end
+
 #GET FASTLY INVOICE DATA
 datasource "ds_invoice_data" do
-   request do
+  request do
     auth $fastly_api_key
     host "api.fastly.com"
-    path join(["/billing/v2/year/", first(split($param_period,"-")), "/month/", last(split($param_period,"-"))])
-   end
-   result do
+    path join(["/billing/v2/year/", first(split(val($ds_billing_period, "billing_period"),"-")), "/month/", last(split(val($ds_billing_period, "billing_period"),"-"))])
+  end
+  result do
     encoding "json"
     collect jmes_path(response, "regions") do
     field "regions", jmes_path(response,"regions")
     field "start_time", jmes_path(response, "start_time")
     field "invoice_id", jmes_path(response, "invoice_id")
     end
-   end
+  end
 end
 
 #GET FASTLY USAGE DATA
@@ -84,8 +99,8 @@ datasource "ds_usage_data" do
     host "api.fastly.com"
     path "/stats/usage_by_month"
     query "billable_units", "true"
-    query "month", last(split($param_period,"-"))
-    query "year", first(split($param_period,"-"))
+    query "month", last(split(val($ds_billing_period, "billing_period"),"-"))
+    query "year", first(split(val($ds_billing_period, "billing_period"),"-"))
   end
 end
 
@@ -99,7 +114,7 @@ datasource "ds_bill_upload" do
     header "User-Agent", "RS-Policies"
     header "allow_redirects", "False"
     body_field "billConnectId", $param_bill_connect_id
-    body_field "billingPeriod", $param_period
+    body_field "billingPeriod", val($ds_billing_period, "billing_period")
   end
 end
 
@@ -107,7 +122,7 @@ end
 #CREATE BILL UPLOAD FILE
 datasource "ds_bill_upload_file" do
   request do
-    run_script $js_process_fastly_billing_data_cbi_upload_file, $ds_invoice_data, $ds_usage_data, $ds_bill_upload, $param_period, rs_org_id, rs_optima_host
+    run_script $js_process_fastly_billing_data_cbi_upload_file, $ds_invoice_data, $ds_usage_data, $ds_bill_upload, val($ds_billing_period, "billing_period"), rs_org_id, rs_optima_host
   end
 end
 
@@ -116,7 +131,7 @@ script "js_process_fastly_billing_data_cbi_upload_file", type: "javascript" do
   result "request"
   code <<-'EOS'
   //CONVERT DATA TO CSV
-  var invoice_csv_output = "CloudVendorAccountID,CloudVendorAccountName,Category,ManufacturerName,Region,Service,Tags,UsageAmount,UsageUnit,Cost,Currency,UsageStartTime,InvoiceYear_month,invoice_id\n";
+  var invoice_csv_output = "CloudVendorAccountID,CloudVendorAccountName,Category,ManufacturerName,Region,Service,Tags,UsageAmount,UsageUnit,Cost,Currency,UsageStartTime,InvoiceYearMonth,InvoiceID\n";
   var vendor_account_name = "Fastly"
   var category_bandwidth = "Network-Bandwidth", category_requests = "Network-Requests"
   var manufacturer = "Fastly"
@@ -160,16 +175,17 @@ script "js_process_fastly_billing_data_cbi_upload_file", type: "javascript" do
         var tags_object = "{\"\"fastly-service\"\": " + fastly_service_name + "}"
         var tags = '"' + tags_object + '"';
 
+        //Get Region Data
+        var region = fastly_service[usg_region_name]
+
         var bandwidth_unit_cost = 0, requests_unit_cost = 0;
         if ((((usg_region_name.indexOf(inv_region_name) !== -1) == true) || (inv_region_name == "australia" && usg_region_name == "anzac")) 
-        && ((value.bandwidth > 0) || (value.requests > 0))) {
-          _.each(usg_region_name, function(region){
-            bandwidth_unit_cost = region.bandwidth * bandwidth_ratio
-            requests_unit_cost = region.requests * requests_ratio
-          })
+        && ((region.bandwidth > 0) || (region.requests > 0))) {
+          bandwidth_unit_cost = region.bandwidth * bandwidth_ratio
+          requests_unit_cost = region.requests * requests_ratio
           
-          invoice_csv_output +=  vendor_account_id + ',' + vendor_account_name + ',' + category_bandwidth + ',' + manufacturer + ',' + inv_region_name + ',' + service + ',' + tags + ',' + bandwidth + ',' + bandwidth_usage_unit + ',' + bandwidth_unit_cost + ',' + currency + ',' + date + ',' + year_month + ',' + invoice_id + '\n';
-          invoice_csv_output +=  vendor_account_id + ',' + vendor_account_name + ',' + category_requests + ',' + manufacturer + ',' + inv_region_name + ',' + service + ',' + tags + ',' + requests + ',' + requests_usage_unit + ',' + requests_unit_cost + ',' + currency + ',' + date + ',' + year_month + ',' + invoice_id + '\n';
+          invoice_csv_output +=  vendor_account_id + ',' + vendor_account_name + ',' + category_bandwidth + ',' + manufacturer + ',' + inv_region_name + ',' + service + ',' + tags + ',' + region.bandwidth + ',' + bandwidth_usage_unit + ',' + bandwidth_unit_cost + ',' + currency + ',' + date + ',' + year_month + ',' + invoice_id + '\n';
+          invoice_csv_output +=  vendor_account_id + ',' + vendor_account_name + ',' + category_requests + ',' + manufacturer + ',' + inv_region_name + ',' + service + ',' + tags + ',' + region.requests + ',' + requests_usage_unit + ',' + requests_unit_cost + ',' + currency + ',' + date + ',' + year_month + ',' + invoice_id + '\n';
         }
       }
     }
@@ -219,9 +235,9 @@ end
 # Policy
 ###############################################################################
 
-policy "fastly_invoiceusage_policy" do
+policy "policy_fastly_invoiceusage" do
   validate $ds_bill_commit do
-    summary_template "Fastly CBI Bill Ingest {{parameters.param_period}}"
+    summary_template "Fastly CBI Bill Ingest"
     detail_template "Bill Uploaded"
     check eq(0,1)
   end
