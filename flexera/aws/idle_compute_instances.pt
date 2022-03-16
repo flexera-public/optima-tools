@@ -76,7 +76,7 @@ end
 
 policy "pol_utilization" do
   validate $ds_instance_cost_mapping do
-    summary_template "AWS Account ID: {{with index data.instance_list 0}}{{ .accountID }}{{end}} - {{ len data.instance_list}} rows containing AWS instance CloudWatch utilization data"
+    summary_template "AWS Account ID: {{with index data.instance_list 0}}{{ data.accountID }}{{end}} - {{ len data.instance_list}} rows containing AWS instance CloudWatch utilization data"
     detail_template <<-EOS
 {{data.message}}
 EOS

@@ -90,7 +90,7 @@ end
 
 policy "pol_unused_ip_addresses" do
   validate $ds_ip_cost_mapping do
-    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.ip_list }} Unused IP Addresses Found"
+    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.instance_list }} Unused IP Addresses Found"
     detail_template <<-EOS
 {{data.message}}
 EOS

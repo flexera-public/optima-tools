@@ -95,8 +95,8 @@ EOS
     escalate $esc_email
     export "instance_list" do
       resource_level true
-      field "accountId" do
-        label "Account Id"
+      field "accountID" do
+        label "Account ID"
       end
       field "resourceID" do
         label "Resource ID"
@@ -117,7 +117,7 @@ EOS
       field "savings" do
         label "Estimated Monthly Savings"
       end
-      field "savings_currency" do
+      field "savingsCurrency" do
         label "Savings Currency"
       end
       field "id" do
