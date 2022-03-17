@@ -79,9 +79,9 @@ end
 
 policy "pol_utilization" do
   validate $ds_snapshots_cost_mapping do
-    summary_template "AWS Account ID: {{with index data.instance_list 0}}{{ data.accountID }}{{end}} - {{ len data.instance_list }} rows containing AWS old snapshot data"
+    summary_template "AWS Account ID: {{with index data.instance_list 0}}{{ .accountID }}{{end}} - {{ len data.instance_list }} rows containing AWS old snapshot data"
     detail_template <<-EOS
-The following {{ len data.instance_list }} old snapshots, for AWS Account: {{with index data.instance_list 0}}{{ data.accountID }}{{end}}, have exceeded the specified age of: 30 days old.
+The following {{ len data.instance_list }} old snapshots, for AWS Account: {{with index data.instance_list 0}}{{ .accountID }}{{end}}, have exceeded the specified age of: 30 days old.
 {{data.message}}
 EOS
     escalate $ese_email

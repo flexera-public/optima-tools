@@ -59,7 +59,8 @@ policy "pol_azure_delete_old_snapshots" do
   validate $ds_snapshot_cost_mapping do
     summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.instance_list }} Old Snapshots Found"
     detail_template <<-EOS
-{{data.message}}.
+
+{{data.message}}
 EOS
     export "instance_list" do
       resource_level true
@@ -112,10 +113,10 @@ EOS
         path "subscriptionName"
       end
     end
-    hash_include "instances"
+    hash_include "instance_list"
     # Send email report
     escalate $send_email_report
-    check eq(size(val(data, "instances")), 0)
+    check eq(size(val(data, "instance_list")), 0)
   end
 end
 

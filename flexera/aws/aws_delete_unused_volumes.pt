@@ -81,6 +81,7 @@ policy "policy_unattached_volumes_list" do
   validate $ds_volume_cost_mapping do
     summary_template "AWS Account ID: {{ data.accountID }} - {{ len data.instance_list }} Unused Volumes Found"
     detail_template <<-EOS
+
 {{data.message}}
 EOS
     escalate $report_unused_volumes
