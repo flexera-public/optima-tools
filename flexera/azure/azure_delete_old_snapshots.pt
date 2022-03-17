@@ -51,6 +51,28 @@ end
 # Scripts
 ###############################################################################
 
+script "js_instance_cost_mapping", type:"javascript" do
+  result "result"
+  parameters "ds_azure_instance_map"
+  code <<-EOS
+  var instance_list = []
+  var monthlySavings = 0
+  var result = {}
+  _.each(ds_azure_instance_map.values, function(instance){
+    monthlySavings = monthlySavings + instance.savings
+    instance_list.push(instance)
+  })
+  var message="The total estimated monthly savings are £"+ monthlySavings;
+  result={
+    "instance_list": instance_list,
+    "message": message,
+    "accountID": ds_azure_instance_map.values[0].accountID
+  }
+  result.instance_list = _.sortBy(result.instance_list,"region");
+  result.instance_list = _.sortBy(result.instance_list,"subscriptionID");
+  EOS
+end
+
 ###############################################################################
 # Policy
 ###############################################################################
