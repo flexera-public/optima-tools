@@ -11,7 +11,7 @@
   "tags": [],
   "savings": 4.91,
   "service": "RDS",
-  "savings_currency": "£"
+  "savingsCurrency": "£"
 },
 {
   "accountID": "279901730306",
@@ -26,6 +26,6 @@
   "tags": ["mock=true","valid=false"],
   "savings": 571.37,
   "service": "RDS",
-  "savings_currency": "£"
+  "savingsCurrency": "£"
 }]
 }
