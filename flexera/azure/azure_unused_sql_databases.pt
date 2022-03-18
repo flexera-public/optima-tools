@@ -56,21 +56,13 @@ script "js_instance_cost_mapping", type:"javascript" do
   result "result"
   parameters "ds_azure_instance_map"
   code <<-EOS
-  var instance_list = []
-  var monthlySavings = 0
-  var result = {}
+  var result = []
   _.each(ds_azure_instance_map.values, function(instance){
-    monthlySavings = monthlySavings + instance.savings
-    instance_list.push(instance)
+    result.push(instance)
   })
-  var message="The total estimated monthly savings are £"+ monthlySavings;
-  result={
-    "instance_list": instance_list,
-    "message": message,
-    "accountID": ds_azure_instance_map.values[0].accountID
-  }
-  result.instance_list = _.sortBy(result.instance_list,"region");
-  result.instance_list = _.sortBy(result.instance_list,"subscriptionID");
+
+  result = _.sortBy(result,"region");
+  result = _.sortBy(result,"subscriptionID");
   EOS
 end
 
@@ -79,14 +71,14 @@ end
 ###############################################################################
 
 policy "policy_azure_db_utilization" do
-  validate $ds_instance_cost_mapping do
-    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.instance_list }} Unused Azure Databases Found"
+  validate_each $ds_instance_cost_mapping do
+    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data }} Unused Azure Databases Found"
     detail_template <<-EOS
-{{data.message}}.
+{{with index data 0}}{{.message}}{{end}}
 EOS
     escalate $esc_email_report
-    check eq(size(val(data, "instance_list")), 0)
-    export "instance_list" do
+    check eq(size(item), 0)
+    export do
       resource_level true
       field "subscriptionID" do
         label "Subscription ID"

@@ -55,21 +55,21 @@ script "js_instance_cost_mapping", type:"javascript" do
   result "result"
   parameters "ds_azure_instance_map"
   code <<-EOS
-  var instance_list = []
-  var monthlySavings = 0
-  var result = {}
+  var result = []
+  monthlySavings = 0
+
   _.each(ds_azure_instance_map.values, function(instance){
     monthlySavings = monthlySavings + instance.savings
-    instance_list.push(instance)
   })
-  var message="The total estimated monthly savings are £"+ monthlySavings;
-  result={
-    "instance_list": instance_list,
-    "message": message,
-    "accountID": ds_azure_instance_map.values[0].accountID
-  }
-  result.instance_list = _.sortBy(result.instance_list,"region");
-  result.instance_list = _.sortBy(result.instance_list,"subscriptionID");
+
+  _.each(ds_azure_instance_map.values, function(instance){
+    var message="The total estimated monthly savings are £"+ monthlySavings;
+    instance.message = message
+    result.push(instance)
+  })
+
+  result = _.sortBy(result,"region");
+  result = _.sortBy(result,"subscriptionID");
   EOS
 end
 
@@ -89,12 +89,12 @@ end
 ###############################################################################
 
 policy "pol_unused_ip_addresses" do
-  validate $ds_ip_cost_mapping do
-    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.instance_list }} Unused IP Addresses Found"
+  validate_each $ds_ip_cost_mapping do
+    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data }} Unused IP Addresses Found"
     detail_template <<-EOS
-{{data.message}}
+{{with index data 0}}{{.message}}{{end}}{{with index data 0}}{{.message}}{{end}}
 EOS
-    check eq(size(val(data, "instance_list")), 0)
+    check eq(1, 0)
     escalate $send_email_report
     export "instance_list" do
       resource_level true

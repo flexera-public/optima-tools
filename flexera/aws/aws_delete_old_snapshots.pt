@@ -44,32 +44,32 @@ datasource "ds_aws_instance_map" do
 end
 
 datasource "ds_snapshots_cost_mapping" do
-  run_script $js_snapshots_cost_mapping, $ds_aws_instance_map
+  run_script $js_instance_cost_mapping, $ds_aws_instance_map
 end
 
 ###############################################################################
 # Scripts
 ###############################################################################
 
-script "js_snapshots_cost_mapping", type: "javascript" do
+script "js_instance_cost_mapping", type:"javascript" do
   result "result"
   parameters "ds_aws_instance_map"
   code <<-EOS
-  var instance_list = []
-  var monthlySavings = 0
-  var result = {}
+  var result = []
+  monthlySavings = 0
+
   _.each(ds_aws_instance_map.values, function(instance){
     monthlySavings = monthlySavings + instance.savings
-    instance_list.push(instance)
   })
-  var message="The total estimated monthly savings are £"+ monthlySavings;
-  result={
-    "instance_list": instance_list,
-    "message": message,
-    "accountID": ds_aws_instance_map.values[0].accountID
-  }
-  result.instance_list = _.sortBy(result.instance_list,"region");
-  result.instance_list = _.sortBy(result.instance_list,"id");
+
+  _.each(ds_aws_instance_map.values, function(instance){
+    var message="The total estimated monthly savings are £"+ monthlySavings;
+    instance.message = message
+    result.push(instance)
+  })
+
+  result = _.sortBy(result,"region");
+  result = _.sortBy(result,"id");
   EOS
 end
 
@@ -78,15 +78,16 @@ end
 ###############################################################################
 
 policy "pol_utilization" do
-  validate $ds_snapshots_cost_mapping do
-    summary_template "AWS Account ID: {{with index data.instance_list 0}}{{ .accountID }}{{end}} - {{ len data.instance_list }} rows containing AWS old snapshot data"
+  validate_each $ds_snapshots_cost_mapping do
+    summary_template "AWS Account ID: {{with index data 0}}{{ .accountID }}{{end}} - {{ len data }} rows containing AWS old snapshot data"
     detail_template <<-EOS
-The following {{ len data.instance_list }} old snapshots, for AWS Account: {{with index data.instance_list 0}}{{ .accountID }}{{end}}, have exceeded the specified age of: 30 days old.
-{{data.message}}
+The following {{ len data }} old snapshots, for AWS Account: {{with index data 0}}{{ .accountID }}{{end}}, have exceeded the specified age of: 30 days old.
+
+{{with index data 0}}{{.message}}{{end}}
 EOS
     escalate $ese_email
-    check eq(size(val(data, "instance_list")), 0)
-    export "instance_list" do
+    check eq(1, 0)
+    export do
       resource_level true
       field "accountID" do
         label "Account ID"
