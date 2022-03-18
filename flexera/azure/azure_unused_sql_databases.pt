@@ -57,7 +57,15 @@ script "js_instance_cost_mapping", type:"javascript" do
   parameters "ds_azure_instance_map"
   code <<-EOS
   var result = []
+  monthlySavings = 0
+
   _.each(ds_azure_instance_map.values, function(instance){
+    monthlySavings = monthlySavings + instance.savings
+  })
+
+  _.each(ds_azure_instance_map.values, function(instance){
+    var message="The total estimated monthly savings are £"+ monthlySavings;
+    instance.message = message
     result.push(instance)
   })
 

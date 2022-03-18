@@ -92,7 +92,7 @@ policy "pol_unused_ip_addresses" do
   validate_each $ds_ip_cost_mapping do
     summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data }} Unused IP Addresses Found"
     detail_template <<-EOS
-{{with index data 0}}{{.message}}{{end}}{{with index data 0}}{{.message}}{{end}}
+{{with index data 0}}{{.message}}{{end}}
 EOS
     check eq(1, 0)
     escalate $send_email_report
