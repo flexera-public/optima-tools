@@ -76,7 +76,7 @@ end
 
 policy "pol_utilization" do
   validate_each $ds_instance_cost_mapping do
-    summary_template "AWS Account ID: {{with index data 0}}{{ data.accountID }}{{end}} - {{ len data}} rows containing AWS instance CloudWatch utilization data"
+    summary_template "AWS Account ID: {{with index data 0}}{{.accountID}}{{end}} - {{ len data}} rows containing AWS instance CloudWatch utilization data"
     detail_template <<-EOS
 
 {{with index data 0}}{{.message}}{{end}}
@@ -103,7 +103,7 @@ EOS
       field "savings" do
         label "Estimated Monthly Savings"
       end
-      field "savings_currency" do
+      field "savingsCurrency" do
         label "Savings Currency"
       end
       field "privateDnsName" do
