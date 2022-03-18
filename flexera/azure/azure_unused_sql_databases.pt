@@ -77,7 +77,7 @@ policy "policy_azure_db_utilization" do
 {{with index data 0}}{{.message}}{{end}}
 EOS
     escalate $esc_email_report
-    check eq(size(item), 0)
+    check eq(1, 0)
     export do
       resource_level true
       field "subscriptionID" do
