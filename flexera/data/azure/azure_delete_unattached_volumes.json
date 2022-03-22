@@ -1,9 +1,9 @@
 
 {"values":[{
-  "subscriptionID": "4cty8d46-28d8-41da-1135-d3j8151cl3bi",
-  "subscriptionName":"Mock Services",
-  "resourceID": "/subscriptions/4cty8d46-28d8-41da-1135-d3j8151cl3bi/resourceGroups/DEFAULT-CENTRALUS/providers/Microsoft.Compute/disks/Mock_disk1_573g5d2u84329h683l850f0175kh848b",
-  "resourceName":"Mock_disk1_573g5d2u84329h683l850f0175kh848b",
+  "subscriptionID": "2d2b2267-ff0a-46d3-9912-8577acb18a0a",
+  "subscriptionName":"Volumes Services",
+  "resourceID": "/subscriptions/2d2b2267-ff0a-46d3-9912-8577acb18a0a/resourceGroups/DEFAULT-CENTRALUS/providers/Microsoft.Compute/disks/centralus_disk1_573g5d2u84329h683l850f0175kh848b",
+  "resourceName":"centralus_disk1_573g5d2u84329h683l850f0175kh848b",
   "region": "centralus",
   "diskSize":"30",
   "resourceGroup":"DEFAULT-CENTRALUS",
@@ -14,10 +14,10 @@
   "service":"Microsoft.Compute"
 },
 {
-  "subscriptionID": "4cty8d46-28d8-41da-1135-d3j8151cl3bi",
-  "subscriptionName":"Mock Services",
-  "resourceID": "/subscriptions/4cty8d46-28d8-41da-1135-d3j8151cl3bi/resourceGroups/DEFAULT-WESTUS/providers/Microsoft.Compute/disks/Mock_disk1_519f5d2u843299f484850f0175kh848b",
-  "resourceName":"Mock_disk1_519f5d2u843299f484850f0175kh848b",
+  "subscriptionID": "2d2b2267-ff0a-46d3-9912-8577acb18a0a",
+  "subscriptionName":"Volumes Services",
+  "resourceID": "/subscriptions/2d2b2267-ff0a-46d3-9912-8577acb18a0a/resourceGroups/DEFAULT-WESTUS/providers/Microsoft.Compute/disks/westus_disk1_519f5d2u843299f484850f0175kh848b",
+  "resourceName":"westus_disk1_519f5d2u843299f484850f0175kh848b",
   "region": "westus",
   "diskSize":"100",
   "resourceGroup":"DEFAULT-WESTUS",

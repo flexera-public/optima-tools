@@ -1,8 +1,8 @@
 
 {"values":[{
-  "subscriptionID": "4cty8d46-28d8-41da-1135-d3j8151cl3bi",
-  "subscriptionName":"Mock Services",
-  "resourceID": "/subscriptions/4cty8d46-28d8-41da-1135-d3j8151cl3bi/resourceGroups/DEFAULT/providers/Microsoft.Compute/virtualMachines/WindowsServer2019-Datacenterlatest",
+  "subscriptionID": "2d2b2267-ff0a-46d3-9912-8577acb18a0a",
+  "subscriptionName":"Compute Services",
+  "resourceID": "/subscriptions/2d2b2267-ff0a-46d3-9912-8577acb18a0a/resourceGroups/DEFAULT/providers/Microsoft.Compute/virtualMachines/WindowsServer2019-Datacenterlatest",
   "resourceName":"WindowsServer2019-Datacenterlatest",
   "region": "centralus",
   "averageCPU":"37.1444211",
@@ -14,13 +14,13 @@
   "service":"Microsoft.Compute"
 },
 {
-  "subscriptionID": "4cty8d46-28d8-41da-1135-d3j8151cl3bi",
-  "subscriptionName":"Mock Services",
-  "resourceID": "/subscriptions/4cty8d46-28d8-41da-1135-d3j8151cl3bi/resourceGroups/Mock-3ES84R88UTBKJ/providers/Microsoft.Compute/virtualMachines/App-11568560031",
+  "subscriptionID": "2d2b2267-ff0a-46d3-9912-8577acb18a0a",
+  "subscriptionName":"Compute Services",
+  "resourceID": "/subscriptions/2d2b2267-ff0a-46d3-9912-8577acb18a0a/resourceGroups/eastus-3ES84R88UTBKJ/providers/Microsoft.Compute/virtualMachines/App-11568560031",
   "resourceName":"App-11568560031",
   "region": "eastus",
   "averageCPU":"7.0012421",
-  "resourceGroup":"Mock-3ES84R88UTBKJ",
+  "resourceGroup":"eastus-3ES84R88UTBKJ",
   "resourceType":"Microsoft.Network/virtualMachines",
   "tags": [],
   "savings": 561.13,
