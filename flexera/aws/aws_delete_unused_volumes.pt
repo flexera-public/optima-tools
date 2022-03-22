@@ -38,7 +38,7 @@ datasource "ds_aws_instance_map" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/POL-556/flexera/data/aws/aws_delete_unused_volumes.json"
+    path "/flexera-public/optima-tools/master/flexera/data/aws/aws_delete_unused_volumes.json"
     header "User-Agent", "RS Policies"
   end
 end
