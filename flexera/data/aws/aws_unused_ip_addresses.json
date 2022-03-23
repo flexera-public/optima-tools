@@ -1,5 +1,5 @@
 {"values":[{
-  "accountId": "625149001990",
+  "accountID": "625149001990",
   "region": "us-east-1",
   "resourceID": "34.100.17.101",
   "domain": "vpc",
@@ -10,7 +10,7 @@
   "service":"EC2"
 },
 {
-  "accountId": "625149001990",
+  "accountID": "625149001990",
   "region": "us-west-2",
   "resourceID": "127.41.13.101",
   "domain": "vpc",
