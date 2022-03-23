@@ -1,0 +1,151 @@
+name "AWS Unused RDS Instance"
+rs_pt_ver 20180301
+type "policy"
+short_description "A mock policy that: Checks for database services that have no connections and delete them after approval. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/aws/unused_rds) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
+long_description ""
+severity "low"
+category "Cost"
+default_frequency "daily"
+info(
+  version: "0.1",
+  provider: "AWS",
+  service: "RDS",
+  policy_set: "Unused Database Services"
+  )
+
+###############################################################################
+# Parameters
+###############################################################################
+
+parameter "param_email" do
+  type "list"
+  label "Email addresses to notify"
+  description "Email addresses of the recipients you wish to notify when new incidents are created"
+end
+
+###############################################################################
+# Authentication
+###############################################################################
+
+
+###############################################################################
+# Datasources
+###############################################################################
+
+datasource "ds_aws_instance_map" do
+  request do
+    verb "GET"
+    host "raw.githubusercontent.com"
+    path "/flexera-public/optima-tools/master/flexera/data/aws/unused_rds.json"
+    header "User-Agent", "RS Policies"
+  end
+end
+
+# get all the RDS instances merged together with the tags and CloudWatch
+datasource "ds_instance_cost_mapping" do
+  run_script $js_instance_cost_mapping, $ds_aws_instance_map
+end
+
+###############################################################################
+# Scripts
+###############################################################################
+
+script "js_instance_cost_mapping", type:"javascript" do
+  result "result"
+  parameters "ds_aws_instance_map"
+  code <<-EOS
+  var result = []
+  monthlySavings = 0
+
+  _.each(ds_aws_instance_map.values, function(instance){
+    monthlySavings = monthlySavings + instance.savings
+  })
+
+  _.each(ds_aws_instance_map.values, function(instance){
+    var message="The total estimated monthly savings are £"+ monthlySavings;
+    instance.message = message
+    result.push(instance)
+  })
+
+  result = _.sortBy(result,"region");
+  result = _.sortBy(result,"id");
+  EOS
+end
+
+###############################################################################
+# Policy
+###############################################################################
+
+policy "pol_unused_rds" do
+  validate_each $ds_instance_cost_mapping do
+    summary_template "AWS Account ID: {{with index data 0}}{{.accountID}}{{end}} - {{ len data}} rows containing AWS RDS Unused Instances"
+    detail_template <<-EOS
+
+{{with index data 0}}{{.message}}{{end}}
+EOS
+    escalate $email
+    check eq(1,0)
+    export "instance_list" do
+      resource_level true
+      field "accountID" do
+        label "Account ID"
+      end
+      field "region" do
+        label "Region"
+      end
+      field "name" do
+        label "Name"
+      end
+      field "status" do
+        label "Status"
+      end
+      field "savings" do
+        label "Estimated Monthly Savings"
+      end
+      field "savingsCurrency" do
+        label "Savings Currency"
+      end
+      field "resourceID" do
+        label "Resource Id"
+      end
+      field "privateDnsName" do
+        label "Private DNS Name"
+      end
+      field "resourceType" do
+        label "Resource Type"
+      end
+      field "connections" do
+        label "Connections"
+      end
+      field "arn" do
+        label "ARN"
+      end
+      field "tags" do
+        label "Tags"
+      end
+      field "id" do
+        label "id"
+        path "resourceID"
+      end
+      field "service" do
+        label "Service"
+      end
+    end
+  end
+end
+
+
+###############################################################################
+# Escalations
+###############################################################################
+
+escalation "email" do
+  automatic true
+  label "Send Email"
+  description "Send incident email"
+  email $param_email
+end
+
+###############################################################################
+# Cloud Workflow
+###############################################################################

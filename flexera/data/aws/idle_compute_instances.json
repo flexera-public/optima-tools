@@ -1,0 +1,35 @@
+{"values":[{
+  "accountID": "625149001990",
+  "region": "us-east-1",
+  "platform":"linux",
+  "hostname":"ip-127-18-1-18",
+  "privateDnsName":"ip-127-18-1-18.ec2.internal",
+  "cpu_maximum": 49.97,
+  "cpu_average":10.07,
+  "resourceType":"c4.large",
+  "mem_maximum_value":"NA",
+  "mem_average_value":"NA",
+  "resourceID": "i-0me123c36ay9k50ek",
+  "tags": [],
+  "savings": 163.11,
+  "savingsCurrency": "£",
+  "service":"EC2"
+},
+{
+  "accountID": "625149001990",
+  "region": "us-west-2",
+  "platform":"linux",
+  "hostname":"ip-127-17-1-38",
+  "privateDnsName":"ip-127-17-1-38.ec2.internal",
+  "cpu_maximum": 9.17,
+  "cpu_average":5.67,
+  "resourceType":"r5.4xlarge",
+  "mem_maximum_value":"NA",
+  "mem_average_value":"NA",
+  "resourceID": "i-01e02trl3afc8rt51",
+  "tags": ["mock=true","valid=false"],
+  "savings": 10.1,
+  "savingsCurrency": "£",
+  "service":"EC2"
+}]
+}

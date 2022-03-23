@@ -1,0 +1,158 @@
+name "Azure Unused Volumes"
+rs_pt_ver 20180301
+type "policy"
+short_description "A mock policy that checks for unused volumes older than specified number of days and, optionally, deletes them. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/azure/unattached_volumes) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
+long_description ""
+severity "low"
+category "Cost"
+default_frequency "daily"
+info(
+  version: "0.1",
+  provider: "Azure",
+  service: "Storage",
+  policy_set: "Unused Volumes"
+)
+
+##################
+# User inputs    #
+##################
+
+parameter "param_email" do
+  type "list"
+  label "Email addresses"
+  description "A list of email addresses to notify"
+end
+
+###############################################################################
+# Authentication
+###############################################################################
+
+###############################################################################
+# Pagination
+###############################################################################
+
+###############################################################################
+# Datasources
+###############################################################################
+
+datasource "ds_azure_instance_map" do
+  request do
+    verb "GET"
+    host "raw.githubusercontent.com"
+    path "/flexera-public/optima-tools/master/flexera/data/azure/azure_delete_unattached_volumes.json"
+    header "User-Agent", "RS Policies"
+  end
+end
+
+datasource "ds_volume_cost_mapping" do
+  run_script $js_instance_cost_mapping, $ds_azure_instance_map
+end
+
+###############################################################################
+# Scripts
+###############################################################################
+
+script "js_instance_cost_mapping", type:"javascript" do
+  result "result"
+  parameters "ds_azure_instance_map"
+  code <<-EOS
+  var result = []
+  monthlySavings = 0
+
+  _.each(ds_azure_instance_map.values, function(instance){
+    monthlySavings = monthlySavings + instance.savings
+  })
+
+  _.each(ds_azure_instance_map.values, function(instance){
+    var message="The total estimated monthly savings are £"+ monthlySavings;
+    instance.message = message
+    result.push(instance)
+  })
+  result = _.sortBy(result,"region");
+  result = _.sortBy(result,"subscriptionID");
+  EOS
+end
+
+###############################################################################
+# Policy
+###############################################################################
+
+policy "pol_azure_unattached_volumes" do
+  validate_each $ds_volume_cost_mapping do
+    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data }} Unused Volumes Found"
+    detail_template <<-EOS
+The following {{ len data }} unused volumes, for Account: {{ rs_project_name }} (ID: {{ rs_project_id }}), have exceeded the specified age of: 30 days old.\n
+{{with index data 0}}{{.message}}{{end}}
+EOS
+    # Send email report
+    escalate $send_email_report
+    check eq(1, 0)
+    export do
+      resource_level true
+      field "subscriptionID" do
+        label "Subscription ID"
+      end
+      field "subscriptionName" do
+        label "Subscription Name"
+      end
+      field "resourceID" do
+        label "Resource ID"
+        path "disk_id"
+      end
+      field "resourceName" do
+        label "Resource Name"
+      end
+      field "resourceType" do
+        label "Resource Type"
+      end
+      field "region" do
+        label "Region"
+      end
+      field "resourceGroup" do
+        label "Resource Group"
+      end
+      field "diskSize" do
+        label "Disk Size in GB"
+      end
+      field "tags" do
+        label "Tags"
+      end
+      field "savings" do
+        label "Estimated Monthly Savings"
+      end
+      field "savingsCurrency" do
+        label "Savings Currency"
+      end
+      field "id" do
+        label "Disk Id"
+        path "disk_id"
+      end
+      field "service" do
+        label "Service"
+      end
+      field "accountName" do
+        label "Account Name"
+        path "subscriptionName"
+      end
+      field "accountID" do
+        label "Account Id"
+        path "subscriptionID"
+      end
+    end
+  end
+end
+
+###############################################################################
+# Escalations
+###############################################################################
+
+escalation "send_email_report" do
+  automatic true
+  label "Send Email"
+  description "Send incident email"
+  email $param_email
+end
+
+###############################################################################
+# Cloud Workflow
+###############################################################################

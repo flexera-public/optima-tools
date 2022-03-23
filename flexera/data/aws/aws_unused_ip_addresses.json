@@ -1,0 +1,23 @@
+{"values":[{
+  "accountID": "625149001990",
+  "region": "us-east-1",
+  "resourceID": "34.100.17.101",
+  "domain": "vpc",
+  "allocation_id": "eipalloc-01d3695ykr27c0bt0",
+  "tags": [],
+  "savings": 1,
+  "savingsCurrency": "£",
+  "service":"EC2"
+},
+{
+  "accountID": "625149001990",
+  "region": "us-west-2",
+  "resourceID": "127.41.13.101",
+  "domain": "vpc",
+  "allocation_id": "eipalloc-01r369582427c0bca",
+  "tags": ["mock=true","valid=false"],
+  "savings": 12.17,
+  "savingsCurrency": "£",
+  "service":"EC2"
+}]
+}
