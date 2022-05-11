@@ -7,9 +7,9 @@ category "Cost"
 default_frequency "daily"
 info(
   version: "0.1",
-  provider: "Azure",
-  service: "Compute",
-  policy_set: "Unused IP Addresses"
+  provider: "GCE",
+  service: "Test",
+  policy_set: "Other"
 )
 
 ##################
