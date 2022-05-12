@@ -1,0 +1,36 @@
+
+{"values":[{
+  "accountID": "rightscale.com:flexeraservice1",
+  "accountNumber":"142312345",
+  "accountName":"IP Services",
+  "resourceID": "35.28.27.102",
+  "resourceName":"confluenc-central",
+  "region": "us-central1",
+  "resourceType":"compute#address",
+  "tags": [],
+  "savings": 41.02,
+  "savingsCurrency": "£",
+  "priority":"P4",
+  "recommenderSubtype":"DELETE_ADDRESS",
+  "state":"ACTIVE",
+  "status":"RESERVED",
+  "service":"Other"
+},
+{
+  "accountID": "rightscale.com:flexeraservice1",
+  "accountNumber":"142312345",
+  "accountName":"IP Services",
+  "resourceID": "35.28.49.92",
+  "resourceName":"confluenc-east",
+  "region": "us-east1",
+  "resourceType":"compute#address",
+  "tags": ["test=true"],
+  "savings": 82.11,
+  "savingsCurrency": "£",
+  "priority":"P4",
+  "recommenderSubtype":"DELETE_ADDRESS",
+  "state":"ACTIVE",
+  "status":"RESERVED",
+  "service":"Other"
+}]
+}

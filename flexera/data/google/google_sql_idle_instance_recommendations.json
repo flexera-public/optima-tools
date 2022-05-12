@@ -1,0 +1,36 @@
+
+{"values":[{
+  "accountID": "rightscale.com:flexeraservice1",
+  "accountNumber":"142312345",
+  "accountName":"SQL Services",
+  "resourceID":"sqlInstance1",
+  "region": "us-central1-a",
+  "resourceType":"CLOUD_SQL_INSTANCE",
+  "selflink":"https://www.googleapis.com/sql/v1beta4/projects/rightscale.com:flexeraservice1/instances/sqlInstance1",
+  "tags": [],
+  "savings": 64.60,
+  "savingsCurrency": "£",
+  "priority":"P4",
+  "recommenderSubtype":"",
+  "state":"ACTIVE",
+  "status":"READY",
+  "service":"SQL"
+},
+{
+  "accountID": "rightscale.com:flexeraservice1",
+  "accountNumber":"142312345",
+  "accountName":"SQL Services",
+  "resourceID":"sqlInstance2",
+  "region": "us-east1-c",
+  "resourceType":"CLOUD_SQL_INSTANCE",
+  "selflink":"https://www.googleapis.com/sql/v1beta4/projects/rightscale.com:flexeraservice1/instances/sqlInstance2",
+  "tags": ["test=true"],
+  "savings": 1.99,
+  "savingsCurrency": "£",
+  "priority":"P4",
+  "recommenderSubtype":"",
+  "state":"ACTIVE",
+  "status":"READY",
+  "service":"SQL"
+}]
+}

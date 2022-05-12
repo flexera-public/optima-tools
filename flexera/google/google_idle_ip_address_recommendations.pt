@@ -1,15 +1,15 @@
-name "Azure Unused IP Addresses"
+name "Google Idle IP Address Recommender"
 rs_pt_ver 20180301
 type "policy"
-short_description "A mock policy that checks for unused IP addresses in the given account and, optionally deletes them. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/azure/unused_ip_addresses) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more"
+short_description "A mock that checks for idle ips and, optionally, deletes them. See the [README](https://github.com/flexera/policy_templates/tree/IND-5103_Google_Dummy_Data/cost/google/idle_ip_address_recommendations) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
 severity "low"
 category "Cost"
 default_frequency "daily"
 info(
   version: "0.1",
-  provider: "Azure",
-  service: "Compute",
-  policy_set: "Unused IP Addresses"
+  provider: "GCE",
+  service: "Test",
+  policy_set: "Other"
 )
 
 ##################
@@ -18,7 +18,7 @@ info(
 
 parameter "param_email" do
   type "list"
-  label "Email Addresses"
+  label "Email Address"
   description "Email addresses of the recipients you wish to notify"
 end
 
@@ -34,17 +34,17 @@ end
 # Datasources
 ###############################################################################
 
-datasource "ds_azure_instance_map" do
+datasource "ds_google_instance_map" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/master/flexera/data/azure/azure_unused_ip_addresses.json"
+    path "/flexera-public/optima-tools/IND-5103_Google_Dummy_Data/flexera/data/google/google_idle_ip_address_recommendations.json"
     header "User-Agent", "RS Policies"
   end
 end
 
-datasource "ds_ip_cost_mapping" do
-  run_script $js_instance_cost_mapping, $ds_azure_instance_map
+datasource "ds_google_cost_mapping" do
+  run_script $js_instance_cost_mapping, $ds_google_instance_map
 end
 
 ###############################################################################
@@ -53,24 +53,85 @@ end
 
 script "js_instance_cost_mapping", type:"javascript" do
   result "result"
-  parameters "ds_azure_instance_map"
+  parameters "ds_google_instance_map"
   code <<-EOS
   var result = []
   monthlySavings = 0
 
-  _.each(ds_azure_instance_map.values, function(instance){
+  _.each(ds_google_instance_map.values, function(instance){
     monthlySavings = monthlySavings + instance.savings
   })
 
-  _.each(ds_azure_instance_map.values, function(instance){
+  _.each(ds_google_instance_map.values, function(instance){
     var message="The total estimated monthly savings are £"+ monthlySavings;
     instance.message = message
     result.push(instance)
   })
 
   result = _.sortBy(result,"region");
-  result = _.sortBy(result,"subscriptionID");
+  result = _.sortBy(result,"accountID");
   EOS
+end
+
+###############################################################################
+# Policy
+###############################################################################
+
+policy "policy_recommendations" do
+  validate $ds_google_cost_mapping do
+    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data }} rows found for Idle IP Instances"
+    check eq(size(val(data, "instances")), 0)
+    escalate $esc_email
+    export "instances" do
+      resource_level true
+      field "accountID" do
+        label "Account ID"
+      end
+      field "accountNumber" do
+        label "Account Number"
+      end
+      field "accountName" do
+        label "Account Name"
+      end
+      field "resourceID" do
+        label "Resource ID"
+      end
+      field "resourceName" do
+        label "Resource Name"
+      end
+      field "resourceType" do
+        label "Resource Type"
+      end
+      field "region" do
+        label "Region"
+      end
+      field "tags" do
+        label "Tags"
+      end
+      field "service" do
+        label "Service"
+      end
+      field "savingsCurrency" do
+        label "Currency"
+      end
+      field "priority" do
+        label "Priority"
+      end
+      field "recommenderSubtype" do
+        label "Sub Type"
+      end
+      field "state" do
+        label "State"
+      end
+      field "status" do
+        label "Status"
+      end
+      field "id" do
+        label "ID"
+        path "accountID"
+      end
+    end
+  end
 end
 
 ###############################################################################
@@ -82,69 +143,6 @@ escalation "send_email_report" do
   label "Send Email"
   description "Send incident email"
   email $param_email
-end
-
-###############################################################################
-# Policy
-###############################################################################
-
-policy "pol_unused_ip_addresses" do
-  validate_each $ds_ip_cost_mapping do
-    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data }} Unused IP Addresses Found"
-    detail_template <<-EOS
-{{with index data 0}}{{.message}}{{end}}
-EOS
-    check eq(1, 0)
-    escalate $send_email_report
-    export "instance_list" do
-      resource_level true
-      field "subscriptionID" do
-        label "Subscription ID"
-      end
-      field "subscriptionName" do
-        label "Subscription Name"
-      end
-      field "resourceName" do
-        label "Resource Name"
-      end
-      field "resourceID" do
-        label "Resource ID"
-      end
-      field "resourceGroup" do
-        label "Resource Group"
-      end
-      field "resourceType" do
-        label "Resource Type"
-      end
-      field "service" do
-        label "Service"
-      end
-      field "savings" do
-        label "Estimated Monthly Savings"
-      end
-      field "region" do
-        label "Region"
-      end
-      field "tags" do
-        label "Tags"
-      end
-      field "savingsCurrency" do
-        label "Savings Currency"
-      end
-      field "accountID" do
-        label "Account ID"
-        path "subscriptionID"
-      end
-      field "accountName" do
-        label "Account Name"
-        path "subscriptionName"
-      end
-      field "id" do
-        label "ID"
-        path "resourceID"
-      end
-    end
-  end
 end
 
 ###############################################################################
