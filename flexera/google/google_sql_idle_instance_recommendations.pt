@@ -118,6 +118,9 @@ EOS
       field "savingsCurrency" do
         label "Currency"
       end
+      field "savings" do
+        label "Estimated Monthly Savings"
+      end
       field "priority" do
         label "Priority"
       end
