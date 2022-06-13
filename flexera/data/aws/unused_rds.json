@@ -8,7 +8,6 @@
   "privateDnsName": "us-east-db-1.c12zeech0klz.us-east-1.rds.amazonaws.com",
   "status": "available",
   "connections": 17423,
-  "tags": [],
   "savings": 4.91,
   "service": "RDS",
   "savingsCurrency": "£"
@@ -23,7 +22,6 @@
   "privateDnsName": "us-west-db-1.c12zeech0klz.us-west-2.rds.amazonaws.com",
   "status": "available",
   "connections": 57821,
-  "tags": ["mock=true","valid=false"],
   "savings": 571.37,
   "service": "RDS",
   "savingsCurrency": "£"

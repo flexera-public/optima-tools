@@ -94,7 +94,7 @@ datasource "ds_aws_instance_map" do
 end
 
 datasource "ds_filtered_results" do
-  run_script $js_filtered_results, $ds_aws_instance_map, $param_avg_cpu_upsize, $param_avg_cpu_downsize, $param_exclusion_tag_key, $param_allowed_regions
+  run_script $js_filtered_results, $ds_aws_instance_map, $param_avg_cpu_upsize, $param_avg_cpu_downsize, $param_allowed_regions
 end
 
 ###############################################################################
@@ -103,45 +103,39 @@ end
 
 script "js_filtered_results", type: "javascript" do
   result "result"
-  parameters "ds_aws_instance_map", "param_avg_cpu_upsize", "param_avg_cpu_downsize", "param_exclusion_tag_key", "param_allowed_regions"
+  parameters "ds_aws_instance_map", "param_avg_cpu_upsize", "param_avg_cpu_downsize", "param_allowed_regions"
   code <<-EOS
   var result = []
-  var is_tag_matched = false
-  _.each(ds_google_instance_map.values, function(instance){
-    for(var k=0;k<param_exclusion_tag_key.length;k++){
-      if(_.has(instance.userLables, param_exclusion_tag_key[k])){
-        is_tag_matched=true
+
+  _.each(ds_aws_instance_map.values, function(instance){
+    if (param_avg_cpu_downsize === -1 && param_avg_cpu_upsize === -1){
+      result.push(instance)
+    } else {
+       function getRandomInboundNumber(upper, lower, decimal) {
+        var num = Math.floor(Math.random() * (upper - lower) + lower)
+        if (decimal) {
+          var numFigs = Math.floor(Math.random() * (100))/100
+          return num + numFigs;
+        }
+        return num
       }
-    }
-    if (!is_tag_matched) {
-      if (param_avg_cpu_downscale === -1 && param_avg_cpu_upscale === -1){
-        result.push(instance)
-      } else {
-         function getRandomInboundNumber(upper, lower, decimal) {
-          var num = Math.floor(Math.random() * (upper - lower) + lower)
-          if (decimal) {
-            var numFigs = Math.floor(Math.random() * (100))/100
-            return num + numFigs;
-          }
-          return num
-        }
-        if (param_avg_cpu_upscale === -1) {
-          param_avg_cpu_upscale = 100
-        }
-        if (param_avg_cpu_downscale === -1) {
-          param_avg_cpu_downscale = 0
-        }
-        instance.cpu_average = getRandomInboundNumber(param_avg_cpu_upscale, param_avg_cpu_downscale, true)
-        if (param_allowed_regions.length >0) {
-          var setRegion = getRandomInboundNumber(param_allowed_regions.length, 0, false)
-          instance.region = setRegion
-          instance.availabilityZone = setRegion + "a"
-        }
-        result.push(instance)
+      if (param_avg_cpu_upsize === -1) {
+        param_avg_cpu_upsize = 100
       }
+      if (param_avg_cpu_downsize === -1) {
+        param_avg_cpu_downsize = 0
+      }
+       instance.cpu_average = getRandomInboundNumber(param_avg_cpu_upsize, param_avg_cpu_downsize, true)
+      if (param_allowed_regions.length >0) {
+        var setRegion = getRandomInboundNumber(param_allowed_regions.length, 0, false)
+        instance.region = param_allowed_regions[setRegion]
+        instance.availabilityZone = param_allowed_regions[setRegion] + "a"
+      }
+      result.push(instance)
     }
   })
   result = _.sortBy(result,"region");
+  EOS
 end
 
 ###############################################################################
