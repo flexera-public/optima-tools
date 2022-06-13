@@ -80,21 +80,21 @@ end
 # Authentication
 ###############################################################################
 
-#authenticate with AWS
-credentials "auth_aws" do
-  schemes "aws","aws_sts"
-  label "AWS"
-  description "Select the AWS Credential from the list."
-  tags "provider=aws"
-  aws_account_number $param_aws_account_number
-end
-
 ###############################################################################
 # Datasources
 ###############################################################################
 
+datasource "ds_aws_instance_map" do
+  request do
+    verb "GET"
+    host "raw.githubusercontent.com"
+    path "/flexera-public/optima-tools/IND-5228_Mocks_Update/flexera/data/aws/rds_instance_cloudwatch_utilization.json"
+    header "User-Agent", "RS Policies"
+  end
+end
+
 datasource "ds_filtered_results" do
-  run_script $js_filtered_results
+  run_script $js_filtered_results, ds_aws_instance_map, $param_avg_cpu_upsize, $param_avg_cpu_downsize, $param_exclusion_tag_key, $param_allowed_regions
 end
 
 ###############################################################################
@@ -103,7 +103,7 @@ end
 
 script "js_filtered_results", type: "javascript" do
   result "result"
-  parameters "ds_google_instance_map", "param_avg_cpu_upsize", "param_avg_cpu_downsize", "param_exclusion_tag_key", "param_allowed_regions"
+  parameters "ds_aws_instance_map", "param_avg_cpu_upsize", "param_avg_cpu_downsize", "param_exclusion_tag_key", "param_allowed_regions"
   code <<-EOS
   var result = []
 
