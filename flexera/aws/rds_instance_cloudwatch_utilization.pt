@@ -1,13 +1,13 @@
 name "AWS Rightsize RDS Instances"
 rs_pt_ver 20180301
 type "policy"
-short_description "Check for Inefficient database services that are inside or outside the CPU threshold for the last 30 days and resizes them after approval. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/aws/rds_instance_cloudwatch_utilization/) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
+short_description "A Mock that would check for Inefficient database services that are inside or outside the CPU threshold for the last 30 days and resizes them after approval. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/aws/rds_instance_cloudwatch_utilization/) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
 long_description ""
 severity "low"
 category "Cost"
 default_frequency "daily"
 info(
-  version: "2.12",
+  version: "0.1",
   provider: "AWS",
   service: "RDS",
   policy_set: "RightSize Database Services"
@@ -106,7 +106,7 @@ script "js_filtered_results", type: "javascript" do
   parameters "ds_aws_instance_map", "param_avg_cpu_upsize", "param_avg_cpu_downsize", "param_exclusion_tag_key", "param_allowed_regions"
   code <<-EOS
   var result = []
-
+  var is_tag_matched = false
   _.each(ds_google_instance_map.values, function(instance){
     for(var k=0;k<param_exclusion_tag_key.length;k++){
       if(_.has(instance.userLables, param_exclusion_tag_key[k])){

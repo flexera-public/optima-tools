@@ -90,6 +90,7 @@ script "js_checked_utilization", type: "javascript" do
   parameters "ds_google_instance_map", "param_avg_cpu_upscale", "param_avg_cpu_downscale", "param_exclusion_tag_key"
   code <<-EOS
   var result = []
+  var is_tag_matched = false
 
   _.each(ds_google_instance_map.values, function(instance){
     for(var k=0;k<param_exclusion_tag_key.length;k++){
