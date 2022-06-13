@@ -94,7 +94,7 @@ datasource "ds_aws_instance_map" do
 end
 
 datasource "ds_filtered_results" do
-  run_script $js_filtered_results, ds_aws_instance_map, $param_avg_cpu_upsize, $param_avg_cpu_downsize, $param_exclusion_tag_key, $param_allowed_regions
+  run_script $js_filtered_results, $ds_aws_instance_map, $param_avg_cpu_upsize, $param_avg_cpu_downsize, $param_exclusion_tag_key, $param_allowed_regions
 end
 
 ###############################################################################

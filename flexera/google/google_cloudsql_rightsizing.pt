@@ -78,7 +78,7 @@ datasource "ds_google_instance_map" do
 end
 
 datasource "ds_checked_utilization" do
-  run_script $js_checked_utilization, ds_google_instance_map, $param_avg_cpu_upscale, $param_avg_cpu_downscale, $param_exclusion_tag_key
+  run_script $js_checked_utilization, $ds_google_instance_map, $param_avg_cpu_upscale, $param_avg_cpu_downscale, $param_exclusion_tag_key
 end
 
 ###############################################################################
