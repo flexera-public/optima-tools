@@ -101,9 +101,21 @@ script "js_checked_utilization", type: "javascript" do
       if (param_avg_cpu_downscale === -1 && param_avg_cpu_upscale === -1){
         result.push(instance)
       } else {
-        var avg = Math.floor(Math.random() * (param_avg_cpu_upscale - param_avg_cpu_downscale) + param_avg_cpu_downscale)
-        var avgCents = Math.floor(Math.random() * (100))/100
-        instance.cpu_average = avg + avgCents
+         function getRandomInboundNumber(upper, lower) {
+          var num = Math.floor(Math.random() * (upper - lower) + lower)
+          var numFigs = Math.floor(Math.random() * (100))/100
+          return num + numFigs;
+        }
+        if (param_avg_cpu_upscale === -1) {
+          param_avg_cpu_upscale = 100
+        }
+        if (param_avg_cpu_downscale === -1) {
+          param_avg_cpu_downscale = 0
+        }
+        instance.cpu_average = getRandomInboundNumber(param_avg_cpu_upscale, param_avg_cpu_downscale)
+        instance.cpu_minimum = getRandomInboundNumber(instance.cpu_average, param_avg_cpu_downscale)
+        instance.cpu_maximum = getRandomInboundNumber(param_avg_cpu_upscale, instance.cpu_average)
+        result.push(instance)
       }
     }
   })
