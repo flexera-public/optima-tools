@@ -16,17 +16,17 @@ info(
 # User inputs
 ###############################################################################
 
+parameter "param_email" do
+  type "list"
+  label "Email addresses to notify"
+  description "Email addresses of the recipients you wish to notify when new incidents are created"
+end
+
 parameter "param_allowed_regions" do
   type "list"
   label "Allowed Regions"
   allowed_pattern /^([a-zA-Z-_]+-[a-zA-Z0-9-_]+-[0-9-_]+,*|)+$/
   description "A list of allowed regions. See the README for more details"
-end
-
-parameter "param_email" do
-  type "list"
-  label "Email addresses"
-  description "A list of email addresses to notify."
 end
 
 parameter "snapshot_age" do
