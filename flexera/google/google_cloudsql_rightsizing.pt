@@ -72,7 +72,7 @@ datasource "ds_google_instance_map" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/IND-5228_Mocks_Update/flexera/data/google/google_cloudsql_rightsizing.json"
+    path "/flexera-public/optima-tools/master/flexera/data/google/google_cloudsql_rightsizing.json"
     header "User-Agent", "RS Policies"
   end
 end
