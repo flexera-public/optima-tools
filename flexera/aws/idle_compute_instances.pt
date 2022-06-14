@@ -17,10 +17,65 @@ info(
 # Parameters
 ###############################################################################
 
+parameter "param_allowed_regions" do
+  type "list"
+  label "Allowed Regions"
+  allowed_pattern /^([a-zA-Z-_]+-[a-zA-Z0-9-_]+-[0-9-_]+,*|)+$/
+  description "A list of allowed regions. See the README for more details"
+end
+
 parameter "param_email" do
   type "list"
   label "Email addresses to notify"
   description "Email addresses of the recipients you wish to notify when new incidents are created"
+end
+
+parameter "param_avg_used_memory" do
+  type "number"
+  label "Average used memory percentage"
+  description "Set to -1 to ignore memory utilization"
+  default -1
+  min_value -1
+  max_value 100
+end
+
+parameter "param_aws_account_number" do
+  type "string"
+  label "Account Number"
+  description "The account number for AWS STS Cross Account Roles."
+  default ""
+end
+
+parameter "param_avg_cpu" do
+  type "number"
+  label "Average used CPU percentage"
+  description "Set to -1 to ignore CPU utilization"
+  default -1
+  min_value -1
+  max_value 100
+end
+
+parameter "param_exclusion_tag_key" do
+  category "User Inputs"
+  label "Exclusion Tag Key:Value"
+  description "Cloud native tag to ignore instances. Format: Key:Value"
+  type "string"
+  allowed_pattern /(^$)|([\w]?)+\:([\w]?)+/
+end
+
+parameter "param_automatic_action" do
+  type "list"
+  label "Automatic Actions"
+  description "When this value is set, this policy will automatically take the selected action(s)"
+  allowed_values ["Terminate Instances"]
+end
+
+parameter "param_log_to_cm_audit_entries" do
+  type "string"
+  label "Log to CM Audit Entries"
+  description "Boolean for whether or not to log any debugging information from actions to CM Audit Entries, this should be left set to No on Flexera EU"
+  default "No"
+  allowed_values "Yes", "No"
 end
 
 ###############################################################################
@@ -41,7 +96,7 @@ datasource "ds_aws_instance_map" do
 end
 
 datasource "ds_instance_cost_mapping" do
-  run_script $js_instance_cost_mapping, $ds_aws_instance_map
+  run_script $js_instance_cost_mapping, $ds_aws_instance_map, $param_avg_cpu, $param_avg_used_memory, $param_allowed_regions, $param_exclusion_tag_key
 end
 
 ###############################################################################
@@ -50,7 +105,7 @@ end
 
 script "js_instance_cost_mapping", type:"javascript" do
   result "result"
-  parameters "ds_aws_instance_map"
+  parameters "ds_aws_instance_map", "param_avg_cpu", "param_avg_used_memory", "param_allowed_regions", "param_exclusion_tag_key"
   code <<-EOS
   var result = []
   monthlySavings = 0
@@ -60,9 +115,44 @@ script "js_instance_cost_mapping", type:"javascript" do
   })
 
   _.each(ds_aws_instance_map.values, function(instance){
-    var message="The total estimated monthly savings are £"+ monthlySavings;
-    instance.message = message
-    result.push(instance)
+    var is_tag_matched = false
+    for(var k=0;k<param_exclusion_tag_key.length;k++){
+      if(_.has(instance.tags, param_exclusion_tag_key[k])){
+        is_tag_matched=true
+      }
+    }
+    if (!is_tag_matched) {
+      function getRandomInboundNumber(upper, lower, decimal) {
+        var num = Math.floor(Math.random() * (upper - lower) + lower)
+        if (decimal) {
+          var numFigs = Math.floor(Math.random() * (100))/100
+          return num + numFigs;
+        }
+        return num
+      }
+
+      if (param_allowed_regions.length >0) {
+        var setRegion = getRandomInboundNumber(param_allowed_regions.length, 0, false)
+        instance.region = param_allowed_regions[setRegion]
+      }
+
+      if (param_avg_cpu === -1) {
+        param_avg_cpu = 100
+      }
+      if (param_avg_used_memory === -1) {
+        param_avg_used_memory = 100
+      }
+      instance.cpu_average = getRandomInboundNumber(param_avg_cpu, 0, true)
+      instance.cpu_minimum = getRandomInboundNumber(instance.cpu_average, 0, true)
+      instance.cpu_maximum = getRandomInboundNumber(param_avg_cpu, instance.cpu_average, true)
+      instance.mem_average = getRandomInboundNumber(param_avg_used_memory, 0, true)
+      instance.mem_minimum = getRandomInboundNumber(instance.mem_average, 0, true)
+      instance.mem_maximum = getRandomInboundNumber(param_avg_used_memory, instance.mem_average, true)
+
+      var message="The total estimated monthly savings are £"+ monthlySavings;
+      instance.message = message
+      result.push(instance)
+    }
   })
 
   result = _.sortBy(result,"region");
@@ -112,16 +202,22 @@ EOS
       field "cpu_maximum" do
         label "CPU Maximum %"
       end
+      field "cpu_minimum" do
+        label "CPU Minimum %"
+      end
       field "cpu_average" do
         label "CPU Average %"
       end
       field "resourceType" do
         label "Resource Type"
       end
-      field "mem_maximum_value" do
+      field "mem_maximum" do
         label "Memory Maximum %"
       end
-      field "mem_average_value" do
+      field "mem_minimum" do
+        label "Memory Minimum %"
+      end
+      field "mem_average" do
         label "Memory Average %"
       end
       field "tags" do

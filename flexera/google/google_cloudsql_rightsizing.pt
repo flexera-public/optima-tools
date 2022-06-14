@@ -94,7 +94,7 @@ script "js_checked_utilization", type: "javascript" do
 
   _.each(ds_google_instance_map.values, function(instance){
     for(var k=0;k<param_exclusion_tag_key.length;k++){
-      if(_.has(instance.userLables, param_exclusion_tag_key[k])){
+      if(_.has(instance.userLabels, param_exclusion_tag_key[k])){
         is_tag_matched=true
       }
     }

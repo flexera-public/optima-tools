@@ -17,10 +17,45 @@ info(
 # Parameters
 ##############################################################################
 
+parameter "param_allowed_regions" do
+  type "list"
+  label "Allowed Regions"
+  allowed_pattern /^([a-zA-Z-_]+-[a-zA-Z0-9-_]+-[0-9-_]+,*|)+$/
+  description "A list of allowed regions. See the README for more details"
+end
+
+parameter "param_exclude_tags" do
+  type "list"
+  label "Exclusion Tags"
+  description "A list of AWS tags to ignore Elastic IPs. Format: Key=Value"
+end
+
 parameter "param_email" do
   type "list"
-  label "Email addresses to notify"
+  label "Email addresses"
   description "Email addresses of the recipients you wish to notify when new incidents are created"
+end
+
+parameter "param_aws_account_number" do
+  type "string"
+  label "Account Number"
+  description "The account number for AWS STS Cross Account Roles."
+  default ""
+end
+
+parameter "param_automatic_action" do
+  type "list"
+  label "Automatic Actions"
+  description "When this value is set, this policy will automatically take the selected action(s)"
+  allowed_values ["Delete Unused IPs"]
+end
+
+parameter "param_log_to_cm_audit_entries" do
+  type "string"
+  label "Log to CM Audit Entries"
+  description "Boolean for whether or not to log any debugging information from actions to CM Audit Entries, this should be left set to No on Flexera EU"
+  default "No"
+  allowed_values "Yes", "No"
 end
 
 ###############################################################################
@@ -41,7 +76,7 @@ datasource "ds_aws_instance_map" do
 end
 
 datasource "ds_ip_cost_mapping" do
-  run_script $js_instance_cost_mapping, $ds_aws_instance_map
+  run_script $js_instance_cost_mapping, $ds_aws_instance_map, $param_allowed_regions, $param_exclude_tags
 end
 
 ###############################################################################
@@ -50,7 +85,7 @@ end
 
 script "js_instance_cost_mapping", type:"javascript" do
   result "result"
-  parameters "ds_aws_instance_map"
+  parameters "ds_aws_instance_map", "param_allowed_regions", "param_exclude_tags"
   code <<-EOS
   var result = []
   monthlySavings = 0
@@ -60,13 +95,35 @@ script "js_instance_cost_mapping", type:"javascript" do
   })
 
   _.each(ds_aws_instance_map.values, function(instance){
-    var message="The total estimated monthly savings are £"+ monthlySavings;
-    instance.message = message
-    result.push(instance)
+    var is_tag_matched = false
+    for(var k=0;k<param_exclude_tags.length;k++){
+      if(_.has(instance.tags, param_exclude_tags[k])){
+        is_tag_matched=true
+      }
+    }
+    if (!is_tag_matched) {
+      function getRandomInboundNumber(upper, lower, decimal) {
+        var num = Math.floor(Math.random() * (upper - lower) + lower)
+        if (decimal) {
+          var numFigs = Math.floor(Math.random() * (100))/100
+          return num + numFigs;
+        }
+        return num
+      }
+
+      if (param_allowed_regions.length >0) {
+        var setRegion = getRandomInboundNumber(param_allowed_regions.length, 0, false)
+        instance.region = param_allowed_regions[setRegion]
+      }
+
+      var message="The total estimated monthly savings are £"+ monthlySavings;
+      instance.message = message
+      result.push(instance)
+    }
   })
 
   result = _.sortBy(result,"region");
-  result = _.sortBy(result,"id");
+  result = _.sortBy(result,"accountID");
   EOS
 end
 
