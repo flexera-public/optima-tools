@@ -128,17 +128,6 @@ script "js_instance_cost_mapping", type:"javascript" do
 end
 
 ###############################################################################
-# Escalations
-###############################################################################
-
-escalation "esc_email" do
-  automatic true
-  label "Send Email"
-  description "Send incident email"
-  email $param_email
-end
-
-###############################################################################
 # Policy
 ##############################################################################
 
@@ -152,6 +141,7 @@ policy "policy_unused_ip_addresses" do
 EOS
     check eq(1,0)
     escalate $esc_email
+    escalate $esc_delete_ip_address
     export "instance_list" do
       resource_level true
       field "accountID" do
@@ -191,5 +181,26 @@ EOS
 end
 
 ###############################################################################
+# Escalations
+###############################################################################
+
+escalation "esc_email" do
+  automatic true
+  label "Send Email"
+  description "Send incident email"
+  email $param_email
+end
+
+escalation "esc_delete_ip_address" do
+  automatic contains($param_automatic_action, "Delete Unused IPs")
+  label "Delete IP"
+  description "Delete Selected Unused IP"
+  run "delete_unused_instances"
+end
+
+###############################################################################
 # Cloud Workflow
 ###############################################################################
+
+define delete_unused_instances() do
+end

@@ -156,6 +156,7 @@ policy "pol_utilization" do
     summary_template "AWS Account ID: {{with index data 0}}{{ .accountId }}{{end}} - {{ len data }} AWS RDS instances with inefficient utilization"
     check eq(size(data),0)
     escalate $email
+    escalate $esc_downsize_instances
     export do
       resource_level true
       field "accountId" do
@@ -197,4 +198,19 @@ escalation "email" do
   label "Send Email"
   description "Send incident email"
   email $param_email
+end
+
+escalation "esc_downsize_instances" do
+  automatic contains($param_automatic_action, "Downsize Instances")
+  label "Downsize Instances"
+  description "Approval to downsize all selected instances"
+  run "downsize_instances"
+end
+
+
+###############################################################################
+# Cloud Workflow
+###############################################################################
+
+define downsize_instances() do
 end

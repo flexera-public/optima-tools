@@ -143,6 +143,7 @@ policy "policy_azure_db_utilization" do
 {{with index data 0}}{{.message}}{{end}}
 EOS
     escalate $esc_email_report
+    escalate $esc_delete_unused_sql_databases_approval
     check eq(1, 0)
     export do
       resource_level true
@@ -221,6 +222,16 @@ escalation "esc_email_report" do
   email $param_email
 end
 
+escalation "esc_delete_unused_sql_databases_approval" do
+  automatic contains($param_automatic_action, "Terminate Instances")
+  label "Delete SQL databases"
+  description "Deleted unused SQL Databases"
+  run "delete_unused_sql_databases"
+end
+
 ###############################################################################
 # Cloud Workflow
 ###############################################################################
+
+define delete_unused_sql_databases() do
+end

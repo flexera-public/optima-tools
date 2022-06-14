@@ -132,6 +132,7 @@ policy "pol_unused_rds" do
 {{with index data 0}}{{.message}}{{end}}
 EOS
     escalate $email
+    escalate $decommission_rds
     check eq(1,0)
     export "instance_list" do
       resource_level true
@@ -194,6 +195,16 @@ escalation "email" do
   email $param_email
 end
 
+escalation "decommission_rds" do
+  automatic contains($param_automatic_action, "Delete Instances")
+  label "Delete RDS Instance"
+  description "Delete selected RDS Instances"
+  run "decommission_rds"
+end
+
 ###############################################################################
 # Cloud Workflow
 ###############################################################################
+
+define decommission_rds() do
+end

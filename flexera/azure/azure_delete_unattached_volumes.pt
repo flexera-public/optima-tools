@@ -159,6 +159,7 @@ The following {{ len data }} unused volumes, for Account: {{ rs_project_name }} 
 EOS
     # Send email report
     escalate $send_email_report
+    escalate $process_volumes
     check eq(1, 0)
     export do
       resource_level true
@@ -226,6 +227,16 @@ escalation "send_email_report" do
   email $param_email
 end
 
+escalation "process_volumes" do
+  automatic contains($param_automatic_action, "Delete Unused Volumes")
+  label "Delete unused volumes"
+  description "Delete the unused volumes"
+  run "delete_unattached_volumes"
+end
+
 ###############################################################################
 # Cloud Workflow
 ###############################################################################
+
+define delete_unattached_volumes() do
+end

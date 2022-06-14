@@ -202,6 +202,7 @@ EOS
     end
     # Send email report
     escalate $send_email_report
+    escalate $process_snapshots
     check eq(1, 0)
   end
 end
@@ -217,6 +218,16 @@ escalation "send_email_report" do
   email $param_email
 end
 
+escalation "process_snapshots" do
+  automatic contains($param_automatic_action, "Delete Snapshots")
+  label "Delete Snapshots"
+  description "Delete all selected snapshots"
+  run "delete_old_snapshots"
+end
+
 ###############################################################################
 # Cloud Workflow
 ###############################################################################
+
+define delete_old_snapshots() do
+end
