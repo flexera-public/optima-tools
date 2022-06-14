@@ -109,6 +109,7 @@ script "js_instance_cost_mapping", type:"javascript" do
     }
     return num
   }
+             
   _.each(ds_azure_instance_map.values, function(instance){
     monthlySavings = monthlySavings + instance.savings
   })
