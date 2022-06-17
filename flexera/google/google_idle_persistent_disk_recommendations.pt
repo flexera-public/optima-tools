@@ -18,8 +18,57 @@ info(
 
 parameter "param_email" do
   type "list"
-  label "Email Address"
-  description "Email addresses of the recipients you wish to notify"
+  label "Email addresses to notify"
+  description "Email addresses of the recipients you wish to notify when new incidents are created"
+end
+
+parameter "param_unattached_days" do
+  type "number"
+  label "Unattached days"
+  description "The number of days a volume has been unattached"
+  default 30
+end
+
+parameter "param_zones" do
+  type "list"
+  label "Zones"
+  description "Location to check, this is zone names"
+end
+
+parameter "param_project" do
+  type "list"
+  label "Project ID"
+  description "Google Projects to Query. Leave blank to query all projects."
+end
+
+parameter "param_create_final_snapshot" do
+  label "Create Final Snapshot"
+  description "Boolean for whether or not to take a final snapshot before deleting"
+  type "string"
+  allowed_values "true", "false"
+end
+
+parameter "param_exclude_tags" do
+  category "User Inputs"
+  label "Exclusion Tag Key:Value"
+  description "Cloud native tag (label) to ignore Volumes. Format: Key:Value"
+  type "string"
+  allowed_pattern /(^$)|([\w]?)+\:([\w]?)/
+end
+
+parameter "param_automatic_action" do
+  type "list"
+  label "Automatic Actions"
+  description "When this value is set, this policy will automatically take the selected action(s)"
+  allowed_values ["Delete Volumes"]
+end
+
+parameter "param_log_to_cm_audit_entries" do
+  type "string"
+  label "Log to CM Audit Entries"
+  description "Boolean for whether or not to log any debugging information from actions to CM Audit Entries, this should be left set to No on Flexera EU"
+  default "No"
+  allowed_values "Yes", "No"
 end
 
 ###############################################################################
@@ -44,7 +93,7 @@ datasource "ds_google_instance_map" do
 end
 
 datasource "ds_google_cost_mapping" do
-  run_script $js_instance_cost_mapping, $ds_google_instance_map
+  run_script $js_instance_cost_mapping, $ds_google_instance_map, $param_unattached_days, $param_zones, $param_project, $param_exclude_tags
 end
 
 ###############################################################################
@@ -53,19 +102,59 @@ end
 
 script "js_instance_cost_mapping", type:"javascript" do
   result "result"
-  parameters "ds_google_instance_map"
+  parameters "ds_google_instance_map", "param_unattached_days", "param_zones", "param_project", "param_exclude_tags"
   code <<-EOS
   var result = []
   monthlySavings = 0
+  var projList = []
+
+  function getRandomInboundNumber(upper, lower, decimal) {
+    var num = Math.floor(Math.random() * (upper - lower) + lower)
+    if (decimal) {
+      var numFigs = Math.floor(Math.random() * (100))/100
+      return num + numFigs;
+    }
+    return num
+  }
+
+  if (param_project.length >0) {
+    _.each(param_project, function(project){
+      project.accountID = param_project
+      project.accountNumber = getRandomInboundNumber(99999999, 10000000, false).String()
+      projList.push(project)
+    })
+  }
 
   _.each(ds_google_instance_map.values, function(instance){
     monthlySavings = monthlySavings + instance.savings
   })
 
   _.each(ds_google_instance_map.values, function(instance){
-    var message="The total estimated monthly savings are £"+ monthlySavings;
-    instance.message = message
-    result.push(instance)
+    var is_tag_matched = false
+    for(var k=0;k<param_exclude_tags.length;k++){
+      if(_.has(instance.tags, param_exclude_tags[k])){
+        is_tag_matched=true
+      }
+    }
+    if (!is_tag_matched) {
+      if (param_zones.length >0) {
+        var setRegion = getRandomInboundNumber(param_zones.length, 0, false)
+        instance.region = param_zones[setRegion]
+      }
+
+      if (param_project.length >0) {
+        var setProject = getRandomInboundNumber(projList.length, 0, false)
+        instance.accountID = projList[setProject].accountID
+        instance.accountName = projList[setProject].accountID
+        instance.accountNumber = projList[setProject].accountNumber
+      }
+
+      instance.daysOld = getRandomInboundNumber((param_unattached_days + 200), param_unattached_days)
+
+      var message="The total estimated monthly savings are £"+ monthlySavings;
+      instance.message = message
+      result.push(instance)
+    }
   })
 
   result = _.sortBy(result,"region");
@@ -85,6 +174,7 @@ policy "policy_recommendations" do
 EOS
     check eq(1, 0)
     escalate $send_email_report
+    escalate $esc_approve_delete_volumes
     export "instance_list" do
       resource_level true
       field "accountID" do
@@ -126,6 +216,9 @@ EOS
       field "savingsCurrency" do
         label "Currency"
       end
+      field "savings" do
+        label "Estimated Monthly Savings"
+      end
       field "priority" do
         label "Priority"
       end
@@ -142,9 +235,6 @@ EOS
         label "ID"
         path "resourceID"
       end
-      field "service" do
-        label "Service"
-      end
     end
   end
 end
@@ -160,6 +250,16 @@ escalation "send_email_report" do
   email $param_email
 end
 
+escalation "esc_approve_delete_volumes" do
+  automatic contains($param_automatic_action, "Delete Volumes")
+  label "Delete Volumes"
+  description "Approval to delete all selected volumes"
+  run "delete_volumes"
+end
+
 ###############################################################################
 # Cloud Workflow
 ###############################################################################
+
+define delete_volumes() do
+end

@@ -18,8 +18,68 @@ info(
 
 parameter "param_email" do
   type "list"
-  label "Email addresses"
-  description "A list of email addresses to notify."
+  label "Email addresses to notify"
+  description "Email addresses of the recipients you wish to notify when new incidents are created"
+end
+
+parameter "param_allowed_regions" do
+  type "list"
+  label "Allowed Regions"
+  allowed_pattern /^([a-zA-Z-_]+-[a-zA-Z0-9-_]+-[0-9-_]+,*|)+$/
+  description "A list of allowed regions. See the README for more details"
+end
+
+parameter "snapshot_age" do
+  type "number"
+  label "Snapshot age"
+  default 30
+  description "The number of days since the snapshot was created."
+  min_value 1
+end
+
+parameter "param_aws_account_number" do
+  type "string"
+  label "Account Number"
+  description "The account number for AWS STS Cross Account Roles."
+  default ""
+end
+
+parameter "param_deregister_image" do
+  type "string"
+  label "Deregister Image"
+  description "If Yes, the snapshot will be deleted along with the images, and if No the snapshot will not be considered for deletion."
+  allowed_values "Yes", "No"
+  default "No"
+end
+
+parameter "param_exclude_tags" do
+  type "list"
+  category "User Inputs"
+  label "Exclude Tags"
+  description "List of tags that a snapshot can have to exclude it from the list."
+end
+
+parameter "param_automatic_action" do
+  type "list"
+  label "Automatic Actions"
+  description "When this value is set, this policy will automatically take the selected action(s)"
+  allowed_values ["Delete Snapshots"]
+end
+
+parameter "param_flexera_org_id_for_optima" do
+  type "string"
+  label "Flexera One Org ID for Optima"
+  description "The Flexera One org ID for Optima queries used to determine estimated costs, by default the current org is used"
+  default "current"
+  allowed_pattern /^(current|[0-9]+)$/
+end
+
+parameter "param_log_to_cm_audit_entries" do
+  type "string"
+  label "Log to CM Audit Entries"
+  description "Boolean for whether or not to log any debugging information from actions to CM Audit Entries, this should be left set to No on Flexera EU"
+  default "No"
+  allowed_values "Yes", "No"
 end
 
 ###############################################################################
@@ -44,7 +104,7 @@ datasource "ds_aws_instance_map" do
 end
 
 datasource "ds_snapshots_cost_mapping" do
-  run_script $js_instance_cost_mapping, $ds_aws_instance_map
+  run_script $js_instance_cost_mapping, $ds_aws_instance_map, $snapshot_age, $param_allowed_regions, $param_exclude_tags
 end
 
 ###############################################################################
@@ -53,7 +113,7 @@ end
 
 script "js_instance_cost_mapping", type:"javascript" do
   result "result"
-  parameters "ds_aws_instance_map"
+  parameters "ds_aws_instance_map", "snapshot_age", "param_allowed_regions", "param_exclude_tags"
   code <<-EOS
   var result = []
   monthlySavings = 0
@@ -63,13 +123,34 @@ script "js_instance_cost_mapping", type:"javascript" do
   })
 
   _.each(ds_aws_instance_map.values, function(instance){
-    var message="The total estimated monthly savings are £"+ monthlySavings;
-    instance.message = message
-    result.push(instance)
+    var is_tag_matched = false
+    for(var k=0;k<param_exclude_tags.length;k++){
+      if(_.has(instance.tags, param_exclude_tags[k])){
+        is_tag_matched=true
+      }
+    }
+    if (!is_tag_matched) {
+      var message="The total estimated monthly savings are £"+ monthlySavings;
+      instance.message = message
+      function getRandomInboundNumber(upper, lower, decimal) {
+        var num = Math.floor(Math.random() * (upper - lower) + lower)
+        if (decimal) {
+          var numFigs = Math.floor(Math.random() * (100))/100
+          return num + numFigs;
+        }
+        return num
+      }
+      if (param_allowed_regions.length >0) {
+        var setRegion = getRandomInboundNumber(param_allowed_regions.length, 0, false)
+        instance.region = param_allowed_regions[setRegion]
+      }
+      instance.daysOld = getRandomInboundNumber((snapshot_age + 200), snapshot_age)
+      result.push(instance)
+    }
   })
 
   result = _.sortBy(result,"region");
-  result = _.sortBy(result,"id");
+  result = _.sortBy(result,"accountID");
   EOS
 end
 
@@ -85,7 +166,8 @@ The following {{ len data }} old snapshots, for AWS Account: {{with index data 0
 
 {{with index data 0}}{{.message}}{{end}}
 EOS
-    escalate $ese_email
+    escalate $esc_email
+    escalate $esc_delete_snapshot
     check eq(1, 0)
     export do
       resource_level true
@@ -103,7 +185,6 @@ EOS
       end
       field "resourceID" do
         label "Resource ID"
-        path "snapshotId"
       end
       field "snapshotImageIdFormat" do
         label "AMI"
@@ -119,7 +200,7 @@ EOS
       end
       field "id" do
         label "ID"
-        path "snapshotId"
+        path "resourceID"
       end
       field "service" do
         label "Service"
@@ -132,13 +213,23 @@ end
 # Escalations
 ###############################################################################
 
-escalation "ese_email" do
+escalation "esc_email" do
   automatic true
   label "Send Email"
   description "Send incident email"
   email $param_email
 end
 
+escalation "esc_delete_snapshot" do
+  automatic contains($param_automatic_action, "Delete Snapshots")
+  label "Delete Snapshots"
+  description "Approval to delete all selected snapshots"
+  run "take_action"
+end
+
 ###############################################################################
 # Cloud Workflow
 ###############################################################################
+
+define take_action() do
+end

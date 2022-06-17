@@ -24,6 +24,43 @@ parameter "param_email" do
   description "Email addresses of the recipients you wish to notify when new incidents are created"
 end
 
+#pass in the CPU in percentage
+parameter "param_cpu_average_percentage" do
+  type "string"
+  label "CPU Threshold"
+  description "Average CPU threshold at which to trigger a decommission"
+  default "60"
+  allowed_pattern /^[0-9]$|^[1-9][0-9]$|^(100)$/
+end
+
+parameter "param_subscription_whitelist" do
+  label "Subscription Whitelist"
+  type "list"
+  description "Whitelisted Subscriptions, if empty, all subscriptions will be checked"
+end
+
+parameter "param_exclusion_tag_key" do
+  category "User Inputs"
+  label "Exclusion Tag Key"
+  description "An Azure-native instance tag key to ignore instances that you don't want to consider for downsizing. Example: exclude_utilization"
+  type "string"
+end
+
+parameter "param_automatic_action" do
+  type "list"
+  label "Automatic Actions"
+  description "When this value is set, this policy will automatically take the selected action(s)"
+  allowed_values ["Terminate Instances"]
+end
+
+parameter "param_log_to_cm_audit_entries" do
+  type "string"
+  label "Log to CM Audit Entries"
+  description "Boolean for whether or not to log any debugging information from actions to CM Audit Entries, this should be left set to No on Flexera EU"
+  default "No"
+  allowed_values "Yes", "No"
+end
+
 ###############################################################################
 # Authentication
 ###############################################################################
@@ -46,7 +83,7 @@ datasource "ds_azure_instance_map" do
 end
 
 datasource "ds_instance_cost_mapping" do
-  run_script $js_instance_cost_mapping, $ds_azure_instance_map
+  run_script $js_instance_cost_mapping, $ds_azure_instance_map, $param_cpu_average_percentage, $param_subscription_whitelist, $param_exclusion_tag_key
 end
 
 ###############################################################################
@@ -55,19 +92,43 @@ end
 
 script "js_instance_cost_mapping", type:"javascript" do
   result "result"
-  parameters "ds_azure_instance_map"
+  parameters "ds_azure_instance_map", "param_cpu_average_percentage", "param_subscription_whitelist", "param_exclusion_tag_key"
   code <<-EOS
   var result = []
   monthlySavings = 0
+
+  function getRandomInboundNumber(upper, lower, decimal) {
+    var num = Math.floor(Math.random() * (upper - lower) + lower)
+    if (decimal) {
+      var numFigs = Math.floor(Math.random() * (100))/100
+      return num + numFigs;
+    }
+    return num
+  }
 
   _.each(ds_azure_instance_map.values, function(instance){
     monthlySavings = monthlySavings + instance.savings
   })
 
   _.each(ds_azure_instance_map.values, function(instance){
-    var message="The total estimated monthly savings are £"+ monthlySavings;
-    instance.message = message
-    result.push(instance)
+    var is_tag_matched = false
+    for(var k=0;k<param_exclusion_tag_key.length;k++){
+      if(_.has(instance.tags, param_exclusion_tag_key[k])){
+        is_tag_matched=true
+      }
+    }
+    if (!is_tag_matched) {
+      if (param_subscription_whitelist.length >0) {
+        var setProject = getRandomInboundNumber(param_subscription_whitelist.length, 0, false)
+        instance.subscriptionID = param_subscription_whitelist[setProject]
+      }
+
+      instance.averageCPU = getRandomInboundNumber(param_cpu_average_percentage, 0, true)
+
+      var message="The total estimated monthly savings are £"+ monthlySavings;
+      instance.message = message
+      result.push(instance)
+    }
   })
 
   result = _.sortBy(result,"region");
@@ -88,6 +149,7 @@ policy "azure_resource_policy" do
 EOS
     check eq(1, 0)
     escalate $email
+    escalate $delete_resources
     export do
       resource_level true
       field "subscriptionName" do
@@ -153,6 +215,16 @@ escalation "email" do
   email $param_email
 end
 
+escalation "delete_resources" do
+  automatic contains($param_automatic_action, "Terminate Instances")
+  label "Terminate Instances"
+  description "Approval to terminate all selected instances"
+  run "delete_resources"
+end
+
 ###############################################################################
 # Cloud Workflow
 ###############################################################################
+
+define delete_resources() do
+end

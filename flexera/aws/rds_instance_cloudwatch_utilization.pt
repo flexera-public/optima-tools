@@ -1,0 +1,216 @@
+name "AWS Rightsize RDS Instances"
+rs_pt_ver 20180301
+type "policy"
+short_description "A Mock that would check for Inefficient database services that are inside or outside the CPU threshold for the last 30 days and resizes them after approval. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/aws/rds_instance_cloudwatch_utilization/) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
+long_description ""
+severity "low"
+category "Cost"
+default_frequency "daily"
+info(
+  version: "0.1",
+  provider: "AWS",
+  service: "RDS",
+  policy_set: "RightSize Database Services"
+)
+
+###############################################################################
+# Parameters
+###############################################################################
+
+parameter "param_allowed_regions" do
+  type "list"
+  label "Allowed Regions"
+  allowed_pattern /^([a-zA-Z-_]+-[a-zA-Z0-9-_]+-[0-9-_]+,*|)+$/
+  description "A list of allowed regions. See the README for more details"
+end
+
+parameter "param_email" do
+  type "list"
+  label "Email addresses to notify"
+  description "Email addresses of the recipients you wish to notify when new incidents are created"
+end
+
+parameter "param_aws_account_number" do
+  type "string"
+  label "Account Number"
+  description "The account number for AWS STS Cross Account Roles."
+  default ""
+end
+
+parameter "param_avg_cpu_upsize" do
+  type "number"
+  label "Average used CPU % - Upsize threshold"
+  description "Set to -1 to ignore CPU utilization"
+  default 80
+  min_value -1
+  max_value 100
+end
+
+parameter "param_avg_cpu_downsize" do
+  type "number"
+  label "Average used CPU % - Downsize Threshold"
+  description "Set to -1 to ignore CPU utilization"
+  default 60
+  min_value -1
+  max_value 100
+end
+
+parameter "param_exclusion_tag_key" do
+  label "Exclusion Tag Key:Value"
+  description "AWS tag key to ignore instances. Format: Key:Value"
+  type "string"
+end
+
+parameter "param_automatic_action" do
+  type "list"
+  label "Automatic Actions"
+  description "When this value is set, this policy will automatically take the selected action(s)"
+  allowed_values ["Resize Instances"]
+end
+
+parameter "param_log_to_cm_audit_entries" do
+  type "string"
+  label "Log to CM Audit Entries"
+  description "Boolean for whether or not to log any debugging information from actions to CM Audit Entries, this should be left set to No on Flexera EU"
+  default "No"
+  allowed_values "Yes", "No"
+end
+
+###############################################################################
+# Authentication
+###############################################################################
+
+###############################################################################
+# Datasources
+###############################################################################
+
+datasource "ds_aws_instance_map" do
+  request do
+    verb "GET"
+    host "raw.githubusercontent.com"
+    path "/flexera-public/optima-tools/master/flexera/data/aws/rds_instance_cloudwatch_utilization.json"
+    header "User-Agent", "RS Policies"
+  end
+end
+
+datasource "ds_filtered_results" do
+  run_script $js_filtered_results, $ds_aws_instance_map, $param_avg_cpu_upsize, $param_avg_cpu_downsize, $param_allowed_regions, $param_exclusion_tag_key
+end
+
+###############################################################################
+# Scripts
+###############################################################################
+
+script "js_filtered_results", type: "javascript" do
+  result "result"
+  parameters "ds_aws_instance_map", "param_avg_cpu_upsize", "param_avg_cpu_downsize", "param_allowed_regions", "param_exclusion_tag_key"
+  code <<-EOS
+  var result = []
+
+  _.each(ds_aws_instance_map.values, function(instance){
+    var is_tag_matched = false
+    for(var k=0;k<param_exclusion_tag_key.length;k++){
+      if(_.has(instance.tags, param_exclusion_tag_key[k])){
+        is_tag_matched=true
+      }
+    }
+
+    if (!is_tag_matched) {
+      if (param_avg_cpu_downsize === -1 && param_avg_cpu_upsize === -1){
+        result.push(instance)
+      } else {
+        function getRandomInboundNumber(upper, lower, decimal) {
+          var num = Math.floor(Math.random() * (upper - lower) + lower)
+          if (decimal) {
+            var numFigs = Math.floor(Math.random() * (100))/100
+            return num + numFigs;
+          }
+          return num
+        }
+        if (param_avg_cpu_upsize === -1) {
+          param_avg_cpu_upsize = 100
+        }
+        if (param_avg_cpu_downsize === -1) {
+          param_avg_cpu_downsize = 0
+        }
+        instance.cpu_average = getRandomInboundNumber(param_avg_cpu_upsize, param_avg_cpu_downsize, true)
+        if (param_allowed_regions.length >0) {
+          var setRegion = getRandomInboundNumber(param_allowed_regions.length, 0, false)
+          instance.region = param_allowed_regions[setRegion]
+          instance.availabilityZone = param_allowed_regions[setRegion] + "a"
+        }
+        result.push(instance)
+      }
+    }
+  })
+  result = _.sortBy(result,"region");
+  EOS
+end
+
+###############################################################################
+# Policy
+###############################################################################
+
+policy "pol_utilization" do
+  validate $ds_filtered_results do
+    summary_template "AWS Account ID: {{with index data 0}}{{ .accountId }}{{end}} - {{ len data }} AWS RDS instances with inefficient utilization"
+    check eq(size(data),0)
+    escalate $email
+    escalate $esc_downsize_instances
+    export do
+      resource_level true
+      field "accountId" do
+        label "Account Id"
+      end
+      field "region" do
+        label "Region"
+      end
+      field "id" do
+        label "Instance Id"
+        path "dbInstanceIdentifier"
+      end
+      field "engine" do
+        label "Engine"
+      end
+      field "dbInstanceClass" do
+        label "Current Instance Class"
+      end
+      field "recommended_size" do
+        label "Recommended Instance Class"
+      end
+      field "availabilityZone" do
+        label "Availability Zone"
+      end
+      field "percent_cpu_avg" do
+        label "CPU Average %"
+      end
+    end
+  end
+end
+
+
+###############################################################################
+# Escalations
+###############################################################################
+
+escalation "email" do
+  automatic true
+  label "Send Email"
+  description "Send incident email"
+  email $param_email
+end
+
+escalation "esc_downsize_instances" do
+  automatic contains($param_automatic_action, "Downsize Instances")
+  label "Downsize Instances"
+  description "Approval to downsize all selected instances"
+  run "downsize_instances"
+end
+
+
+###############################################################################
+# Cloud Workflow
+###############################################################################
+
+define downsize_instances() do
+end
