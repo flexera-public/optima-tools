@@ -8,8 +8,8 @@ category "Cost"
 default_frequency "daily"
 info(
       version: "0.1",
-      provider: "GCE",
-      service: "SQL",
+      provider: "Google",
+      service: "Database",
       policy_set: "Rightsize Database Services"
     )
 
