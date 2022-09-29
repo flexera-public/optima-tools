@@ -7,9 +7,9 @@ category "Cost"
 default_frequency "daily"
 info(
   version: "0.1",
-  provider: "GCE",
-  service: "Test",
-  policy_set: "Other"
+  provider: "Google",
+  service: "Storage",
+  policy_set: "Unused Volumes"
 )
 
 ##################
