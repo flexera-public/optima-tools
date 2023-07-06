@@ -1,67 +1,23 @@
 name "Google Committed Use Discount Recommender"
 rs_pt_ver 20180301
 type "policy"
-short_description "A mock that checks for idle cloud sql instances. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/google/cud_recommendationss) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
-severity "low"
+short_description "This Policy finds Google Committed Use Discount Recommendations and reports when it finds them. See the [README](https://github.com/flexera-public/policy_templates/tree/master/cost/google/cud_recommendations) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
 category "Cost"
+severity "low"
 default_frequency "daily"
 info(
-  version: "0.1",
+  version: "3.2",
   provider: "Google",
   service: "Compute",
+  recommendation_type: "Rate Reduction",
   policy_set: "Reserved Instances"
 )
-
-##################
-# User inputs    #
-##################
-
-parameter "param_email" do
-  type "list"
-  label "Email addresses to notify"
-  description "Email addresses of the recipients you wish to notify when new incidents are created"
-end
-
-parameter "param_project" do
-  type "list"
-  label "Project ID"
-  description "Google Projects to Query. Leave blank to query all projects."
-end
-
-parameter "param_regions" do
-  type "list"
-  label "Region"
-  description "Location to check, this is region names"
-end
-
-parameter "param_automatic_action" do
-  type "list"
-  label "Automatic Actions"
-  description "When this value is set, this policy will automatically take the selected action(s)"
-  allowed_values ["Delete IP Addresses"]
-end
-
-parameter "param_log_to_cm_audit_entries" do
-  type "string"
-  label "Log to CM Audit Entries"
-  description "Boolean for whether or not to log any debugging information from actions to CM Audit Entries, this should be left set to No on Flexera EU"
-  default "No"
-  allowed_values "Yes", "No"
-end
-
-###############################################################################
-# Authentication
-###############################################################################
-
-###############################################################################
-# Pagination
-###############################################################################
 
 ###############################################################################
 # Datasources
 ###############################################################################
 
-datasource "ds_google_instance_map" do
+datasource "ds_cud_cost_mapping" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
@@ -70,85 +26,24 @@ datasource "ds_google_instance_map" do
   end
 end
 
-datasource "ds_google_cost_mapping" do
-  run_script $js_instance_cost_mapping, $ds_google_instance_map, $param_regions, $param_project
-end
-
-###############################################################################
-# Scripts
-###############################################################################
-
-script "js_instance_cost_mapping", type:"javascript" do
-  result "result"
-  parameters "ds_google_instance_map", "param_regions", "param_project"
-  code <<-EOS
-  var result = []
-  monthlySavings = 0
-  var projList = []
-
-  function getRandomInboundNumber(upper, lower, decimal) {
-    var num = Math.floor(Math.random() * (upper - lower) + lower)
-    if (decimal) {
-      var numFigs = Math.floor(Math.random() * (100))/100
-      return num + numFigs;
-    }
-    return num
-  }
-  _.each(ds_google_instance_map.values, function(instance){
-    monthlySavings = monthlySavings + instance.savings
-  })
-
-  if (param_project.length >0) {
-    _.each(param_project, function(project){
-      project.accountID = param_project
-      project.accountNumber = getRandomInboundNumber(99999999, 10000000, false).String()
-      projList.push(project)
-    })
-  }
-  _.each(ds_google_instance_map.values, function(instance){
-    if (param_regions.length >0) {
-      var setRegion = getRandomInboundNumber(param_regions.length, 0, false)
-      instance.region = param_regions[setRegion]
-    }
-
-    if (param_project.length >0) {
-      var setProject = getRandomInboundNumber(projList.length, 0, false)
-      instance.accountID = projList[setProject].accountID
-      instance.accountName = projList[setProject].accountID
-      instance.accountNumber = projList[setProject].accountNumber
-    }
-    var message="The total estimated monthly savings are £"+ monthlySavings;
-    instance.message = message
-    result.push(instance)
-  })
-
-  result = _.sortBy(result,"region");
-  result = _.sortBy(result,"accountID");
-  EOS
-end
-
 ###############################################################################
 # Policy
 ###############################################################################
 
 policy "policy_recommendations" do
-  validate_each $ds_google_cost_mapping do
-    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data }} Committed Use Discount Plans Found"
-    detail_template <<-EOS
-{{with index data 0}}{{.message}}{{end}}
-EOS
+  validate $ds_cud_cost_mapping do
+    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.instances }} rows found for Committed Use Discount Recommendations to Purchase"
     check eq(1, 0)
-    escalate $send_email_report
-    export "instance_list" do
+    export "instances" do
       resource_level true
       field "accountID" do
-        label "Account ID"
-      end
-      field "accountNumber" do
-        label "Account Number"
+        label "Project ID"
       end
       field "accountName" do
-        label "Account Name"
+        label "Project Name"
+      end
+      field "projectNumber" do
+        label "Project Number"
       end
       field "resourceID" do
         label "Resource ID"
@@ -159,11 +54,18 @@ EOS
       field "resourceType" do
         label "Resource Type"
       end
+      field "resourcesToPurchase" do
+        label "Resources To Purchase"
+      end
       field "region" do
         label "Region"
       end
-      field "plan" do
-        label "Plan"
+      field "term" do
+        label "Term"
+        path "plan"
+      end
+      field "algorithm" do
+        label "Algorithm"
       end
       field "tags" do
         label "Tags"
@@ -171,20 +73,18 @@ EOS
       field "description" do
         label "Description"
       end
-      field "service" do
-        label "Service"
+      field "savings" do
+        label "Estimated Monthly Savings"
       end
       field "savingsCurrency" do
         label "Currency"
       end
-      field "savings" do
-        label "Estimated Monthly Savings"
-      end
       field "priority" do
         label "Priority"
       end
-      field "recommenderSubtype" do
-        label "Sub Type"
+      field "scope" do
+        label "Scope"
+        path "recommenderSubtype"
       end
       field "state" do
         label "State"
@@ -196,18 +96,3 @@ EOS
     end
   end
 end
-
-###############################################################################
-# Escalations
-###############################################################################
-
-escalation "send_email_report" do
-  automatic true
-  label "Send Email"
-  description "Send incident email"
-  email $param_email
-end
-
-###############################################################################
-# Cloud Workflow
-###############################################################################
