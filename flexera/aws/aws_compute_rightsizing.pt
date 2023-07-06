@@ -40,7 +40,6 @@ end
 # Policy
 ###############################################################################
 
-
 policy "pol_utilization" do
   validate_each $ds_underutilized_instances do
     summary_template <<-EOS
