@@ -15,6 +15,18 @@ info(
 )
 
 ###############################################################################
+# Parameters
+###############################################################################
+
+parameter "param_savings_threshold" do
+  category "RI"
+  label "Net Savings Threshold"
+  description "Specify the minimum net savings that should result in a recommendation"
+  default 100
+  type "number"
+end
+
+###############################################################################
 # Datasources
 ###############################################################################
 
