@@ -14,6 +14,28 @@ info(
 )
 
 ###############################################################################
+# Parameters
+###############################################################################
+
+parameter "param_avg_cpu_upsize" do
+  type "number"
+  label "Average used CPU % - Upsize threshold"
+  description "Set to -1 to ignore CPU utilization"
+  default 80
+  min_value -1
+  max_value 100
+end
+
+parameter "param_avg_cpu_downsize" do
+  type "number"
+  label "Average used CPU % - Downsize Threshold"
+  description "Set to -1 to ignore CPU utilization"
+  default 60
+  min_value -1
+  max_value 100
+end
+
+###############################################################################
 # Datasources
 ###############################################################################
 

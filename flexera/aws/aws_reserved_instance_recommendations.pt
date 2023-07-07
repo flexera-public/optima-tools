@@ -22,7 +22,7 @@ parameter "param_savings_threshold" do
   category "RI"
   label "Net Savings Threshold"
   description "Specify the minimum net savings that should result in a recommendation"
-  default 100
+  default 1
   type "number"
 end
 
