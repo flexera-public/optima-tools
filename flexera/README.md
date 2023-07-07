@@ -14,3 +14,4 @@ Upload the desired policies to your demo environment in Flexera One and apply. T
 - The incidents the policies raise are identical to their catalog counterparts, so they can be used to demo the incidents in addition to the Optimization dashboard.
 - These are not fully functioning policies and should not be used to demonstrate how to apply these policies, what parameters the policies have, or to demonstrate how to take action against resources.
 - The metadata and version number for the demo policy is equivalent to its counterpart in the policy catalog, with the exception of the name, which has " [Demo]" appended to it to distinguish it from the catalog versions of these same policies.
+- The same-named .js files in the data folder were used to generate the demo data and can be modified and used to generate new data as needed.
