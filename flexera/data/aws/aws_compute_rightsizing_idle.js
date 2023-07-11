@@ -40,12 +40,25 @@ type_list = [
   "m6i.8xlarge",
   "r5.2xlarge",
   "m5.8xlarge",
-  "t2.micro",
+  "r5.xlarge",
   "c4n.xlarge",
   "m5i.8xlarge",
   "r4.2xlarge",
   "m4.8xlarge",
   "c3n.xlarge"
+]
+
+type_downsize_list = [
+  "c4n.xlarge",
+  "m5i.8xlarge",
+  "r4.2xlarge",
+  "m4.8xlarge",
+  "r4.xlarge",
+  "c3n.xlarge",
+  "m4i.8xlarge",
+  "r3.2xlarge",
+  "m3.8xlarge",
+  "c2n.xlarge"
 ]
 
 region_list = [
@@ -75,8 +88,8 @@ for (var i = 0; i < 20; i++) {
   result.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
     "accountName": (Math.random() + 1).toString(36).substring(2),
-    "cpu_average": Math.random(),
-    "cpu_maximum": Math.random(),
+    "cpu_average": Math.random() + 3,
+    "cpu_maximum": Math.random() + 5,
     "cpu_minimum": Math.random(),
     "cpu_p90": Math.random(),
     "cpu_p95": Math.random(),
@@ -87,8 +100,8 @@ for (var i = 0; i < 20; i++) {
     "idleThreshold": 5,
     "launchTime": times_list[parseInt(Math.random() * 10)],
     "lookbackPeriod": "30 days",
-    "mem_average": Math.random(),
-    "mem_maximum": Math.random(),
+    "mem_average": Math.random() + 3,
+    "mem_maximum": Math.random() + 5,
     "mem_minimum": Math.random(),
     "mem_p90": Math.random(),
     "mem_p95": Math.random(),

@@ -36,16 +36,29 @@ times_list = [
 ]
 
 type_list = [
-  "Standard_A1_v2",
+  "Standard_A2_v2",
   "Standard_A4_v2",
   "Standard_B12ms",
   "Standard_B16as_v2",
   "Standard_B16ms",
-  "Standard_B1ms",
-  "Standard_B1s",
+  "Standard_B2ms",
+  "Standard_B2s",
   "Standard_B32as_v2",
   "Standard_D16_v3",
-  "Easv5_Type1"
+  "Standard_B4ms"
+]
+
+type_downsize_list = [
+  "Standard_A1_v2",
+  "Standard_A3_v2",
+  "Standard_B8ms",
+  "Standard_B12as_v2",
+  "Standard_B12ms",
+  "Standard_B1ms",
+  "Standard_B1s",
+  "Standard_B16as_v2",
+  "Standard_D8_v3",
+  "Standard_B2ms"
 ]
 
 region_list = [
@@ -73,6 +86,7 @@ for (var i = 0; i < 10; i++) {
   resourceGroup = (Math.random() + 1).toString(36).substring(2).toUpperCase() + '-' + (Math.random() + 1).toString(36).substring(2).toUpperCase()
   resourceName = (Math.random() + 1).toString(36).substring(2)
   resourceId = "/subscriptions/" + subscriptionId + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Compute/virtualMachines/" + resourceName
+  resourceNumber = parseInt(Math.random() * 10)
 
   result.push({
     "averageCPU": Math.random() + 10,
@@ -81,13 +95,13 @@ for (var i = 0; i < 10; i++) {
     "maxCPU": Math.random() + 20,
     "minCPU": Math.random(),
     "osType": "Linux",
-    "recommendedVmSize": type_list[parseInt(Math.random() * 10)],
+    "recommendedVmSize": type_downsize_list[resourceNumber],
     "region": region_list[parseInt(Math.random() * 10)],
     "resourceGroup": resourceGroup,
     "resourceId": resourceId,
     "resourceKind": "Microsoft.Compute/virtualMachines",
     "resourceName": resourceName,
-    "resourceType": type_list[parseInt(Math.random() * 10)],
+    "resourceType": type_list[resourceNumber],
     "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
     "savingsCurrency": "US$",
     "service": "Microsoft.Compute",

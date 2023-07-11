@@ -40,12 +40,25 @@ type_list = [
   "m6i.8xlarge",
   "r5.2xlarge",
   "m5.8xlarge",
-  "t2.micro",
+  "r5.xlarge",
   "c4n.xlarge",
   "m5i.8xlarge",
   "r4.2xlarge",
   "m4.8xlarge",
   "c3n.xlarge"
+]
+
+type_downsize_list = [
+  "c4n.xlarge",
+  "m5i.8xlarge",
+  "r4.2xlarge",
+  "m4.8xlarge",
+  "r4.xlarge",
+  "c3n.xlarge",
+  "m4i.8xlarge",
+  "r3.2xlarge",
+  "m3.8xlarge",
+  "c2n.xlarge"
 ]
 
 region_list = [
@@ -71,16 +84,17 @@ for (var i = 0; i < 20; i++) {
   id = "i-" + (Math.random() + 1).toString(36).substring(2)
   ip = "ip-" + parseInt(Math.random() * 100) + '-'  + parseInt(Math.random() * 100) + '-' + parseInt(Math.random() * 100) + '-' + parseInt(Math.random() * 100)
   resourceName = (Math.random() + 1).toString(36).substring(2)
+  resourceNumber = parseInt(Math.random() * 10)
 
   result.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
     "accountName": (Math.random() + 1).toString(36).substring(2),
-    "cpu_average": parseInt(Math.random() * 40) + Math.random(),
+    "cpu_average": parseInt(Math.random() * 30) + Math.random(),
     "cpu_maximum": parseInt(Math.random() * 40) + Math.random(),
-    "cpu_minimum": parseInt(Math.random() * 40) + Math.random(),
-    "cpu_p90": parseInt(Math.random() * 40) + Math.random(),
+    "cpu_minimum": parseInt(Math.random() * 10) + Math.random(),
+    "cpu_p90": parseInt(Math.random() * 30) + Math.random(),
     "cpu_p95": parseInt(Math.random() * 40) + Math.random(),
-    "cpu_p99": parseInt(Math.random() * 40) + Math.random(),
+    "cpu_p99": parseInt(Math.random() * 10) + Math.random(),
     "hostname": ip,
     "id": id,
     "idleMemoryThreshold": 5,
@@ -95,12 +109,12 @@ for (var i = 0; i < 20; i++) {
     "mem_p99": parseInt(Math.random() * 40) + Math.random(),
     "platform": "Linux/UNIX",
     "privateDnsName": ip + ".ec2.internal",
-    "recommendationType": "Terminate",
-    "recommendedVmSize": "Terminate Instance",
+    "recommendationType": "Downsize",
+    "recommendedVmSize": type_downsize_list[resourceNumber],
     "region": region_list[parseInt(Math.random() * 10)],
     "resourceID": id,
     "resourceName": resourceName,
-    "resourceType": type_list[parseInt(Math.random() * 10)],
+    "resourceType": type_list[resourceNumber],
     "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
     "savingsCurrency": "US$",
     "service": "EC2",
