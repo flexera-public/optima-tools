@@ -42,35 +42,44 @@ policy "policy_azure_rightsizing_data" do
     check eq(val(item, "recommendedVmSize"), "Terminate Instance")
     export do
       resource_level true
-      field "subscriptionName" do
-        label "Subscription Name"
-      end
-      field "subscriptionId" do
+      field "accountID" do
         label "Subscription ID"
+        path "subscriptionId"
+      end
+      field "accountName" do
+        label "Subscription Name"
+        path "subscriptionName"
+      end
+      field "resourceGroup" do
+        label "Resource Group"
+      end
+      field "resourceName" do
+        label "Resource Name"
       end
       field "resourceID" do
         label "Resource ID"
         path "resourceId"
       end
-      field "resourceName" do
-        label "Resource Name"
+      field "tags" do
+        label "Resource Tags"
+      end
+      field "recommendationDetails" do
+        label "Recommendation"
+      end
+      field "resourceType" do
+        label "Instance Size"
+      end
+      field "newResourceType" do
+        label "Recommended Instance Size"
       end
       field "resourceKind" do
         label "Resource Kind"
       end
-      field "resourceType" do
-        label "Resource Type"
-      end
-      field "newResourceType" do
-        label "Recommended Resource Type"
-        path "recommendedVmSize"
-      end
-      field "platform" do
-        label "OS Type"
-        path "osType"
-      end
       field "region" do
         label "Region"
+      end
+      field "osType" do
+        label "Operating System"
       end
       field "savings" do
         label "Estimated Monthly Savings"
@@ -78,21 +87,41 @@ policy "policy_azure_rightsizing_data" do
       field "savingsCurrency" do
         label "Savings Currency"
       end
-      field "minCPU" do
-        label "CPU Minimum (%)"
+      field "cpuMaximum" do
+        label "CPU Maximum %"
+        path "cpu_maximum"
+      end
+      field "cpuMinimum" do
+        label "CPU Minimum %"
+        path "cpu_minimum"
       end
       field "cpuAverage" do
-        label "CPU Average (%)"
-        path "averageCPU"
+        label "CPU Average %"
+        path "cpu_average"
       end
-      field "maxCPU" do
-        label "CPU Maximum (%)"
+      field "memMaximum" do
+        label "Memory Maximum %"
+        path "mem_maximum"
       end
-      field "resourceGroup" do
-        label "Resource Group"
+      field "memMinimum" do
+        label "Memory Minimum %"
+        path "mem_minimum"
       end
-      field "tags" do
-        label "Tags"
+      field "memAverage" do
+        label "Memory Average %"
+        path "mem_average"
+      end
+      field "thresholdType" do
+        label "Threshold Statistic"
+      end
+      field "threshold" do
+        label "CPU Threshold"
+      end
+      field "memoryThreshold" do
+        label "Memory Threshold"
+      end
+      field "lookbackPeriod" do
+        label "Look Back Period (Days)"
       end
       field "service" do
         label "Service"
@@ -100,21 +129,6 @@ policy "policy_azure_rightsizing_data" do
       field "id" do
         label "ID"
         path "resourceId"
-      end
-      field "accountName" do
-        label "Account Name"
-        path "subscriptionName"
-      end
-      field "accountID" do
-        label "Account ID"
-        path "subscriptionId"
-      end
-      field "lookbackPeriod" do
-        label "Lookback Period"
-      end
-      field "threshold" do
-        label "Underutilized Threshold"
-        path "underutilThreshold"
       end
     end
   end
@@ -128,35 +142,41 @@ EOS
     check ne(val(item, "recommendedVmSize"), "Terminate Instance")
     export do
       resource_level true
-      field "subscriptionName" do
-        label "Subscription Name"
-      end
-      field "subscriptionId" do
+      field "accountID" do
         label "Subscription ID"
+        path "subscriptionId"
+      end
+      field "accountName" do
+        label "Subscription Name"
+        path "subscriptionName"
+      end
+      field "resourceGroup" do
+        label "Resource Group"
+      end
+      field "resourceName" do
+        label "Resource Name"
       end
       field "resourceID" do
         label "Resource ID"
         path "resourceId"
       end
-      field "resourceName" do
-        label "Resource Name"
+      field "tags" do
+        label "Resource Tags"
+      end
+      field "recommendationDetails" do
+        label "Recommendation"
+      end
+      field "resourceType" do
+        label "Instance Size"
       end
       field "resourceKind" do
         label "Resource Kind"
       end
-      field "resourceType" do
-        label "Resource Type"
-      end
-      field "newResourceType" do
-        label "Recommended Resource Type"
-        path "recommendedVmSize"
-      end
-      field "platform" do
-        label "OS Type"
-        path "osType"
-      end
       field "region" do
         label "Region"
+      end
+      field "osType" do
+        label "Operating System"
       end
       field "savings" do
         label "Estimated Monthly Savings"
@@ -164,21 +184,41 @@ EOS
       field "savingsCurrency" do
         label "Savings Currency"
       end
-      field "minCPU" do
-        label "CPU Minimum (%)"
+      field "cpuMaximum" do
+        label "CPU Maximum %"
+        path "cpu_maximum"
+      end
+      field "cpuMinimum" do
+        label "CPU Minimum %"
+        path "cpu_minimum"
       end
       field "cpuAverage" do
-        label "CPU Average (%)"
-        path "averageCPU"
+        label "CPU Average %"
+        path "cpu_average"
       end
-      field "maxCPU" do
-        label "CPU Maximum (%)"
+      field "memMaximum" do
+        label "Memory Maximum %"
+        path "mem_maximum"
       end
-      field "resourceGroup" do
-        label "Resource Group"
+      field "memMinimum" do
+        label "Memory Minimum %"
+        path "mem_minimum"
       end
-      field "tags" do
-        label "Tags"
+      field "memAverage" do
+        label "Memory Average %"
+        path "mem_average"
+      end
+      field "thresholdType" do
+        label "Threshold Statistic"
+      end
+      field "threshold" do
+        label "CPU Threshold"
+      end
+      field "memoryThreshold" do
+        label "Memory Threshold"
+      end
+      field "lookbackPeriod" do
+        label "Look Back Period (Days)"
       end
       field "service" do
         label "Service"
@@ -186,21 +226,6 @@ EOS
       field "id" do
         label "ID"
         path "resourceId"
-      end
-      field "accountName" do
-        label "Account Name"
-        path "subscriptionName"
-      end
-      field "accountID" do
-        label "Account ID"
-        path "subscriptionId"
-      end
-      field "lookbackPeriod" do
-        label "Lookback Period"
-      end
-      field "threshold" do
-        label "Idle Threshold"
-        path "idleThreshold"
       end
     end
   end

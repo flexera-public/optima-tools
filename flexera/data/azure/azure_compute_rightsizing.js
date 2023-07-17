@@ -5,8 +5,22 @@
 var _ = require('underscore')
 
 // --------------------------------------
+// Functions
+// --------------------------------------
+
+function getRandomDate(year) {
+  let start = new Date(year, 0, 1); // Start from January 1st of the given year
+  let end = new Date(year + 1, 0, 1); // End at December 31st of the given year
+  let randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+
+  return randomDate.toISOString();
+}
+
+// --------------------------------------
 // Dummy Data
 // --------------------------------------
+
+current_year = parseInt(new Date().toISOString().split('-')[0])
 
 account_list = [
   "ca1eeeca-231f-4a91-a740-04eaeb043516",
@@ -20,19 +34,6 @@ account_list = [
   "912102ae-2e57-4094-bb8a-63a7d1c38207",
   "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
   "f048a88c-9bc9-43cf-a30d-f48c94708866"
-]
-
-times_list = [
-  "2022-02-11T00:34:25.000Z",
-  "2023-05-01T01:24:20.000Z",
-  "2022-03-15T02:35:15.000Z",
-  "2022-02-17T05:11:35.000Z",
-  "2022-07-18T08:22:48.000Z",
-  "2022-02-22T11:33:57.000Z",
-  "2022-12-27T14:44:46.000Z",
-  "2022-11-05T17:55:35.000Z",
-  "2022-10-12T22:45:23.000Z",
-  "2022-09-13T15:21:11.000Z"
 ]
 
 type_list = [
@@ -74,6 +75,19 @@ region_list = [
   "centralindia"
 ]
 
+tag_list = [
+  "environment=prod, app=paymentGateway",
+  "environment=dev, app=dataAnalytics",
+  "environment=prod, app=userManagement",
+  "environment=dev, app=reportingService",
+  "environment=staging, app=invoiceProcessing",
+  "environment=prod, app=emailService",
+  "environment=prod, app=securityModule",
+  "environment=dev, app=inventoryManagement",
+  "environment=prod, app=customerSupport",
+  "environment=staging, app=crmModule"
+]
+
 // --------------------------------------
 // Script
 // --------------------------------------
@@ -87,34 +101,44 @@ for (var i = 0; i < 25; i++) {
   resourceName = (Math.random() + 1).toString(36).substring(2)
   resourceId = "/subscriptions/" + subscriptionId + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Compute/virtualMachines/" + resourceName
   resourceNumber = parseInt(Math.random() * 10)
+  resourceType = type_list[resourceNumber]
+  newResourceType = type_downsize_list[resourceNumber]
+
+  recommendationDetails = [
+    "Resize Azure virtual machine ", resourceName, " ",
+    "in Azure Subscription ", subscriptionName, " ",
+    "(", subscriptionId, ") ",
+    "from ", resourceType, " ",
+    "to ", newResourceType
+  ].join('')
 
   result.push({
-    "averageCPU": Math.random() + 10,
-    "idleThreshold": 5,
-    "lookbackPeriod": "30 days",
-    "maxCPU": Math.random() + 20,
-    "minCPU": Math.random(),
-    "osType": "Linux",
-    "recommendedVmSize": type_downsize_list[resourceNumber],
-    "region": region_list[parseInt(Math.random() * 10)],
-    "resourceGroup": resourceGroup,
-    "resourceId": resourceId,
-    "resourceKind": "Microsoft.Compute/virtualMachines",
-    "resourceName": resourceName,
-    "resourceType": type_list[resourceNumber],
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
-    "savingsCurrency": "US$",
-    "service": "Microsoft.Compute",
     "subscriptionId": subscriptionId,
     "subscriptionName": subscriptionName,
-    "summaryData": {
-      "idleInstanceCount": 4,
-      "idleMessage": "The total estimated monthly savings is US$ 100.00",
-      "underutilInstanceCount": 1,
-      "underutilMessage": "The total estimated monthly savings is US$ 100.00"
-    },
-    "tags": [],
-    "underutilThreshold": 40
+    "resourceGroup": resourceGroup,
+    "resourceName": resourceName,
+    "resourceId": resourceId,
+    "tags": tag_list[parseInt(Math.random() * 10)],
+    "recommendationType": "Downsize",
+    "recommendationDetails": recommendationDetails,
+    "resourceType": resourceType,
+    "newResourceType": newResourceType,
+    "resourceKind": "Microsoft.Compute/virtualMachines",
+    "region": region_list[parseInt(Math.random() * 10)],
+    "osType": "Linux",
+    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
+    "savingsCurrency": "US$",
+    "cpu_average": parseFloat((parseInt(Math.random() * 30) + Math.random()).toFixed(2)),
+    "cpu_maximum": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
+    "cpu_minimum": parseFloat((parseInt(Math.random() * 10) + Math.random()).toFixed(2)),
+    "mem_average": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
+    "mem_maximum": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
+    "mem_minimum": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
+    "thresholdType": "Average",
+    "threshold": 40,
+    "memoryThreshold": 40,
+    "lookbackPeriod": 30,
+    "service": "Microsoft.Compute"
   })
 }
 
@@ -124,34 +148,42 @@ for (var i = 0; i < 25; i++) {
   resourceGroup = (Math.random() + 1).toString(36).substring(2).toUpperCase() + '-' + (Math.random() + 1).toString(36).substring(2).toUpperCase()
   resourceName = (Math.random() + 1).toString(36).substring(2)
   resourceId = "/subscriptions/" + subscriptionId + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Compute/virtualMachines/" + resourceName
+  resourceNumber = parseInt(Math.random() * 10)
+  resourceType = type_list[resourceNumber]
+  newResourceType = type_downsize_list[resourceNumber]
+
+  recommendationDetails = [
+    "Delete Azure virtual machine ", resourceName, " ",
+    "in Azure Subscription ", subscriptionName, " ",
+    "(", subscriptionId, ")"
+  ].join('')
 
   result.push({
-    "averageCPU": Math.random() + 1,
-    "idleThreshold": 5,
-    "lookbackPeriod": "30 days",
-    "maxCPU": Math.random() + 3,
-    "minCPU": Math.random(),
-    "osType": "Linux",
-    "recommendedVmSize": "Terminate Instance",
-    "region": region_list[parseInt(Math.random() * 10)],
-    "resourceGroup": resourceGroup,
-    "resourceId": resourceId,
-    "resourceKind": "Microsoft.Compute/virtualMachines",
-    "resourceName": resourceName,
-    "resourceType": type_list[parseInt(Math.random() * 10)],
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
-    "savingsCurrency": "US$",
-    "service": "Microsoft.Compute",
     "subscriptionId": subscriptionId,
     "subscriptionName": subscriptionName,
-    "summaryData": {
-      "idleInstanceCount": 4,
-      "idleMessage": "The total estimated monthly savings is US$ 100.00",
-      "underutilInstanceCount": 1,
-      "underutilMessage": "The total estimated monthly savings is US$ 100.00"
-    },
-    "tags": [],
-    "underutilThreshold": 40
+    "resourceGroup": resourceGroup,
+    "resourceName": resourceName,
+    "resourceId": resourceId,
+    "tags": tag_list[parseInt(Math.random() * 10)],
+    "recommendationType": "Delete",
+    "recommendationDetails": recommendationDetails,
+    "resourceType": type_list[resourceNumber],
+    "resourceKind": "Microsoft.Compute/virtualMachines",
+    "region": region_list[parseInt(Math.random() * 10)],
+    "osType": "Linux",
+    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
+    "savingsCurrency": "US$",
+    "cpu_average": parseFloat((parseInt(Math.random() * 3) + Math.random()).toFixed(2)),
+    "cpu_maximum": parseFloat((parseInt(Math.random() * 5) + Math.random()).toFixed(2)),
+    "cpu_minimum": parseFloat((parseInt(Math.random()) + Math.random()).toFixed(2)),
+    "mem_average": parseFloat((parseInt(Math.random() * 3) + Math.random()).toFixed(2)),
+    "mem_maximum": parseFloat((parseInt(Math.random() * 5) + Math.random()).toFixed(2)),
+    "mem_minimum": parseFloat((parseInt(Math.random()) + Math.random()).toFixed(2)),
+    "thresholdType": "Average",
+    "threshold": 5,
+    "memoryThreshold": 5,
+    "lookbackPeriod": 30,
+    "service": "Microsoft.Compute"
   })
 }
 

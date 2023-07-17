@@ -5,8 +5,22 @@
 var _ = require('underscore')
 
 // --------------------------------------
+// Functions
+// --------------------------------------
+
+function getRandomDate(year) {
+  let start = new Date(year, 0, 1); // Start from January 1st of the given year
+  let end = new Date(year + 1, 0, 1); // End at December 31st of the given year
+  let randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+
+  return randomDate.toISOString();
+}
+
+// --------------------------------------
 // Dummy Data
 // --------------------------------------
+
+current_year = parseInt(new Date().toISOString().split('-')[0])
 
 account_list = [
   "999773517191",
@@ -35,17 +49,17 @@ region_list = [
   "eu-west-2"
 ]
 
-times_list = [
-  "2022-02-11T00:34:25.000Z",
-  "2023-05-01T01:24:20.000Z",
-  "2022-03-15T02:35:15.000Z",
-  "2022-02-17T05:11:35.000Z",
-  "2022-07-18T08:22:48.000Z",
-  "2022-02-22T11:33:57.000Z",
-  "2022-12-27T14:44:46.000Z",
-  "2022-11-05T17:55:35.000Z",
-  "2022-10-12T22:45:23.000Z",
-  "2022-09-13T15:21:11.000Z"
+tag_list = [
+  { environment: "prod", app: "paymentGateway" },
+  { environment: "dev", app: "dataAnalytics" },
+  { environment: "staging", app: "userManagement" },
+  { environment: "prod", app: "reportingService" },
+  { environment: "dev", app: "emailService" },
+  { environment: "staging", app: "invoiceProcessing" },
+  { environment: "prod", app: "securityModule" },
+  { environment: "prod", app: "inventoryManagement" },
+  { environment: "dev", app: "customerSupport" },
+  { environment: "prod", app: "crmModule" }
 ]
 
 // --------------------------------------
@@ -57,12 +71,15 @@ volumes = []
 for (var i = 0; i < 50; i++) {
   region = region_list[parseInt(Math.random() * 10)]
 
+  createdTime = getRandomDate(current_year - 1 - parseInt(Math.random() * 2))
+  age = Math.round((new Date() - new Date(createdTime)) / 1000 / 60 / 60 / 24)
+
   volumes.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
     "accountName": (Math.random() + 1).toString(36).substring(2),
-    "age": parseInt(Math.random() * 200) + " days",
+    "age": age + " days",
     "availabilityZone": region + 'a',
-    "createdTime": times_list[parseInt(Math.random() * 10)],
+    "createdTime": createdTime,
     "lookbackPeriod": "30 days",
     "region": region,
     "resourceName": (Math.random() + 1).toString(36).substring(2),
@@ -72,7 +89,7 @@ for (var i = 0; i < 50; i++) {
     "service": "EBS",
     "size": parseInt(Math.random() * 500).toFixed(0) + " GB",
     "status": "available",
-    "tags": [],
+    "tags": tag_list[parseInt(Math.random() * 10)],
     "volumeId": "vol-" + (Math.random() + 1).toString(36).substring(2)
   })
 }

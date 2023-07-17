@@ -5,8 +5,22 @@
 var _ = require('underscore')
 
 // --------------------------------------
+// Functions
+// --------------------------------------
+
+function getRandomDate(year) {
+  let start = new Date(year, 0, 1); // Start from January 1st of the given year
+  let end = new Date(year + 1, 0, 1); // End at December 31st of the given year
+  let randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+
+  return randomDate.toISOString();
+}
+
+// --------------------------------------
 // Dummy Data
 // --------------------------------------
+
+current_year = parseInt(new Date().toISOString().split('-')[0])
 
 account_list = [
   "999773517191",
@@ -20,19 +34,6 @@ account_list = [
   "665319725593",
   "925894598672",
   "766083082562"
-]
-
-times_list = [
-  "2022-02-11T00:34:25.000Z",
-  "2023-05-01T01:24:20.000Z",
-  "2022-03-15T02:35:15.000Z",
-  "2022-02-17T05:11:35.000Z",
-  "2022-07-18T08:22:48.000Z",
-  "2022-02-22T11:33:57.000Z",
-  "2022-12-27T14:44:46.000Z",
-  "2022-11-05T17:55:35.000Z",
-  "2022-10-12T22:45:23.000Z",
-  "2022-09-13T15:21:11.000Z"
 ]
 
 type_list = [
@@ -74,6 +75,19 @@ region_list = [
   "eu-west-2"
 ]
 
+tag_list = [
+  "environment=prod, app=paymentGateway",
+  "environment=dev, app=dataAnalytics",
+  "environment=prod, app=userManagement",
+  "environment=dev, app=reportingService",
+  "environment=staging, app=invoiceProcessing",
+  "environment=prod, app=emailService",
+  "environment=prod, app=securityModule",
+  "environment=dev, app=inventoryManagement",
+  "environment=prod, app=customerSupport",
+  "environment=staging, app=crmModule"
+]
+
 // --------------------------------------
 // Script
 // --------------------------------------
@@ -89,24 +103,24 @@ for (var i = 0; i < 50; i++) {
   result.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
     "accountName": (Math.random() + 1).toString(36).substring(2),
-    "cpu_average": parseInt(Math.random() * 30) + Math.random(),
-    "cpu_maximum": parseInt(Math.random() * 40) + Math.random(),
-    "cpu_minimum": parseInt(Math.random() * 10) + Math.random(),
-    "cpu_p90": parseInt(Math.random() * 30) + Math.random(),
-    "cpu_p95": parseInt(Math.random() * 40) + Math.random(),
-    "cpu_p99": parseInt(Math.random() * 10) + Math.random(),
+    "cpu_average": parseFloat((parseInt(Math.random() * 30) + Math.random()).toFixed(2)),
+    "cpu_maximum": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
+    "cpu_minimum": parseFloat((parseInt(Math.random() * 10) + Math.random()).toFixed(2)),
+    "cpu_p90": parseFloat((parseInt(Math.random() * 30) + Math.random()).toFixed(2)),
+    "cpu_p95": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
+    "cpu_p99": parseFloat((parseInt(Math.random() * 10) + Math.random()).toFixed(2)),
     "hostname": ip,
     "id": id,
     "idleMemoryThreshold": 5,
     "idleThreshold": 5,
-    "launchTime": times_list[parseInt(Math.random() * 10)],
+    "launchTime": getRandomDate(current_year - 1 - parseInt(Math.random() * 5)),
     "lookbackPeriod": "30 days",
-    "mem_average": parseInt(Math.random() * 40) + Math.random(),
-    "mem_maximum": parseInt(Math.random() * 40) + Math.random(),
-    "mem_minimum": parseInt(Math.random() * 40) + Math.random(),
-    "mem_p90": parseInt(Math.random() * 40) + Math.random(),
-    "mem_p95": parseInt(Math.random() * 40) + Math.random(),
-    "mem_p99": parseInt(Math.random() * 40) + Math.random(),
+    "mem_average": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
+    "mem_maximum": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
+    "mem_minimum": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
+    "mem_p90": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
+    "mem_p95": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
+    "mem_p99": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),
     "platform": "Linux/UNIX",
     "privateDnsName": ip + ".ec2.internal",
     "recommendationType": "Downsize",
@@ -124,7 +138,7 @@ for (var i = 0; i < 50; i++) {
       "underutilInstanceCount": 16,
       "underutilMessage": "The total estimated monthly savings is US$ 142.24"
     },
-    "tags": "name=" + resourceName,
+    "tags": "name=" + resourceName + ", " + tag_list[parseInt(Math.random() * 10)],
     "thresholdType": "average",
     "underutilMemoryThreshold": 40,
     "underutilThreshold": 40

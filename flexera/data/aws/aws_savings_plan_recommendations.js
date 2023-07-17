@@ -5,8 +5,22 @@
 var _ = require('underscore')
 
 // --------------------------------------
+// Functions
+// --------------------------------------
+
+function getRandomDate(year) {
+  let start = new Date(year, 0, 1); // Start from January 1st of the given year
+  let end = new Date(year + 1, 0, 1); // End at December 31st of the given year
+  let randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+
+  return randomDate.toISOString();
+}
+
+// --------------------------------------
 // Dummy Data
 // --------------------------------------
+
+current_year = parseInt(new Date().toISOString().split('-')[0])
 
 account_list = [
   "999773517191",

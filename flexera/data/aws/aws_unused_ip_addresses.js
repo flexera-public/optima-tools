@@ -5,8 +5,22 @@
 var _ = require('underscore')
 
 // --------------------------------------
+// Functions
+// --------------------------------------
+
+function getRandomDate(year) {
+  let start = new Date(year, 0, 1); // Start from January 1st of the given year
+  let end = new Date(year + 1, 0, 1); // End at December 31st of the given year
+  let randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+
+  return randomDate.toISOString();
+}
+
+// --------------------------------------
 // Dummy Data
 // --------------------------------------
+
+current_year = parseInt(new Date().toISOString().split('-')[0])
 
 account_list = [
   "999773517191",
@@ -35,6 +49,19 @@ region_list = [
   "eu-west-2"
 ]
 
+tag_list = [
+  { environment: "prod", app: "paymentGateway" },
+  { environment: "dev", app: "dataAnalytics" },
+  { environment: "staging", app: "userManagement" },
+  { environment: "prod", app: "reportingService" },
+  { environment: "dev", app: "emailService" },
+  { environment: "staging", app: "invoiceProcessing" },
+  { environment: "prod", app: "securityModule" },
+  { environment: "prod", app: "inventoryManagement" },
+  { environment: "dev", app: "customerSupport" },
+  { environment: "prod", app: "crmModule" }
+]
+
 // --------------------------------------
 // Script
 // --------------------------------------
@@ -53,10 +80,10 @@ for (var i = 0; i < 50; i++) {
     "publicIp": ip,
     "region": region,
     "resourceName": (Math.random() + 1).toString(36).substring(2) + '/' + (Math.random() + 1).toString(36).substring(8),
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
+    "savings": parseFloat((Math.random() * Math.random() * 10).toFixed(3)),
     "savingsCurrency": "$",
     "service": "EC2",
-    "tags": []
+    "tags": tag_list[parseInt(Math.random() * 10)]
   })
 }
 

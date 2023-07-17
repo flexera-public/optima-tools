@@ -5,8 +5,22 @@
 var _ = require('underscore')
 
 // --------------------------------------
+// Functions
+// --------------------------------------
+
+function getRandomDate(year) {
+  let start = new Date(year, 0, 1); // Start from January 1st of the given year
+  let end = new Date(year + 1, 0, 1); // End at December 31st of the given year
+  let randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+
+  return randomDate.toISOString();
+}
+
+// --------------------------------------
 // Dummy Data
 // --------------------------------------
+
+current_year = parseInt(new Date().toISOString().split('-')[0])
 
 account_list = [
   "999773517191",
@@ -74,6 +88,19 @@ region_list = [
   "eu-west-2"
 ]
 
+tag_list = [
+  "environment=prod, app=paymentGateway",
+  "environment=dev, app=dataAnalytics",
+  "environment=prod, app=userManagement",
+  "environment=dev, app=reportingService",
+  "environment=staging, app=invoiceProcessing",
+  "environment=prod, app=emailService",
+  "environment=prod, app=securityModule",
+  "environment=dev, app=inventoryManagement",
+  "environment=prod, app=customerSupport",
+  "environment=staging, app=crmModule"
+]
+
 // --------------------------------------
 // Script
 // --------------------------------------
@@ -88,24 +115,24 @@ for (var i = 0; i < 50; i++) {
   result.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
     "accountName": (Math.random() + 1).toString(36).substring(2),
-    "cpu_average": Math.random() + 3,
-    "cpu_maximum": Math.random() + 5,
-    "cpu_minimum": Math.random(),
-    "cpu_p90": Math.random(),
-    "cpu_p95": Math.random(),
-    "cpu_p99": Math.random(),
+    "cpu_average": parseFloat((Math.random() + 3).toFixed(2)),
+    "cpu_maximum": parseFloat((Math.random() + 5).toFixed(2)),
+    "cpu_minimum": parseFloat((Math.random()).toFixed(2)),
+    "cpu_p90": parseFloat((Math.random()).toFixed(2)),
+    "cpu_p95": parseFloat((Math.random()).toFixed(2)),
+    "cpu_p99": parseFloat((Math.random()).toFixed(2)),
     "hostname": ip,
     "id": id,
     "idleMemoryThreshold": 5,
     "idleThreshold": 5,
-    "launchTime": times_list[parseInt(Math.random() * 10)],
+    "launchTime": getRandomDate(current_year - 1 - parseInt(Math.random() * 5)),
     "lookbackPeriod": "30 days",
-    "mem_average": Math.random() + 3,
-    "mem_maximum": Math.random() + 5,
-    "mem_minimum": Math.random(),
-    "mem_p90": Math.random(),
-    "mem_p95": Math.random(),
-    "mem_p99": Math.random(),
+    "mem_average": parseFloat((Math.random() + 3).toFixed(2)),
+    "mem_maximum": parseFloat((Math.random() + 5).toFixed(2)),
+    "mem_minimum": parseFloat((Math.random()).toFixed(2)),
+    "mem_p90": parseFloat((Math.random()).toFixed(2)),
+    "mem_p95": parseFloat((Math.random()).toFixed(2)),
+    "mem_p99": parseFloat((Math.random()).toFixed(2)),
     "platform": "Linux/UNIX",
     "privateDnsName": ip + ".ec2.internal",
     "recommendationType": "Terminate",
@@ -123,7 +150,7 @@ for (var i = 0; i < 50; i++) {
       "underutilInstanceCount": 16,
       "underutilMessage": "The total estimated monthly savings is US$ 142.24"
     },
-    "tags": "name=" + resourceName,
+    "tags": "name=" + resourceName + ", " + tag_list[parseInt(Math.random() * 10)],
     "thresholdType": "average",
     "underutilMemoryThreshold": 40,
     "underutilThreshold": 40

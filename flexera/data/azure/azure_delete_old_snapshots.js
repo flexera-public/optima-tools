@@ -23,30 +23,30 @@ function getRandomDate(year) {
 current_year = parseInt(new Date().toISOString().split('-')[0])
 
 account_list = [
-  "999773517191",
-  "138186646095",
-  "353197488767",
-  "516702013600",
-  "627286410625",
-  "165283112664",
-  "646728909564",
-  "620368136857",
-  "665319725593",
-  "925894598672",
-  "766083082562"
+  "ca1eeeca-231f-4a91-a740-04eaeb043516",
+  "ceee86e2-a6cf-4a62-8004-1313cc581679",
+  "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+  "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+  "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+  "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+  "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+  "9c6588cd-ca5e-429d-adc7-5292d3880914",
+  "912102ae-2e57-4094-bb8a-63a7d1c38207",
+  "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+  "f048a88c-9bc9-43cf-a30d-f48c94708866"
 ]
 
 region_list = [
-  "us-east-2",
-  "us-east-1",
-  "us-west-1",
-  "us-west-2",
-  "ap-east-1",
-  "ap-northeast-3",
-  "ca-central-1",
-  "eu-central-1",
-  "eu-west-1",
-  "eu-west-2"
+  "southcentralus",
+  "eastus",
+  "eastus2",
+  "westus2",
+  "australiaeast",
+  "southeastasia",
+  "northeurope",
+  "uksouth",
+  "centralus",
+  "centralindia"
 ]
 
 tag_list = [
@@ -68,49 +68,36 @@ tag_list = [
 
 snapshots = []
 
-for (var i = 0; i < 10; i++) {
-  snapshots.push({
-    "accountID": account_list[parseInt(Math.random() * 10)],
-    "accountName": (Math.random() + 1).toString(36).substring(2),
-    "daysOld": parseInt(Math.random() * 200),
-    "dbClusterId": (Math.random() + 1).toString(36).substring(2),
-    "dbInstanceId": "",
-    "imageId": "",
-    "region": region_list[parseInt(Math.random() * 10)],
-    "resourceName": (Math.random() + 1).toString(36).substring(2),
-    "resourceType": "Storage Snapshot",
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
-    "savingsCurrency": "US$",
-    "service": "RDS",
-    "snapshotId": (Math.random() + 1).toString(36).substring(2),
-    "tags": tag_list[parseInt(Math.random() * 10)],
-    "volumeSize": parseInt(Math.random() * 500).toFixed(0)
-  })
-}
+for (var i = 0; i < 50; i++) {
+  subscriptionId = account_list[parseInt(Math.random() * 10)]
+  subscriptionName = (Math.random() + 1).toString(36).substring(2)
+  resourceGroup = (Math.random() + 1).toString(36).substring(2).toUpperCase() + '-' + (Math.random() + 1).toString(36).substring(2).toUpperCase()
+  resourceName = (Math.random() + 1).toString(36).substring(2)
+  resourceId = "/subscriptions/" + subscriptionId + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Compute/snapshots/" + resourceName
+  createdTime = getRandomDate(current_year - 1 - parseInt(Math.random() * 2))
+  age = Math.round((new Date() - new Date(createdTime)) / 1000 / 60 / 60 / 24)
 
-for (var i = 0; i < 40; i++) {
   snapshots.push({
-    "accountID": account_list[parseInt(Math.random() * 10)],
-    "accountName": (Math.random() + 1).toString(36).substring(2),
-    "daysOld": parseInt(Math.random() * 200),
-    "dbClusterId": "",
-    "dbInstanceId": "",
-    "imageId": "",
+    "age": age,
     "region": region_list[parseInt(Math.random() * 10)],
-    "resourceName": (Math.random() + 1).toString(36).substring(2),
-    "resourceType": "Storage Snapshot",
+    "resourceGroup": resourceGroup,
+    "resourceID": resourceId,
+    "resourceName": resourceName,
+    "resourceType": "Microsoft.Compute/snapshots",
     "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
     "savingsCurrency": "US$",
-    "service": "EBS",
-    "snapshotId": (Math.random() + 1).toString(36).substring(2),
+    "service": "Microsoft.Compute",
+    "size": parseInt(Math.random() * 500).toFixed(0),
+    "subscriptionID": subscriptionId,
+    "subscriptionName": subscriptionName,
     "tags": tag_list[parseInt(Math.random() * 10)],
-    "volumeSize": parseInt(Math.random() * 500).toFixed(0)
+    "timeCreated": createdTime
   })
 }
 
 result = {
-  "message": "The total estimated monthly savings are US$ 246.70",
-  "result": snapshots
+  "message": "The total estimated monthly savings are US$ 172.03",
+  "instances": snapshots
 }
 
 // --------------------------------------
