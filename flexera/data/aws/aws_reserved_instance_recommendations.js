@@ -67,7 +67,7 @@ region_list = [
 
 result = []
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 50; i++) {
   resourceType = type_list[parseInt(Math.random() * 10)]
 
   result.push({

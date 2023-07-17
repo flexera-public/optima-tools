@@ -41,7 +41,7 @@ region_list = [
 
 ip_list = []
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 50; i++) {
   region = region_list[parseInt(Math.random() * 10)]
   ip = parseInt(Math.random() * 100) + '.'  + parseInt(Math.random() * 100) + '.' + parseInt(Math.random() * 100) + '.' + parseInt(Math.random() * 100)
 

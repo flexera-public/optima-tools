@@ -41,7 +41,7 @@ region_list = [
 
 result = []
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 50; i++) {
   currentAverageHourlyOnDemandSpend = (Math.random() * 100).toFixed(2)
   currentMaximumHourlyOnDemandSpend = (Math.random() * 100).toFixed(2)
   currentMinimumHourlyOnDemandSpend = (Math.random() * 10).toFixed(2)

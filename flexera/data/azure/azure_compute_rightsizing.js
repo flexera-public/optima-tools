@@ -80,7 +80,7 @@ region_list = [
 
 result = []
 
-for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 25; i++) {
   subscriptionId = account_list[parseInt(Math.random() * 10)]
   subscriptionName = (Math.random() + 1).toString(36).substring(2)
   resourceGroup = (Math.random() + 1).toString(36).substring(2).toUpperCase() + '-' + (Math.random() + 1).toString(36).substring(2).toUpperCase()
@@ -118,7 +118,7 @@ for (var i = 0; i < 10; i++) {
   })
 }
 
-for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 25; i++) {
   subscriptionId = account_list[parseInt(Math.random() * 10)]
   subscriptionName = (Math.random() + 1).toString(36).substring(2)
   resourceGroup = (Math.random() + 1).toString(36).substring(2).toUpperCase() + '-' + (Math.random() + 1).toString(36).substring(2).toUpperCase()

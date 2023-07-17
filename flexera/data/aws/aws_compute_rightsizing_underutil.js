@@ -80,7 +80,7 @@ region_list = [
 
 result = []
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 50; i++) {
   id = "i-" + (Math.random() + 1).toString(36).substring(2)
   ip = "ip-" + parseInt(Math.random() * 100) + '-'  + parseInt(Math.random() * 100) + '-' + parseInt(Math.random() * 100) + '-' + parseInt(Math.random() * 100)
   resourceName = (Math.random() + 1).toString(36).substring(2)

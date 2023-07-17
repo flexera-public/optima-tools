@@ -54,7 +54,7 @@ times_list = [
 
 volumes = []
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 50; i++) {
   region = region_list[parseInt(Math.random() * 10)]
 
   volumes.push({

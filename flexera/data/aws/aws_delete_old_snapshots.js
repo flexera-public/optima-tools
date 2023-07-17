@@ -41,7 +41,7 @@ region_list = [
 
 snapshots = []
 
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 50; i++) {
   snapshots.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
     "accountName": (Math.random() + 1).toString(36).substring(2),
