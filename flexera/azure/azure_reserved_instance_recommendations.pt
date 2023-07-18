@@ -1,4 +1,4 @@
-name "Azure Reserved Instances Recommendations"
+name "Azure Reserved Instances Recommendations [Demo]"
 rs_pt_ver 20180301
 type "policy"
 short_description "Demo policy for generating recommendations. See [README](https://github.com/flexera-public/optima-tools/tree/master/flexera/) for more information."

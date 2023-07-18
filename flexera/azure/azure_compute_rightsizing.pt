@@ -33,12 +33,7 @@ end
 
 policy "policy_azure_rightsizing_data" do
   validate_each $ds_combined_data do
-    summary_template <<-EOS
-    {{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ with index data 0 }}{{ .summaryData.underutilInstanceCount }}{{ end }} Azure underutilized compute instances found
-        EOS
-    detail_template <<-EOS
-    {{ with index data 0 }}{{ .summaryData.underutilMessage }}{{ end }}
-        EOS
+    summary_template "{{ len data }} Azure Underutilized Virtual Machines Found"
     check ne(val(item, "recommendationType"), "Downsize")
     export do
       resource_level true
@@ -133,12 +128,7 @@ policy "policy_azure_rightsizing_data" do
     end
   end
   validate_each $ds_combined_data do
-    summary_template <<-EOS
-{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ with index data 0 }}{{ .summaryData.idleInstanceCount }}{{end}} Azure idle compute instances found
-EOS
-    detail_template <<-EOS
-{{ with index data 0 }}{{ .summaryData.idleMessage }}{{ end }}
-EOS
+    summary_template "{{ len data }} Azure Idle Virtual Machines Found"
     check ne(val(item, "recommendationType"), "Delete")
     export do
       resource_level true
