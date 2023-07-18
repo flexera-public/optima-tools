@@ -16,6 +16,27 @@ function getRandomDate(year) {
   return randomDate.toISOString();
 }
 
+function generateRandomName() {
+  adjectives = [
+    "quick", "lazy", "drowsy", "excited", "adventurous", "jolly", "brave", "calm",
+    "eager", "fierce", "gentle", "happy", "innocent", "jovial", "kind", "lively",
+    "merry", "nervous", "obedient", "proud", "relieved", "silly", "thankful",
+    "upbeat", "vivacious", "witty", "excited", "youthful", "zealous", "quirky"
+  ]
+
+  animals = [
+    "ant", "bear", "cat", "dog", "eel", "fox", "goat", "horse", "ibis", "jaguar",
+    "kangaroo", "lion", "mouse", "newt", "owl", "penguin", "quail", "rabbit",
+    "snake", "tiger", "urchin", "viper", "whale", "xerus", "yak", "zebra", "parrot",
+    "octopus", "giraffe", "elephant"
+  ];
+
+  randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)]
+  randomAnimal = animals[Math.floor(Math.random() * animals.length)]
+
+  return randomAdjective + randomAnimal
+}
+
 // --------------------------------------
 // Dummy Data
 // --------------------------------------
@@ -71,18 +92,18 @@ snapshots = []
 for (var i = 0; i < 10; i++) {
   snapshots.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
-    "accountName": (Math.random() + 1).toString(36).substring(2),
+    "accountName": generateRandomName(),
     "daysOld": parseInt(Math.random() * 200),
     "dbClusterId": (Math.random() + 1).toString(36).substring(2),
     "dbInstanceId": "",
     "imageId": "",
     "region": region_list[parseInt(Math.random() * 10)],
-    "resourceName": (Math.random() + 1).toString(36).substring(2),
+    "resourceName": generateRandomName(),
     "resourceType": "Storage Snapshot",
     "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
     "savingsCurrency": "US$",
     "service": "RDS",
-    "snapshotId": (Math.random() + 1).toString(36).substring(2),
+    "snapshotId": generateRandomName(),
     "tags": tag_list[parseInt(Math.random() * 10)],
     "volumeSize": parseInt(Math.random() * 500).toFixed(0)
   })
@@ -91,18 +112,18 @@ for (var i = 0; i < 10; i++) {
 for (var i = 0; i < 40; i++) {
   snapshots.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
-    "accountName": (Math.random() + 1).toString(36).substring(2),
+    "accountName": generateRandomName(),
     "daysOld": parseInt(Math.random() * 200),
     "dbClusterId": "",
     "dbInstanceId": "",
     "imageId": "",
     "region": region_list[parseInt(Math.random() * 10)],
-    "resourceName": (Math.random() + 1).toString(36).substring(2),
+    "resourceName": generateRandomName(),
     "resourceType": "Storage Snapshot",
     "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
     "savingsCurrency": "US$",
     "service": "EBS",
-    "snapshotId": (Math.random() + 1).toString(36).substring(2),
+    "snapshotId": generateRandomName(),
     "tags": tag_list[parseInt(Math.random() * 10)],
     "volumeSize": parseInt(Math.random() * 500).toFixed(0)
   })

@@ -16,6 +16,27 @@ function getRandomDate(year) {
   return randomDate.toISOString();
 }
 
+function generateRandomName() {
+  adjectives = [
+    "quick", "lazy", "drowsy", "excited", "adventurous", "jolly", "brave", "calm",
+    "eager", "fierce", "gentle", "happy", "innocent", "jovial", "kind", "lively",
+    "merry", "nervous", "obedient", "proud", "relieved", "silly", "thankful",
+    "upbeat", "vivacious", "witty", "excited", "youthful", "zealous", "quirky"
+  ]
+
+  animals = [
+    "ant", "bear", "cat", "dog", "eel", "fox", "goat", "horse", "ibis", "jaguar",
+    "kangaroo", "lion", "mouse", "newt", "owl", "penguin", "quail", "rabbit",
+    "snake", "tiger", "urchin", "viper", "whale", "xerus", "yak", "zebra", "parrot",
+    "octopus", "giraffe", "elephant"
+  ];
+
+  randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)]
+  randomAnimal = animals[Math.floor(Math.random() * animals.length)]
+
+  return randomAdjective + randomAnimal
+}
+
 // --------------------------------------
 // Dummy Data
 // --------------------------------------
@@ -98,7 +119,7 @@ for (var i = 0; i < 50; i++) {
   projectNumber = (Math.random() * 1000000000000).toFixed(0)
   resourceType = type_list[parseInt(Math.random() * 10)]
   savings = parseFloat((Math.random() * Math.random() * 100).toFixed(3))
-  resourceName = (Math.random() + 1).toString(36).substring(2)
+  resourceName = generateRandomName()
   resourceID = (Math.random() * 10000000000000000000).toFixed(0)
   region = region_list[parseInt(Math.random() * 10)]
   accountId = "rightscale.com:resat-prem"

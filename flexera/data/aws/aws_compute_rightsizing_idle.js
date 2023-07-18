@@ -16,6 +16,27 @@ function getRandomDate(year) {
   return randomDate.toISOString();
 }
 
+function generateRandomName() {
+  adjectives = [
+    "quick", "lazy", "drowsy", "excited", "adventurous", "jolly", "brave", "calm",
+    "eager", "fierce", "gentle", "happy", "innocent", "jovial", "kind", "lively",
+    "merry", "nervous", "obedient", "proud", "relieved", "silly", "thankful",
+    "upbeat", "vivacious", "witty", "excited", "youthful", "zealous", "quirky"
+  ]
+
+  animals = [
+    "ant", "bear", "cat", "dog", "eel", "fox", "goat", "horse", "ibis", "jaguar",
+    "kangaroo", "lion", "mouse", "newt", "owl", "penguin", "quail", "rabbit",
+    "snake", "tiger", "urchin", "viper", "whale", "xerus", "yak", "zebra", "parrot",
+    "octopus", "giraffe", "elephant"
+  ];
+
+  randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)]
+  randomAnimal = animals[Math.floor(Math.random() * animals.length)]
+
+  return randomAdjective + randomAnimal
+}
+
 // --------------------------------------
 // Dummy Data
 // --------------------------------------
@@ -110,11 +131,11 @@ result = []
 for (var i = 0; i < 50; i++) {
   id = "i-" + (Math.random() + 1).toString(36).substring(2)
   ip = "ip-" + parseInt(Math.random() * 100) + '-'  + parseInt(Math.random() * 100) + '-' + parseInt(Math.random() * 100) + '-' + parseInt(Math.random() * 100)
-  resourceName = (Math.random() + 1).toString(36).substring(2)
+  resourceName = generateRandomName()
 
   result.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
-    "accountName": (Math.random() + 1).toString(36).substring(2),
+    "accountName": generateRandomName(),
     "cpu_average": parseFloat((Math.random() + 3).toFixed(2)),
     "cpu_maximum": parseFloat((Math.random() + 5).toFixed(2)),
     "cpu_minimum": parseFloat((Math.random()).toFixed(2)),

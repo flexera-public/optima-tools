@@ -16,6 +16,27 @@ function getRandomDate(year) {
   return randomDate.toISOString();
 }
 
+function generateRandomName() {
+  adjectives = [
+    "quick", "lazy", "drowsy", "excited", "adventurous", "jolly", "brave", "calm",
+    "eager", "fierce", "gentle", "happy", "innocent", "jovial", "kind", "lively",
+    "merry", "nervous", "obedient", "proud", "relieved", "silly", "thankful",
+    "upbeat", "vivacious", "witty", "excited", "youthful", "zealous", "quirky"
+  ]
+
+  animals = [
+    "ant", "bear", "cat", "dog", "eel", "fox", "goat", "horse", "ibis", "jaguar",
+    "kangaroo", "lion", "mouse", "newt", "owl", "penguin", "quail", "rabbit",
+    "snake", "tiger", "urchin", "viper", "whale", "xerus", "yak", "zebra", "parrot",
+    "octopus", "giraffe", "elephant"
+  ];
+
+  randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)]
+  randomAnimal = animals[Math.floor(Math.random() * animals.length)]
+
+  return randomAdjective + randomAnimal
+}
+
 // --------------------------------------
 // Dummy Data
 // --------------------------------------
@@ -71,12 +92,12 @@ result = []
 for (var i = 0; i < 50; i++) {
   accountid = account_list[parseInt(Math.random() * 10)]
   region = region_list[parseInt(Math.random() * 10)]
-  dbInstanceIdentifier = (Math.random() + 1).toString(36).substring(2)
+  dbInstanceIdentifier = generateRandomName()
   resourceType = type_list[parseInt(Math.random() * 10)]
 
   result.push({
     "accountId": accountid,
-    "accountName": (Math.random() + 1).toString(36).substring(2),
+    "accountName": generateRandomName(),
     "availabilityZone": region + 'a',
     "databaseEngine": "aurora-postgresql",
     "dbInstanceArn": "arn:aws:rds:" + region + ":" + accountid + ":" + dbInstanceIdentifier,

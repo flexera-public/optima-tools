@@ -16,6 +16,27 @@ function getRandomDate(year) {
   return randomDate.toISOString();
 }
 
+function generateRandomName() {
+  adjectives = [
+    "quick", "lazy", "drowsy", "excited", "adventurous", "jolly", "brave", "calm",
+    "eager", "fierce", "gentle", "happy", "innocent", "jovial", "kind", "lively",
+    "merry", "nervous", "obedient", "proud", "relieved", "silly", "thankful",
+    "upbeat", "vivacious", "witty", "excited", "youthful", "zealous", "quirky"
+  ]
+
+  animals = [
+    "ant", "bear", "cat", "dog", "eel", "fox", "goat", "horse", "ibis", "jaguar",
+    "kangaroo", "lion", "mouse", "newt", "owl", "penguin", "quail", "rabbit",
+    "snake", "tiger", "urchin", "viper", "whale", "xerus", "yak", "zebra", "parrot",
+    "octopus", "giraffe", "elephant"
+  ];
+
+  randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)]
+  randomAnimal = animals[Math.floor(Math.random() * animals.length)]
+
+  return randomAdjective + randomAnimal
+}
+
 // --------------------------------------
 // Dummy Data
 // --------------------------------------
@@ -76,13 +97,13 @@ for (var i = 0; i < 50; i++) {
 
   volumes.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
-    "accountName": (Math.random() + 1).toString(36).substring(2),
+    "accountName": generateRandomName(),
     "age": age + " days",
     "availabilityZone": region + 'a',
     "createdTime": createdTime,
     "lookbackPeriod": "30 days",
     "region": region,
-    "resourceName": (Math.random() + 1).toString(36).substring(2),
+    "resourceName": generateRandomName(),
     "resourceType": "gp" + (parseInt(Math.random() * 2) + 2),
     "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
     "savingsCurrency": "US$",
@@ -90,7 +111,7 @@ for (var i = 0; i < 50; i++) {
     "size": parseInt(Math.random() * 500).toFixed(0) + " GB",
     "status": "available",
     "tags": tag_list[parseInt(Math.random() * 10)],
-    "volumeId": "vol-" + (Math.random() + 1).toString(36).substring(2)
+    "volumeId": "vol-" + generateRandomName()
   })
 }
 
