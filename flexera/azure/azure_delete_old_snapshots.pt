@@ -1,82 +1,24 @@
-name "Azure Old Snapshots"
+name "Azure Old Snapshots [Demo]"
 rs_pt_ver 20180301
 type "policy"
-short_description "A mock that checks for snapshots older than specified number of days and, optionally, deletes them. See the [README](https://github.com/flexera/policy_templates/tree/master/cost/azure/old_snapshots) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
+short_description "Demo policy for generating recommendations. See [README](https://github.com/flexera-public/optima-tools/tree/master/flexera/) for more information."
+long_description ""
 severity "low"
 category "Cost"
 default_frequency "daily"
 info(
-  version: "0.1",
+  version: "4.5",
   provider: "Azure",
   service: "Storage",
-  policy_set: "Old Snapshots"
+  policy_set: "Old Snapshots",
+  recommendation_type: "Usage Reduction"
 )
-
-##################
-# User inputs    #
-##################
-
-parameter "param_email" do
-  type "list"
-  label "Email Address"
-  description "Email addresses of the recipients you wish to notify"
-end
-
-parameter "param_azure_endpoint" do
-  type "string"
-  label "Azure Endpoint"
-  allowed_values "management.azure.com", "management.chinacloudapi.cn"
-  default "management.azure.com"
-end
-
-parameter "param_subscription_whitelist" do
-  label "Subscription Whitelist"
-  type "list"
-  description "Whitelisted Subscriptions, if empty, all subscriptions will be checked"
-end
-
-parameter "param_snapshot_age" do
-  type "number"
-  label "Snapshot Age"
-  description "The number of days since the snapshot was created"
-  default 30
-end
-
-parameter "param_exclusion_tag_key" do
-  category "User Inputs"
-  label "Exclusion Tag Key"
-  description "Cloud native tag key to ignore instances. Example: exclude_utilization"
-  type "list"
-end
-
-parameter "param_automatic_action" do
-  type "list"
-  label "Automatic Actions"
-  description "When this value is set, this policy will automatically take the selected action(s)"
-  allowed_values ["Delete Snapshots"]
-end
-
-parameter "param_log_to_cm_audit_entries" do
-  type "string"
-  label "Log to CM Audit Entries"
-  description "Boolean for whether or not to log any debugging information from actions to CM Audit Entries, this should be left set to No on Flexera EU"
-  default "No"
-  allowed_values "Yes", "No"
-end
-
-###############################################################################
-# Authentication
-###############################################################################
-
-###############################################################################
-# Pagination
-###############################################################################
 
 ###############################################################################
 # Datasources
 ###############################################################################
 
-datasource "ds_azure_instance_map" do
+datasource "ds_snapshot_cost_mapping" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
@@ -85,82 +27,26 @@ datasource "ds_azure_instance_map" do
   end
 end
 
-datasource "ds_snapshot_cost_mapping" do
-  run_script $js_instance_cost_mapping, $ds_azure_instance_map, $param_snapshot_age, $param_subscription_whitelist, $param_exclusion_tag_key
-end
-
-###############################################################################
-# Scripts
-###############################################################################
-
-script "js_instance_cost_mapping", type:"javascript" do
-  result "result"
-  parameters "ds_azure_instance_map", "param_snapshot_age", "param_subscription_whitelist", "param_exclusion_tag_key"
-  code <<-EOS
-  var result = []
-  monthlySavings = 0
-  var subList = []
-
-  function getRandomInboundNumber(upper, lower, decimal) {
-    var num = Math.floor(Math.random() * (upper - lower) + lower)
-    if (decimal) {
-      var numFigs = Math.floor(Math.random() * (100))/100
-      return num + numFigs;
-    }
-    return num
-  }
-             
-  _.each(ds_azure_instance_map.values, function(instance){
-    monthlySavings = monthlySavings + instance.savings
-  })
-
-  _.each(ds_azure_instance_map.values, function(instance){
-    var is_tag_matched = false
-    for(var k=0;k<param_exclusion_tag_key.length;k++){
-      if(_.has(instance.tags, param_exclusion_tag_key[k])){
-        is_tag_matched=true
-      }
-    }
-    if (!is_tag_matched) {
-      if (param_subscription_whitelist.length >0) {
-        var setProject = getRandomInboundNumber(param_subscription_whitelist.length, 0, false)
-        instance.subscriptionID = param_subscription_whitelist[setProject]
-      }
-
-      instance.age = getRandomInboundNumber((param_snapshot_age + 200), param_snapshot_age)
-      var message="The total estimated monthly savings are £"+ monthlySavings;
-      instance.message = message
-      result.push(instance)
-    }
-  })
-
-  result = _.sortBy(result,"region");
-  result = _.sortBy(result,"subscriptionID");
-  EOS
-end
-
 ###############################################################################
 # Policy
 ###############################################################################
 
 policy "pol_azure_delete_old_snapshots" do
-  validate_each $ds_snapshot_cost_mapping do
-    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data }} Old Snapshots Found"
+  validate $ds_snapshot_cost_mapping do
+    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.instances }} Old Snapshots Found"
     detail_template <<-EOS
-
-{{with index data 0}}{{.message}}{{end}}
+{{data.message}}.
 EOS
-    export do
+    check eq(1, 0)
+    export "instances" do
       resource_level true
-      field "id" do
-        label "ID"
-        path "resourceID"
-      end
-      field "subscriptionID" do
+      field "accountID" do
         label "Subscription ID"
+        path "subscriptionID"
       end
-      field "subscriptionName" do
+      field "accountName" do
         label "Subscription Name"
+        path "subscriptionName"
       end
       field "resourceID" do
         label "Resource Id"
@@ -192,43 +78,13 @@ EOS
       field "savingsCurrency" do
         label "Savings Currency"
       end
-      field "accountID" do
-        label "Account ID"
-        path "subscriptionID"
+      field "id" do
+        label "ID"
+        path "resourceID"
       end
-      field "accountName" do
-        label "Account Name"
-        path "subscriptionName"
+      field "size" do
+        label "Size (GB)"
       end
     end
-    # Send email report
-    escalate $send_email_report
-    escalate $process_snapshots
-    check eq(1, 0)
   end
-end
-
-###############################################################################
-# Escalations
-###############################################################################
-
-escalation "send_email_report" do
-  automatic true
-  label "Send Email"
-  description "Send incident email"
-  email $param_email
-end
-
-escalation "process_snapshots" do
-  automatic contains($param_automatic_action, "Delete Snapshots")
-  label "Delete Snapshots"
-  description "Delete all selected snapshots"
-  run "delete_old_snapshots"
-end
-
-###############################################################################
-# Cloud Workflow
-###############################################################################
-
-define delete_old_snapshots() do
 end

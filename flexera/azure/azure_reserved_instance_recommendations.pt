@@ -1,0 +1,113 @@
+name "Azure Reserved Instances Recommendations"
+rs_pt_ver 20180301
+type "policy"
+short_description "Demo policy for generating recommendations. See [README](https://github.com/flexera-public/optima-tools/tree/master/flexera/) for more information."
+long_description ""
+severity "medium"
+category "Cost"
+default_frequency "daily"
+info(
+  version: "2.17",
+  provider: "Azure",
+  service: "Compute",
+  policy_set: "Reserved Instances",
+  recommendation_type: "Rate Reduction"
+)
+
+###############################################################################
+# Parameters
+###############################################################################
+
+parameter "param_savings_threshold" do
+  category "RI"
+  label "Net Savings Threshold"
+  description "Specify the minimum net savings that should result in a recommendation"
+  default 1
+  type "number"
+end
+
+###############################################################################
+# Datasources
+###############################################################################
+
+datasource "ds_ri_normalization" do
+  request do
+    verb "GET"
+    host "raw.githubusercontent.com"
+    path "/flexera-public/optima-tools/master/flexera/data/azure/azure_reserved_instance_recommendations.json"
+    header "User-Agent", "RS Policies"
+  end
+end
+
+###############################################################################
+# Policy
+###############################################################################
+
+policy "azure_ri_recommendations" do
+  validate_each $ds_ri_normalization do
+    summary_template "{{ len data }} Azure Reservation Purchase Recommendations"
+    check lt(to_n(val(item, "netSavings")), $param_savings_threshold)
+    export do
+      resource_level false
+      field "accountID" do
+        label "Subscription ID"
+        path "subscriptionId"
+      end
+      field "accountName" do
+        label "Subscription Name"
+        path "subscriptionName"
+      end
+      field "service" do
+        label "Service"
+      end
+      field "resourceType" do
+        label "Resource Type"
+        path "skuName"
+      end
+      field "region" do
+        label "Location"
+      end
+      field "term" do
+        label "Term"
+      end
+      field "savings" do
+        label "Net Savings"
+        path "netSavings"
+      end
+      field "recommendedQuantity" do
+        label "Recommended Quantity to Purchase"
+      end
+      field "costWithNoRI" do
+        label "Total Current Cost (without RI)"
+      end
+      field "totalCostWithRI" do
+        label "Total Cost if RI was purchased"
+      end
+      field "firstUsageDate" do
+        label "First Usage Date"
+      end
+      field "id" do
+        label "Resource MeterID"
+        path "meterId"
+      end
+      field "instanceFlexibilityGroup" do
+        label "instanceFlexibilityGroup"
+      end
+      field "instanceFlexibilityRatio" do
+        label "instanceFlexibilityRatio"
+      end
+      field "normalizedSize" do
+        label "normalizedSize"
+      end
+      field "recommendedQuantityNormalized" do
+        label "recommendedQuantityNormalized"
+      end
+      field "scope" do
+        label "Scope"
+      end
+      field "lookbackPeriod" do
+        label "Lookback Period"
+      end
+    end
+  end
+end

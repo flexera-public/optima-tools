@@ -1,26 +1,1005 @@
-
-{"values":[{
-  "accountID": "625149001990",
-  "region": "us-east-1",
-  "volumeSize":20,
-  "daysOld":45,
-  "snapshotImageIdFormat":"ami-0abcdef1234567890",
-  "resourceID": "snap-09k412de481e0317b",
-  "tags": [],
-  "savings": 0.75,
-  "savingsCurrency": "£",
-  "service":"EBS"
-},
 {
-  "accountID": "625149001990",
-  "region": "us-west-2",
-  "volumeSize":300,
-  "daysOld":77,
-  "snapshotImageIdFormat":"ami-0abcdef1234567890",
-  "resourceID": "snap-09k414ui1l5e0317y",
-  "tags": ["mock=true","valid=false"],
-  "savings": 1.33,
-  "savingsCurrency": "£",
-  "service":"EBS"
-}]
+  "message": "The total estimated monthly savings are US$ 246.70",
+  "result": [
+    {
+      "accountID": "165283112664",
+      "accountName": "innocentjaguar",
+      "daysOld": 40,
+      "dbClusterId": "g3qj9yt6x4",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-2",
+      "resourceName": "proudhorse",
+      "resourceType": "Storage Snapshot",
+      "savings": 3.774,
+      "savingsCurrency": "US$",
+      "service": "RDS",
+      "snapshotId": "innocentparrot",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "volumeSize": "306"
+    },
+    {
+      "accountID": "353197488767",
+      "accountName": "calmelephant",
+      "daysOld": 161,
+      "dbClusterId": "pa2o7p9b2m",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-2",
+      "resourceName": "obedientsnake",
+      "resourceType": "Storage Snapshot",
+      "savings": 8.297,
+      "savingsCurrency": "US$",
+      "service": "RDS",
+      "snapshotId": "proudjaguar",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "volumeSize": "386"
+    },
+    {
+      "accountID": "627286410625",
+      "accountName": "excitedpenguin",
+      "daysOld": 74,
+      "dbClusterId": "tbzh6aezef",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ap-northeast-3",
+      "resourceName": "lazyelephant",
+      "resourceType": "Storage Snapshot",
+      "savings": 8.584,
+      "savingsCurrency": "US$",
+      "service": "RDS",
+      "snapshotId": "merryyak",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "volumeSize": "153"
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "happyfox",
+      "daysOld": 108,
+      "dbClusterId": "faul7brs0c",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-1",
+      "resourceName": "calmfox",
+      "resourceType": "Storage Snapshot",
+      "savings": 44.921,
+      "savingsCurrency": "US$",
+      "service": "RDS",
+      "snapshotId": "livelyeel",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "volumeSize": "213"
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "jovialoctopus",
+      "daysOld": 52,
+      "dbClusterId": "chq3dblh4ig",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-west-2",
+      "resourceName": "quickfox",
+      "resourceType": "Storage Snapshot",
+      "savings": 22.238,
+      "savingsCurrency": "US$",
+      "service": "RDS",
+      "snapshotId": "jovialdog",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "volumeSize": "86"
+    },
+    {
+      "accountID": "665319725593",
+      "accountName": "youthfulowl",
+      "daysOld": 45,
+      "dbClusterId": "2202sypej9",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-west-2",
+      "resourceName": "wittyelephant",
+      "resourceType": "Storage Snapshot",
+      "savings": 2.006,
+      "savingsCurrency": "US$",
+      "service": "RDS",
+      "snapshotId": "proudant",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "volumeSize": "179"
+    },
+    {
+      "accountID": "646728909564",
+      "accountName": "fierceviper",
+      "daysOld": 135,
+      "dbClusterId": "7ef5vyl2yh",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ap-northeast-3",
+      "resourceName": "jovialpenguin",
+      "resourceType": "Storage Snapshot",
+      "savings": 4.285,
+      "savingsCurrency": "US$",
+      "service": "RDS",
+      "snapshotId": "nervouszebra",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      },
+      "volumeSize": "108"
+    },
+    {
+      "accountID": "925894598672",
+      "accountName": "lazyowl",
+      "daysOld": 171,
+      "dbClusterId": "jexz3cjyec",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-1",
+      "resourceName": "calmzebra",
+      "resourceType": "Storage Snapshot",
+      "savings": 43.144,
+      "savingsCurrency": "US$",
+      "service": "RDS",
+      "snapshotId": "thankfulowl",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "volumeSize": "32"
+    },
+    {
+      "accountID": "138186646095",
+      "accountName": "innocentcat",
+      "daysOld": 74,
+      "dbClusterId": "rk7tnmfuw1",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ap-northeast-3",
+      "resourceName": "excitedpenguin",
+      "resourceType": "Storage Snapshot",
+      "savings": 54.666,
+      "savingsCurrency": "US$",
+      "service": "RDS",
+      "snapshotId": "nervousbear",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "volumeSize": "399"
+    },
+    {
+      "accountID": "353197488767",
+      "accountName": "innocentgoat",
+      "daysOld": 55,
+      "dbClusterId": "qin2zlkv1ng",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-1",
+      "resourceName": "jollyxerus",
+      "resourceType": "Storage Snapshot",
+      "savings": 39.501,
+      "savingsCurrency": "US$",
+      "service": "RDS",
+      "snapshotId": "upbeathorse",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "volumeSize": "203"
+    },
+    {
+      "accountID": "646728909564",
+      "accountName": "adventurouszebra",
+      "daysOld": 60,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-west-1",
+      "resourceName": "relievedbear",
+      "resourceType": "Storage Snapshot",
+      "savings": 3.849,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "gentletiger",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "volumeSize": "335"
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "jovialkangaroo",
+      "daysOld": 89,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-west-2",
+      "resourceName": "relievedquail",
+      "resourceType": "Storage Snapshot",
+      "savings": 24.08,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "relievedelephant",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "volumeSize": "458"
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "merryzebra",
+      "daysOld": 17,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-2",
+      "resourceName": "innocentgiraffe",
+      "resourceType": "Storage Snapshot",
+      "savings": 27.25,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "zealousviper",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "volumeSize": "465"
+    },
+    {
+      "accountID": "665319725593",
+      "accountName": "youthfullion",
+      "daysOld": 122,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-1",
+      "resourceName": "vivaciousfox",
+      "resourceType": "Storage Snapshot",
+      "savings": 11.051,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "fiercemouse",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "volumeSize": "0"
+    },
+    {
+      "accountID": "165283112664",
+      "accountName": "zealousowl",
+      "daysOld": 14,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ca-central-1",
+      "resourceName": "relievedyak",
+      "resourceType": "Storage Snapshot",
+      "savings": 23.814,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "obedientparrot",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "volumeSize": "404"
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "livelytiger",
+      "daysOld": 2,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-west-1",
+      "resourceName": "quicklion",
+      "resourceType": "Storage Snapshot",
+      "savings": 11.319,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "happyviper",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "volumeSize": "126"
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "braveelephant",
+      "daysOld": 79,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-1",
+      "resourceName": "jollyyak",
+      "resourceType": "Storage Snapshot",
+      "savings": 5.631,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "braveant",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "volumeSize": "99"
+    },
+    {
+      "accountID": "353197488767",
+      "accountName": "wittygiraffe",
+      "daysOld": 128,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-central-1",
+      "resourceName": "youthfulparrot",
+      "resourceType": "Storage Snapshot",
+      "savings": 3.256,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "obedientyak",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      },
+      "volumeSize": "337"
+    },
+    {
+      "accountID": "999773517191",
+      "accountName": "quickfox",
+      "daysOld": 21,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-west-2",
+      "resourceName": "thankfullion",
+      "resourceType": "Storage Snapshot",
+      "savings": 11.987,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "drowsyibis",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "volumeSize": "137"
+    },
+    {
+      "accountID": "665319725593",
+      "accountName": "merryxerus",
+      "daysOld": 91,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ca-central-1",
+      "resourceName": "calmwhale",
+      "resourceType": "Storage Snapshot",
+      "savings": 26.811,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "fiercehorse",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "volumeSize": "18"
+    },
+    {
+      "accountID": "165283112664",
+      "accountName": "eagerfox",
+      "daysOld": 194,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-2",
+      "resourceName": "relievedhorse",
+      "resourceType": "Storage Snapshot",
+      "savings": 25.456,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "upbeatyak",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "volumeSize": "324"
+    },
+    {
+      "accountID": "999773517191",
+      "accountName": "vivaciousrabbit",
+      "daysOld": 148,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ap-northeast-3",
+      "resourceName": "gentleviper",
+      "resourceType": "Storage Snapshot",
+      "savings": 49.054,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "wittygiraffe",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "volumeSize": "175"
+    },
+    {
+      "accountID": "925894598672",
+      "accountName": "eagerbear",
+      "daysOld": 0,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-west-1",
+      "resourceName": "lazyviper",
+      "resourceType": "Storage Snapshot",
+      "savings": 35.599,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "happyxerus",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      },
+      "volumeSize": "162"
+    },
+    {
+      "accountID": "627286410625",
+      "accountName": "upbeatlion",
+      "daysOld": 40,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-central-1",
+      "resourceName": "fierceparrot",
+      "resourceType": "Storage Snapshot",
+      "savings": 60.305,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "obedientyak",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "volumeSize": "135"
+    },
+    {
+      "accountID": "516702013600",
+      "accountName": "calmrabbit",
+      "daysOld": 91,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-west-2",
+      "resourceName": "relievednewt",
+      "resourceType": "Storage Snapshot",
+      "savings": 55.776,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "proudcat",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "volumeSize": "110"
+    },
+    {
+      "accountID": "627286410625",
+      "accountName": "excitedsnake",
+      "daysOld": 133,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-central-1",
+      "resourceName": "thankfulibis",
+      "resourceType": "Storage Snapshot",
+      "savings": 24.708,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "merryibis",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "volumeSize": "338"
+    },
+    {
+      "accountID": "353197488767",
+      "accountName": "youthfulnewt",
+      "daysOld": 99,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ap-east-1",
+      "resourceName": "jollyeel",
+      "resourceType": "Storage Snapshot",
+      "savings": 8.567,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "thankfulibis",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "volumeSize": "315"
+    },
+    {
+      "accountID": "353197488767",
+      "accountName": "excitedhorse",
+      "daysOld": 186,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-1",
+      "resourceName": "calmparrot",
+      "resourceType": "Storage Snapshot",
+      "savings": 37.926,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "drowsyurchin",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "volumeSize": "292"
+    },
+    {
+      "accountID": "665319725593",
+      "accountName": "zealousviper",
+      "daysOld": 195,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-west-1",
+      "resourceName": "thankfulparrot",
+      "resourceType": "Storage Snapshot",
+      "savings": 18.057,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "jovialgoat",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "volumeSize": "62"
+    },
+    {
+      "accountID": "516702013600",
+      "accountName": "innocentviper",
+      "daysOld": 109,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-2",
+      "resourceName": "proudzebra",
+      "resourceType": "Storage Snapshot",
+      "savings": 0.971,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "happyeel",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "volumeSize": "352"
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "quirkyoctopus",
+      "daysOld": 138,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-2",
+      "resourceName": "calmoctopus",
+      "resourceType": "Storage Snapshot",
+      "savings": 47.941,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "sillyparrot",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "volumeSize": "491"
+    },
+    {
+      "accountID": "516702013600",
+      "accountName": "livelyzebra",
+      "daysOld": 27,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ap-northeast-3",
+      "resourceName": "nervousgiraffe",
+      "resourceType": "Storage Snapshot",
+      "savings": 3.664,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "excitedhorse",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "volumeSize": "322"
+    },
+    {
+      "accountID": "627286410625",
+      "accountName": "bravemouse",
+      "daysOld": 131,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-1",
+      "resourceName": "vivaciousmouse",
+      "resourceType": "Storage Snapshot",
+      "savings": 63.89,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "youthfulquail",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "volumeSize": "315"
+    },
+    {
+      "accountID": "999773517191",
+      "accountName": "obedientxerus",
+      "daysOld": 109,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ca-central-1",
+      "resourceName": "youthfulparrot",
+      "resourceType": "Storage Snapshot",
+      "savings": 24.236,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "drowsyxerus",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "volumeSize": "499"
+    },
+    {
+      "accountID": "138186646095",
+      "accountName": "youthfulbear",
+      "daysOld": 49,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-west-2",
+      "resourceName": "merrydog",
+      "resourceType": "Storage Snapshot",
+      "savings": 47.852,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "zealousquail",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "volumeSize": "461"
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "kindnewt",
+      "daysOld": 97,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-1",
+      "resourceName": "gentlekangaroo",
+      "resourceType": "Storage Snapshot",
+      "savings": 43.158,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "proudzebra",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "volumeSize": "410"
+    },
+    {
+      "accountID": "665319725593",
+      "accountName": "kindtiger",
+      "daysOld": 189,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ca-central-1",
+      "resourceName": "proudcat",
+      "resourceType": "Storage Snapshot",
+      "savings": 1.322,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "gentletiger",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "volumeSize": "114"
+    },
+    {
+      "accountID": "165283112664",
+      "accountName": "thankfulyak",
+      "daysOld": 0,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-1",
+      "resourceName": "merryurchin",
+      "resourceType": "Storage Snapshot",
+      "savings": 54.609,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "thankfulwhale",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "volumeSize": "97"
+    },
+    {
+      "accountID": "999773517191",
+      "accountName": "zealousyak",
+      "daysOld": 117,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-west-1",
+      "resourceName": "jollyibis",
+      "resourceType": "Storage Snapshot",
+      "savings": 6.012,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "quirkysnake",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "volumeSize": "43"
+    },
+    {
+      "accountID": "925894598672",
+      "accountName": "innocentsnake",
+      "daysOld": 170,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-west-1",
+      "resourceName": "excitedzebra",
+      "resourceType": "Storage Snapshot",
+      "savings": 73.214,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "thankfulmouse",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "volumeSize": "54"
+    },
+    {
+      "accountID": "138186646095",
+      "accountName": "bravexerus",
+      "daysOld": 8,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-2",
+      "resourceName": "calmoctopus",
+      "resourceType": "Storage Snapshot",
+      "savings": 6.706,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "adventurousowl",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "volumeSize": "311"
+    },
+    {
+      "accountID": "925894598672",
+      "accountName": "excitedelephant",
+      "daysOld": 139,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-central-1",
+      "resourceName": "relievedtiger",
+      "resourceType": "Storage Snapshot",
+      "savings": 37.892,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "vivaciousxerus",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "volumeSize": "422"
+    },
+    {
+      "accountID": "999773517191",
+      "accountName": "obedientmouse",
+      "daysOld": 100,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-central-1",
+      "resourceName": "zealousant",
+      "resourceType": "Storage Snapshot",
+      "savings": 3.585,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "obedientmouse",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "volumeSize": "197"
+    },
+    {
+      "accountID": "138186646095",
+      "accountName": "jollywhale",
+      "daysOld": 183,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ap-northeast-3",
+      "resourceName": "innocentparrot",
+      "resourceType": "Storage Snapshot",
+      "savings": 13.649,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "fierceviper",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "volumeSize": "194"
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "quicklion",
+      "daysOld": 1,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "eu-west-2",
+      "resourceName": "thankfuljaguar",
+      "resourceType": "Storage Snapshot",
+      "savings": 2.183,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "obedientibis",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "volumeSize": "108"
+    },
+    {
+      "accountID": "999773517191",
+      "accountName": "innocentoctopus",
+      "daysOld": 141,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ap-northeast-3",
+      "resourceName": "drowsyyak",
+      "resourceType": "Storage Snapshot",
+      "savings": 72.642,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "bravegoat",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "volumeSize": "164"
+    },
+    {
+      "accountID": "165283112664",
+      "accountName": "innocentjaguar",
+      "daysOld": 197,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-east-1",
+      "resourceName": "zealoustiger",
+      "resourceType": "Storage Snapshot",
+      "savings": 22.599,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "wittyibis",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "volumeSize": "272"
+    },
+    {
+      "accountID": "646728909564",
+      "accountName": "fiercerabbit",
+      "daysOld": 149,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-west-1",
+      "resourceName": "upbeatbear",
+      "resourceType": "Storage Snapshot",
+      "savings": 35.151,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "quickant",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "volumeSize": "480"
+    },
+    {
+      "accountID": "138186646095",
+      "accountName": "excitedjaguar",
+      "daysOld": 83,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "us-west-2",
+      "resourceName": "quirkywhale",
+      "resourceType": "Storage Snapshot",
+      "savings": 2.415,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "quickcat",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "volumeSize": "395"
+    },
+    {
+      "accountID": "165283112664",
+      "accountName": "zealousjaguar",
+      "daysOld": 16,
+      "dbClusterId": "",
+      "dbInstanceId": "",
+      "imageId": "",
+      "region": "ap-northeast-3",
+      "resourceName": "excitedowl",
+      "resourceType": "Storage Snapshot",
+      "savings": 14.493,
+      "savingsCurrency": "US$",
+      "service": "EBS",
+      "snapshotId": "drowsytiger",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "volumeSize": "247"
+    }
+  ]
 }
