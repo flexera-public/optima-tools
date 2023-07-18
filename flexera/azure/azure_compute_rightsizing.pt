@@ -39,7 +39,7 @@ policy "policy_azure_rightsizing_data" do
     detail_template <<-EOS
     {{ with index data 0 }}{{ .summaryData.underutilMessage }}{{ end }}
         EOS
-    check eq(val(item, "recommendedVmSize"), "Terminate Instance")
+    check ne(val(item, "recommendationType"), "Downsize")
     export do
       resource_level true
       field "accountID" do
@@ -139,7 +139,7 @@ EOS
     detail_template <<-EOS
 {{ with index data 0 }}{{ .summaryData.idleMessage }}{{ end }}
 EOS
-    check ne(val(item, "recommendedVmSize"), "Terminate Instance")
+    check ne(val(item, "recommendationType"), "Delete")
     export do
       resource_level true
       field "accountID" do
