@@ -23,5 +23,5 @@ node google/google_committed_use_discount_recommendations.js > google/google_com
 node google/google_idle_ip_address_recommendations.js > google/google_idle_ip_address_recommendations.json
 node google/google_idle_persistent_disk_recommendations.js > google/google_idle_persistent_disk_recommendations.json
 node google/google_rightsize_vm_recommendations.js > google/google_rightsize_vm_recommendations.json
-#node google/google_sql_idle_instance_recommendations.js > google/google_sql_idle_instance_recommendations.json
+node google/google_sql_idle_instance_recommendations.js > google/google_sql_idle_instance_recommendations.json
 node google/google_vm_recommendations.js > google/google_vm_recommendations.json
