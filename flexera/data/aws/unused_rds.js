@@ -109,6 +109,7 @@ for (var i = 0; i < 50; i++) {
   resourceType = 'db.' + type_list[parseInt(Math.random() * 10)]
   resourceName = generateRandomName()
   id = "db-" + (generateRandomName() + generateRandomName()).toUpperCase()
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
 
   dbs.push({
     "accountID": accountid,
@@ -123,7 +124,7 @@ for (var i = 0; i < 50; i++) {
     "region": region,
     "resourceID": id,
     "resourceType": resourceType,
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
+    "savings": savings,
     "savingsCurrency": "US$",
     "service": "RDS",
     "status": "available",

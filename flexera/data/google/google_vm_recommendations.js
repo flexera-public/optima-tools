@@ -118,12 +118,13 @@ instances = []
 for (var i = 0; i < 50; i++) {
   projectNumber = (Math.random() * 1000000000000).toFixed(0)
   resourceType = type_list[parseInt(Math.random() * 10)]
-  savings = parseFloat((Math.random() * Math.random() * 100).toFixed(3))
   resourceName = generateRandomName()
   resourceID = (Math.random() * 10000000000000000000).toFixed(0)
   region = region_list[parseInt(Math.random() * 10)]
   accountId = "rightscale.com:resat-prem"
   accountName = "RightScale-Resat-Premium"
+
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
 
   instances.push({
     "cpuAverage": parseFloat((Math.random() + 5).toFixed(2)),

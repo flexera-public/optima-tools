@@ -111,9 +111,9 @@ for (var i = 0; i < 50; i++) {
   resourceName = generateRandomName() + "-public-ip"
   resourceLink =  "projects/" + accountName + "/regions/" + region + "/addresses/" + resourceName
   ip = parseInt(Math.random() * 100) + '.'  + parseInt(Math.random() * 100) + '.' + parseInt(Math.random() * 100) + '.' + parseInt(Math.random() * 100)
-  savings = parseFloat((Math.random() * Math.random() * 100).toFixed(3))
-
   createdTime = getRandomDate(current_year - 1 - parseInt(Math.random() * 2))
+
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
 
   instances.push({
     "accountID": accountId,

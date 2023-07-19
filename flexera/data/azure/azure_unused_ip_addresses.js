@@ -97,6 +97,8 @@ for (var i = 0; i < 50; i++) {
   resourceId = "/subscriptions/" + subscriptionId + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Network/publicIPAddresses/" + resourceName
   ip = parseInt(Math.random() * 100) + '.'  + parseInt(Math.random() * 100) + '.' + parseInt(Math.random() * 100) + '.' + parseInt(Math.random() * 100)
 
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
+
   ip_list.push({
     "properties": {
       "ipAddress": ip,

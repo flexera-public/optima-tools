@@ -120,6 +120,7 @@ for (var i = 0; i < 50; i++) {
   ip = "ip-" + parseInt(Math.random() * 100) + '-'  + parseInt(Math.random() * 100) + '-' + parseInt(Math.random() * 100) + '-' + parseInt(Math.random() * 100)
   resourceName = generateRandomName()
   resourceNumber = parseInt(Math.random() * 10)
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
 
   result.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
@@ -150,7 +151,7 @@ for (var i = 0; i < 50; i++) {
     "resourceID": id,
     "resourceName": resourceName,
     "resourceType": type_list[resourceNumber],
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
+    "savings": savings,
     "savingsCurrency": "US$",
     "service": "EC2",
     "summaryData": {

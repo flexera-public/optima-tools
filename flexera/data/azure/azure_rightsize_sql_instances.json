@@ -1,48 +1,22 @@
 [
   {
-    "average_cpu": "17.86",
-    "id": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/RELIEVEDNEWT-RELIEVEDFOX/providers/Microsoft.Sql/servers/obedientowl/databases/livelydog",
+    "average_cpu": "14.19",
+    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/UPBEATOWL-EAGERKANGAROO/providers/Microsoft.Sql/servers/vivaciousgoat/databases/upbeatyak",
     "kind": "v12.0,user",
     "location": "southeastasia",
     "lookbackPeriod": "30 days",
-    "name": "obedientowl/livelydog",
+    "name": "vivaciousgoat/upbeatyak",
     "recommendation": "Change tier",
     "recommended_capacity": "n/a",
     "resourceType": "Standard_Standard",
-    "resource_group": "RELIEVEDNEWT-RELIEVEDFOX",
+    "resource_group": "UPBEATOWL-EAGERKANGAROO",
     "sku": {
       "capacity": 10,
       "name": "Standard",
       "tier": "Standard"
     },
-    "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-    "subscriptionName": "quirkykangaroo",
-    "tags": {
-      "environment": "dev",
-      "app": "dataAnalytics"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "46.46",
-    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/ZEALOUSKANGAROO-WITTYPENGUIN/providers/Microsoft.Sql/servers/kindrabbit/databases/drowsybear",
-    "kind": "v12.0,user",
-    "location": "southeastasia",
-    "lookbackPeriod": "30 days",
-    "name": "kindrabbit/drowsybear",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "ZEALOUSKANGAROO-WITTYPENGUIN",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-    "subscriptionName": "quickant",
+    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "subscriptionName": "eagermouse",
     "tags": {
       "environment": "prod",
       "app": "reportingService"
@@ -52,595 +26,23 @@
     "unit": "Percent"
   },
   {
-    "average_cpu": "41.35",
-    "id": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/EXCITEDHORSE-UPBEATBEAR/providers/Microsoft.Sql/servers/fiercezebra/databases/bravejaguar",
-    "kind": "v12.0,user",
-    "location": "northeurope",
-    "lookbackPeriod": "30 days",
-    "name": "fiercezebra/bravejaguar",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "EXCITEDHORSE-UPBEATBEAR",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-    "subscriptionName": "drowsyelephant",
-    "tags": {
-      "environment": "prod",
-      "app": "inventoryManagement"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "16.27",
-    "id": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/QUIRKYGOAT-SILLYNEWT/providers/Microsoft.Sql/servers/innocentviper/databases/jovialibis",
-    "kind": "v12.0,user",
-    "location": "centralus",
-    "lookbackPeriod": "30 days",
-    "name": "innocentviper/jovialibis",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "QUIRKYGOAT-SILLYNEWT",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-    "subscriptionName": "excitedoctopus",
-    "tags": {
-      "environment": "prod",
-      "app": "crmModule"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "41.79",
-    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/EXCITEDHORSE-EXCITEDGIRAFFE/providers/Microsoft.Sql/servers/drowsyrabbit/databases/calmcat",
-    "kind": "v12.0,user",
-    "location": "centralindia",
-    "lookbackPeriod": "30 days",
-    "name": "drowsyrabbit/calmcat",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "EXCITEDHORSE-EXCITEDGIRAFFE",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-    "subscriptionName": "quirkypenguin",
-    "tags": {
-      "environment": "dev",
-      "app": "emailService"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "8.01",
-    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/BRAVEELEPHANT-FIERCEGOAT/providers/Microsoft.Sql/servers/proudjaguar/databases/innocentparrot",
-    "kind": "v12.0,user",
-    "location": "uksouth",
-    "lookbackPeriod": "30 days",
-    "name": "proudjaguar/innocentparrot",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "BRAVEELEPHANT-FIERCEGOAT",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-    "subscriptionName": "livelywhale",
-    "tags": {
-      "environment": "prod",
-      "app": "inventoryManagement"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "8.19",
-    "id": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/QUICKFOX-ADVENTUROUSPARROT/providers/Microsoft.Sql/servers/upbeatgoat/databases/jollyelephant",
-    "kind": "v12.0,user",
-    "location": "centralindia",
-    "lookbackPeriod": "30 days",
-    "name": "upbeatgoat/jollyelephant",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "QUICKFOX-ADVENTUROUSPARROT",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-    "subscriptionName": "excitedelephant",
-    "tags": {
-      "environment": "prod",
-      "app": "inventoryManagement"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "25.16",
-    "id": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/LIVELYWHALE-RELIEVEDHORSE/providers/Microsoft.Sql/servers/youthfulzebra/databases/kindgoat",
-    "kind": "v12.0,user",
-    "location": "centralus",
-    "lookbackPeriod": "30 days",
-    "name": "youthfulzebra/kindgoat",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "LIVELYWHALE-RELIEVEDHORSE",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-    "subscriptionName": "vivaciousquail",
-    "tags": {
-      "environment": "dev",
-      "app": "dataAnalytics"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "8.79",
-    "id": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/LIVELYNEWT-BRAVEPENGUIN/providers/Microsoft.Sql/servers/relievedparrot/databases/zealoustiger",
-    "kind": "v12.0,user",
-    "location": "uksouth",
-    "lookbackPeriod": "30 days",
-    "name": "relievedparrot/zealoustiger",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "LIVELYNEWT-BRAVEPENGUIN",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-    "subscriptionName": "upbeatwhale",
-    "tags": {
-      "environment": "dev",
-      "app": "emailService"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "13.28",
-    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/RELIEVEDJAGUAR-HAPPYNEWT/providers/Microsoft.Sql/servers/proudviper/databases/excitedparrot",
-    "kind": "v12.0,user",
-    "location": "australiaeast",
-    "lookbackPeriod": "30 days",
-    "name": "proudviper/excitedparrot",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "RELIEVEDJAGUAR-HAPPYNEWT",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-    "subscriptionName": "wittyquail",
-    "tags": {
-      "environment": "prod",
-      "app": "securityModule"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "25.52",
-    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/NERVOUSLION-INNOCENTFOX/providers/Microsoft.Sql/servers/fiercetiger/databases/quickhorse",
-    "kind": "v12.0,user",
-    "location": "centralindia",
-    "lookbackPeriod": "30 days",
-    "name": "fiercetiger/quickhorse",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "NERVOUSLION-INNOCENTFOX",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-    "subscriptionName": "quirkygoat",
-    "tags": {
-      "environment": "dev",
-      "app": "customerSupport"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "7.80",
-    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/FIERCEMOUSE-ZEALOUSZEBRA/providers/Microsoft.Sql/servers/merrysnake/databases/wittytiger",
-    "kind": "v12.0,user",
-    "location": "southeastasia",
-    "lookbackPeriod": "30 days",
-    "name": "merrysnake/wittytiger",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "FIERCEMOUSE-ZEALOUSZEBRA",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-    "subscriptionName": "braveurchin",
-    "tags": {
-      "environment": "dev",
-      "app": "customerSupport"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "20.65",
-    "id": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/MERRYIBIS-FIERCEFOX/providers/Microsoft.Sql/servers/relievedgiraffe/databases/livelymouse",
-    "kind": "v12.0,user",
-    "location": "southeastasia",
-    "lookbackPeriod": "30 days",
-    "name": "relievedgiraffe/livelymouse",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "MERRYIBIS-FIERCEFOX",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-    "subscriptionName": "jollyyak",
-    "tags": {
-      "environment": "prod",
-      "app": "inventoryManagement"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "36.03",
-    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/INNOCENTLION-EXCITEDXERUS/providers/Microsoft.Sql/servers/adventurouseel/databases/jovialgiraffe",
-    "kind": "v12.0,user",
-    "location": "eastus2",
-    "lookbackPeriod": "30 days",
-    "name": "adventurouseel/jovialgiraffe",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "INNOCENTLION-EXCITEDXERUS",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-    "subscriptionName": "gentlezebra",
-    "tags": {
-      "environment": "dev",
-      "app": "customerSupport"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "37.92",
-    "id": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/WITTYPENGUIN-SILLYSNAKE/providers/Microsoft.Sql/servers/jovialbear/databases/kindnewt",
-    "kind": "v12.0,user",
-    "location": "eastus2",
-    "lookbackPeriod": "30 days",
-    "name": "jovialbear/kindnewt",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "WITTYPENGUIN-SILLYSNAKE",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-    "subscriptionName": "obedientjaguar",
-    "tags": {
-      "environment": "staging",
-      "app": "invoiceProcessing"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "7.35",
-    "id": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/JOLLYPARROT-EXCITEDQUAIL/providers/Microsoft.Sql/servers/happyfox/databases/jollylion",
-    "kind": "v12.0,user",
-    "location": "centralindia",
-    "lookbackPeriod": "30 days",
-    "name": "happyfox/jollylion",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "JOLLYPARROT-EXCITEDQUAIL",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-    "subscriptionName": "drowsyibis",
-    "tags": {
-      "environment": "prod",
-      "app": "crmModule"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "10.26",
-    "id": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/ZEALOUSNEWT-ZEALOUSOCTOPUS/providers/Microsoft.Sql/servers/quirkygiraffe/databases/jovialpenguin",
-    "kind": "v12.0,user",
-    "location": "southeastasia",
-    "lookbackPeriod": "30 days",
-    "name": "quirkygiraffe/jovialpenguin",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "ZEALOUSNEWT-ZEALOUSOCTOPUS",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-    "subscriptionName": "upbeaturchin",
-    "tags": {
-      "environment": "staging",
-      "app": "userManagement"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "48.11",
-    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/ADVENTUROUSHORSE-JOVIALVIPER/providers/Microsoft.Sql/servers/quirkyoctopus/databases/kindviper",
-    "kind": "v12.0,user",
-    "location": "uksouth",
-    "lookbackPeriod": "30 days",
-    "name": "quirkyoctopus/kindviper",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "ADVENTUROUSHORSE-JOVIALVIPER",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-    "subscriptionName": "jovialnewt",
-    "tags": {
-      "environment": "staging",
-      "app": "invoiceProcessing"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "32.63",
-    "id": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/DROWSYTIGER-EXCITEDFOX/providers/Microsoft.Sql/servers/excitedbear/databases/happyowl",
+    "average_cpu": "41.30",
+    "id": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/EAGERQUAIL-JOVIALWHALE/providers/Microsoft.Sql/servers/relievedowl/databases/livelyjaguar",
     "kind": "v12.0,user",
     "location": "eastus",
     "lookbackPeriod": "30 days",
-    "name": "excitedbear/happyowl",
+    "name": "relievedowl/livelyjaguar",
     "recommendation": "Change tier",
     "recommended_capacity": "n/a",
     "resourceType": "Standard_Standard",
-    "resource_group": "DROWSYTIGER-EXCITEDFOX",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-    "subscriptionName": "merryparrot",
-    "tags": {
-      "environment": "prod",
-      "app": "reportingService"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "9.84",
-    "id": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/PROUDJAGUAR-OBEDIENTOCTOPUS/providers/Microsoft.Sql/servers/sillysnake/databases/eagerurchin",
-    "kind": "v12.0,user",
-    "location": "centralus",
-    "lookbackPeriod": "30 days",
-    "name": "sillysnake/eagerurchin",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "PROUDJAGUAR-OBEDIENTOCTOPUS",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-    "subscriptionName": "adventurousjaguar",
-    "tags": {
-      "environment": "staging",
-      "app": "userManagement"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "24.13",
-    "id": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/VIVACIOUSPARROT-INNOCENTDOG/providers/Microsoft.Sql/servers/jollypenguin/databases/nervouspenguin",
-    "kind": "v12.0,user",
-    "location": "centralus",
-    "lookbackPeriod": "30 days",
-    "name": "jollypenguin/nervouspenguin",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "VIVACIOUSPARROT-INNOCENTDOG",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-    "subscriptionName": "happyyak",
-    "tags": {
-      "environment": "prod",
-      "app": "inventoryManagement"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "9.54",
-    "id": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/WITTYNEWT-THANKFULANT/providers/Microsoft.Sql/servers/fierceibis/databases/quickbear",
-    "kind": "v12.0,user",
-    "location": "northeurope",
-    "lookbackPeriod": "30 days",
-    "name": "fierceibis/quickbear",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "WITTYNEWT-THANKFULANT",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-    "subscriptionName": "gentleant",
-    "tags": {
-      "environment": "prod",
-      "app": "securityModule"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "45.05",
-    "id": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/PROUDSNAKE-EXCITEDHORSE/providers/Microsoft.Sql/servers/wittysnake/databases/youthfullion",
-    "kind": "v12.0,user",
-    "location": "centralindia",
-    "lookbackPeriod": "30 days",
-    "name": "wittysnake/youthfullion",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "PROUDSNAKE-EXCITEDHORSE",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-    "subscriptionName": "vivaciousibis",
-    "tags": {
-      "environment": "staging",
-      "app": "invoiceProcessing"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "9.95",
-    "id": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/HAPPYJAGUAR-JOVIALELEPHANT/providers/Microsoft.Sql/servers/bravehorse/databases/livelyfox",
-    "kind": "v12.0,user",
-    "location": "southeastasia",
-    "lookbackPeriod": "30 days",
-    "name": "bravehorse/livelyfox",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "HAPPYJAGUAR-JOVIALELEPHANT",
-    "sku": {
-      "capacity": 10,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-    "subscriptionName": "happyeel",
-    "tags": {
-      "environment": "staging",
-      "app": "userManagement"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "46.72",
-    "id": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/DROWSYGIRAFFE-OBEDIENTVIPER/providers/Microsoft.Sql/servers/adventurousnewt/databases/eagerparrot",
-    "kind": "v12.0,user",
-    "location": "westus2",
-    "lookbackPeriod": "30 days",
-    "name": "adventurousnewt/eagerparrot",
-    "recommendation": "Change tier",
-    "recommended_capacity": "n/a",
-    "resourceType": "Standard_Standard",
-    "resource_group": "DROWSYGIRAFFE-OBEDIENTVIPER",
+    "resource_group": "EAGERQUAIL-JOVIALWHALE",
     "sku": {
       "capacity": 10,
       "name": "Standard",
       "tier": "Standard"
     },
     "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-    "subscriptionName": "quirkydog",
+    "subscriptionName": "innocentjaguar",
     "tags": {
       "environment": "dev",
       "app": "customerSupport"
@@ -650,75 +52,101 @@
     "unit": "Percent"
   },
   {
-    "average_cpu": "42.91",
-    "id": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/8KFWTY7XVD-MF5SMZYUP9/providers/Microsoft.Sql/servers/fg5jbrdfbg/databases/0sa0gbrfccj",
+    "average_cpu": "4.94",
+    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/KINDIBIS-ZEALOUSURCHIN/providers/Microsoft.Sql/servers/adventurousquail/databases/obedientparrot",
     "kind": "v12.0,user",
-    "location": "uksouth",
+    "location": "eastus",
     "lookbackPeriod": "30 days",
-    "name": "fg5jbrdfbg/0sa0gbrfccj",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
+    "name": "adventurousquail/obedientparrot",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
     "resourceType": "Standard_Standard",
-    "resource_group": "8KFWTY7XVD-MF5SMZYUP9",
+    "resource_group": "KINDIBIS-ZEALOUSURCHIN",
     "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-    "subscriptionName": "nno1h5qmvw",
-    "tags": {
-      "environment": "prod",
-      "app": "crmModule"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "15.60",
-    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/M16BSL1GEW-9RARAEO3P9/providers/Microsoft.Sql/servers/szx3plnwfq/databases/0dwnd8cxbz",
-    "kind": "v12.0,user",
-    "location": "eastus2",
-    "lookbackPeriod": "30 days",
-    "name": "szx3plnwfq/0dwnd8cxbz",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "M16BSL1GEW-9RARAEO3P9",
-    "sku": {
-      "capacity": 50,
+      "capacity": 10,
       "name": "Standard",
       "tier": "Standard"
     },
     "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-    "subscriptionName": "9t8yknz2b2",
+    "subscriptionName": "quirkyjaguar",
     "tags": {
-      "environment": "staging",
-      "app": "invoiceProcessing"
+      "environment": "prod",
+      "app": "inventoryManagement"
     },
     "threshold": 60,
     "type": "Microsoft.Sql/servers/databases",
     "unit": "Percent"
   },
   {
-    "average_cpu": "43.69",
-    "id": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/5XDDPBIX9X-H09S67TZKY/providers/Microsoft.Sql/servers/6opvknvvh9/databases/240gyh9gqj",
+    "average_cpu": "29.39",
+    "id": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/SILLYTIGER-SILLYANT/providers/Microsoft.Sql/servers/bravemouse/databases/excitedkangaroo",
     "kind": "v12.0,user",
-    "location": "australiaeast",
+    "location": "centralus",
     "lookbackPeriod": "30 days",
-    "name": "6opvknvvh9/240gyh9gqj",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
+    "name": "bravemouse/excitedkangaroo",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
     "resourceType": "Standard_Standard",
-    "resource_group": "5XDDPBIX9X-H09S67TZKY",
+    "resource_group": "SILLYTIGER-SILLYANT",
     "sku": {
-      "capacity": 50,
+      "capacity": 10,
       "name": "Standard",
       "tier": "Standard"
     },
-    "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-    "subscriptionName": "o6br1gg649",
+    "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+    "subscriptionName": "nervousgiraffe",
+    "tags": {
+      "environment": "prod",
+      "app": "reportingService"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "28.66",
+    "id": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/FIERCEWHALE-PROUDOWL/providers/Microsoft.Sql/servers/excitedzebra/databases/jollyparrot",
+    "kind": "v12.0,user",
+    "location": "southeastasia",
+    "lookbackPeriod": "30 days",
+    "name": "excitedzebra/jollyparrot",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "FIERCEWHALE-PROUDOWL",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "subscriptionName": "thankfulhorse",
+    "tags": {
+      "environment": "dev",
+      "app": "dataAnalytics"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "22.39",
+    "id": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/JOLLYQUAIL-JOVIALZEBRA/providers/Microsoft.Sql/servers/exciteddog/databases/drowsylion",
+    "kind": "v12.0,user",
+    "location": "eastus",
+    "lookbackPeriod": "30 days",
+    "name": "exciteddog/drowsylion",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "JOLLYQUAIL-JOVIALZEBRA",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+    "subscriptionName": "nervouswhale",
     "tags": {
       "environment": "staging",
       "app": "userManagement"
@@ -728,23 +156,595 @@
     "unit": "Percent"
   },
   {
-    "average_cpu": "35.05",
-    "id": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/7QFCX3NIKK-0KYFF9DCCB/providers/Microsoft.Sql/servers/kuek315hwk/databases/lzdqy0qi3q",
+    "average_cpu": "1.02",
+    "id": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/JOVIALPARROT-ADVENTUROUSJAGUAR/providers/Microsoft.Sql/servers/zealousgiraffe/databases/excitedkangaroo",
+    "kind": "v12.0,user",
+    "location": "westus2",
+    "lookbackPeriod": "30 days",
+    "name": "zealousgiraffe/excitedkangaroo",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "JOVIALPARROT-ADVENTUROUSJAGUAR",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+    "subscriptionName": "adventurousowl",
+    "tags": {
+      "environment": "prod",
+      "app": "reportingService"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "14.70",
+    "id": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/ADVENTUROUSELEPHANT-QUIRKYXERUS/providers/Microsoft.Sql/servers/kindhorse/databases/merryurchin",
+    "kind": "v12.0,user",
+    "location": "eastus",
+    "lookbackPeriod": "30 days",
+    "name": "kindhorse/merryurchin",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "ADVENTUROUSELEPHANT-QUIRKYXERUS",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+    "subscriptionName": "happyjaguar",
+    "tags": {
+      "environment": "dev",
+      "app": "emailService"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "23.20",
+    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/ZEALOUSSNAKE-LAZYOWL/providers/Microsoft.Sql/servers/kindcat/databases/vivaciouswhale",
+    "kind": "v12.0,user",
+    "location": "westus2",
+    "lookbackPeriod": "30 days",
+    "name": "kindcat/vivaciouswhale",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "ZEALOUSSNAKE-LAZYOWL",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "subscriptionName": "innocentkangaroo",
+    "tags": {
+      "environment": "staging",
+      "app": "invoiceProcessing"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "19.16",
+    "id": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/QUICKXERUS-KINDXERUS/providers/Microsoft.Sql/servers/merrycat/databases/eagerparrot",
+    "kind": "v12.0,user",
+    "location": "centralindia",
+    "lookbackPeriod": "30 days",
+    "name": "merrycat/eagerparrot",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "QUICKXERUS-KINDXERUS",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "subscriptionName": "thankfulxerus",
+    "tags": {
+      "environment": "dev",
+      "app": "emailService"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "31.03",
+    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/CALMCAT-EXCITEDPENGUIN/providers/Microsoft.Sql/servers/upbeatviper/databases/drowsyeel",
+    "kind": "v12.0,user",
+    "location": "uksouth",
+    "lookbackPeriod": "30 days",
+    "name": "upbeatviper/drowsyeel",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "CALMCAT-EXCITEDPENGUIN",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "subscriptionName": "innocentjaguar",
+    "tags": {
+      "environment": "prod",
+      "app": "securityModule"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "48.69",
+    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/INNOCENTLION-QUIRKYKANGAROO/providers/Microsoft.Sql/servers/nervousyak/databases/calmlion",
+    "kind": "v12.0,user",
+    "location": "centralus",
+    "lookbackPeriod": "30 days",
+    "name": "nervousyak/calmlion",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "INNOCENTLION-QUIRKYKANGAROO",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "subscriptionName": "fierceowl",
+    "tags": {
+      "environment": "prod",
+      "app": "paymentGateway"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "38.45",
+    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/THANKFULEEL-KINDIBIS/providers/Microsoft.Sql/servers/quirkytiger/databases/merryeel",
+    "kind": "v12.0,user",
+    "location": "eastus",
+    "lookbackPeriod": "30 days",
+    "name": "quirkytiger/merryeel",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "THANKFULEEL-KINDIBIS",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+    "subscriptionName": "calmxerus",
+    "tags": {
+      "environment": "dev",
+      "app": "dataAnalytics"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "41.98",
+    "id": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/BRAVEMOUSE-HAPPYCAT/providers/Microsoft.Sql/servers/happyzebra/databases/happymouse",
     "kind": "v12.0,user",
     "location": "southcentralus",
     "lookbackPeriod": "30 days",
-    "name": "kuek315hwk/lzdqy0qi3q",
+    "name": "happyzebra/happymouse",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "BRAVEMOUSE-HAPPYCAT",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+    "subscriptionName": "innocentrabbit",
+    "tags": {
+      "environment": "dev",
+      "app": "dataAnalytics"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "33.22",
+    "id": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/FIERCEHORSE-HAPPYJAGUAR/providers/Microsoft.Sql/servers/jollymouse/databases/wittywhale",
+    "kind": "v12.0,user",
+    "location": "centralus",
+    "lookbackPeriod": "30 days",
+    "name": "jollymouse/wittywhale",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "FIERCEHORSE-HAPPYJAGUAR",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+    "subscriptionName": "upbeatyak",
+    "tags": {
+      "environment": "staging",
+      "app": "userManagement"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "1.75",
+    "id": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/INNOCENTYAK-BRAVEOWL/providers/Microsoft.Sql/servers/lazyquail/databases/gentlepenguin",
+    "kind": "v12.0,user",
+    "location": "uksouth",
+    "lookbackPeriod": "30 days",
+    "name": "lazyquail/gentlepenguin",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "INNOCENTYAK-BRAVEOWL",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+    "subscriptionName": "youthfullion",
+    "tags": {
+      "environment": "dev",
+      "app": "dataAnalytics"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "28.44",
+    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/BRAVEURCHIN-JOVIALTIGER/providers/Microsoft.Sql/servers/zealouszebra/databases/merryowl",
+    "kind": "v12.0,user",
+    "location": "centralus",
+    "lookbackPeriod": "30 days",
+    "name": "zealouszebra/merryowl",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "BRAVEURCHIN-JOVIALTIGER",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "subscriptionName": "vivaciousgoat",
+    "tags": {
+      "environment": "dev",
+      "app": "emailService"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "45.25",
+    "id": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/LIVELYURCHIN-BRAVEOCTOPUS/providers/Microsoft.Sql/servers/sillyant/databases/relievedmouse",
+    "kind": "v12.0,user",
+    "location": "centralus",
+    "lookbackPeriod": "30 days",
+    "name": "sillyant/relievedmouse",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "LIVELYURCHIN-BRAVEOCTOPUS",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "subscriptionName": "adventurousgiraffe",
+    "tags": {
+      "environment": "prod",
+      "app": "paymentGateway"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "31.48",
+    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/INNOCENTHORSE-EXCITEDWHALE/providers/Microsoft.Sql/servers/calmgiraffe/databases/innocentdog",
+    "kind": "v12.0,user",
+    "location": "southeastasia",
+    "lookbackPeriod": "30 days",
+    "name": "calmgiraffe/innocentdog",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "INNOCENTHORSE-EXCITEDWHALE",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+    "subscriptionName": "upbeatelephant",
+    "tags": {
+      "environment": "prod",
+      "app": "inventoryManagement"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "32.08",
+    "id": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/LAZYMOUSE-EAGERMOUSE/providers/Microsoft.Sql/servers/quickbear/databases/obedientibis",
+    "kind": "v12.0,user",
+    "location": "centralindia",
+    "lookbackPeriod": "30 days",
+    "name": "quickbear/obedientibis",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "LAZYMOUSE-EAGERMOUSE",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+    "subscriptionName": "eagergiraffe",
+    "tags": {
+      "environment": "prod",
+      "app": "crmModule"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "26.23",
+    "id": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/BRAVESNAKE-VIVACIOUSNEWT/providers/Microsoft.Sql/servers/wittymouse/databases/excitedxerus",
+    "kind": "v12.0,user",
+    "location": "eastus2",
+    "lookbackPeriod": "30 days",
+    "name": "wittymouse/excitedxerus",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "BRAVESNAKE-VIVACIOUSNEWT",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+    "subscriptionName": "jollyviper",
+    "tags": {
+      "environment": "staging",
+      "app": "invoiceProcessing"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "11.50",
+    "id": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/OBEDIENTBEAR-NERVOUSKANGAROO/providers/Microsoft.Sql/servers/happyoctopus/databases/merrygoat",
+    "kind": "v12.0,user",
+    "location": "australiaeast",
+    "lookbackPeriod": "30 days",
+    "name": "happyoctopus/merrygoat",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "OBEDIENTBEAR-NERVOUSKANGAROO",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+    "subscriptionName": "sillyviper",
+    "tags": {
+      "environment": "dev",
+      "app": "emailService"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "10.23",
+    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/QUICKZEBRA-ADVENTUROUSWHALE/providers/Microsoft.Sql/servers/happyoctopus/databases/livelyurchin",
+    "kind": "v12.0,user",
+    "location": "eastus2",
+    "lookbackPeriod": "30 days",
+    "name": "happyoctopus/livelyurchin",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "QUICKZEBRA-ADVENTUROUSWHALE",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "subscriptionName": "innocentquail",
+    "tags": {
+      "environment": "dev",
+      "app": "dataAnalytics"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "49.00",
+    "id": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/WITTYBEAR-RELIEVEDHORSE/providers/Microsoft.Sql/servers/drowsywhale/databases/eagerzebra",
+    "kind": "v12.0,user",
+    "location": "northeurope",
+    "lookbackPeriod": "30 days",
+    "name": "drowsywhale/eagerzebra",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "WITTYBEAR-RELIEVEDHORSE",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+    "subscriptionName": "eagernewt",
+    "tags": {
+      "environment": "prod",
+      "app": "reportingService"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "20.08",
+    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/THANKFULPARROT-YOUTHFULBEAR/providers/Microsoft.Sql/servers/quickoctopus/databases/kindibis",
+    "kind": "v12.0,user",
+    "location": "eastus2",
+    "lookbackPeriod": "30 days",
+    "name": "quickoctopus/kindibis",
+    "recommendation": "Change tier",
+    "recommended_capacity": "n/a",
+    "resourceType": "Standard_Standard",
+    "resource_group": "THANKFULPARROT-YOUTHFULBEAR",
+    "sku": {
+      "capacity": 10,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "subscriptionName": "quirkyelephant",
+    "tags": {
+      "environment": "prod",
+      "app": "crmModule"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "35.84",
+    "id": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/OKPGRK2N6X-NHJIG4WJJP/providers/Microsoft.Sql/servers/r6dtf8icsc/databases/vu5pkus6bdg",
+    "kind": "v12.0,user",
+    "location": "eastus2",
+    "lookbackPeriod": "30 days",
+    "name": "r6dtf8icsc/vu5pkus6bdg",
     "recommendation": "Downsize",
     "recommended_capacity": "20",
     "resourceType": "Standard_Standard",
-    "resource_group": "7QFCX3NIKK-0KYFF9DCCB",
+    "resource_group": "OKPGRK2N6X-NHJIG4WJJP",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+    "subscriptionName": "k6caxa4xk6",
+    "tags": {
+      "environment": "prod",
+      "app": "paymentGateway"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "9.23",
+    "id": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/B9GHDVAMHL-PG0TJWLKSE/providers/Microsoft.Sql/servers/d5nkx8kf3c/databases/zbqnzqfxvk",
+    "kind": "v12.0,user",
+    "location": "uksouth",
+    "lookbackPeriod": "30 days",
+    "name": "d5nkx8kf3c/zbqnzqfxvk",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "B9GHDVAMHL-PG0TJWLKSE",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+    "subscriptionName": "ktjyscr3bwh",
+    "tags": {
+      "environment": "dev",
+      "app": "customerSupport"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "48.57",
+    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/UNIOF5OLO3-Q553Z2WO7V/providers/Microsoft.Sql/servers/wlyr7y4p1t/databases/n8sk0iss0wl",
+    "kind": "v12.0,user",
+    "location": "uksouth",
+    "lookbackPeriod": "30 days",
+    "name": "wlyr7y4p1t/n8sk0iss0wl",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "UNIOF5OLO3-Q553Z2WO7V",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "subscriptionName": "sgzacs5kvu",
+    "tags": {
+      "environment": "prod",
+      "app": "crmModule"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "23.71",
+    "id": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/7B01809I34-QZ7PCZOELE/providers/Microsoft.Sql/servers/cs3hxwwzeyi/databases/clw4lno5pu",
+    "kind": "v12.0,user",
+    "location": "southcentralus",
+    "lookbackPeriod": "30 days",
+    "name": "cs3hxwwzeyi/clw4lno5pu",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "7B01809I34-QZ7PCZOELE",
     "sku": {
       "capacity": 50,
       "name": "Standard",
       "tier": "Standard"
     },
     "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-    "subscriptionName": "5iwga9jk7k",
+    "subscriptionName": "ess6qbzi62",
     "tags": {
       "environment": "dev",
       "app": "emailService"
@@ -754,283 +754,23 @@
     "unit": "Percent"
   },
   {
-    "average_cpu": "14.09",
-    "id": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/XYM6KWK871-7F1R6NZKWF/providers/Microsoft.Sql/servers/a1kbvt8l6e/databases/lu07qifgqc",
+    "average_cpu": "33.38",
+    "id": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/XRDVE8UJG-S9DUE50T79H/providers/Microsoft.Sql/servers/inj9ndptbhk/databases/ivh4rr7ffii",
     "kind": "v12.0,user",
-    "location": "northeurope",
+    "location": "uksouth",
     "lookbackPeriod": "30 days",
-    "name": "a1kbvt8l6e/lu07qifgqc",
+    "name": "inj9ndptbhk/ivh4rr7ffii",
     "recommendation": "Downsize",
     "recommended_capacity": "20",
     "resourceType": "Standard_Standard",
-    "resource_group": "XYM6KWK871-7F1R6NZKWF",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-    "subscriptionName": "gofsymmomq",
-    "tags": {
-      "environment": "prod",
-      "app": "inventoryManagement"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "42.15",
-    "id": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/2KGYPBUM3M-NWN4A8SOSV/providers/Microsoft.Sql/servers/bl4kkydbxl/databases/pehwmagmec",
-    "kind": "v12.0,user",
-    "location": "centralus",
-    "lookbackPeriod": "30 days",
-    "name": "bl4kkydbxl/pehwmagmec",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "2KGYPBUM3M-NWN4A8SOSV",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-    "subscriptionName": "pk2zixq0mq",
-    "tags": {
-      "environment": "prod",
-      "app": "crmModule"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "15.52",
-    "id": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/BTD2OUGPPPH-ILHWVGWZE4/providers/Microsoft.Sql/servers/1y7vopcbsdl/databases/uw660uny5q",
-    "kind": "v12.0,user",
-    "location": "northeurope",
-    "lookbackPeriod": "30 days",
-    "name": "1y7vopcbsdl/uw660uny5q",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "BTD2OUGPPPH-ILHWVGWZE4",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-    "subscriptionName": "k0rjjwmdg4",
-    "tags": {
-      "environment": "dev",
-      "app": "customerSupport"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "23.40",
-    "id": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/TXATJWIFOE-4U5AU9Q2E5J/providers/Microsoft.Sql/servers/ba2rt6r20f/databases/va09113kwe",
-    "kind": "v12.0,user",
-    "location": "northeurope",
-    "lookbackPeriod": "30 days",
-    "name": "ba2rt6r20f/va09113kwe",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "TXATJWIFOE-4U5AU9Q2E5J",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-    "subscriptionName": "93gni24f9x",
-    "tags": {
-      "environment": "prod",
-      "app": "inventoryManagement"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "16.27",
-    "id": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/8AKEDJV9ON-JD1CP1HIGV/providers/Microsoft.Sql/servers/k7slv0j7zl/databases/7f04am8he4",
-    "kind": "v12.0,user",
-    "location": "westus2",
-    "lookbackPeriod": "30 days",
-    "name": "k7slv0j7zl/7f04am8he4",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "8AKEDJV9ON-JD1CP1HIGV",
+    "resource_group": "XRDVE8UJG-S9DUE50T79H",
     "sku": {
       "capacity": 50,
       "name": "Standard",
       "tier": "Standard"
     },
     "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-    "subscriptionName": "3o1eykmvotk",
-    "tags": {
-      "environment": "prod",
-      "app": "crmModule"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "27.59",
-    "id": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/10P2KGCBPH-SPY5WLZMNE/providers/Microsoft.Sql/servers/iyqwravmwdj/databases/jovk5i9oaqi",
-    "kind": "v12.0,user",
-    "location": "centralus",
-    "lookbackPeriod": "30 days",
-    "name": "iyqwravmwdj/jovk5i9oaqi",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "10P2KGCBPH-SPY5WLZMNE",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-    "subscriptionName": "zk2o9e21hn",
-    "tags": {
-      "environment": "dev",
-      "app": "emailService"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "42.25",
-    "id": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/VJ5P30GKVO-BZF42RG6EUL/providers/Microsoft.Sql/servers/d4v1qqz4bw/databases/ywwaqn4ux5j",
-    "kind": "v12.0,user",
-    "location": "eastus",
-    "lookbackPeriod": "30 days",
-    "name": "d4v1qqz4bw/ywwaqn4ux5j",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "VJ5P30GKVO-BZF42RG6EUL",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-    "subscriptionName": "i5i8eazixek",
-    "tags": {
-      "environment": "prod",
-      "app": "securityModule"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "24.12",
-    "id": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/U1HCFTNX1K-BXWNLURUSF/providers/Microsoft.Sql/servers/bw5t4gp4b5/databases/02cf4i4rf5",
-    "kind": "v12.0,user",
-    "location": "eastus2",
-    "lookbackPeriod": "30 days",
-    "name": "bw5t4gp4b5/02cf4i4rf5",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "U1HCFTNX1K-BXWNLURUSF",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-    "subscriptionName": "i26rpimz5tj",
-    "tags": {
-      "environment": "prod",
-      "app": "paymentGateway"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "46.71",
-    "id": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/ZJRPW9G392J-096NAXLZVUH/providers/Microsoft.Sql/servers/ovhx5bplx8/databases/hddzgeq4dc",
-    "kind": "v12.0,user",
-    "location": "southcentralus",
-    "lookbackPeriod": "30 days",
-    "name": "ovhx5bplx8/hddzgeq4dc",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "ZJRPW9G392J-096NAXLZVUH",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-    "subscriptionName": "lq8m8ac41o",
-    "tags": {
-      "environment": "dev",
-      "app": "emailService"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "43.14",
-    "id": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/PQTLWKHXTU-CLOOS9T3IH/providers/Microsoft.Sql/servers/s6webymna9/databases/rmy7q6bh0xj",
-    "kind": "v12.0,user",
-    "location": "eastus2",
-    "lookbackPeriod": "30 days",
-    "name": "s6webymna9/rmy7q6bh0xj",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "PQTLWKHXTU-CLOOS9T3IH",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-    "subscriptionName": "g1fj5hzpky",
-    "tags": {
-      "environment": "prod",
-      "app": "paymentGateway"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "14.99",
-    "id": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/23DEP3ZVLX-1ZU79JNB4KG/providers/Microsoft.Sql/servers/3ecwpuztiw/databases/u4iubyuph9",
-    "kind": "v12.0,user",
-    "location": "centralus",
-    "lookbackPeriod": "30 days",
-    "name": "3ecwpuztiw/u4iubyuph9",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "23DEP3ZVLX-1ZU79JNB4KG",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-    "subscriptionName": "uiw6mtp4w0g",
+    "subscriptionName": "vwxs4zx5pn",
     "tags": {
       "environment": "prod",
       "app": "reportingService"
@@ -1040,101 +780,49 @@
     "unit": "Percent"
   },
   {
-    "average_cpu": "29.07",
-    "id": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/TSHS3N0ECV-QRDHSRZOCB/providers/Microsoft.Sql/servers/cbalyqlfs9/databases/0wao784qwi",
+    "average_cpu": "32.87",
+    "id": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/U24M1H4QHH-8B0UOB8TS1/providers/Microsoft.Sql/servers/f2psk8tnw7/databases/xma2lrfytxg",
     "kind": "v12.0,user",
-    "location": "australiaeast",
+    "location": "centralindia",
     "lookbackPeriod": "30 days",
-    "name": "cbalyqlfs9/0wao784qwi",
+    "name": "f2psk8tnw7/xma2lrfytxg",
     "recommendation": "Downsize",
     "recommended_capacity": "20",
     "resourceType": "Standard_Standard",
-    "resource_group": "TSHS3N0ECV-QRDHSRZOCB",
+    "resource_group": "U24M1H4QHH-8B0UOB8TS1",
     "sku": {
       "capacity": 50,
       "name": "Standard",
       "tier": "Standard"
     },
-    "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-    "subscriptionName": "2crh9l5ul1",
+    "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+    "subscriptionName": "j7aakpro0q",
     "tags": {
-      "environment": "prod",
-      "app": "crmModule"
+      "environment": "staging",
+      "app": "userManagement"
     },
     "threshold": 60,
     "type": "Microsoft.Sql/servers/databases",
     "unit": "Percent"
   },
   {
-    "average_cpu": "28.74",
-    "id": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/UOLQAADUL-R2WI5C2IYR/providers/Microsoft.Sql/servers/gxn48f47ybl/databases/plzi1645vl",
+    "average_cpu": "11.60",
+    "id": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/DP1A2L2OET-OKPS2MVCUH/providers/Microsoft.Sql/servers/a288opir6j/databases/zu3uo9zg6vg",
     "kind": "v12.0,user",
-    "location": "uksouth",
+    "location": "northeurope",
     "lookbackPeriod": "30 days",
-    "name": "gxn48f47ybl/plzi1645vl",
+    "name": "a288opir6j/zu3uo9zg6vg",
     "recommendation": "Downsize",
     "recommended_capacity": "20",
     "resourceType": "Standard_Standard",
-    "resource_group": "UOLQAADUL-R2WI5C2IYR",
+    "resource_group": "DP1A2L2OET-OKPS2MVCUH",
     "sku": {
       "capacity": 50,
       "name": "Standard",
       "tier": "Standard"
     },
     "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-    "subscriptionName": "m81fevmu2m",
-    "tags": {
-      "environment": "staging",
-      "app": "invoiceProcessing"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "5.13",
-    "id": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/KDKRQ6OLFPL-AU1Y6YLERB/providers/Microsoft.Sql/servers/3pdcd45s6f/databases/hgf7qgnipr",
-    "kind": "v12.0,user",
-    "location": "uksouth",
-    "lookbackPeriod": "30 days",
-    "name": "3pdcd45s6f/hgf7qgnipr",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "KDKRQ6OLFPL-AU1Y6YLERB",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-    "subscriptionName": "70eprszin8i",
-    "tags": {
-      "environment": "prod",
-      "app": "paymentGateway"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "9.30",
-    "id": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/VJKCNMQP0Z-BZDYFWNU5QL/providers/Microsoft.Sql/servers/jxuii7iodl/databases/b2d3awdt01",
-    "kind": "v12.0,user",
-    "location": "southcentralus",
-    "lookbackPeriod": "30 days",
-    "name": "jxuii7iodl/b2d3awdt01",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "VJKCNMQP0Z-BZDYFWNU5QL",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-    "subscriptionName": "78dmplowch",
+    "subscriptionName": "x2yc3fe404l",
     "tags": {
       "environment": "prod",
       "app": "securityModule"
@@ -1144,101 +832,413 @@
     "unit": "Percent"
   },
   {
-    "average_cpu": "9.93",
-    "id": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/ZGNEQ3VUP2-HDC6WEBQXQ/providers/Microsoft.Sql/servers/f2kiz8an14/databases/8b3e1sz5jw",
+    "average_cpu": "22.41",
+    "id": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/0B34AFVI5CK-99ABCJDBFP/providers/Microsoft.Sql/servers/1gbk6hlftc/databases/thh76fjhwb",
     "kind": "v12.0,user",
-    "location": "centralindia",
+    "location": "northeurope",
     "lookbackPeriod": "30 days",
-    "name": "f2kiz8an14/8b3e1sz5jw",
+    "name": "1gbk6hlftc/thh76fjhwb",
     "recommendation": "Downsize",
     "recommended_capacity": "20",
     "resourceType": "Standard_Standard",
-    "resource_group": "ZGNEQ3VUP2-HDC6WEBQXQ",
+    "resource_group": "0B34AFVI5CK-99ABCJDBFP",
     "sku": {
       "capacity": 50,
       "name": "Standard",
       "tier": "Standard"
     },
-    "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-    "subscriptionName": "d5g3xgvbae",
+    "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+    "subscriptionName": "x1kj4xf2oi",
     "tags": {
       "environment": "prod",
-      "app": "paymentGateway"
+      "app": "inventoryManagement"
     },
     "threshold": 60,
     "type": "Microsoft.Sql/servers/databases",
     "unit": "Percent"
   },
   {
-    "average_cpu": "33.25",
-    "id": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/0FQXZ27JZA-8OTX921A8Y/providers/Microsoft.Sql/servers/yiwtkvtp6h/databases/vicvw4s2nf",
+    "average_cpu": "8.81",
+    "id": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/KSA54QLQPX-S7JU28WORU/providers/Microsoft.Sql/servers/2icflw8076/databases/3lkv174e8t",
     "kind": "v12.0,user",
-    "location": "westus2",
+    "location": "centralus",
     "lookbackPeriod": "30 days",
-    "name": "yiwtkvtp6h/vicvw4s2nf",
+    "name": "2icflw8076/3lkv174e8t",
     "recommendation": "Downsize",
     "recommended_capacity": "20",
     "resourceType": "Standard_Standard",
-    "resource_group": "0FQXZ27JZA-8OTX921A8Y",
-    "sku": {
-      "capacity": 50,
-      "name": "Standard",
-      "tier": "Standard"
-    },
-    "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-    "subscriptionName": "mu5qqmyi7s",
-    "tags": {
-      "environment": "dev",
-      "app": "customerSupport"
-    },
-    "threshold": 60,
-    "type": "Microsoft.Sql/servers/databases",
-    "unit": "Percent"
-  },
-  {
-    "average_cpu": "43.13",
-    "id": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/PQV8P0GG0E-NRSHY4FY3W/providers/Microsoft.Sql/servers/73vp4e2klu/databases/g3wkrejedh",
-    "kind": "v12.0,user",
-    "location": "westus2",
-    "lookbackPeriod": "30 days",
-    "name": "73vp4e2klu/g3wkrejedh",
-    "recommendation": "Downsize",
-    "recommended_capacity": "20",
-    "resourceType": "Standard_Standard",
-    "resource_group": "PQV8P0GG0E-NRSHY4FY3W",
+    "resource_group": "KSA54QLQPX-S7JU28WORU",
     "sku": {
       "capacity": 50,
       "name": "Standard",
       "tier": "Standard"
     },
     "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-    "subscriptionName": "zbypafcp2e",
+    "subscriptionName": "s7zfrj8gb1",
     "tags": {
-      "environment": "dev",
-      "app": "dataAnalytics"
+      "environment": "staging",
+      "app": "invoiceProcessing"
     },
     "threshold": 60,
     "type": "Microsoft.Sql/servers/databases",
     "unit": "Percent"
   },
   {
-    "average_cpu": "26.06",
-    "id": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/OHV3BCKGL8-VR0FJEP5L8/providers/Microsoft.Sql/servers/2k0yfu2b3t/databases/stei88i9cm",
+    "average_cpu": "35.95",
+    "id": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/1V28XQUGD6-RLU5V90LZ/providers/Microsoft.Sql/servers/xakyoyfy6h/databases/dw1md449qs",
     "kind": "v12.0,user",
-    "location": "northeurope",
+    "location": "eastus",
     "lookbackPeriod": "30 days",
-    "name": "2k0yfu2b3t/stei88i9cm",
+    "name": "xakyoyfy6h/dw1md449qs",
     "recommendation": "Downsize",
     "recommended_capacity": "20",
     "resourceType": "Standard_Standard",
-    "resource_group": "OHV3BCKGL8-VR0FJEP5L8",
+    "resource_group": "1V28XQUGD6-RLU5V90LZ",
     "sku": {
       "capacity": 50,
       "name": "Standard",
       "tier": "Standard"
     },
     "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-    "subscriptionName": "mnecywc2pl",
+    "subscriptionName": "xrwok8qy6",
+    "tags": {
+      "environment": "prod",
+      "app": "crmModule"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "20.42",
+    "id": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/CLG6S96FV9-HS6GI9QNG7/providers/Microsoft.Sql/servers/vx1astazyti/databases/hjzy56mn2h",
+    "kind": "v12.0,user",
+    "location": "westus2",
+    "lookbackPeriod": "30 days",
+    "name": "vx1astazyti/hjzy56mn2h",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "CLG6S96FV9-HS6GI9QNG7",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+    "subscriptionName": "etvo7a5dcqg",
+    "tags": {
+      "environment": "prod",
+      "app": "crmModule"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "22.77",
+    "id": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/S1BY29MWQB-J5XQX0GAUAK/providers/Microsoft.Sql/servers/8w152oeh8ak/databases/wzuupdg82ok",
+    "kind": "v12.0,user",
+    "location": "centralus",
+    "lookbackPeriod": "30 days",
+    "name": "8w152oeh8ak/wzuupdg82ok",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "S1BY29MWQB-J5XQX0GAUAK",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "subscriptionName": "71mbnt9yxn",
+    "tags": {
+      "environment": "prod",
+      "app": "reportingService"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "34.25",
+    "id": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/G2ZYOMSSNVI-BEW3B0TLTV/providers/Microsoft.Sql/servers/t85c57gx9c/databases/5ozswsv35l",
+    "kind": "v12.0,user",
+    "location": "eastus",
+    "lookbackPeriod": "30 days",
+    "name": "t85c57gx9c/5ozswsv35l",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "G2ZYOMSSNVI-BEW3B0TLTV",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+    "subscriptionName": "jfoyvs57kf",
+    "tags": {
+      "environment": "staging",
+      "app": "invoiceProcessing"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "26.21",
+    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/60SC6D7649-2DNGKMPHXA/providers/Microsoft.Sql/servers/kbfx5ko0ga/databases/ox5m610gfj",
+    "kind": "v12.0,user",
+    "location": "centralus",
+    "lookbackPeriod": "30 days",
+    "name": "kbfx5ko0ga/ox5m610gfj",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "60SC6D7649-2DNGKMPHXA",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "subscriptionName": "q6apc45izo",
+    "tags": {
+      "environment": "prod",
+      "app": "crmModule"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "35.38",
+    "id": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/OC7U5QHFIV-ATZTY2SXLM/providers/Microsoft.Sql/servers/u7x5hqj04ki/databases/dlm9ucmyfv",
+    "kind": "v12.0,user",
+    "location": "northeurope",
+    "lookbackPeriod": "30 days",
+    "name": "u7x5hqj04ki/dlm9ucmyfv",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "OC7U5QHFIV-ATZTY2SXLM",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+    "subscriptionName": "qdqyhouy5oh",
+    "tags": {
+      "environment": "prod",
+      "app": "inventoryManagement"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "18.69",
+    "id": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/VAK5MBOPQB-X5TFNQBVQT/providers/Microsoft.Sql/servers/kogrcwnh38/databases/ra7yfdn0vg",
+    "kind": "v12.0,user",
+    "location": "australiaeast",
+    "lookbackPeriod": "30 days",
+    "name": "kogrcwnh38/ra7yfdn0vg",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "VAK5MBOPQB-X5TFNQBVQT",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+    "subscriptionName": "2w5vs1q8v2l",
+    "tags": {
+      "environment": "prod",
+      "app": "inventoryManagement"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "7.92",
+    "id": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/51LNFLQFW3-5I4BTV6VWKK/providers/Microsoft.Sql/servers/tyz6759czv/databases/vopl8gyd9mj",
+    "kind": "v12.0,user",
+    "location": "southeastasia",
+    "lookbackPeriod": "30 days",
+    "name": "tyz6759czv/vopl8gyd9mj",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "51LNFLQFW3-5I4BTV6VWKK",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "subscriptionName": "5478niydq9",
+    "tags": {
+      "environment": "prod",
+      "app": "securityModule"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "20.45",
+    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/4LTDGUJABMJ-PAK7D2PK4R/providers/Microsoft.Sql/servers/s8pneme111/databases/8sjgzdlggfk",
+    "kind": "v12.0,user",
+    "location": "centralus",
+    "lookbackPeriod": "30 days",
+    "name": "s8pneme111/8sjgzdlggfk",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "4LTDGUJABMJ-PAK7D2PK4R",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+    "subscriptionName": "bmkda04nz1",
+    "tags": {
+      "environment": "prod",
+      "app": "crmModule"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "9.37",
+    "id": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/TYHO4YD05U-V17ZE2BAZX/providers/Microsoft.Sql/servers/dfutdk05s1/databases/od0nflc84g",
+    "kind": "v12.0,user",
+    "location": "centralindia",
+    "lookbackPeriod": "30 days",
+    "name": "dfutdk05s1/od0nflc84g",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "TYHO4YD05U-V17ZE2BAZX",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "subscriptionName": "px5ww68qegf",
+    "tags": {
+      "environment": "prod",
+      "app": "securityModule"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "9.65",
+    "id": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/C36GQK3UPU-W7IFD1IOMD/providers/Microsoft.Sql/servers/aiyzqkyb7a/databases/0w022n4uhvk",
+    "kind": "v12.0,user",
+    "location": "northeurope",
+    "lookbackPeriod": "30 days",
+    "name": "aiyzqkyb7a/0w022n4uhvk",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "C36GQK3UPU-W7IFD1IOMD",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+    "subscriptionName": "r8fhsxcuh3",
+    "tags": {
+      "environment": "prod",
+      "app": "inventoryManagement"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "6.40",
+    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/D8NGHNDTUJ-62YR4ZD8NN/providers/Microsoft.Sql/servers/dnx60z3aaoj/databases/51qumvl208",
+    "kind": "v12.0,user",
+    "location": "southeastasia",
+    "lookbackPeriod": "30 days",
+    "name": "dnx60z3aaoj/51qumvl208",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "D8NGHNDTUJ-62YR4ZD8NN",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+    "subscriptionName": "lnuk5kjddq",
+    "tags": {
+      "environment": "prod",
+      "app": "reportingService"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "39.95",
+    "id": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/BGBFNZOQSK-ZYWPCMJ4QX/providers/Microsoft.Sql/servers/503iux9ib6/databases/6anvtkkimb",
+    "kind": "v12.0,user",
+    "location": "eastus",
+    "lookbackPeriod": "30 days",
+    "name": "503iux9ib6/6anvtkkimb",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "BGBFNZOQSK-ZYWPCMJ4QX",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+    "subscriptionName": "379826r7yf",
+    "tags": {
+      "environment": "staging",
+      "app": "userManagement"
+    },
+    "threshold": 60,
+    "type": "Microsoft.Sql/servers/databases",
+    "unit": "Percent"
+  },
+  {
+    "average_cpu": "45.49",
+    "id": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/5HKZPG19FEJ-YIVU2GJ1HT/providers/Microsoft.Sql/servers/u9rgcq1ilz/databases/yn14ls3dw4",
+    "kind": "v12.0,user",
+    "location": "centralus",
+    "lookbackPeriod": "30 days",
+    "name": "u9rgcq1ilz/yn14ls3dw4",
+    "recommendation": "Downsize",
+    "recommended_capacity": "20",
+    "resourceType": "Standard_Standard",
+    "resource_group": "5HKZPG19FEJ-YIVU2GJ1HT",
+    "sku": {
+      "capacity": 50,
+      "name": "Standard",
+      "tier": "Standard"
+    },
+    "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "subscriptionName": "pape837vwp",
     "tags": {
       "environment": "dev",
       "app": "customerSupport"
@@ -1248,52 +1248,52 @@
     "unit": "Percent"
   },
   {
-    "average_cpu": "36.97",
-    "id": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/VV4I4U4JMN-9KMWGQJZPW/providers/Microsoft.Sql/servers/stu7ig92d7/databases/q9c59c1wcd",
+    "average_cpu": "41.43",
+    "id": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/VA8H4D5LA7-XEAL1UFGM0G/providers/Microsoft.Sql/servers/z8zm8gc10o/databases/kkzkm74y9al",
     "kind": "v12.0,user",
     "location": "uksouth",
     "lookbackPeriod": "30 days",
-    "name": "stu7ig92d7/q9c59c1wcd",
+    "name": "z8zm8gc10o/kkzkm74y9al",
     "recommendation": "Downsize",
     "recommended_capacity": "20",
     "resourceType": "Standard_Standard",
-    "resource_group": "VV4I4U4JMN-9KMWGQJZPW",
+    "resource_group": "VA8H4D5LA7-XEAL1UFGM0G",
     "sku": {
       "capacity": 50,
       "name": "Standard",
       "tier": "Standard"
     },
     "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-    "subscriptionName": "4jhkz8vyksi",
+    "subscriptionName": "1f98k38pk6",
     "tags": {
-      "environment": "prod",
-      "app": "paymentGateway"
+      "environment": "dev",
+      "app": "emailService"
     },
     "threshold": 60,
     "type": "Microsoft.Sql/servers/databases",
     "unit": "Percent"
   },
   {
-    "average_cpu": "7.74",
-    "id": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/QXYLQT6FN6-KQRASTH0AP/providers/Microsoft.Sql/servers/gzowboy9fy/databases/8jy6mnvfal",
+    "average_cpu": "33.43",
+    "id": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/26VJS6Y1JC-FEZ09WQ0I8/providers/Microsoft.Sql/servers/vk0fjphif7/databases/tgc90o66ne",
     "kind": "v12.0,user",
-    "location": "centralus",
+    "location": "southcentralus",
     "lookbackPeriod": "30 days",
-    "name": "gzowboy9fy/8jy6mnvfal",
+    "name": "vk0fjphif7/tgc90o66ne",
     "recommendation": "Downsize",
     "recommended_capacity": "20",
     "resourceType": "Standard_Standard",
-    "resource_group": "QXYLQT6FN6-KQRASTH0AP",
+    "resource_group": "26VJS6Y1JC-FEZ09WQ0I8",
     "sku": {
       "capacity": 50,
       "name": "Standard",
       "tier": "Standard"
     },
-    "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-    "subscriptionName": "y6thf09f3u",
+    "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+    "subscriptionName": "8hyrqwvgw7",
     "tags": {
-      "environment": "staging",
-      "app": "userManagement"
+      "environment": "prod",
+      "app": "crmModule"
     },
     "threshold": 60,
     "type": "Microsoft.Sql/servers/databases",

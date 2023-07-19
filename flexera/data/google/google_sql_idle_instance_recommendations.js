@@ -106,11 +106,12 @@ instances = []
 
 for (var i = 0; i < 50; i++) {
   projectNumber = (Math.random() * 1000000000000).toFixed(0)
-  savings = parseFloat((Math.random() * Math.random() * 100).toFixed(3))
   resourceID = generateRandomName()
   region = region_list[parseInt(Math.random() * 10)]
   accountId = "rightscale.com:resat-prem"
   accountName = "RightScale-Resat-Premium"
+
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
 
   instances.push({
     "accountID": accountId,
