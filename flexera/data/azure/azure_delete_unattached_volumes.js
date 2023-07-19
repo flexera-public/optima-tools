@@ -96,6 +96,8 @@ for (var i = 0; i < 50; i++) {
   resourceName = generateRandomName()
   resourceId = "/subscriptions/" + subscriptionId + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Compute/disks/" + resourceName
 
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
+
   volumes.push({
     "diskSize": parseInt(Math.random() * 500).toFixed(0),
     "disk_id": resourceId,
@@ -104,7 +106,7 @@ for (var i = 0; i < 50; i++) {
     "resourceGroup": resourceGroup,
     "resourceName": resourceName,
     "resourceType": "Microsoft.Compute/disks",
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
+    "savings": savings,
     "savingsCurrency": "US$",
     "service": "Microsoft.Compute",
     "subscriptionID": subscriptionId,

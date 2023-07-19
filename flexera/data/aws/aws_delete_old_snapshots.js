@@ -90,6 +90,8 @@ tag_list = [
 snapshots = []
 
 for (var i = 0; i < 10; i++) {
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
+
   snapshots.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
     "accountName": generateRandomName(),
@@ -100,7 +102,7 @@ for (var i = 0; i < 10; i++) {
     "region": region_list[parseInt(Math.random() * 10)],
     "resourceName": generateRandomName(),
     "resourceType": "Storage Snapshot",
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
+    "savings": savings,
     "savingsCurrency": "US$",
     "service": "RDS",
     "snapshotId": generateRandomName(),
@@ -110,6 +112,8 @@ for (var i = 0; i < 10; i++) {
 }
 
 for (var i = 0; i < 40; i++) {
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
+
   snapshots.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
     "accountName": generateRandomName(),
@@ -120,7 +124,7 @@ for (var i = 0; i < 40; i++) {
     "region": region_list[parseInt(Math.random() * 10)],
     "resourceName": generateRandomName(),
     "resourceType": "Storage Snapshot",
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
+    "savings": savings,
     "savingsCurrency": "US$",
     "service": "EBS",
     "snapshotId": generateRandomName(),

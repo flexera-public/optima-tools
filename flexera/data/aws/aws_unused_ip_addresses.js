@@ -92,6 +92,7 @@ ip_list = []
 for (var i = 0; i < 50; i++) {
   region = region_list[parseInt(Math.random() * 10)]
   ip = parseInt(Math.random() * 100) + '.'  + parseInt(Math.random() * 100) + '.' + parseInt(Math.random() * 100) + '.' + parseInt(Math.random() * 100)
+  savings = parseFloat((Math.random() * Math.random() * 10).toFixed(3))
 
   ip_list.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
@@ -101,7 +102,7 @@ for (var i = 0; i < 50; i++) {
     "publicIp": ip,
     "region": region,
     "resourceName": generateRandomName() + '/' + (Math.random() + 1).toString(36).substring(8),
-    "savings": parseFloat((Math.random() * Math.random() * 10).toFixed(3)),
+    "savings": savings,
     "savingsCurrency": "$",
     "service": "EC2",
     "tags": tag_list[parseInt(Math.random() * 10)]

@@ -1,3 +1,5 @@
+// NOTE: Waiting on fix to this policy to get recommendation data
+
 // --------------------------------------
 // Libraries
 // --------------------------------------
@@ -44,30 +46,30 @@ function generateRandomName() {
 current_year = parseInt(new Date().toISOString().split('-')[0])
 
 account_list = [
-  "999773517191",
-  "138186646095",
-  "353197488767",
-  "516702013600",
-  "627286410625",
-  "165283112664",
-  "646728909564",
-  "620368136857",
-  "665319725593",
-  "925894598672",
-  "766083082562"
+  "ca1eeeca-231f-4a91-a740-04eaeb043516",
+  "ceee86e2-a6cf-4a62-8004-1313cc581679",
+  "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+  "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+  "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+  "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+  "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+  "9c6588cd-ca5e-429d-adc7-5292d3880914",
+  "912102ae-2e57-4094-bb8a-63a7d1c38207",
+  "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+  "f048a88c-9bc9-43cf-a30d-f48c94708866"
 ]
 
 region_list = [
-  "us-east-2",
-  "us-east-1",
-  "us-west-1",
-  "us-west-2",
-  "ap-east-1",
-  "ap-northeast-3",
-  "ca-central-1",
-  "eu-central-1",
-  "eu-west-1",
-  "eu-west-2"
+  "us-central1",
+  "europe-west1",
+  "asia-northeast1",
+  "us-west1",
+  "australia-southeast1",
+  "southamerica-east1",
+  "northamerica-northeast1",
+  "europe-west4",
+  "asia-southeast2",
+  "europe-west6"
 ]
 
 tag_list = [
@@ -83,44 +85,59 @@ tag_list = [
   { environment: "prod", app: "crmModule" }
 ]
 
+description_list = [
+  "Purchase a 1 year new standard CUD for RegularCore CPU",
+  "Purchase a 1 year new standard CUD for RegularRAM memory",
+  "Purchase a 1 year new standard CUD for E2Core CPU",
+  "Purchase a 1 year new standard CUD for E2RAM memory",
+  "Purchase a 1 year new standard CUD for N2DRAM memory",
+  "Purchase a 1 year new standard CUD for N2DCore CPU",
+  "Purchase a 1 year additional standard CUD for RegularCore CPU",
+  "Purchase a 1 year additional standard CUD for RegularRAM memory",
+  "Purchase a 1 year additional standard CUD for E2RAM memory",
+  "Purchase a 1 year additional standard CUD for N2DCore CPU",
+]
+
 // --------------------------------------
 // Script
 // --------------------------------------
 
-volumes = []
+instances = []
 
 for (var i = 0; i < 50; i++) {
+  projectNumber = (Math.random() * 1000000000000).toFixed(0)
+  resourceID = generateRandomName()
   region = region_list[parseInt(Math.random() * 10)]
-
-  createdTime = getRandomDate(current_year - 1 - parseInt(Math.random() * 2))
-  age = Math.round((new Date() - new Date(createdTime)) / 1000 / 60 / 60 / 24)
+  accountId = "rightscale.com:resat-prem"
+  accountName = "RightScale-Resat-Premium"
 
   savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
 
-  volumes.push({
-    "accountID": account_list[parseInt(Math.random() * 10)],
-    "accountName": generateRandomName(),
-    "age": age + " days",
-    "availabilityZone": region + 'a',
-    "createdTime": createdTime,
-    "lookbackPeriod": "30 days",
+  instances.push({
+    "accountID": accountId,
+    "accountName": accountName,
+    "projectNumber": projectNumber,
+    "resourceID": resourceID,
+    "resourceType": "CLOUD_SQL_INSTANCE",
+    "lookBackPeriodInDays": 30,
     "region": region,
-    "resourceName": generateRandomName(),
-    "resourceType": "gp" + (parseInt(Math.random() * 2) + 2),
-    "savings": savings,
+    "primaryImpact": { "category": "COST" },
+    "tags": "fingerprint=" + (Math.random() + 1).toString(36).substring(2) + "=",
+    "platform": "",
+    "description": "",
+    "service": "SQL",
     "savingsCurrency": "US$",
-    "service": "EBS",
-    "size": parseInt(Math.random() * 500).toFixed(0) + " GB",
-    "status": "available",
-    "tags": tag_list[parseInt(Math.random() * 10)],
-    "volumeId": "vol-" + generateRandomName()
+    "savings": savings,
+    "priority": "P4",
+    "recommenderSubtype": "",
+    "state": "ACTIVE",
+    "status": "READY"
   })
 }
 
 result = {
-  "accountID": account_list[parseInt(Math.random() * 10)],
-  "message": "The total estimated monthly savings are US$ 171.29",
-  "unused_volumes": volumes
+  "message": "The total estimated monthly savings are US$ 7833.10",
+  "instances": instances
 }
 
 // --------------------------------------

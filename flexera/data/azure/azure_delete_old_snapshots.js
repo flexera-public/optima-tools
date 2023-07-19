@@ -98,6 +98,8 @@ for (var i = 0; i < 50; i++) {
   createdTime = getRandomDate(current_year - 1 - parseInt(Math.random() * 2))
   age = Math.round((new Date() - new Date(createdTime)) / 1000 / 60 / 60 / 24)
 
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
+
   snapshots.push({
     "age": age,
     "region": region_list[parseInt(Math.random() * 10)],
@@ -105,7 +107,7 @@ for (var i = 0; i < 50; i++) {
     "resourceID": resourceId,
     "resourceName": resourceName,
     "resourceType": "Microsoft.Compute/snapshots",
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
+    "savings": savings,
     "savingsCurrency": "US$",
     "service": "Microsoft.Compute",
     "size": parseInt(Math.random() * 500).toFixed(0),

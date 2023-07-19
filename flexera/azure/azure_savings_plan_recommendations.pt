@@ -15,18 +15,6 @@ info(
 )
 
 ###############################################################################
-# Parameters
-###############################################################################
-
-parameter "param_savings_threshold" do
-  category "RI"
-  label "Net Savings Threshold"
-  description "Specify the minimum net savings that should result in a recommendation"
-  default 100
-  type "number"
-end
-
-###############################################################################
 # Datasources
 ###############################################################################
 
@@ -46,7 +34,7 @@ end
 policy "azure_sp_recommendations" do
   validate_each $ds_sp_recommendations_data do
     summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data }} Azure Savings Plan Purchase Recommendations"
-    check lt(to_n(val(item,"savingsAmount")),$param_savings_threshold)
+    check lt(to_n(val(item,"savingsAmount")), 1)
     export do
       resource_level false
       field "name" do

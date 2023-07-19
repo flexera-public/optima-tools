@@ -133,6 +133,8 @@ for (var i = 0; i < 25; i++) {
     "to ", newResourceType
   ].join('')
 
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
+
   result.push({
     "subscriptionId": subscriptionId,
     "subscriptionName": subscriptionName,
@@ -147,7 +149,7 @@ for (var i = 0; i < 25; i++) {
     "resourceKind": "Microsoft.Compute/virtualMachines",
     "region": region_list[parseInt(Math.random() * 10)],
     "osType": "Linux",
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
+    "savings": savings,
     "savingsCurrency": "US$",
     "cpu_average": parseFloat((parseInt(Math.random() * 30) + Math.random()).toFixed(2)),
     "cpu_maximum": parseFloat((parseInt(Math.random() * 40) + Math.random()).toFixed(2)),

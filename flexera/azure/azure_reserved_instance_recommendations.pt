@@ -1,4 +1,4 @@
-name "Azure Reserved Instances Recommendations"
+name "Azure Reserved Instances Recommendations [Demo]"
 rs_pt_ver 20180301
 type "policy"
 short_description "Demo policy for generating recommendations. See [README](https://github.com/flexera-public/optima-tools/tree/master/flexera/) for more information."
@@ -13,18 +13,6 @@ info(
   policy_set: "Reserved Instances",
   recommendation_type: "Rate Reduction"
 )
-
-###############################################################################
-# Parameters
-###############################################################################
-
-parameter "param_savings_threshold" do
-  category "RI"
-  label "Net Savings Threshold"
-  description "Specify the minimum net savings that should result in a recommendation"
-  default 1
-  type "number"
-end
 
 ###############################################################################
 # Datasources
@@ -46,7 +34,7 @@ end
 policy "azure_ri_recommendations" do
   validate_each $ds_ri_normalization do
     summary_template "{{ len data }} Azure Reservation Purchase Recommendations"
-    check lt(to_n(val(item, "netSavings")), $param_savings_threshold)
+    check lt(to_n(val(item, "netSavings")), 1)
     export do
       resource_level false
       field "accountID" do

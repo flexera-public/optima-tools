@@ -111,7 +111,6 @@ for (var i = 0; i < 50; i++) {
   resourceName = generateRandomName() + "-disk1"
   resourceLink =  "projects/" + accountName + "/regions/" + region + "/disks/" + resourceName
   type =  "projects/" + accountName + "/regions/" + region + "/diskTypes/pd-ssd"
-  savings = parseFloat((Math.random() * Math.random() * 100).toFixed(3))
   diskSize = 2 ** parseInt(Math.random() * 10)
 
   dates = [getRandomDate(current_year - 1 - parseInt(Math.random() * 2)), getRandomDate(current_year - 1 - parseInt(Math.random() * 2)), getRandomDate(current_year - 1 - parseInt(Math.random() * 2))]
@@ -120,6 +119,8 @@ for (var i = 0; i < 50; i++) {
   creationTimestamp = dates[0]
   lastAttachTimestamp = dates[1]
   lastDetachTimestamp = dates[2]
+
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
 
   instances.push({
     "accountID": accountId,

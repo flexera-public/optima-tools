@@ -166,6 +166,7 @@ for (var i = 0; i < 50; i++) {
   serverName = generateRandomName()
   resourceId = "/subscriptions/" + subscriptionId + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Sql/servers/" + serverName + "/databases/" + resourceName
   resourceType = sku_list[parseInt(Math.random() * 10)]
+  savings = parseFloat((Math.random() * Math.random() * 1000).toFixed(3))
 
   instance_list.push({
     "lookbackPeriod": "30 days",
@@ -176,7 +177,7 @@ for (var i = 0; i < 50; i++) {
     "resourceKind": "v12.0,user,vcore",
     "resourceName": serverName + "/" + resourceName,
     "resourceType": resourceType['resourceType'],
-    "savings": parseFloat((Math.random() * Math.random() * 100).toFixed(3)),
+    "savings": savings,
     "savingsCurrency": "US$",
     "service": "Microsoft.Sql",
     "sku": resourceType,
