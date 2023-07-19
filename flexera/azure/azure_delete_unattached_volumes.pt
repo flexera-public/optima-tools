@@ -15,19 +15,6 @@ info(
 )
 
 ###############################################################################
-# Parameters
-###############################################################################
-
-parameter "param_unattached_days" do
-  type "number"
-  label "Unused Age"
-  description "Number of days the volume is unused"
-  default 30
-  min_value 1
-  max_value 90
-end
-
-###############################################################################
 # Datasources
 ###############################################################################
 
@@ -48,7 +35,7 @@ policy "pol_azure_unattached_volumes" do
   validate $ds_volume_cost_mapping do
     summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.instances }} Unused Volumes Found"
     detail_template <<-EOS
-The following {{ len data.instances }} unused volumes, for Account: {{ rs_project_name }} (ID: {{ rs_project_id }}), have exceeded the specified age of: {{ parameters.param_unattached_days }} days old.\n
+The following {{ len data.instances }} unused volumes, for Account: {{ rs_project_name }} (ID: {{ rs_project_id }}), have exceeded the specified age of: 30 days old.\n
 {{data.message}}
 EOS
     check eq(1, 0)

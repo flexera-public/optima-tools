@@ -14,18 +14,6 @@ info(
 )
 
 ###############################################################################
-# Parameters
-###############################################################################
-
-parameter "snapshot_age" do
-  type "number"
-  label "Snapshot age"
-  default 30
-  description "The number of days since the snapshot was created."
-  min_value 1
-end
-
-###############################################################################
 # Datasources
 ###############################################################################
 
@@ -46,7 +34,7 @@ policy "pol_utilization" do
   validate $ds_snapshots_cost_mapping do
     summary_template "AWS Account ID: {{with index data.result 0}}{{ .accountID }}{{end}} - {{ len data.result }} rows containing AWS old snapshot data"
     detail_template <<-EOS
-The following {{ len data.result }} old snapshots, for AWS Account: {{with index data.result 0}}{{ .accountID }}{{end}}, have exceeded the specified age of: {{ parameters.snapshot_age }} days old.
+The following {{ len data.result }} old snapshots, for AWS Account: {{with index data.result 0}}{{ .accountID }}{{end}}, have exceeded the specified age of: 30 days old.
 
 {{data.message}}
 EOS

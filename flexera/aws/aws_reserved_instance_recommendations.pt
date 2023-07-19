@@ -15,18 +15,6 @@ info(
 )
 
 ###############################################################################
-# Parameters
-###############################################################################
-
-parameter "param_savings_threshold" do
-  category "RI"
-  label "Net Savings Threshold"
-  description "Specify the minimum net savings that should result in a recommendation"
-  default 1
-  type "number"
-end
-
-###############################################################################
 # Datasources
 ###############################################################################
 
@@ -46,7 +34,7 @@ end
 policy "aws_ri_recommendations" do
   validate_each $ds_ri_normalization do
     summary_template "{{ len data }} AWS Reserved Instances Purchase Recommendations"
-    check lt(to_n(val(item,"estimatedMonthlySavingsAmount")),$param_savings_threshold)
+    check lt(to_n(val(item,"estimatedMonthlySavingsAmount")), 1)
     export do
       resource_level false
       field "region" do
