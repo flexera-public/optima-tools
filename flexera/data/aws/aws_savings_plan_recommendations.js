@@ -58,16 +58,16 @@ account_list = [
 ]
 
 region_list = [
-  "us-east-2",
-  "us-east-1",
-  "us-west-1",
-  "us-west-2",
-  "ap-east-1",
-  "ap-northeast-3",
-  "ca-central-1",
-  "eu-central-1",
-  "eu-west-1",
-  "eu-west-2"
+  "EU (London)",
+  "US East (N. Virginia)",
+  "Asia Pacific (Mumbai)",
+  "EU (Frankfurt)",
+  "Asia Pacific (Tokyo)",
+  "Asia Pacific (Sydney)",
+  "US West (Oregon)",
+  "EU (Ireland)",
+  "EU (Paris)",
+  "Asia Pacific (Singapore)"
 ]
 
 // --------------------------------------

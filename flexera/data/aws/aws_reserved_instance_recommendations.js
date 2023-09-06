@@ -57,30 +57,48 @@ account_list = [
   "766083082562"
 ]
 
-type_list = [
-  "cache.t2",
-  "cache.r4",
-  "cache.m4",
-  "cache.r3",
-  "cache.m3",
-  "cache.r2",
-  "cache.m2",
-  "cache.r5",
-  "cache.m5",
-  "cache.t3"
+region_list = [
+  "EU (London)",
+  "US East (N. Virginia)",
+  "Asia Pacific (Mumbai)",
+  "EU (Frankfurt)",
+  "Asia Pacific (Tokyo)",
+  "Asia Pacific (Sydney)",
+  "US West (Oregon)",
+  "EU (Ireland)",
+  "EU (Paris)",
+  "Asia Pacific (Singapore)"
 ]
 
-region_list = [
-  "us-east-2",
-  "us-east-1",
-  "us-west-1",
-  "us-west-2",
-  "ap-east-1",
-  "ap-northeast-3",
-  "ca-central-1",
-  "eu-central-1",
-  "eu-west-1",
-  "eu-west-2"
+instance_type_list = [
+  "r5.large",
+  "m5.large",
+  "c4.large",
+  "t2.nano",
+  "t3.nano",
+  "c6i.large",
+  "c5.xlarge",
+  "i4i.large",
+  "g4dn.xlarge",
+  "c5a.large",
+  "m4.large",
+  "g5.2xlarge",
+  "c6a.2xlarge",
+  "t3a.nano",
+  "c6a.8xlarge",
+  "m4.2xlarge",
+  "c6g.medium",
+  "im4gn.large",
+  "c5d.large",
+  "r6g.medium",
+  "t3.xlarge",
+  "m6i.large",
+  "m6gd.medium",
+  "g5.4xlarge",
+  "m3.medium",
+  "r6i.large",
+  "c5.4xlarge",
+  "c5.large"
 ]
 
 // --------------------------------------
@@ -90,15 +108,16 @@ region_list = [
 result = []
 
 for (var i = 0; i < 50; i++) {
-  resourceType = type_list[parseInt(Math.random() * 10)]
+  instanceType = instance_type_list[parseInt(Math.random() * 10)]
+  resourceType = instanceType.split('.')[0]
 
   result.push({
     "accountID": account_list[parseInt(Math.random() * 10)],
     "accountName": generateRandomName(),
     "accountScope": "Linked",
     "availabilityZone": "",
-    "averageNormalizedUnitsUsedPerHour": "NaN",
-    "averageNumberOfInstancesUsedPerHour": parseInt(Math.random() * 10).toFixed(0),
+    "averageNormalizedUnitsUsedPerHour": parseFloat((Math.random() * 1000).toFixed(2)),
+    "averageNumberOfInstancesUsedPerHour": parseFloat((Math.random() * 1000).toFixed(2)),
     "averageUtilization": parseInt(Math.random() * 100).toFixed(0),
     "databaseEdition": "",
     "databaseEngine": "",
@@ -111,25 +130,25 @@ for (var i = 0; i < 50; i++) {
     "family": resourceType,
     "instanceClass": "",
     "instanceSize": "",
-    "instanceType": "",
+    "instanceType": instanceType,
     "licenseModel": "",
     "lookbackPeriodInDays": "7",
-    "maximumNormalizedUnitsUsedPerHour": "NaN",
-    "maximumNumberOfInstancesUsedPerHour": parseInt(Math.random() * 10).toFixed(0),
-    "minimumNormalizedUnitsUsedPerHour": "NaN",
-    "minimumNumberOfInstancesUsedPerHour": parseInt(Math.random() * 10).toFixed(0),
-    "nodeType": resourceType + ".large",
-    "paymentOption": "Heavy_Utilization",
+    "maximumNormalizedUnitsUsedPerHour": parseFloat((Math.random() * 100).toFixed(2)),
+    "maximumNumberOfInstancesUsedPerHour": parseFloat((Math.random() * 100).toFixed(2)),
+    "minimumNormalizedUnitsUsedPerHour": parseFloat((Math.random() * 100).toFixed(2)),
+    "minimumNumberOfInstancesUsedPerHour": parseFloat((Math.random() * 100).toFixed(2)),
+    "nodeType": instanceType,
+    "paymentOption": "Partial_Upfront",
     "platform": "",
-    "productDescription": "Redis",
-    "recommendedNormalizedUnitsToPurchase": "NA",
+    "productDescription": "Linux/UNIX",
+    "recommendedNormalizedUnitsToPurchase": parseInt(Math.random() * 10).toFixed(0),
     "recommendedNumberOfInstancesToPurchase": parseInt(Math.random() * 10).toFixed(0),
     "recurringStandardMonthlyCost": (Math.random() * Math.random() * 1000).toFixed(2),
     "region": region_list[parseInt(Math.random() * 10)],
-    "resourceType": resourceType + ".large",
-    "service": "ElastiCache",
+    "resourceType": resourceType,
+    "service": "Elastic Compute Cloud (EC2)",
     "sizeFlexEligible": "false",
-    "tenancy": "",
+    "tenancy": "Shared",
     "term": "1 year",
     "upfrontCost": (Math.random() * Math.random() * 1000).toFixed(2)
   })

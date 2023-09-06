@@ -70,6 +70,61 @@ region_list = [
   "centralindia"
 ]
 
+sku_compute = [
+  "Standard_D16s_v4",
+  "Standard_DS5_v2",
+  "Standard_E16s_v3",
+  "Standard_DS12_v2",
+  "Standard_DS13_v2",
+  "Standard_DS4_v2",
+  "Standard_D3_v2",
+  "Standard_D8s_v3",
+  "Standard_D8s_v3",
+  "Standard_D4a_v4",
+  "Standard_D8s_v5",
+  "Standard_DS3_v2",
+  "Standard_D8as_v4",
+  "Standard_D16as_v4",
+  "Standard_E8s_v3",
+  "Standard_E4s_v3",
+  "Standard_D8_v3",
+  "Standard_E32s_v3",
+  "Standard_DS4_v2",
+  "Standard_D8a_v4",
+  "Standard_D4s_v3",
+  "Standard_DS5_v2",
+  "Standard_D16s_v3",
+  "Standard_E8s_v3",
+  "Standard_DS4_v2",
+  "Standard_D4s_v4",
+  "Standard_E32s_v3",
+  "Standard_E8-4s_v3",
+  "Standard_D8s_v3",
+  "Standard_E4s_v3",
+  "Standard_D8a_v4",
+  "Standard_D4s_v3",
+  "Standard_DS5_v2",
+  "Standard_E16s_v3",
+  "Standard_E8-4s_v3",
+  "Standard_D8s_v3",
+  "Standard_D16s_v4",
+  "Standard_D8s_v4",
+  "Standard_D64s_v5"
+]
+
+sku_db = [
+  "SQLMI_BC_Compute_Gen5",
+  "SQLDB_HyperScale_Compute_Gen5",
+  "SQLDB_BC_Compute_Gen5",
+  "SQLDB_GP_Compute_Gen5",
+  "SQLMI_BC_Compute_Gen5",
+  "SQLMI_GP_Compute_Gen5",
+  "SQLMI_BC_Compute_Gen5",
+  "SQLDB_HyperScale_Compute_Gen5",
+  "SQLDB_BC_Compute_Gen5",
+  "SQLDB_GP_Compute_Gen5",
+]
+
 // --------------------------------------
 // Script
 // --------------------------------------
@@ -81,7 +136,23 @@ for (var i = 0; i < 50; i++) {
   subscriptionName = generateRandomName()
   resourceGroup = generateRandomName().toUpperCase() + '-' + generateRandomName().toUpperCase()
   resourceName = generateRandomName()
-  sku = "SQL_" + (Math.random() + 1).toString(36).substring(6)
+  recommendedQuantity = parseInt(Math.random() * 10)
+
+  sku_type = parseInt(Math.random() * 10)
+
+  if (sku_type >= 8) {
+    sku_type = "SQL"
+  } else {
+    sku_type = "Compute"
+  }
+
+  if (sku_type == "SQL") {
+    sku = sku_db[parseInt(Math.random() * 10)]
+    service = "SqlDataWarehouse"
+  } else {
+    sku = sku_compute[parseInt(Math.random() * 35)]
+    service = "Microsoft.Compute"
+  }
 
   totalCostWithRI = parseFloat((Math.random() * 10000).toFixed(3))
   costWithNoRI = (totalCostWithRI + (totalCostWithRI * Math.random())).toString()
@@ -92,12 +163,12 @@ for (var i = 0; i < 50; i++) {
   result.push({
     "subscriptionId": subscriptionId,
     "subscriptionName": subscriptionName,
-    "service": "SqlDataWarehouse",
+    "service": service,
     "skuName": sku,
     "region": region_list[parseInt(Math.random() * 10)],
     "term": "1 Year",
     "netSavings": netSavings,
-    "recommendedQuantity": 10,
+    "recommendedQuantity": recommendedQuantity,
     "costWithNoRI": costWithNoRI,
     "totalCostWithRI": totalCostWithRI,
     "firstUsageDate": firstUsageDate,
@@ -105,7 +176,7 @@ for (var i = 0; i < 50; i++) {
     "instanceFlexibilityGroup": "NA",
     "instanceFlexibilityRatio": 1,
     "normalizedSize": sku,
-    "recommendedQuantityNormalized": 10,
+    "recommendedQuantityNormalized": recommendedQuantity,
     "lookbackPeriod": "Last7Days",
     "scope": "Single",
   })
