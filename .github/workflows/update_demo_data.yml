@@ -1,0 +1,46 @@
+name: Update Demo Data
+
+on:
+  push:
+    branches:
+      - master # Adjust this as per your requirement. Maybe you want this to run on a different event or branch.
+
+jobs:
+  automate-process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16' # Adjust the version as per your requirement
+
+      - name: Install underscore library
+        run: npm install underscore
+
+      - name: Create a new branch
+        run: git checkout -b automated-update-branch-${{ github.run_number }}
+
+      - name: Run the update script
+        run: |
+          cd ./flexera/data
+          bash update_all.sh
+
+      - name: Commit the updated files
+        run: |
+          git add .
+          git commit -m "Updated files using flexera/data/update_all.sh"
+          git push origin automated-update-branch-${{ github.run_number }}
+
+      - name: Create Pull Request
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: automated-update-branch-${{ github.run_number }}
+          destination_branch: master
+          title: Automated Update PR
+          body: Updates from automated script.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
