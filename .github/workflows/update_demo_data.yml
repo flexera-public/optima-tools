@@ -44,9 +44,5 @@ jobs:
       - name: Run the update script
         run: bash ./update_demo_data.sh
 
-      - name: Commit the updated files directly to master
-        run: |
-          git add .
-          git commit -m "Updated demo data via update_demo_data.sh script"
-          git push origin master
-
+      - name: Checkout code
+        uses: stefanzweifel/git-auto-commit-action@v4
