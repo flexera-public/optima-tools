@@ -2,9 +2,7 @@ name: Update Demo Data
 
 on:
   push:
-    branches:
-      - demo-data-workflow
-  #schedule:
+  schedule:
     #        ?????????????? minute (0 - 59)
     #        ?  ?????????????? hour (0 - 23)
     #        ?  ? ?????????????? day of the month (1 - 31)
@@ -15,10 +13,10 @@ on:
     #        ?  ? ? ? ?
     #        *  * * * *
     # At 00:00 UTC on Sundays
-    #- cron: "0 0 * * 0"
+    - cron: "0 0 * * 0"
 
   # Workflow dispatch trigger allows manually running workflow
- #workflow_dispatch: {}
+  workflow_dispatch: {}
 
 jobs:
   update-demo-data:
@@ -44,5 +42,5 @@ jobs:
       - name: Run the update script
         run: bash ./update_demo_data.sh
 
-      - name: Checkout code
+      - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
