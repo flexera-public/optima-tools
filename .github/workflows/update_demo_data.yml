@@ -1,0 +1,56 @@
+name: Update Demo Data
+
+on:
+  schedule:
+    #        ?????????????? minute (0 - 59)
+    #        ?  ?????????????? hour (0 - 23)
+    #        ?  ? ?????????????? day of the month (1 - 31)
+    #        ?  ? ? ?????????????? month (1 - 12 or JAN-DEC)
+    #        ?  ? ? ? ?????????????? day of the week (0 - 6 or SUN-SAT)
+    #        ?  ? ? ? ?
+    #        ?  ? ? ? ?
+    #        ?  ? ? ? ?
+    #        *  * * * *
+    # At 00:00 UTC on Sundays
+    - cron: "0 0 * * 0"
+
+  # Workflow dispatch trigger allows manually running workflow
+  workflow_dispatch: {}
+
+jobs:
+  automate-process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install underscore library
+        run: npm install underscore
+
+      - name: Create a new branch
+        run: git checkout -b update-demo-data-${{ github.run_number }}
+
+      - name: Run the update script
+        run: bash update_demo_data.sh
+
+      - name: Commit the updated files
+        run: |
+          git add .
+          git commit -m "Updated files using update_demo_data.sh"
+          git push origin update-demo-data-${{ github.run_number }}
+
+      - name: Create Pull Request
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: update-demo-data-${{ github.run_number }}
+          destination_branch: master
+          title: Update Demo Data
+          body: Updates demo data from automated script.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
