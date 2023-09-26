@@ -3,7 +3,7 @@ name: Update Demo Data
 on:
   push:
     branches:
-      - master # Adjust this as per your requirement. Maybe you want this to run on a different event or branch.
+      - master
 
 jobs:
   automate-process:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16' # Adjust the version as per your requirement
+          node-version: '16'
 
       - name: Install underscore library
         run: npm install underscore
