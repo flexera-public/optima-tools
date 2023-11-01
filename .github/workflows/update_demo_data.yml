@@ -34,7 +34,7 @@ jobs:
         uses: actions/setup-node@v2
 
       - name: Install underscore library
-        run: npm install underscore
+        run: npm install underscore --legacy-peer-deps
 
       - name: Run the update script
         run: bash ./update_demo_data.sh
