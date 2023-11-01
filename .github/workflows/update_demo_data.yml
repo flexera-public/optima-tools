@@ -19,7 +19,7 @@ on:
 
 jobs:
   update-demo-data:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout code
@@ -32,11 +32,9 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
-        with:
-          node-version: '16'
 
       - name: Install underscore library
-        run: npm install underscore
+        run: npm install underscore --legacy-peer-deps
 
       - name: Run the update script
         run: bash ./update_demo_data.sh
