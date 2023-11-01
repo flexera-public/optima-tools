@@ -2,954 +2,954 @@
   "message": "The total estimated monthly savings are US$ 172.03",
   "instances": [
     {
-      "age": 994,
-      "region": "northeurope",
-      "resourceGroup": "LAZYOWL-RELIEVEDVIPER",
-      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/LAZYOWL-RELIEVEDVIPER/providers/Microsoft.Compute/snapshots/gentleibis",
-      "resourceName": "gentleibis",
+      "age": 898,
+      "region": "southeastasia",
+      "resourceGroup": "KINDIBIS-CALMELEPHANT",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/KINDIBIS-CALMELEPHANT/providers/Microsoft.Compute/snapshots/upbeatrabbit",
+      "resourceName": "upbeatrabbit",
       "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 310.97,
+      "savings": 148.047,
       "savingsCurrency": "US$",
       "service": "Microsoft.Compute",
-      "size": "43",
-      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "quirkyyak",
+      "size": "446",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "merrymouse",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "timeCreated": "2021-05-17T20:04:14.675Z"
+    },
+    {
+      "age": 489,
+      "region": "eastus2",
+      "resourceGroup": "INNOCENTIBIS-FIERCESNAKE",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/INNOCENTIBIS-FIERCESNAKE/providers/Microsoft.Compute/snapshots/nervousgiraffe",
+      "resourceName": "nervousgiraffe",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 212.703,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "209",
+      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "relievedmouse",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "timeCreated": "2022-06-30T16:55:36.637Z"
+    },
+    {
+      "age": 925,
+      "region": "centralus",
+      "resourceGroup": "OBEDIENTTIGER-QUICKQUAIL",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/OBEDIENTTIGER-QUICKQUAIL/providers/Microsoft.Compute/snapshots/adventurouszebra",
+      "resourceName": "adventurouszebra",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 43.668,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "182",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "lazyurchin",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "timeCreated": "2021-04-20T22:22:47.422Z"
+    },
+    {
+      "age": 1025,
+      "region": "southcentralus",
+      "resourceGroup": "EXCITEDDOG-LAZYQUAIL",
+      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/EXCITEDDOG-LAZYQUAIL/providers/Microsoft.Compute/snapshots/thankfulfox",
+      "resourceName": "thankfulfox",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 744.721,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "398",
+      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+      "subscriptionName": "calmbear",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "timeCreated": "2021-01-11T02:30:13.866Z"
+    },
+    {
+      "age": 718,
+      "region": "westus2",
+      "resourceGroup": "INNOCENTTIGER-VIVACIOUSTIGER",
+      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/INNOCENTTIGER-VIVACIOUSTIGER/providers/Microsoft.Compute/snapshots/quirkyhorse",
+      "resourceName": "quirkyhorse",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 149.952,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "226",
+      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "sillyeel",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "timeCreated": "2021-11-13T20:31:01.058Z"
+    },
+    {
+      "age": 913,
+      "region": "westus2",
+      "resourceGroup": "RELIEVEDKANGAROO-WITTYLION",
+      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/RELIEVEDKANGAROO-WITTYLION/providers/Microsoft.Compute/snapshots/lazyquail",
+      "resourceName": "lazyquail",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 179.351,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "480",
+      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "zealouselephant",
       "tags": {
         "environment": "prod",
         "app": "crmModule"
       },
-      "timeCreated": "2021-01-05T23:06:48.594Z"
+      "timeCreated": "2021-05-02T09:53:59.000Z"
     },
     {
-      "age": 756,
-      "region": "northeurope",
-      "resourceGroup": "QUIRKYANT-RELIEVEDLION",
-      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/QUIRKYANT-RELIEVEDLION/providers/Microsoft.Compute/snapshots/obedientsnake",
-      "resourceName": "obedientsnake",
+      "age": 602,
+      "region": "eastus",
+      "resourceGroup": "MERRYBEAR-MERRYANT",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/MERRYBEAR-MERRYANT/providers/Microsoft.Compute/snapshots/gentlezebra",
+      "resourceName": "gentlezebra",
       "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 441.185,
+      "savings": 215.676,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "445",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "excitedgoat",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "timeCreated": "2022-03-09T11:04:09.544Z"
+    },
+    {
+      "age": 607,
+      "region": "southeastasia",
+      "resourceGroup": "CALMOWL-PROUDPARROT",
+      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/CALMOWL-PROUDPARROT/providers/Microsoft.Compute/snapshots/happyant",
+      "resourceName": "happyant",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 146.876,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "111",
+      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "innocentparrot",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "timeCreated": "2022-03-05T00:49:42.804Z"
+    },
+    {
+      "age": 359,
+      "region": "australiaeast",
+      "resourceGroup": "HAPPYANT-NERVOUSRABBIT",
+      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/HAPPYANT-NERVOUSRABBIT/providers/Microsoft.Compute/snapshots/sillycat",
+      "resourceName": "sillycat",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 441.146,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "29",
+      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "fierceviper",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "timeCreated": "2022-11-07T06:40:21.150Z"
+    },
+    {
+      "age": 932,
+      "region": "westus2",
+      "resourceGroup": "WITTYSNAKE-BRAVETIGER",
+      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/WITTYSNAKE-BRAVETIGER/providers/Microsoft.Compute/snapshots/lazyibis",
+      "resourceName": "lazyibis",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 401.803,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "177",
+      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "proudfox",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "timeCreated": "2021-04-13T12:37:53.606Z"
+    },
+    {
+      "age": 403,
+      "region": "uksouth",
+      "resourceGroup": "EXCITEDNEWT-OBEDIENTOWL",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/EXCITEDNEWT-OBEDIENTOWL/providers/Microsoft.Compute/snapshots/quirkyyak",
+      "resourceName": "quirkyyak",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 653.336,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "300",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "quirkyxerus",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "timeCreated": "2022-09-24T22:52:17.112Z"
+    },
+    {
+      "age": 698,
+      "region": "uksouth",
+      "resourceGroup": "FIERCERABBIT-ZEALOUSEEL",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/FIERCERABBIT-ZEALOUSEEL/providers/Microsoft.Compute/snapshots/drowsytiger",
+      "resourceName": "drowsytiger",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 55.268,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "386",
+      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "excitedtiger",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "timeCreated": "2021-12-03T11:11:59.348Z"
+    },
+    {
+      "age": 697,
+      "region": "southeastasia",
+      "resourceGroup": "EXCITEDCAT-SILLYOWL",
+      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/EXCITEDCAT-SILLYOWL/providers/Microsoft.Compute/snapshots/vivaciousfox",
+      "resourceName": "vivaciousfox",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 64.773,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "150",
+      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "lazynewt",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      },
+      "timeCreated": "2021-12-04T23:13:35.467Z"
+    },
+    {
+      "age": 1009,
+      "region": "southcentralus",
+      "resourceGroup": "NERVOUSCAT-MERRYCAT",
+      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/NERVOUSCAT-MERRYCAT/providers/Microsoft.Compute/snapshots/nervouszebra",
+      "resourceName": "nervouszebra",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 106.644,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "143",
+      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "adventurouscat",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "timeCreated": "2021-01-27T00:21:00.615Z"
+    },
+    {
+      "age": 644,
+      "region": "centralus",
+      "resourceGroup": "FIERCEOCTOPUS-THANKFULIBIS",
+      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/FIERCEOCTOPUS-THANKFULIBIS/providers/Microsoft.Compute/snapshots/wittywhale",
+      "resourceName": "wittywhale",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 74.843,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "352",
+      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "nervousowl",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "timeCreated": "2022-01-26T20:07:48.559Z"
+    },
+    {
+      "age": 643,
+      "region": "southeastasia",
+      "resourceGroup": "YOUTHFULOWL-LAZYOWL",
+      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/YOUTHFULOWL-LAZYOWL/providers/Microsoft.Compute/snapshots/wittylion",
+      "resourceName": "wittylion",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 140.81,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "278",
+      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+      "subscriptionName": "excitedjaguar",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "timeCreated": "2022-01-27T11:53:10.804Z"
+    },
+    {
+      "age": 809,
+      "region": "southcentralus",
+      "resourceGroup": "LIVELYVIPER-NERVOUSGOAT",
+      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/LIVELYVIPER-NERVOUSGOAT/providers/Microsoft.Compute/snapshots/excitedcat",
+      "resourceName": "excitedcat",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 48.139,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "96",
+      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "jovialant",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "timeCreated": "2021-08-15T00:23:40.624Z"
+    },
+    {
+      "age": 956,
+      "region": "westus2",
+      "resourceGroup": "WITTYDOG-DROWSYPARROT",
+      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/WITTYDOG-DROWSYPARROT/providers/Microsoft.Compute/snapshots/merryparrot",
+      "resourceName": "merryparrot",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 38.907,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "74",
+      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+      "subscriptionName": "kindgiraffe",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "timeCreated": "2021-03-20T14:34:30.604Z"
+    },
+    {
+      "age": 567,
+      "region": "northeurope",
+      "resourceGroup": "DROWSYOCTOPUS-MERRYEEL",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/DROWSYOCTOPUS-MERRYEEL/providers/Microsoft.Compute/snapshots/youthfulrabbit",
+      "resourceName": "youthfulrabbit",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 194.105,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "312",
+      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "youthfultiger",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      },
+      "timeCreated": "2022-04-13T17:54:44.731Z"
+    },
+    {
+      "age": 647,
+      "region": "uksouth",
+      "resourceGroup": "LAZYVIPER-EAGEROCTOPUS",
+      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/LAZYVIPER-EAGEROCTOPUS/providers/Microsoft.Compute/snapshots/quirkyfox",
+      "resourceName": "quirkyfox",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 216.749,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "440",
+      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "braveibis",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "timeCreated": "2022-01-23T07:26:22.949Z"
+    },
+    {
+      "age": 964,
+      "region": "southcentralus",
+      "resourceGroup": "KINDQUAIL-ADVENTUROUSQUAIL",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/KINDQUAIL-ADVENTUROUSQUAIL/providers/Microsoft.Compute/snapshots/fiercegiraffe",
+      "resourceName": "fiercegiraffe",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 84.266,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "87",
+      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "innocentant",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "timeCreated": "2021-03-12T15:47:26.413Z"
+    },
+    {
+      "age": 703,
+      "region": "centralus",
+      "resourceGroup": "UPBEATOWL-INNOCENTJAGUAR",
+      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/UPBEATOWL-INNOCENTJAGUAR/providers/Microsoft.Compute/snapshots/happyrabbit",
+      "resourceName": "happyrabbit",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 86.516,
       "savingsCurrency": "US$",
       "service": "Microsoft.Compute",
       "size": "267",
-      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "zealousibis",
+      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "upbeatquail",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "timeCreated": "2021-11-28T12:22:49.657Z"
+    },
+    {
+      "age": 545,
+      "region": "northeurope",
+      "resourceGroup": "QUICKIBIS-SILLYVIPER",
+      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/QUICKIBIS-SILLYVIPER/providers/Microsoft.Compute/snapshots/sillyurchin",
+      "resourceName": "sillyurchin",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 98.829,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "147",
+      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+      "subscriptionName": "livelyurchin",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "timeCreated": "2022-05-05T12:00:26.408Z"
+    },
+    {
+      "age": 755,
+      "region": "australiaeast",
+      "resourceGroup": "HAPPYXERUS-RELIEVEDCAT",
+      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/HAPPYXERUS-RELIEVEDCAT/providers/Microsoft.Compute/snapshots/eagereel",
+      "resourceName": "eagereel",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 35.825,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "317",
+      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "calmnewt",
       "tags": {
         "environment": "prod",
         "app": "securityModule"
       },
-      "timeCreated": "2021-08-31T08:22:47.710Z"
+      "timeCreated": "2021-10-07T07:52:33.871Z"
     },
     {
-      "age": 918,
-      "region": "northeurope",
-      "resourceGroup": "RELIEVEDRABBIT-UPBEATZEBRA",
-      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/RELIEVEDRABBIT-UPBEATZEBRA/providers/Microsoft.Compute/snapshots/vivaciousant",
-      "resourceName": "vivaciousant",
+      "age": 829,
+      "region": "centralus",
+      "resourceGroup": "ADVENTUROUSANT-GENTLESNAKE",
+      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/ADVENTUROUSANT-GENTLESNAKE/providers/Microsoft.Compute/snapshots/drowsymouse",
+      "resourceName": "drowsymouse",
       "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 150.961,
+      "savings": 112.702,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "135",
+      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "vivaciousibis",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "timeCreated": "2021-07-25T09:11:05.089Z"
+    },
+    {
+      "age": 539,
+      "region": "eastus2",
+      "resourceGroup": "ADVENTUROUSTIGER-EXCITEDIBIS",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/ADVENTUROUSTIGER-EXCITEDIBIS/providers/Microsoft.Compute/snapshots/eagermouse",
+      "resourceName": "eagermouse",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 81.589,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "82",
+      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "excitednewt",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "timeCreated": "2022-05-12T06:06:26.485Z"
+    },
+    {
+      "age": 638,
+      "region": "southeastasia",
+      "resourceGroup": "PROUDYAK-VIVACIOUSFOX",
+      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/PROUDYAK-VIVACIOUSFOX/providers/Microsoft.Compute/snapshots/thankfulbear",
+      "resourceName": "thankfulbear",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 224.56,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "352",
+      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "innocenttiger",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      },
+      "timeCreated": "2022-02-01T08:21:03.397Z"
+    },
+    {
+      "age": 792,
+      "region": "northeurope",
+      "resourceGroup": "EXCITEDZEBRA-MERRYOWL",
+      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/EXCITEDZEBRA-MERRYOWL/providers/Microsoft.Compute/snapshots/proudfox",
+      "resourceName": "proudfox",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 55.331,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "231",
+      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "jovialcat",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "timeCreated": "2021-08-31T19:49:51.957Z"
+    },
+    {
+      "age": 948,
+      "region": "centralindia",
+      "resourceGroup": "MERRYBEAR-BRAVEDOG",
+      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/MERRYBEAR-BRAVEDOG/providers/Microsoft.Compute/snapshots/excitedxerus",
+      "resourceName": "excitedxerus",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 374.238,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "205",
+      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "lazycat",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      },
+      "timeCreated": "2021-03-28T17:09:04.985Z"
+    },
+    {
+      "age": 509,
+      "region": "australiaeast",
+      "resourceGroup": "NERVOUSJAGUAR-JOLLYPARROT",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/NERVOUSJAGUAR-JOLLYPARROT/providers/Microsoft.Compute/snapshots/excitednewt",
+      "resourceName": "excitednewt",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 10.799,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "467",
+      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "livelymouse",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "timeCreated": "2022-06-10T08:27:43.616Z"
+    },
+    {
+      "age": 403,
+      "region": "southcentralus",
+      "resourceGroup": "QUIRKYJAGUAR-ZEALOUSQUAIL",
+      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/QUIRKYJAGUAR-ZEALOUSQUAIL/providers/Microsoft.Compute/snapshots/gentlelion",
+      "resourceName": "gentlelion",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 24.75,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "65",
+      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "wittytiger",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "timeCreated": "2022-09-24T08:53:01.538Z"
+    },
+    {
+      "age": 547,
+      "region": "centralindia",
+      "resourceGroup": "UPBEATWHALE-THANKFULYAK",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/UPBEATWHALE-THANKFULYAK/providers/Microsoft.Compute/snapshots/excitedjaguar",
+      "resourceName": "excitedjaguar",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 139.705,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "125",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "bravenewt",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "timeCreated": "2022-05-03T12:20:27.570Z"
+    },
+    {
+      "age": 725,
+      "region": "westus2",
+      "resourceGroup": "RELIEVEDGOAT-WITTYCAT",
+      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/RELIEVEDGOAT-WITTYCAT/providers/Microsoft.Compute/snapshots/youthfulviper",
+      "resourceName": "youthfulviper",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 527.869,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "141",
+      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+      "subscriptionName": "lazyhorse",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      },
+      "timeCreated": "2021-11-07T04:54:27.296Z"
+    },
+    {
+      "age": 320,
+      "region": "eastus",
+      "resourceGroup": "DROWSYCAT-JOVIALTIGER",
+      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/DROWSYCAT-JOVIALTIGER/providers/Microsoft.Compute/snapshots/livelyowl",
+      "resourceName": "livelyowl",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 220.254,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "86",
+      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "lazybear",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "timeCreated": "2022-12-16T14:38:12.711Z"
+    },
+    {
+      "age": 925,
+      "region": "southcentralus",
+      "resourceGroup": "SILLYELEPHANT-QUICKMOUSE",
+      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/SILLYELEPHANT-QUICKMOUSE/providers/Microsoft.Compute/snapshots/happywhale",
+      "resourceName": "happywhale",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 28.873,
       "savingsCurrency": "US$",
       "service": "Microsoft.Compute",
       "size": "331",
       "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "lazywhale",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "timeCreated": "2021-03-23T03:38:04.388Z"
-    },
-    {
-      "age": 864,
-      "region": "northeurope",
-      "resourceGroup": "FIERCEQUAIL-CALMJAGUAR",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/FIERCEQUAIL-CALMJAGUAR/providers/Microsoft.Compute/snapshots/livelywhale",
-      "resourceName": "livelywhale",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 32.034,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "405",
-      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "excitedxerus",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      },
-      "timeCreated": "2021-05-15T11:15:45.210Z"
-    },
-    {
-      "age": 564,
-      "region": "eastus2",
-      "resourceGroup": "WITTYOCTOPUS-JOLLYRABBIT",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/WITTYOCTOPUS-JOLLYRABBIT/providers/Microsoft.Compute/snapshots/calmparrot",
-      "resourceName": "calmparrot",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 137.488,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "299",
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "thankfulfox",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      },
-      "timeCreated": "2022-03-11T13:19:59.851Z"
-    },
-    {
-      "age": 930,
-      "region": "westus2",
-      "resourceGroup": "WITTYQUAIL-EAGERKANGAROO",
-      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/WITTYQUAIL-EAGERKANGAROO/providers/Microsoft.Compute/snapshots/kindzebra",
-      "resourceName": "kindzebra",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 22.566,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "432",
-      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "innocentsnake",
+      "subscriptionName": "youthfulzebra",
       "tags": {
         "environment": "staging",
         "app": "userManagement"
       },
-      "timeCreated": "2021-03-10T21:37:29.542Z"
+      "timeCreated": "2021-04-20T15:49:26.924Z"
     },
     {
-      "age": 965,
-      "region": "westus2",
-      "resourceGroup": "VIVACIOUSWHALE-ADVENTUROUSZEBRA",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/VIVACIOUSWHALE-ADVENTUROUSZEBRA/providers/Microsoft.Compute/snapshots/zealousdog",
-      "resourceName": "zealousdog",
+      "age": 584,
+      "region": "eastus2",
+      "resourceGroup": "LAZYTIGER-YOUTHFULFOX",
+      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/LAZYTIGER-YOUTHFULFOX/providers/Microsoft.Compute/snapshots/braveeel",
+      "resourceName": "braveeel",
       "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 11.171,
+      "savings": 67.299,
       "savingsCurrency": "US$",
       "service": "Microsoft.Compute",
-      "size": "162",
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "wittylion",
+      "size": "182",
+      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "youthfulkangaroo",
       "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
+        "environment": "dev",
+        "app": "customerSupport"
       },
-      "timeCreated": "2021-02-03T11:50:10.549Z"
+      "timeCreated": "2022-03-27T14:18:25.872Z"
     },
     {
-      "age": 773,
-      "region": "centralindia",
-      "resourceGroup": "INNOCENTWHALE-WITTYLION",
-      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/INNOCENTWHALE-WITTYLION/providers/Microsoft.Compute/snapshots/nervousfox",
-      "resourceName": "nervousfox",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 397.422,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "491",
-      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "wittyzebra",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      },
-      "timeCreated": "2021-08-14T20:41:04.898Z"
-    },
-    {
-      "age": 627,
+      "age": 336,
       "region": "northeurope",
-      "resourceGroup": "JOVIALOCTOPUS-EXCITEDFOX",
-      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/JOVIALOCTOPUS-EXCITEDFOX/providers/Microsoft.Compute/snapshots/nervouspenguin",
-      "resourceName": "nervouspenguin",
+      "resourceGroup": "INNOCENTLION-QUIRKYTIGER",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/INNOCENTLION-QUIRKYTIGER/providers/Microsoft.Compute/snapshots/lazyibis",
+      "resourceName": "lazyibis",
       "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 254.265,
+      "savings": 369.063,
       "savingsCurrency": "US$",
       "service": "Microsoft.Compute",
-      "size": "494",
-      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "excitedcat",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      },
-      "timeCreated": "2022-01-08T04:16:21.349Z"
-    },
-    {
-      "age": 675,
-      "region": "uksouth",
-      "resourceGroup": "HAPPYNEWT-YOUTHFULEEL",
-      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/HAPPYNEWT-YOUTHFULEEL/providers/Microsoft.Compute/snapshots/relievedfox",
-      "resourceName": "relievedfox",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 17.791,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "200",
-      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "obedientkangaroo",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "timeCreated": "2021-11-20T07:23:24.896Z"
-    },
-    {
-      "age": 350,
-      "region": "southcentralus",
-      "resourceGroup": "GENTLEFOX-OBEDIENTYAK",
-      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/GENTLEFOX-OBEDIENTYAK/providers/Microsoft.Compute/snapshots/lazyfox",
-      "resourceName": "lazyfox",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 35.565,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "183",
+      "size": "489",
       "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "braveviper",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "timeCreated": "2022-10-11T06:55:12.346Z"
-    },
-    {
-      "age": 534,
-      "region": "uksouth",
-      "resourceGroup": "MERRYGIRAFFE-NERVOUSHORSE",
-      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/MERRYGIRAFFE-NERVOUSHORSE/providers/Microsoft.Compute/snapshots/merryviper",
-      "resourceName": "merryviper",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 5.549,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "74",
-      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "bravegiraffe",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "timeCreated": "2022-04-10T12:33:06.418Z"
-    },
-    {
-      "age": 322,
-      "region": "westus2",
-      "resourceGroup": "EAGERRABBIT-PROUDCAT",
-      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/EAGERRABBIT-PROUDCAT/providers/Microsoft.Compute/snapshots/innocentyak",
-      "resourceName": "innocentyak",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 3.175,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "69",
-      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "thankfulant",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "timeCreated": "2022-11-08T07:40:08.257Z"
-    },
-    {
-      "age": 731,
-      "region": "centralindia",
-      "resourceGroup": "LAZYWHALE-UPBEATBEAR",
-      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/LAZYWHALE-UPBEATBEAR/providers/Microsoft.Compute/snapshots/excitedtiger",
-      "resourceName": "excitedtiger",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 522.959,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "9",
-      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "sillyparrot",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "timeCreated": "2021-09-25T18:14:11.809Z"
-    },
-    {
-      "age": 567,
-      "region": "southcentralus",
-      "resourceGroup": "WITTYZEBRA-NERVOUSURCHIN",
-      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/WITTYZEBRA-NERVOUSURCHIN/providers/Microsoft.Compute/snapshots/jovialelephant",
-      "resourceName": "jovialelephant",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 268.842,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "448",
-      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "bravenewt",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "timeCreated": "2022-03-09T04:24:55.634Z"
-    },
-    {
-      "age": 463,
-      "region": "centralindia",
-      "resourceGroup": "NERVOUSFOX-HAPPYOCTOPUS",
-      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/NERVOUSFOX-HAPPYOCTOPUS/providers/Microsoft.Compute/snapshots/quickelephant",
-      "resourceName": "quickelephant",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 506.078,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "270",
-      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "calmxerus",
+      "subscriptionName": "obedientibis",
       "tags": {
         "environment": "prod",
-        "app": "inventoryManagement"
+        "app": "crmModule"
       },
-      "timeCreated": "2022-06-21T00:04:35.165Z"
+      "timeCreated": "2022-11-30T09:48:43.617Z"
     },
     {
-      "age": 707,
-      "region": "northeurope",
-      "resourceGroup": "HAPPYPENGUIN-HAPPYMOUSE",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/HAPPYPENGUIN-HAPPYMOUSE/providers/Microsoft.Compute/snapshots/drowsyxerus",
-      "resourceName": "drowsyxerus",
+      "age": 884,
+      "region": "westus2",
+      "resourceGroup": "INNOCENTEEL-RELIEVEDELEPHANT",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/INNOCENTEEL-RELIEVEDELEPHANT/providers/Microsoft.Compute/snapshots/proudfox",
+      "resourceName": "proudfox",
       "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 705.842,
+      "savings": 104.711,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "452",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "wittymouse",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "timeCreated": "2021-06-01T00:45:07.045Z"
+    },
+    {
+      "age": 756,
+      "region": "australiaeast",
+      "resourceGroup": "QUICKCAT-ZEALOUSEEL",
+      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/QUICKCAT-ZEALOUSEEL/providers/Microsoft.Compute/snapshots/relievednewt",
+      "resourceName": "relievednewt",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 75.519,
       "savingsCurrency": "US$",
       "service": "Microsoft.Compute",
       "size": "187",
-      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "excitedrabbit",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      },
-      "timeCreated": "2021-10-20T05:23:01.332Z"
-    },
-    {
-      "age": 698,
-      "region": "centralindia",
-      "resourceGroup": "DROWSYPENGUIN-OBEDIENTNEWT",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/DROWSYPENGUIN-OBEDIENTNEWT/providers/Microsoft.Compute/snapshots/relievedtiger",
-      "resourceName": "relievedtiger",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 72.499,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "247",
-      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "youthfulgiraffe",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      },
-      "timeCreated": "2021-10-28T11:38:12.890Z"
-    },
-    {
-      "age": 337,
-      "region": "eastus",
-      "resourceGroup": "RELIEVEDXERUS-CALMANT",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/RELIEVEDXERUS-CALMANT/providers/Microsoft.Compute/snapshots/thankfulparrot",
-      "resourceName": "thankfulparrot",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 542.537,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "274",
-      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "nervouszebra",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "timeCreated": "2022-10-24T17:07:51.686Z"
-    },
-    {
-      "age": 397,
-      "region": "southcentralus",
-      "resourceGroup": "LIVELYPENGUIN-THANKFULXERUS",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/LIVELYPENGUIN-THANKFULXERUS/providers/Microsoft.Compute/snapshots/wittyowl",
-      "resourceName": "wittyowl",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 464.305,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "264",
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "innocenturchin",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "timeCreated": "2022-08-25T11:13:02.537Z"
-    },
-    {
-      "age": 743,
-      "region": "northeurope",
-      "resourceGroup": "DROWSYCAT-RELIEVEDCAT",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/DROWSYCAT-RELIEVEDCAT/providers/Microsoft.Compute/snapshots/upbeatwhale",
-      "resourceName": "upbeatwhale",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 520.058,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "285",
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "kindkangaroo",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      },
-      "timeCreated": "2021-09-13T13:37:04.564Z"
-    },
-    {
-      "age": 516,
-      "region": "southcentralus",
-      "resourceGroup": "KINDVIPER-KINDLION",
-      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/KINDVIPER-KINDLION/providers/Microsoft.Compute/snapshots/bravepenguin",
-      "resourceName": "bravepenguin",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 25.04,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "417",
-      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "quickhorse",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      },
-      "timeCreated": "2022-04-28T19:02:15.648Z"
-    },
-    {
-      "age": 892,
-      "region": "australiaeast",
-      "resourceGroup": "HAPPYHORSE-PROUDPARROT",
-      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/HAPPYHORSE-PROUDPARROT/providers/Microsoft.Compute/snapshots/livelyviper",
-      "resourceName": "livelyviper",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 66.4,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "64",
-      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "obedientzebra",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "timeCreated": "2021-04-17T08:22:54.446Z"
-    },
-    {
-      "age": 652,
-      "region": "eastus2",
-      "resourceGroup": "ZEALOUSFOX-NERVOUSIBIS",
-      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/ZEALOUSFOX-NERVOUSIBIS/providers/Microsoft.Compute/snapshots/sillywhale",
-      "resourceName": "sillywhale",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 600.115,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "446",
-      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "calmfox",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      },
-      "timeCreated": "2021-12-13T07:00:14.643Z"
-    },
-    {
-      "age": 594,
-      "region": "southeastasia",
-      "resourceGroup": "ZEALOUSMOUSE-JOVIALGOAT",
-      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/ZEALOUSMOUSE-JOVIALGOAT/providers/Microsoft.Compute/snapshots/happytiger",
-      "resourceName": "happytiger",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 116.009,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "471",
-      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "thankfulyak",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "timeCreated": "2022-02-09T08:58:53.060Z"
-    },
-    {
-      "age": 659,
-      "region": "uksouth",
-      "resourceGroup": "YOUTHFULXERUS-EAGERJAGUAR",
-      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/YOUTHFULXERUS-EAGERJAGUAR/providers/Microsoft.Compute/snapshots/nervousibis",
-      "resourceName": "nervousibis",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 275.584,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "315",
-      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "obedientrabbit",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "timeCreated": "2021-12-07T00:34:21.929Z"
-    },
-    {
-      "age": 541,
-      "region": "southcentralus",
-      "resourceGroup": "QUICKELEPHANT-BRAVEEEL",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/QUICKELEPHANT-BRAVEEEL/providers/Microsoft.Compute/snapshots/fiercequail",
-      "resourceName": "fiercequail",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 474.202,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "492",
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "relievedcat",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "timeCreated": "2022-04-04T05:40:41.224Z"
-    },
-    {
-      "age": 839,
-      "region": "southcentralus",
-      "resourceGroup": "MERRYWHALE-UPBEATEEL",
-      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/MERRYWHALE-UPBEATEEL/providers/Microsoft.Compute/snapshots/drowsyparrot",
-      "resourceName": "drowsyparrot",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 5.14,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "415",
-      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "zealousdog",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "timeCreated": "2021-06-10T05:19:49.187Z"
-    },
-    {
-      "age": 395,
-      "region": "australiaeast",
-      "resourceGroup": "HAPPYELEPHANT-LAZYWHALE",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/HAPPYELEPHANT-LAZYWHALE/providers/Microsoft.Compute/snapshots/calmeel",
-      "resourceName": "calmeel",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 82.256,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "366",
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "wittybear",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "timeCreated": "2022-08-27T15:49:21.267Z"
-    },
-    {
-      "age": 546,
-      "region": "southcentralus",
-      "resourceGroup": "UPBEATCAT-GENTLEEEL",
-      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/UPBEATCAT-GENTLEEEL/providers/Microsoft.Compute/snapshots/quickhorse",
-      "resourceName": "quickhorse",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 426.872,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "306",
-      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "merryeel",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      },
-      "timeCreated": "2022-03-29T10:59:52.610Z"
-    },
-    {
-      "age": 287,
-      "region": "southcentralus",
-      "resourceGroup": "RELIEVEDGIRAFFE-EAGERLION",
-      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/RELIEVEDGIRAFFE-EAGERLION/providers/Microsoft.Compute/snapshots/thankfulibis",
-      "resourceName": "thankfulibis",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 128.765,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "168",
       "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "relievedeel",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      },
-      "timeCreated": "2022-12-13T19:54:03.297Z"
-    },
-    {
-      "age": 560,
-      "region": "centralindia",
-      "resourceGroup": "EAGERPENGUIN-MERRYNEWT",
-      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/EAGERPENGUIN-MERRYNEWT/providers/Microsoft.Compute/snapshots/lazymouse",
-      "resourceName": "lazymouse",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 89.659,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "438",
-      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "happyfox",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "timeCreated": "2022-03-15T21:02:41.021Z"
-    },
-    {
-      "age": 286,
-      "region": "eastus2",
-      "resourceGroup": "BRAVEVIPER-THANKFULWHALE",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/BRAVEVIPER-THANKFULWHALE/providers/Microsoft.Compute/snapshots/vivaciousgoat",
-      "resourceName": "vivaciousgoat",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 221.264,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "165",
-      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "gentlebear",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      },
-      "timeCreated": "2022-12-14T07:59:17.624Z"
-    },
-    {
-      "age": 303,
-      "region": "eastus",
-      "resourceGroup": "FIERCEQUAIL-ADVENTUROUSIBIS",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/FIERCEQUAIL-ADVENTUROUSIBIS/providers/Microsoft.Compute/snapshots/jollypenguin",
-      "resourceName": "jollypenguin",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 636.157,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "378",
-      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "nervouskangaroo",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      },
-      "timeCreated": "2022-11-27T10:45:42.343Z"
-    },
-    {
-      "age": 411,
-      "region": "southcentralus",
-      "resourceGroup": "SILLYKANGAROO-MERRYGOAT",
-      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/SILLYKANGAROO-MERRYGOAT/providers/Microsoft.Compute/snapshots/gentlequail",
-      "resourceName": "gentlequail",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 431.705,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "332",
-      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "merrysnake",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "timeCreated": "2022-08-11T15:03:27.288Z"
-    },
-    {
-      "age": 995,
-      "region": "centralindia",
-      "resourceGroup": "SILLYOCTOPUS-LIVELYURCHIN",
-      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/SILLYOCTOPUS-LIVELYURCHIN/providers/Microsoft.Compute/snapshots/calmurchin",
-      "resourceName": "calmurchin",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 16.169,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "299",
-      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "quirkyjaguar",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      },
-      "timeCreated": "2021-01-04T23:27:22.961Z"
-    },
-    {
-      "age": 612,
-      "region": "southcentralus",
-      "resourceGroup": "QUICKLION-DROWSYOCTOPUS",
-      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/QUICKLION-DROWSYOCTOPUS/providers/Microsoft.Compute/snapshots/drowsyfox",
-      "resourceName": "drowsyfox",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 352.739,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "228",
-      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "quirkynewt",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "timeCreated": "2022-01-22T18:57:08.726Z"
-    },
-    {
-      "age": 455,
-      "region": "centralus",
-      "resourceGroup": "YOUTHFULEEL-HAPPYFOX",
-      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/YOUTHFULEEL-HAPPYFOX/providers/Microsoft.Compute/snapshots/excitedowl",
-      "resourceName": "excitedowl",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 635.669,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "110",
-      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "proudowl",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "timeCreated": "2022-06-28T09:47:03.411Z"
-    },
-    {
-      "age": 896,
-      "region": "southcentralus",
-      "resourceGroup": "INNOCENTQUAIL-EAGERNEWT",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/INNOCENTQUAIL-EAGERNEWT/providers/Microsoft.Compute/snapshots/fiercehorse",
-      "resourceName": "fiercehorse",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 1.865,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "101",
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "jovialnewt",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "timeCreated": "2021-04-13T19:52:06.904Z"
-    },
-    {
-      "age": 442,
-      "region": "westus2",
-      "resourceGroup": "MERRYHORSE-QUICKCAT",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/MERRYHORSE-QUICKCAT/providers/Microsoft.Compute/snapshots/fiercetiger",
-      "resourceName": "fiercetiger",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 93.902,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "335",
-      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "thankfulkangaroo",
+      "subscriptionName": "sillykangaroo",
       "tags": {
         "environment": "prod",
         "app": "paymentGateway"
       },
-      "timeCreated": "2022-07-11T12:20:17.480Z"
+      "timeCreated": "2021-10-06T11:15:24.938Z"
     },
     {
-      "age": 379,
-      "region": "australiaeast",
-      "resourceGroup": "EXCITEDSNAKE-VIVACIOUSZEBRA",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/EXCITEDSNAKE-VIVACIOUSZEBRA/providers/Microsoft.Compute/snapshots/nervousviper",
-      "resourceName": "nervousviper",
+      "age": 729,
+      "region": "southeastasia",
+      "resourceGroup": "CALMGOAT-VIVACIOUSTIGER",
+      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/CALMGOAT-VIVACIOUSTIGER/providers/Microsoft.Compute/snapshots/eagerowl",
+      "resourceName": "eagerowl",
       "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 119.252,
+      "savings": 78.948,
       "savingsCurrency": "US$",
       "service": "Microsoft.Compute",
-      "size": "283",
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "proudtiger",
+      "size": "406",
+      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+      "subscriptionName": "obedientdog",
       "tags": {
         "environment": "staging",
         "app": "userManagement"
       },
-      "timeCreated": "2022-09-13T00:10:31.844Z"
+      "timeCreated": "2021-11-02T20:36:11.635Z"
     },
     {
-      "age": 951,
+      "age": 376,
       "region": "uksouth",
-      "resourceGroup": "LAZYELEPHANT-EXCITEDTIGER",
-      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/LAZYELEPHANT-EXCITEDTIGER/providers/Microsoft.Compute/snapshots/gentlebear",
-      "resourceName": "gentlebear",
+      "resourceGroup": "NERVOUSYAK-OBEDIENTWHALE",
+      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/NERVOUSYAK-OBEDIENTWHALE/providers/Microsoft.Compute/snapshots/jovialoctopus",
+      "resourceName": "jovialoctopus",
       "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 563.898,
+      "savings": 10.903,
       "savingsCurrency": "US$",
       "service": "Microsoft.Compute",
-      "size": "225",
-      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "youthfulkangaroo",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      },
-      "timeCreated": "2021-02-17T20:25:14.459Z"
-    },
-    {
-      "age": 339,
-      "region": "southeastasia",
-      "resourceGroup": "MERRYELEPHANT-KINDNEWT",
-      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/MERRYELEPHANT-KINDNEWT/providers/Microsoft.Compute/snapshots/relievedviper",
-      "resourceName": "relievedviper",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 373.098,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "431",
+      "size": "296",
       "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "livelyzebra",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      },
-      "timeCreated": "2022-10-22T09:37:40.303Z"
-    },
-    {
-      "age": 332,
-      "region": "centralus",
-      "resourceGroup": "OBEDIENTFOX-DROWSYPENGUIN",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/OBEDIENTFOX-DROWSYPENGUIN/providers/Microsoft.Compute/snapshots/sillyxerus",
-      "resourceName": "sillyxerus",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 96.499,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "360",
-      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "youthfuloctopus",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      },
-      "timeCreated": "2022-10-29T17:39:32.215Z"
-    },
-    {
-      "age": 562,
-      "region": "australiaeast",
-      "resourceGroup": "VIVACIOUSCAT-HAPPYYAK",
-      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/VIVACIOUSCAT-HAPPYYAK/providers/Microsoft.Compute/snapshots/quirkybear",
-      "resourceName": "quirkybear",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 610.181,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "223",
-      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "eagerxerus",
+      "subscriptionName": "quirkywhale",
       "tags": {
         "environment": "dev",
         "app": "emailService"
       },
-      "timeCreated": "2022-03-14T00:09:17.369Z"
+      "timeCreated": "2022-10-22T02:46:34.838Z"
     },
     {
-      "age": 436,
-      "region": "uksouth",
-      "resourceGroup": "HAPPYBEAR-OBEDIENTIBIS",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/HAPPYBEAR-OBEDIENTIBIS/providers/Microsoft.Compute/snapshots/calmtiger",
-      "resourceName": "calmtiger",
+      "age": 363,
+      "region": "eastus2",
+      "resourceGroup": "INNOCENTVIPER-LIVELYELEPHANT",
+      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/INNOCENTVIPER-LIVELYELEPHANT/providers/Microsoft.Compute/snapshots/fierceyak",
+      "resourceName": "fierceyak",
       "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 91.591,
+      "savings": 25.903,
       "savingsCurrency": "US$",
       "service": "Microsoft.Compute",
-      "size": "198",
+      "size": "355",
       "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "jollyurchin",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      },
-      "timeCreated": "2022-07-17T22:28:30.555Z"
-    },
-    {
-      "age": 617,
-      "region": "australiaeast",
-      "resourceGroup": "RELIEVEDVIPER-OBEDIENTHORSE",
-      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/RELIEVEDVIPER-OBEDIENTHORSE/providers/Microsoft.Compute/snapshots/quirkydog",
-      "resourceName": "quirkydog",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 196.66,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "486",
-      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "merryparrot",
+      "subscriptionName": "fiercezebra",
       "tags": {
         "environment": "dev",
-        "app": "customerSupport"
+        "app": "emailService"
       },
-      "timeCreated": "2022-01-17T14:26:45.252Z"
+      "timeCreated": "2022-11-03T22:40:45.774Z"
     },
     {
-      "age": 494,
-      "region": "eastus",
-      "resourceGroup": "INNOCENTHORSE-HAPPYPENGUIN",
-      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/INNOCENTHORSE-HAPPYPENGUIN/providers/Microsoft.Compute/snapshots/kindrabbit",
-      "resourceName": "kindrabbit",
+      "age": 586,
+      "region": "centralindia",
+      "resourceGroup": "YOUTHFULPARROT-KINDIBIS",
+      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/YOUTHFULPARROT-KINDIBIS/providers/Microsoft.Compute/snapshots/thankfulsnake",
+      "resourceName": "thankfulsnake",
       "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 123.508,
+      "savings": 391.887,
       "savingsCurrency": "US$",
       "service": "Microsoft.Compute",
-      "size": "158",
-      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "wittymouse",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      },
-      "timeCreated": "2022-05-21T05:55:47.952Z"
-    },
-    {
-      "age": 943,
-      "region": "uksouth",
-      "resourceGroup": "LAZYIBIS-BRAVEXERUS",
-      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/LAZYIBIS-BRAVEXERUS/providers/Microsoft.Compute/snapshots/merryzebra",
-      "resourceName": "merryzebra",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 332.968,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "362",
+      "size": "141",
       "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "braveowl",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      },
-      "timeCreated": "2021-02-26T05:51:51.727Z"
-    },
-    {
-      "age": 431,
-      "region": "centralus",
-      "resourceGroup": "JOVIALELEPHANT-QUICKSNAKE",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/JOVIALELEPHANT-QUICKSNAKE/providers/Microsoft.Compute/snapshots/excitedmouse",
-      "resourceName": "excitedmouse",
-      "resourceType": "Microsoft.Compute/snapshots",
-      "savings": 398.069,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Compute",
-      "size": "6",
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "drowsyoctopus",
+      "subscriptionName": "innocentgoat",
       "tags": {
         "environment": "prod",
         "app": "securityModule"
       },
-      "timeCreated": "2022-07-22T20:39:40.092Z"
+      "timeCreated": "2022-03-25T17:21:10.028Z"
+    },
+    {
+      "age": 891,
+      "region": "eastus2",
+      "resourceGroup": "LIVELYPARROT-DROWSYTIGER",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/LIVELYPARROT-DROWSYTIGER/providers/Microsoft.Compute/snapshots/fiercexerus",
+      "resourceName": "fiercexerus",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 170.537,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "432",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "jollyquail",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "timeCreated": "2021-05-25T03:53:35.148Z"
+    },
+    {
+      "age": 654,
+      "region": "southeastasia",
+      "resourceGroup": "LAZYPENGUIN-SILLYPARROT",
+      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/LAZYPENGUIN-SILLYPARROT/providers/Microsoft.Compute/snapshots/calmnewt",
+      "resourceName": "calmnewt",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 8.95,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "127",
+      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+      "subscriptionName": "merrypenguin",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "timeCreated": "2022-01-16T13:13:05.199Z"
+    },
+    {
+      "age": 486,
+      "region": "westus2",
+      "resourceGroup": "QUIRKYCAT-KINDQUAIL",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/QUIRKYCAT-KINDQUAIL/providers/Microsoft.Compute/snapshots/bravexerus",
+      "resourceName": "bravexerus",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 627.641,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "394",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "relievedbear",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "timeCreated": "2022-07-04T03:01:39.474Z"
+    },
+    {
+      "age": 328,
+      "region": "southcentralus",
+      "resourceGroup": "ADVENTUROUSKANGAROO-QUIRKYPARROT",
+      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/ADVENTUROUSKANGAROO-QUIRKYPARROT/providers/Microsoft.Compute/snapshots/lazydog",
+      "resourceName": "lazydog",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 287.105,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "453",
+      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+      "subscriptionName": "vivaciousjaguar",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      },
+      "timeCreated": "2022-12-08T17:51:57.873Z"
+    },
+    {
+      "age": 661,
+      "region": "eastus",
+      "resourceGroup": "QUICKTIGER-ZEALOUSEEL",
+      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/QUICKTIGER-ZEALOUSEEL/providers/Microsoft.Compute/snapshots/livelyeel",
+      "resourceName": "livelyeel",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 45.966,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "279",
+      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+      "subscriptionName": "thankfulzebra",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "timeCreated": "2022-01-09T11:26:48.379Z"
+    },
+    {
+      "age": 678,
+      "region": "centralus",
+      "resourceGroup": "MERRYXERUS-THANKFULLION",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/MERRYXERUS-THANKFULLION/providers/Microsoft.Compute/snapshots/innocentzebra",
+      "resourceName": "innocentzebra",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 9.755,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "496",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "jovialwhale",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "timeCreated": "2021-12-23T07:28:10.619Z"
+    },
+    {
+      "age": 637,
+      "region": "australiaeast",
+      "resourceGroup": "EAGERQUAIL-PROUDANT",
+      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/EAGERQUAIL-PROUDANT/providers/Microsoft.Compute/snapshots/lazygoat",
+      "resourceName": "lazygoat",
+      "resourceType": "Microsoft.Compute/snapshots",
+      "savings": 94.191,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Compute",
+      "size": "337",
+      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "quickbear",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "timeCreated": "2022-02-02T16:07:49.625Z"
     }
   ]
 }
