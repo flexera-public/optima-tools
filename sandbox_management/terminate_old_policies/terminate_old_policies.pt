@@ -1,4 +1,4 @@
-name "Terminate Old Policies"
+name "Sandbox Management - Terminate Old Policies"
 rs_pt_ver 20180301
 type "policy"
 short_description "Automatically terminates all policies applied longer ago than a user-specified number of days. See the [README](https://github.com/flexera-public/optima-tools/tree/master/sandbox_management/terminate_old_policies) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
