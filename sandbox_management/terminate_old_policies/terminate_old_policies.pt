@@ -133,6 +133,7 @@ datasource "ds_terminate_applied_policies" do
     verb "DELETE"
     header "User-Agent", "RS Policies"
     header "Api-Version", "1.0"
+    ignore_status [400, 401, 402, 403, 404, 405]
   end
   result do
     encoding "text"
