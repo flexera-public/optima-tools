@@ -1,0 +1,152 @@
+name "Terminate Old Policies"
+rs_pt_ver 20180301
+type "policy"
+short_description "Automatically terminates all policies applied longer ago than a user-specified number of days. See the [README](https://github.com/flexera-public/optima-tools/tree/master/sandbox_management/terminate_old_policies) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
+long_description ""
+severity "low"
+category "Utility"
+default_frequency "weekly"
+info(
+  version: "0.1",
+  provider: "Flexera"
+)
+
+###############################################################################
+# Parameters
+###############################################################################
+
+parameter "param_days_back" do
+  type "number"
+  category "Policy Settings"
+  label "Termination Age (Days)"
+  description "How many days ago a policy must have been applied before it is terminated."
+  min_value 1
+  default 30
+end
+
+parameter "param_created_updated" do
+  type "string"
+  category "Policy Settings"
+  label "Created / Updated"
+  description "Whether to use the date the applied policy was created or the date it was last updated to determine its age."
+  allowed_values "Created", "Updated"
+  default "Updated"
+end
+
+parameter "param_filter" do
+  type "list"
+  category "Policy Settings"
+  label "Policy Ignore List"
+  description "A list of policy template names to never terminate despite their age."
+  default  []
+end
+
+parameter "param_applied_filter" do
+  type "list"
+  category "Policy Settings"
+  label "Applied Policy Ignore List"
+  description "A list of applied policy names to never terminate despite their age."
+  default  []
+end
+
+###############################################################################
+# Authentication
+###############################################################################
+
+credentials "auth_flexera" do
+  schemes "oauth2"
+  label "Flexera"
+  description "Select Flexera One OAuth2 credentials"
+  tags "provider=flexera"
+end
+
+###############################################################################
+# Datasources & Scripts
+###############################################################################
+
+datasource "ds_applied_policies" do
+  request do
+    auth $auth_flexera
+    host rs_governance_host
+    path join(["/api/governance/projects/", rs_project_id, "/applied_policies"])
+    verb "GET"
+    header "User-Agent", "RS Policies"
+    header "Api-Version", "1.0"
+    query "show_meta_child_policies", "true"
+  end
+  result do
+    encoding "json"
+    collect jmes_path(response, "items") do
+      field "category", jmes_path(col_item, "category")
+      field "created_at", jmes_path(col_item, "created_at")
+      field "description", jmes_path(col_item, "description")
+      field "href", jmes_path(col_item, "href")
+      field "id", jmes_path(col_item, "id")
+      field "name", jmes_path(col_item, "name")
+      field "status", jmes_path(col_item, "status")
+      field "updated_at", jmes_path(col_item, "updated_at")
+      field "template_id", jmes_path(col_item, "policy_template.id")
+      field "template_name", jmes_path(col_item, "policy_template.name")
+    end
+  end
+end
+
+datasource "ds_filtered_applied_policies" do
+  run_script $js_filtered_applied_policies, $ds_applied_policies, $param_days_back, $param_created_updated, $param_filter, $param_applied_filter, policy_id
+end
+
+script "js_filtered_applied_policies", type: "javascript" do
+  parameters "ds_applied_policies", "param_days_back", "param_created_updated", "param_filter", "param_applied_filter", "self_id"
+  result "result"
+  code <<-EOS
+  today = new Date()
+
+  result = _.filter(ds_applied_policies, function(policy) {
+    terminate_policy = true
+
+    // Prevent policy from terminating itself
+    if (policy['id'] == self_id) { terminate_policy = false }
+
+    // Prevent policy from terminating newly applied/updated policies
+    if (param_created_updated == 'Created') { policy_date = new Date(policy['created_at']) }
+    if (param_created_updated == 'Updated') { policy_date = new Date(policy['updated_at']) }
+
+    policy_age = Math.round((today - policy_date) / 1000 / 60 / 60 / 24)
+
+    if (policy_age < param_days_back)  { terminate_policy = false }
+
+    // Prevent policy from terminating user-specified policies
+    if (_.contains(param_filter, policy['template_name'])) { terminate_policy = false }
+    if (_.contains(param_applied_filter, policy['name'])) { terminate_policy = false }
+
+    return terminate_policy
+  })
+EOS
+end
+
+datasource "ds_terminate_applied_policies" do
+  iterate $ds_filtered_applied_policies
+  request do
+    auth $auth_flexera
+    host rs_governance_host
+    path val(iter_item, 'href')
+    verb "DELETE"
+    header "User-Agent", "RS Policies"
+    header "Api-Version", "1.0"
+  end
+  result do
+    encoding "text"
+  end
+end
+
+###############################################################################
+# Policy
+###############################################################################
+
+policy "pol_terminate_policies" do
+  validate $ds_terminate_applied_policies do
+    summary_template "{{ len data }} Applied Policies Terminated"
+    detail_template ""
+    check eq(0, 0)
+  end
+end
