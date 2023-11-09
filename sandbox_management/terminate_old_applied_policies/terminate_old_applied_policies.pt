@@ -136,7 +136,7 @@ script "js_filtered_applied_policies", type: "javascript" do
     }
 
     // Prevent policy from terminating org-level policies
-    if (typeof(policy['template_id']) != 'string' || policy['template_id'] != '') {
+    if (typeof(policy['template_id']) != 'string' || policy['template_id'] == '') {
       terminate_policy = false
     }
 

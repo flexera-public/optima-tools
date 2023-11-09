@@ -1,4 +1,4 @@
-# Sandbox Management - Terminate Old Policies
+# Sandbox Management - Terminate Old Applied Policies
 
 ## What It Does
 
