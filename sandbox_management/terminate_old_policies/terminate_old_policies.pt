@@ -1,4 +1,4 @@
-name "Sandbox Management - Terminate Old Policies"
+name "Sandbox Management - Terminate Old Applied Policies"
 rs_pt_ver 20180301
 type "policy"
 short_description "Automatically terminates all policies applied longer ago than a user-specified number of days. See the [README](https://github.com/flexera-public/optima-tools/tree/master/sandbox_management/terminate_old_policies) and [docs.flexera.com/flexera/EN/Automation](https://docs.flexera.com/flexera/EN/Automation/AutomationGS.htm) to learn more."
@@ -31,6 +31,15 @@ parameter "param_created_updated" do
   description "Whether to use the date the applied policy was created or the date it was last updated to determine its age."
   allowed_values "Created", "Updated"
   default "Updated"
+end
+
+parameter "param_aggregates" do
+  type "string"
+  category "Policy Settings"
+  label "Terminate Aggregates"
+  description "Whether or not to also terminate policy aggregates e.g. org-level applied policies."
+  allowed_values "Yes", "No"
+  default "No"
 end
 
 parameter "param_filter" do
@@ -116,8 +125,20 @@ script "js_filtered_applied_policies", type: "javascript" do
     if (policy_age < param_days_back)  { terminate_policy = false }
 
     // Prevent policy from terminating user-specified policies
-    if (_.contains(param_filter, policy['template_name'])) { terminate_policy = false }
-    if (_.contains(param_applied_filter, policy['name'])) { terminate_policy = false }
+    if (param_filter.length > 0) {
+      if (_.contains(param_filter, policy['template_name']) && typeof(policy['template_name']) == 'string' && policy['template_name'] != '') {
+        terminate_policy = false
+      }
+    }
+
+    if (param_applied_filter.length > 0) {
+      if (_.contains(param_applied_filter, policy['name'])) { terminate_policy = false }
+    }
+
+    // Prevent policy from terminating org-level policies
+    if (typeof(policy['template_id']) != 'string' || policy['template_id'] != '') {
+      terminate_policy = false
+    }
 
     return terminate_policy
   })
@@ -140,12 +161,103 @@ datasource "ds_terminate_applied_policies" do
   end
 end
 
+datasource "ds_policy_aggregates" do
+  request do
+    auth $auth_flexera
+    host rs_governance_host
+    path join(["/api/governance/orgs/", rs_org_id, "/policy_aggregates"])
+    verb "GET"
+    header "User-Agent", "RS Policies"
+    header "Api-Version", "1.0"
+  end
+  result do
+    encoding "json"
+    collect jmes_path(response, "items") do
+      field "category", jmes_path(col_item, "category")
+      field "created_at", jmes_path(col_item, "created_at")
+      field "description", jmes_path(col_item, "description")
+      field "href", jmes_path(col_item, "href")
+      field "id", jmes_path(col_item, "id")
+      field "name", jmes_path(col_item, "name")
+      field "status", jmes_path(col_item, "status")
+      field "updated_at", jmes_path(col_item, "updated_at")
+      field "template_id", jmes_path(col_item, "published_template.id")
+      field "template_name", jmes_path(col_item, "published_template.name")
+    end
+  end
+end
+
+
+datasource "ds_filtered_policy_aggregates" do
+  run_script $js_filtered_policy_aggregates, $ds_policy_aggregates, $param_days_back, $param_filter, $param_applied_filter, $param_aggregates, policy_id
+end
+
+script "js_filtered_policy_aggregates", type: "javascript" do
+  parameters "ds_policy_aggregates", "param_days_back", "param_filter", "param_applied_filter", "param_aggregates", "self_id"
+  result "result"
+  code <<-EOS
+  today = new Date()
+
+  result = _.filter(ds_policy_aggregates, function(policy) {
+    terminate_policy = param_aggregates == 'Yes'
+
+    // Prevent policy from terminating itself
+    if (policy['id'] == self_id) { terminate_policy = false }
+
+    // Prevent policy from terminating newly applied/updated policies
+    policy_date = new Date(policy['created_at'])
+    policy_age = Math.round((today - policy_date) / 1000 / 60 / 60 / 24)
+
+    if (policy_age < param_days_back)  { terminate_policy = false }
+
+    // Prevent policy from terminating user-specified policies
+    if (param_filter.length > 0) {
+      if (_.contains(param_filter, policy['template_name']) && typeof(policy['template_name']) == 'string' && policy['template_name'] != '') {
+        terminate_policy = false
+      }
+    }
+
+    if (param_applied_filter.length > 0) {
+      if (_.contains(param_applied_filter, policy['name'])) { terminate_policy = false }
+    }
+
+    return terminate_policy
+  })
+EOS
+end
+
+datasource "ds_terminate_aggregates" do
+  iterate $ds_filtered_policy_aggregates
+  request do
+    auth $auth_flexera
+    host rs_governance_host
+    path val(iter_item, 'href')
+    verb "DELETE"
+    header "User-Agent", "RS Policies"
+    header "Api-Version", "1.0"
+    ignore_status [400, 401, 402, 403, 404, 405]
+  end
+  result do
+    encoding "text"
+  end
+end
+
+datasource "ds_terminate_all" do
+  run_script $js_terminate_all, $ds_terminate_applied_policies, $ds_terminate_aggregates
+end
+
+script "js_terminate_all", type: "javascript" do
+  parameters "ds_terminate_applied_policies", "ds_terminate_aggregates"
+  result "result"
+  code "result = []"
+end
+
 ###############################################################################
 # Policy
 ###############################################################################
 
 policy "pol_terminate_policies" do
-  validate $ds_terminate_applied_policies do
+  validate $ds_terminate_all do
     summary_template "{{ len data }} Applied Policies Terminated"
     detail_template ""
     check eq(0, 0)

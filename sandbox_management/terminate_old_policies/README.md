@@ -14,6 +14,7 @@ This policy has the following input parameters required when launching the polic
 
 - *Termination Age (Days)* - How many days ago a policy must have been applied before it is terminated.
 - *Created / Updated* - Whether to use the date the applied policy was created or the date it was last updated to determine its age.
+- *Terminate Aggregates* - Whether or not to also terminate policy aggregates e.g. org-level applied policies. Note that this will not be scoped to the project you are running this policy in and will always be based on the `created_at` date for policy aggregates regardless of the value of the `Created / Updated` parameter.
 - *Policy Ignore List* - A list of policy template names to never terminate despite their age.
 - *Applied Policy Ignore List* - A list of applied policy names to never terminate despite their age.
 
