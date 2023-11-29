@@ -39,5 +39,19 @@ jobs:
       - name: Run the update script
         run: bash ./update_demo_data.sh
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "Update CCO Demo Data"
+          title: "Update CCO Demo Data"
+          body: "Updated CCO Demo from GitHub Actions Workflow [${{ github.workflow }}](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+          branch: "task/update-cco-demo-data"
+          delete-branch: true
+          labels: "automation, data"
+
+      - name: Check outputs
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
