@@ -3,56 +3,18 @@
   "ip_list": [
     {
       "properties": {
-        "ipAddress": "30.42.1.97"
+        "ipAddress": "47.80.14.39"
       },
-      "region": "eastus",
-      "resourceGroup": "THANKFULGOAT-KINDOWL",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/THANKFULGOAT-KINDOWL/providers/Microsoft.Network/publicIPAddresses/happygoat",
-      "resourceName": "happygoat",
+      "region": "centralus",
+      "resourceGroup": "HAPPYYAK-VIVACIOUSBEAR",
+      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/HAPPYYAK-VIVACIOUSBEAR/providers/Microsoft.Network/publicIPAddresses/bravequail",
+      "resourceName": "bravequail",
       "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 18.204,
+      "savings": 4.632,
       "savingsCurrency": "US$",
       "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "kindwhale",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "17.94.37.16"
-      },
-      "region": "westus2",
-      "resourceGroup": "JOVIALMOUSE-LAZYANT",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/JOVIALMOUSE-LAZYANT/providers/Microsoft.Network/publicIPAddresses/excitedcat",
-      "resourceName": "excitedcat",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 2.785,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "wittygiraffe",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "29.75.50.98"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "LIVELYIBIS-YOUTHFULXERUS",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/LIVELYIBIS-YOUTHFULXERUS/providers/Microsoft.Network/publicIPAddresses/adventurousowl",
-      "resourceName": "adventurousowl",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 8.624,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "quirkyrabbit",
+      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "lazypenguin",
       "tags": {
         "environment": "staging",
         "app": "userManagement"
@@ -60,18 +22,37 @@
     },
     {
       "properties": {
-        "ipAddress": "54.26.19.42"
+        "ipAddress": "62.30.50.30"
       },
-      "region": "eastus2",
-      "resourceGroup": "BRAVEYAK-QUIRKYZEBRA",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/BRAVEYAK-QUIRKYZEBRA/providers/Microsoft.Network/publicIPAddresses/vivaciouswhale",
-      "resourceName": "vivaciouswhale",
+      "region": "westus2",
+      "resourceGroup": "LAZYJAGUAR-GENTLEPARROT",
+      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/LAZYJAGUAR-GENTLEPARROT/providers/Microsoft.Network/publicIPAddresses/adventurouslion",
+      "resourceName": "adventurouslion",
       "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 2.727,
+      "savings": 9.103,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "nervousoctopus",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "61.30.52.50"
+      },
+      "region": "australiaeast",
+      "resourceGroup": "CALMPARROT-BRAVEKANGAROO",
+      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/CALMPARROT-BRAVEKANGAROO/providers/Microsoft.Network/publicIPAddresses/vivaciousurchin",
+      "resourceName": "vivaciousurchin",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 30.723,
       "savingsCurrency": "US$",
       "service": "Microsoft.Network",
       "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "innocentbear",
+      "subscriptionName": "excitedurchin",
       "tags": {
         "environment": "prod",
         "app": "securityModule"
@@ -79,56 +60,75 @@
     },
     {
       "properties": {
-        "ipAddress": "4.79.58.89"
-      },
-      "region": "eastus2",
-      "resourceGroup": "BRAVEXERUS-QUIRKYEEL",
-      "resourceId": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/BRAVEXERUS-QUIRKYEEL/providers/Microsoft.Network/publicIPAddresses/excitedibis",
-      "resourceName": "excitedibis",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 12.784,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "upbeatoctopus",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "21.23.35.52"
+        "ipAddress": "31.3.26.79"
       },
       "region": "southcentralus",
-      "resourceGroup": "YOUTHFULBEAR-EAGERIBIS",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/YOUTHFULBEAR-EAGERIBIS/providers/Microsoft.Network/publicIPAddresses/nervouskangaroo",
-      "resourceName": "nervouskangaroo",
+      "resourceGroup": "YOUTHFULOWL-EAGERIBIS",
+      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/YOUTHFULOWL-EAGERIBIS/providers/Microsoft.Network/publicIPAddresses/adventurouseel",
+      "resourceName": "adventurouseel",
       "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 7.188,
+      "savings": 2.111,
       "savingsCurrency": "US$",
       "service": "Microsoft.Network",
-      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "lazysnake",
+      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "kinddog",
       "tags": {
         "environment": "prod",
-        "app": "reportingService"
+        "app": "paymentGateway"
       }
     },
     {
       "properties": {
-        "ipAddress": "34.88.90.58"
+        "ipAddress": "88.98.73.98"
       },
-      "region": "australiaeast",
-      "resourceGroup": "BRAVEFOX-HAPPYVIPER",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/BRAVEFOX-HAPPYVIPER/providers/Microsoft.Network/publicIPAddresses/calmsnake",
-      "resourceName": "calmsnake",
+      "region": "eastus2",
+      "resourceGroup": "CALMJAGUAR-OBEDIENTXERUS",
+      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/CALMJAGUAR-OBEDIENTXERUS/providers/Microsoft.Network/publicIPAddresses/vivaciouswhale",
+      "resourceName": "vivaciouswhale",
       "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 42.951,
+      "savings": 12.527,
       "savingsCurrency": "US$",
       "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "proudrabbit",
+      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "jovialdog",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "8.21.15.39"
+      },
+      "region": "centralindia",
+      "resourceGroup": "FIERCEVIPER-MERRYIBIS",
+      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/FIERCEVIPER-MERRYIBIS/providers/Microsoft.Network/publicIPAddresses/adventuroushorse",
+      "resourceName": "adventuroushorse",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 2.895,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "quickdog",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "14.67.0.99"
+      },
+      "region": "centralus",
+      "resourceGroup": "ADVENTUROUSGOAT-UPBEATSNAKE",
+      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/ADVENTUROUSGOAT-UPBEATSNAKE/providers/Microsoft.Network/publicIPAddresses/quickgiraffe",
+      "resourceName": "quickgiraffe",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 12.865,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "livelyyak",
       "tags": {
         "environment": "prod",
         "app": "inventoryManagement"
@@ -136,189 +136,37 @@
     },
     {
       "properties": {
-        "ipAddress": "47.38.47.99"
-      },
-      "region": "eastus",
-      "resourceGroup": "YOUTHFULMOUSE-JOLLYELEPHANT",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/YOUTHFULMOUSE-JOLLYELEPHANT/providers/Microsoft.Network/publicIPAddresses/zealousowl",
-      "resourceName": "zealousowl",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 8.467,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "merryzebra",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "59.98.56.65"
+        "ipAddress": "40.85.65.62"
       },
       "region": "southcentralus",
-      "resourceGroup": "UPBEATHORSE-MERRYVIPER",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/UPBEATHORSE-MERRYVIPER/providers/Microsoft.Network/publicIPAddresses/eagerkangaroo",
-      "resourceName": "eagerkangaroo",
+      "resourceGroup": "FIERCEWHALE-ADVENTUROUSKANGAROO",
+      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/FIERCEWHALE-ADVENTUROUSKANGAROO/providers/Microsoft.Network/publicIPAddresses/nervouskangaroo",
+      "resourceName": "nervouskangaroo",
       "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 6.583,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "sillyurchin",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "1.70.1.17"
-      },
-      "region": "centralus",
-      "resourceGroup": "EXCITEDCAT-KINDSNAKE",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/EXCITEDCAT-KINDSNAKE/providers/Microsoft.Network/publicIPAddresses/eagerrabbit",
-      "resourceName": "eagerrabbit",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 85.132,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "livelynewt",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "56.39.24.88"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "GENTLEJAGUAR-ZEALOUSEEL",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/GENTLEJAGUAR-ZEALOUSEEL/providers/Microsoft.Network/publicIPAddresses/drowsysnake",
-      "resourceName": "drowsysnake",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 5.182,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "calmant",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "31.94.55.51"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "DROWSYXERUS-EXCITEDPARROT",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/DROWSYXERUS-EXCITEDPARROT/providers/Microsoft.Network/publicIPAddresses/excitedhorse",
-      "resourceName": "excitedhorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 12.654,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "gentleyak",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "37.41.82.59"
-      },
-      "region": "uksouth",
-      "resourceGroup": "YOUTHFULELEPHANT-ADVENTUROUSTIGER",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/YOUTHFULELEPHANT-ADVENTUROUSTIGER/providers/Microsoft.Network/publicIPAddresses/eageroctopus",
-      "resourceName": "eageroctopus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 46.258,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "gentlemouse",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "19.55.65.60"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "VIVACIOUSEEL-BRAVECAT",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/VIVACIOUSEEL-BRAVECAT/providers/Microsoft.Network/publicIPAddresses/vivaciouscat",
-      "resourceName": "vivaciouscat",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 19.727,
+      "savings": 17.909,
       "savingsCurrency": "US$",
       "service": "Microsoft.Network",
       "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "excitedzebra",
+      "subscriptionName": "bravelion",
       "tags": {
-        "environment": "prod",
-        "app": "securityModule"
+        "environment": "staging",
+        "app": "invoiceProcessing"
       }
     },
     {
       "properties": {
-        "ipAddress": "30.48.41.58"
+        "ipAddress": "21.67.72.31"
       },
-      "region": "southeastasia",
-      "resourceGroup": "EXCITEDFOX-EXCITEDPARROT",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/EXCITEDFOX-EXCITEDPARROT/providers/Microsoft.Network/publicIPAddresses/youthfulviper",
-      "resourceName": "youthfulviper",
+      "region": "westus2",
+      "resourceGroup": "EXCITEDPARROT-WITTYPARROT",
+      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/EXCITEDPARROT-WITTYPARROT/providers/Microsoft.Network/publicIPAddresses/merrygoat",
+      "resourceName": "merrygoat",
       "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 8.105,
+      "savings": 5.665,
       "savingsCurrency": "US$",
       "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "youthfulnewt",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "77.94.9.22"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "SILLYELEPHANT-BRAVEXERUS",
-      "resourceId": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/SILLYELEPHANT-BRAVEXERUS/providers/Microsoft.Network/publicIPAddresses/eagereel",
-      "resourceName": "eagereel",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 14.574,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "innocenttiger",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "32.68.37.6"
-      },
-      "region": "northeurope",
-      "resourceGroup": "OBEDIENTZEBRA-FIERCEPARROT",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/OBEDIENTZEBRA-FIERCEPARROT/providers/Microsoft.Network/publicIPAddresses/eagereel",
-      "resourceName": "eagereel",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 26.638,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "jovialhorse",
+      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "relievedgiraffe",
       "tags": {
         "environment": "dev",
         "app": "emailService"
@@ -326,18 +174,37 @@
     },
     {
       "properties": {
-        "ipAddress": "76.10.70.73"
+        "ipAddress": "0.23.15.28"
       },
-      "region": "eastus",
-      "resourceGroup": "SILLYVIPER-QUICKURCHIN",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/SILLYVIPER-QUICKURCHIN/providers/Microsoft.Network/publicIPAddresses/youthfulowl",
-      "resourceName": "youthfulowl",
+      "region": "westus2",
+      "resourceGroup": "QUICKEEL-EXCITEDELEPHANT",
+      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/QUICKEEL-EXCITEDELEPHANT/providers/Microsoft.Network/publicIPAddresses/kinddog",
+      "resourceName": "kinddog",
       "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 8.16,
+      "savings": 63.558,
       "savingsCurrency": "US$",
       "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "wittylion",
+      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "adventurousnewt",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "99.29.69.1"
+      },
+      "region": "southeastasia",
+      "resourceGroup": "OBEDIENTOCTOPUS-BRAVEDOG",
+      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/OBEDIENTOCTOPUS-BRAVEDOG/providers/Microsoft.Network/publicIPAddresses/wittyquail",
+      "resourceName": "wittyquail",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 14.146,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+      "subscriptionName": "wittyzebra",
       "tags": {
         "environment": "staging",
         "app": "userManagement"
@@ -345,265 +212,721 @@
     },
     {
       "properties": {
-        "ipAddress": "0.8.17.56"
+        "ipAddress": "77.58.29.79"
       },
-      "region": "australiaeast",
-      "resourceGroup": "QUICKELEPHANT-VIVACIOUSDOG",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/QUICKELEPHANT-VIVACIOUSDOG/providers/Microsoft.Network/publicIPAddresses/youthfulsnake",
-      "resourceName": "youthfulsnake",
+      "region": "southcentralus",
+      "resourceGroup": "THANKFULELEPHANT-EAGERVIPER",
+      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/THANKFULELEPHANT-EAGERVIPER/providers/Microsoft.Network/publicIPAddresses/jollyeel",
+      "resourceName": "jollyeel",
       "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 15.004,
+      "savings": 17.805,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "wittyyak",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "48.9.21.27"
+      },
+      "region": "centralus",
+      "resourceGroup": "LIVELYYAK-LIVELYPARROT",
+      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/LIVELYYAK-LIVELYPARROT/providers/Microsoft.Network/publicIPAddresses/happyrabbit",
+      "resourceName": "happyrabbit",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 4.394,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "innocentnewt",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "36.78.11.26"
+      },
+      "region": "westus2",
+      "resourceGroup": "MERRYEEL-UPBEATWHALE",
+      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/MERRYEEL-UPBEATWHALE/providers/Microsoft.Network/publicIPAddresses/excitedparrot",
+      "resourceName": "excitedparrot",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 33.722,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+      "subscriptionName": "upbeatfox",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "36.21.8.57"
+      },
+      "region": "southeastasia",
+      "resourceGroup": "THANKFULCAT-JOVIALBEAR",
+      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/THANKFULCAT-JOVIALBEAR/providers/Microsoft.Network/publicIPAddresses/fierceoctopus",
+      "resourceName": "fierceoctopus",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 13.626,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "braveant",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "17.57.59.93"
+      },
+      "region": "centralindia",
+      "resourceGroup": "QUICKOCTOPUS-BRAVEGIRAFFE",
+      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/QUICKOCTOPUS-BRAVEGIRAFFE/providers/Microsoft.Network/publicIPAddresses/quirkyeel",
+      "resourceName": "quirkyeel",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 1.898,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "excitedibis",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "33.26.11.80"
+      },
+      "region": "southeastasia",
+      "resourceGroup": "SILLYDOG-EXCITEDXERUS",
+      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/SILLYDOG-EXCITEDXERUS/providers/Microsoft.Network/publicIPAddresses/sillydog",
+      "resourceName": "sillydog",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 7.106,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+      "subscriptionName": "gentletiger",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "44.84.25.7"
+      },
+      "region": "westus2",
+      "resourceGroup": "UPBEATZEBRA-LAZYIBIS",
+      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/UPBEATZEBRA-LAZYIBIS/providers/Microsoft.Network/publicIPAddresses/calmwhale",
+      "resourceName": "calmwhale",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 12.987,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "zealousfox",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "30.57.73.39"
+      },
+      "region": "eastus2",
+      "resourceGroup": "FIERCEFOX-FIERCEURCHIN",
+      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/FIERCEFOX-FIERCEURCHIN/providers/Microsoft.Network/publicIPAddresses/adventuroustiger",
+      "resourceName": "adventuroustiger",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 12.977,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "fiercexerus",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "5.12.50.4"
+      },
+      "region": "westus2",
+      "resourceGroup": "YOUTHFULRABBIT-BRAVEFOX",
+      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/YOUTHFULRABBIT-BRAVEFOX/providers/Microsoft.Network/publicIPAddresses/kindgiraffe",
+      "resourceName": "kindgiraffe",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 75.893,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "excitednewt",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "17.96.54.45"
+      },
+      "region": "uksouth",
+      "resourceGroup": "KINDANT-JOLLYYAK",
+      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/KINDANT-JOLLYYAK/providers/Microsoft.Network/publicIPAddresses/sillyelephant",
+      "resourceName": "sillyelephant",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 23.672,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "excitedjaguar",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "67.61.68.16"
+      },
+      "region": "southcentralus",
+      "resourceGroup": "CALMLION-ZEALOUSIBIS",
+      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/CALMLION-ZEALOUSIBIS/providers/Microsoft.Network/publicIPAddresses/obedientibis",
+      "resourceName": "obedientibis",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 0.274,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+      "subscriptionName": "zealousxerus",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "80.19.26.17"
+      },
+      "region": "southeastasia",
+      "resourceGroup": "BRAVEIBIS-FIERCEZEBRA",
+      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/BRAVEIBIS-FIERCEZEBRA/providers/Microsoft.Network/publicIPAddresses/adventurousparrot",
+      "resourceName": "adventurousparrot",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 40.849,
       "savingsCurrency": "US$",
       "service": "Microsoft.Network",
       "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "vivacioussnake",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "61.14.86.31"
+      },
+      "region": "eastus2",
+      "resourceGroup": "PROUDIBIS-JOVIALTIGER",
+      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/PROUDIBIS-JOVIALTIGER/providers/Microsoft.Network/publicIPAddresses/jovialkangaroo",
+      "resourceName": "jovialkangaroo",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 11.319,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "jollyurchin",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "50.60.78.80"
+      },
+      "region": "australiaeast",
+      "resourceGroup": "VIVACIOUSNEWT-LAZYNEWT",
+      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/VIVACIOUSNEWT-LAZYNEWT/providers/Microsoft.Network/publicIPAddresses/lazyjaguar",
+      "resourceName": "lazyjaguar",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 13.789,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "bravejaguar",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "49.21.43.89"
+      },
+      "region": "centralus",
+      "resourceGroup": "DROWSYLION-INNOCENTWHALE",
+      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/DROWSYLION-INNOCENTWHALE/providers/Microsoft.Network/publicIPAddresses/relievedfox",
+      "resourceName": "relievedfox",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 30.896,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "youthfulrabbit",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "92.52.62.16"
+      },
+      "region": "eastus",
+      "resourceGroup": "KINDEEL-GENTLEVIPER",
+      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/KINDEEL-GENTLEVIPER/providers/Microsoft.Network/publicIPAddresses/upbeatnewt",
+      "resourceName": "upbeatnewt",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 27.329,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "wittyhorse",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "35.7.38.29"
+      },
+      "region": "australiaeast",
+      "resourceGroup": "CALMSNAKE-ZEALOUSKANGAROO",
+      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/CALMSNAKE-ZEALOUSKANGAROO/providers/Microsoft.Network/publicIPAddresses/quickparrot",
+      "resourceName": "quickparrot",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 6.57,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "youthfulibis",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "89.89.33.99"
+      },
+      "region": "southcentralus",
+      "resourceGroup": "EAGERZEBRA-PROUDGIRAFFE",
+      "resourceId": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/EAGERZEBRA-PROUDGIRAFFE/providers/Microsoft.Network/publicIPAddresses/youthfulfox",
+      "resourceName": "youthfulfox",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 24.078,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+      "subscriptionName": "relievedlion",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "16.94.30.18"
+      },
+      "region": "eastus",
+      "resourceGroup": "EXCITEDSNAKE-JOLLYGOAT",
+      "resourceId": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/EXCITEDSNAKE-JOLLYGOAT/providers/Microsoft.Network/publicIPAddresses/excitedgoat",
+      "resourceName": "excitedgoat",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 20.092,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+      "subscriptionName": "merryowl",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "16.9.65.95"
+      },
+      "region": "southcentralus",
+      "resourceGroup": "EXCITEDZEBRA-KINDPENGUIN",
+      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/EXCITEDZEBRA-KINDPENGUIN/providers/Microsoft.Network/publicIPAddresses/zealouselephant",
+      "resourceName": "zealouselephant",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 9.641,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "bravehorse",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "18.50.46.51"
+      },
+      "region": "southcentralus",
+      "resourceGroup": "OBEDIENTRABBIT-EAGERGIRAFFE",
+      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/OBEDIENTRABBIT-EAGERGIRAFFE/providers/Microsoft.Network/publicIPAddresses/innocentwhale",
+      "resourceName": "innocentwhale",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 26.759,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "wittyyak",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "93.46.30.46"
+      },
+      "region": "australiaeast",
+      "resourceGroup": "RELIEVEDXERUS-YOUTHFULEEL",
+      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/RELIEVEDXERUS-YOUTHFULEEL/providers/Microsoft.Network/publicIPAddresses/jovialant",
+      "resourceName": "jovialant",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 1.257,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "upbeatelephant",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "64.61.36.96"
+      },
+      "region": "northeurope",
+      "resourceGroup": "CALMJAGUAR-THANKFULPARROT",
+      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/CALMJAGUAR-THANKFULPARROT/providers/Microsoft.Network/publicIPAddresses/proudmouse",
+      "resourceName": "proudmouse",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 28.479,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+      "subscriptionName": "relievedfox",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "64.23.33.40"
+      },
+      "region": "eastus2",
+      "resourceGroup": "EAGERRABBIT-RELIEVEDXERUS",
+      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/EAGERRABBIT-RELIEVEDXERUS/providers/Microsoft.Network/publicIPAddresses/lazyhorse",
+      "resourceName": "lazyhorse",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 64.768,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "nervouswhale",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "22.9.91.85"
+      },
+      "region": "southeastasia",
+      "resourceGroup": "NERVOUSNEWT-FIERCEMOUSE",
+      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/NERVOUSNEWT-FIERCEMOUSE/providers/Microsoft.Network/publicIPAddresses/vivaciousrabbit",
+      "resourceName": "vivaciousrabbit",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 20.728,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "merryxerus",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "57.7.80.32"
+      },
+      "region": "northeurope",
+      "resourceGroup": "MERRYGIRAFFE-OBEDIENTSNAKE",
+      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/MERRYGIRAFFE-OBEDIENTSNAKE/providers/Microsoft.Network/publicIPAddresses/braveelephant",
+      "resourceName": "braveelephant",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 2.359,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "gentleeel",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "2.18.60.54"
+      },
+      "region": "eastus",
+      "resourceGroup": "MERRYGOAT-THANKFULMOUSE",
+      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/MERRYGOAT-THANKFULMOUSE/providers/Microsoft.Network/publicIPAddresses/kindurchin",
+      "resourceName": "kindurchin",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 29.974,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "excitedyak",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "3.45.63.46"
+      },
+      "region": "northeurope",
+      "resourceGroup": "WITTYURCHIN-ADVENTUROUSELEPHANT",
+      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/WITTYURCHIN-ADVENTUROUSELEPHANT/providers/Microsoft.Network/publicIPAddresses/exciteddog",
+      "resourceName": "exciteddog",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 7.33,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "quickgiraffe",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "3.29.68.35"
+      },
+      "region": "westus2",
+      "resourceGroup": "RELIEVEDYAK-JOLLYURCHIN",
+      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/RELIEVEDYAK-JOLLYURCHIN/providers/Microsoft.Network/publicIPAddresses/fierceelephant",
+      "resourceName": "fierceelephant",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 9.885,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "sillyelephant",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "52.48.88.38"
+      },
+      "region": "australiaeast",
+      "resourceGroup": "EXCITEDKANGAROO-INNOCENTMOUSE",
+      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/EXCITEDKANGAROO-INNOCENTMOUSE/providers/Microsoft.Network/publicIPAddresses/upbeatviper",
+      "resourceName": "upbeatviper",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 72.078,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "obedientelephant",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "45.93.51.45"
+      },
+      "region": "centralus",
+      "resourceGroup": "YOUTHFULFOX-ZEALOUSHORSE",
+      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/YOUTHFULFOX-ZEALOUSHORSE/providers/Microsoft.Network/publicIPAddresses/innocenturchin",
+      "resourceName": "innocenturchin",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 4.882,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "livelyviper",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "70.59.99.62"
+      },
+      "region": "uksouth",
+      "resourceGroup": "SILLYQUAIL-BRAVEYAK",
+      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/SILLYQUAIL-BRAVEYAK/providers/Microsoft.Network/publicIPAddresses/wittycat",
+      "resourceName": "wittycat",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 8.691,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "fiercepenguin",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "0.69.68.42"
+      },
+      "region": "northeurope",
+      "resourceGroup": "VIVACIOUSOCTOPUS-KINDVIPER",
+      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/VIVACIOUSOCTOPUS-KINDVIPER/providers/Microsoft.Network/publicIPAddresses/sillytiger",
+      "resourceName": "sillytiger",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 23.1,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "gentleurchin",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "27.65.43.14"
+      },
+      "region": "centralus",
+      "resourceGroup": "HAPPYURCHIN-ZEALOUSYAK",
+      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/HAPPYURCHIN-ZEALOUSYAK/providers/Microsoft.Network/publicIPAddresses/merryowl",
+      "resourceName": "merryowl",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 33.486,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "gentlegoat",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "58.97.42.24"
+      },
+      "region": "australiaeast",
+      "resourceGroup": "DROWSYTIGER-LIVELYJAGUAR",
+      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/DROWSYTIGER-LIVELYJAGUAR/providers/Microsoft.Network/publicIPAddresses/happykangaroo",
+      "resourceName": "happykangaroo",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 72.245,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "nervoussnake",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "1.54.91.7"
+      },
+      "region": "eastus",
+      "resourceGroup": "FIERCECAT-BRAVEQUAIL",
+      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/FIERCECAT-BRAVEQUAIL/providers/Microsoft.Network/publicIPAddresses/braveparrot",
+      "resourceName": "braveparrot",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 53.262,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+      "subscriptionName": "excitedpenguin",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      }
+    },
+    {
+      "properties": {
+        "ipAddress": "16.77.86.60"
+      },
+      "region": "westus2",
+      "resourceGroup": "WITTYOCTOPUS-BRAVEEEL",
+      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/WITTYOCTOPUS-BRAVEEEL/providers/Microsoft.Network/publicIPAddresses/innocentmouse",
+      "resourceName": "innocentmouse",
+      "resourceType": "Microsoft.Network/publicIPAddresses",
+      "savings": 2.068,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Network",
+      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
       "subscriptionName": "quirkyviper",
       "tags": {
         "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "46.40.22.60"
-      },
-      "region": "westus2",
-      "resourceGroup": "NERVOUSURCHIN-THANKFULDOG",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/NERVOUSURCHIN-THANKFULDOG/providers/Microsoft.Network/publicIPAddresses/eageribis",
-      "resourceName": "eageribis",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 45.844,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "quirkycat",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "52.50.97.9"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "GENTLEOWL-HAPPYOCTOPUS",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/GENTLEOWL-HAPPYOCTOPUS/providers/Microsoft.Network/publicIPAddresses/happyzebra",
-      "resourceName": "happyzebra",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 5.655,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "quirkyeel",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "25.84.4.45"
-      },
-      "region": "centralindia",
-      "resourceGroup": "KINDQUAIL-RELIEVEDNEWT",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/KINDQUAIL-RELIEVEDNEWT/providers/Microsoft.Network/publicIPAddresses/adventurousbear",
-      "resourceName": "adventurousbear",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 36.175,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "innocentlion",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "57.71.50.0"
-      },
-      "region": "eastus",
-      "resourceGroup": "FIERCECAT-LAZYKANGAROO",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/FIERCECAT-LAZYKANGAROO/providers/Microsoft.Network/publicIPAddresses/jollyeel",
-      "resourceName": "jollyeel",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 39.092,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "livelycat",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "79.61.33.23"
-      },
-      "region": "uksouth",
-      "resourceGroup": "UPBEATOCTOPUS-EXCITEDWHALE",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/UPBEATOCTOPUS-EXCITEDWHALE/providers/Microsoft.Network/publicIPAddresses/happyparrot",
-      "resourceName": "happyparrot",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 0.371,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "quirkynewt",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "10.21.70.60"
-      },
-      "region": "uksouth",
-      "resourceGroup": "NERVOUSFOX-WITTYPARROT",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/NERVOUSFOX-WITTYPARROT/providers/Microsoft.Network/publicIPAddresses/vivaciouspenguin",
-      "resourceName": "vivaciouspenguin",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 10.271,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "vivaciousrabbit",
-      "tags": {
-        "environment": "prod",
         "app": "inventoryManagement"
       }
     },
     {
       "properties": {
-        "ipAddress": "57.11.49.43"
-      },
-      "region": "northeurope",
-      "resourceGroup": "WITTYHORSE-RELIEVEDLION",
-      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/WITTYHORSE-RELIEVEDLION/providers/Microsoft.Network/publicIPAddresses/gentlewhale",
-      "resourceName": "gentlewhale",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 25.722,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "jollygoat",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "21.61.99.95"
-      },
-      "region": "uksouth",
-      "resourceGroup": "LAZYELEPHANT-SILLYJAGUAR",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/LAZYELEPHANT-SILLYJAGUAR/providers/Microsoft.Network/publicIPAddresses/livelylion",
-      "resourceName": "livelylion",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 11.292,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "vivaciousibis",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "44.39.56.28"
+        "ipAddress": "55.28.4.92"
       },
       "region": "centralus",
-      "resourceGroup": "QUICKXERUS-FIERCEXERUS",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/QUICKXERUS-FIERCEXERUS/providers/Microsoft.Network/publicIPAddresses/merrynewt",
-      "resourceName": "merrynewt",
+      "resourceGroup": "OBEDIENTPENGUIN-EXCITEDNEWT",
+      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/OBEDIENTPENGUIN-EXCITEDNEWT/providers/Microsoft.Network/publicIPAddresses/adventurouslion",
+      "resourceName": "adventurouslion",
       "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 4.432,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "vivaciousbear",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "24.69.94.0"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "VIVACIOUSHORSE-VIVACIOUSANT",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/VIVACIOUSHORSE-VIVACIOUSANT/providers/Microsoft.Network/publicIPAddresses/happyjaguar",
-      "resourceName": "happyjaguar",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 34.803,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "excitedtiger",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "10.70.39.69"
-      },
-      "region": "centralindia",
-      "resourceGroup": "VIVACIOUSQUAIL-CALMANT",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/VIVACIOUSQUAIL-CALMANT/providers/Microsoft.Network/publicIPAddresses/quickxerus",
-      "resourceName": "quickxerus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 11.335,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "thankfulbear",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "89.21.97.11"
-      },
-      "region": "eastus2",
-      "resourceGroup": "THANKFULIBIS-WITTYGIRAFFE",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/THANKFULIBIS-WITTYGIRAFFE/providers/Microsoft.Network/publicIPAddresses/nervousparrot",
-      "resourceName": "nervousparrot",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 59.695,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "livelyhorse",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "51.96.72.28"
-      },
-      "region": "westus2",
-      "resourceGroup": "MERRYPARROT-UPBEATELEPHANT",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/MERRYPARROT-UPBEATELEPHANT/providers/Microsoft.Network/publicIPAddresses/livelykangaroo",
-      "resourceName": "livelykangaroo",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 26.932,
+      "savings": 43.305,
       "savingsCurrency": "US$",
       "service": "Microsoft.Network",
       "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "jollylion",
+      "subscriptionName": "sillybear",
       "tags": {
         "environment": "staging",
         "app": "invoiceProcessing"
@@ -611,344 +934,21 @@
     },
     {
       "properties": {
-        "ipAddress": "14.97.28.69"
-      },
-      "region": "westus2",
-      "resourceGroup": "RELIEVEDKANGAROO-SILLYXERUS",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/RELIEVEDKANGAROO-SILLYXERUS/providers/Microsoft.Network/publicIPAddresses/eagerowl",
-      "resourceName": "eagerowl",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 15.939,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "relievedcat",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "19.72.61.68"
-      },
-      "region": "westus2",
-      "resourceGroup": "CALMMOUSE-EXCITEDDOG",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/CALMMOUSE-EXCITEDDOG/providers/Microsoft.Network/publicIPAddresses/calmzebra",
-      "resourceName": "calmzebra",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 9.972,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "excitedtiger",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "60.97.69.11"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "UPBEATXERUS-THANKFULGOAT",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/UPBEATXERUS-THANKFULGOAT/providers/Microsoft.Network/publicIPAddresses/sillyparrot",
-      "resourceName": "sillyparrot",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 67.381,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "eagerowl",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "47.40.35.33"
+        "ipAddress": "77.60.49.74"
       },
       "region": "centralus",
-      "resourceGroup": "DROWSYPARROT-ADVENTUROUSYAK",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/DROWSYPARROT-ADVENTUROUSYAK/providers/Microsoft.Network/publicIPAddresses/happyibis",
-      "resourceName": "happyibis",
+      "resourceGroup": "WITTYHORSE-QUICKNEWT",
+      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/WITTYHORSE-QUICKNEWT/providers/Microsoft.Network/publicIPAddresses/proudurchin",
+      "resourceName": "proudurchin",
       "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 24.502,
+      "savings": 70.854,
       "savingsCurrency": "US$",
       "service": "Microsoft.Network",
       "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "youthfullion",
+      "subscriptionName": "merryant",
       "tags": {
         "environment": "prod",
         "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "52.93.44.87"
-      },
-      "region": "centralindia",
-      "resourceGroup": "EAGERPARROT-CALMOCTOPUS",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/EAGERPARROT-CALMOCTOPUS/providers/Microsoft.Network/publicIPAddresses/jollygoat",
-      "resourceName": "jollygoat",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 5.22,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "obedientibis",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "89.24.72.54"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "VIVACIOUSVIPER-LIVELYOCTOPUS",
-      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/VIVACIOUSVIPER-LIVELYOCTOPUS/providers/Microsoft.Network/publicIPAddresses/quirkypenguin",
-      "resourceName": "quirkypenguin",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 9.66,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "calmhorse",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "11.39.34.41"
-      },
-      "region": "northeurope",
-      "resourceGroup": "WITTYXERUS-FIERCEGOAT",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/WITTYXERUS-FIERCEGOAT/providers/Microsoft.Network/publicIPAddresses/nervousxerus",
-      "resourceName": "nervousxerus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 59.831,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "drowsynewt",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "47.19.99.12"
-      },
-      "region": "centralindia",
-      "resourceGroup": "ZEALOUSCAT-WITTYBEAR",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/ZEALOUSCAT-WITTYBEAR/providers/Microsoft.Network/publicIPAddresses/happycat",
-      "resourceName": "happycat",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 8.199,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "sillyyak",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "60.77.98.5"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "CALMPENGUIN-HAPPYVIPER",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/CALMPENGUIN-HAPPYVIPER/providers/Microsoft.Network/publicIPAddresses/nervouszebra",
-      "resourceName": "nervouszebra",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 22.313,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "merryelephant",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "28.16.24.54"
-      },
-      "region": "eastus2",
-      "resourceGroup": "VIVACIOUSHORSE-ADVENTUROUSELEPHANT",
-      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/VIVACIOUSHORSE-ADVENTUROUSELEPHANT/providers/Microsoft.Network/publicIPAddresses/excitednewt",
-      "resourceName": "excitednewt",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 36.368,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "obedientfox",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "87.56.57.31"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "EXCITEDJAGUAR-YOUTHFULHORSE",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/EXCITEDJAGUAR-YOUTHFULHORSE/providers/Microsoft.Network/publicIPAddresses/youthfulurchin",
-      "resourceName": "youthfulurchin",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 19.818,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "adventuroushorse",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "80.87.98.29"
-      },
-      "region": "northeurope",
-      "resourceGroup": "EAGERYAK-THANKFULTIGER",
-      "resourceId": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/EAGERYAK-THANKFULTIGER/providers/Microsoft.Network/publicIPAddresses/merryhorse",
-      "resourceName": "merryhorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 14.25,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "wittylion",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "51.9.19.46"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "ADVENTUROUSBEAR-ZEALOUSTIGER",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/ADVENTUROUSBEAR-ZEALOUSTIGER/providers/Microsoft.Network/publicIPAddresses/vivaciouspenguin",
-      "resourceName": "vivaciouspenguin",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 33.606,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "excitedcat",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "85.54.44.25"
-      },
-      "region": "eastus2",
-      "resourceGroup": "EXCITEDIBIS-DROWSYGOAT",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/EXCITEDIBIS-DROWSYGOAT/providers/Microsoft.Network/publicIPAddresses/gentlekangaroo",
-      "resourceName": "gentlekangaroo",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 13.329,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "upbeatxerus",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "9.91.99.2"
-      },
-      "region": "eastus2",
-      "resourceGroup": "LAZYFOX-LAZYKANGAROO",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/LAZYFOX-LAZYKANGAROO/providers/Microsoft.Network/publicIPAddresses/calmwhale",
-      "resourceName": "calmwhale",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 12.352,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "quickyak",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "16.20.66.30"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "MERRYNEWT-LIVELYRABBIT",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/MERRYNEWT-LIVELYRABBIT/providers/Microsoft.Network/publicIPAddresses/jollyjaguar",
-      "resourceName": "jollyjaguar",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 17.456,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "proudkangaroo",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "97.58.8.82"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "JOVIALPARROT-WITTYXERUS",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/JOVIALPARROT-WITTYXERUS/providers/Microsoft.Network/publicIPAddresses/lazytiger",
-      "resourceName": "lazytiger",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 31.68,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "eagertiger",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "41.14.23.88"
-      },
-      "region": "centralindia",
-      "resourceGroup": "JOLLYWHALE-PROUDGOAT",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/JOLLYWHALE-PROUDGOAT/providers/Microsoft.Network/publicIPAddresses/jovialhorse",
-      "resourceName": "jovialhorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 7.511,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "livelyhorse",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
       }
     }
   ]

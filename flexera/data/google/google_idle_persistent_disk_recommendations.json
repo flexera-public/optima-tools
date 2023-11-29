@@ -4,128 +4,128 @@
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-06-25T06:12:20.926Z",
-      "daysOld": 489,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'vivacioustiger-disk1'.",
-      "diskSizeGb": 512,
-      "id": "5522308757805747200",
+      "creationTimestamp": "2021-06-08T10:07:49.681Z",
+      "daysOld": 950,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'bravefox-disk1'.",
+      "diskSizeGb": 64,
+      "id": "5299680707958074368",
       "kind": "compute#disk",
-      "labelFingerprint": "lk3a4suwui=",
+      "labelFingerprint": "hxd008jbbi=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2022-05-21T22:31:00.078Z",
-      "lastDetachTimestamp": "2022-09-28T07:20:39.299Z",
-      "name": "vivacioustiger-disk1",
+      "lastAttachTimestamp": "2021-12-16T12:40:43.296Z",
+      "lastDetachTimestamp": "2022-08-20T19:22:51.860Z",
+      "name": "bravefox-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "476768503181",
+      "projectNumber": "280794411835",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
       "region": "northamerica-northeast1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "5522308757805747200",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/vivacioustiger-disk1",
-      "resourceName": "vivacioustiger-disk1",
+      "resourceID": "5299680707958074368",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/bravefox-disk1",
+      "resourceName": "bravefox-disk1",
       "resourceType": "compute#disk",
-      "savings": 164.87,
+      "savings": 96.935,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/vivacioustiger-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/bravefox-disk1",
       "service": "Storage",
-      "sizeGb": 512,
+      "sizeGb": 64,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
         "environment": "prod",
-        "app": "inventoryManagement"
+        "app": "crmModule"
       },
       "type": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-07-15T17:50:59.045Z",
-      "daysOld": 215,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'bravenewt-disk1'.",
-      "diskSizeGb": 8,
-      "id": "8226008817180625920",
+      "creationTimestamp": "2021-02-02T22:13:27.707Z",
+      "daysOld": 655,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'drowsyibis-disk1'.",
+      "diskSizeGb": 32,
+      "id": "2500099611930404352",
       "kind": "compute#disk",
-      "labelFingerprint": "sxn8i6ypz4=",
+      "labelFingerprint": "lll0w7pemi=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-12-26T04:31:54.990Z",
-      "lastDetachTimestamp": "2022-07-06T06:03:12.153Z",
-      "name": "bravenewt-disk1",
+      "lastAttachTimestamp": "2021-12-23T04:28:23.479Z",
+      "lastDetachTimestamp": "2022-03-22T21:29:34.586Z",
+      "name": "drowsyibis-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "313321120442",
+      "projectNumber": "224237170352",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "asia-southeast2",
+      "region": "europe-west6",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "8226008817180625920",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/bravenewt-disk1",
-      "resourceName": "bravenewt-disk1",
+      "resourceID": "2500099611930404352",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west6/disks/drowsyibis-disk1",
+      "resourceName": "drowsyibis-disk1",
       "resourceType": "compute#disk",
-      "savings": 258.245,
+      "savings": 293.163,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/bravenewt-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west6/disks/drowsyibis-disk1",
       "service": "Storage",
-      "sizeGb": 8,
+      "sizeGb": 32,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
         "environment": "prod",
-        "app": "securityModule"
+        "app": "crmModule"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/asia-southeast2/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west6/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-04-20T23:00:52.949Z",
-      "daysOld": 488,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'drowsygiraffe-disk1'.",
+      "creationTimestamp": "2021-03-16T12:37:13.233Z",
+      "daysOld": 382,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'merryhorse-disk1'.",
       "diskSizeGb": 16,
-      "id": "2221827055958411776",
+      "id": "5803503990591516672",
       "kind": "compute#disk",
-      "labelFingerprint": "iskc1p9nlc=",
+      "labelFingerprint": "4eoilh6g1z=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-07-31T06:23:17.749Z",
-      "lastDetachTimestamp": "2022-03-30T11:08:48.802Z",
-      "name": "drowsygiraffe-disk1",
+      "lastAttachTimestamp": "2022-06-13T08:36:35.777Z",
+      "lastDetachTimestamp": "2022-11-11T06:11:45.883Z",
+      "name": "merryhorse-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "941316321598",
+      "projectNumber": "526347744998",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-west1",
+      "region": "us-central1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "2221827055958411776",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/drowsygiraffe-disk1",
-      "resourceName": "drowsygiraffe-disk1",
+      "resourceID": "5803503990591516672",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/merryhorse-disk1",
+      "resourceName": "merryhorse-disk1",
       "resourceType": "compute#disk",
-      "savings": 7.574,
+      "savings": 99.709,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/drowsygiraffe-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/merryhorse-disk1",
       "service": "Storage",
       "sizeGb": 16,
       "state": "ACTIVE",
@@ -134,718 +134,268 @@
         "environment": "prod",
         "app": "paymentGateway"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-09-20T22:43:24.750Z",
-      "daysOld": 573,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'quirkyelephant-disk1'.",
-      "diskSizeGb": 32,
-      "id": "4712318280826787840",
-      "kind": "compute#disk",
-      "labelFingerprint": "i8c9b7tphp=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-12-21T04:44:54.033Z",
-      "lastDetachTimestamp": "2022-04-10T07:43:45.291Z",
-      "name": "quirkyelephant-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "390167342302",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-central1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "4712318280826787840",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/quirkyelephant-disk1",
-      "resourceName": "quirkyelephant-disk1",
-      "resourceType": "compute#disk",
-      "savings": 175.053,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/quirkyelephant-disk1",
-      "service": "Storage",
-      "sizeGb": 32,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      },
       "type": "projects/RightScale-Resat-Premium/regions/us-central1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-01-22T09:09:03.791Z",
-      "daysOld": 419,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'adventurousnewt-disk1'.",
-      "diskSizeGb": 32,
-      "id": "7233465241968007168",
-      "kind": "compute#disk",
-      "labelFingerprint": "fel07ufutj=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-02-12T15:47:43.339Z",
-      "lastDetachTimestamp": "2021-07-19T02:45:24.679Z",
-      "name": "adventurousnewt-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "365261743825",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "southamerica-east1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "7233465241968007168",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/adventurousnewt-disk1",
-      "resourceName": "adventurousnewt-disk1",
-      "resourceType": "compute#disk",
-      "savings": 63.324,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/adventurousnewt-disk1",
-      "service": "Storage",
-      "sizeGb": 32,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/southamerica-east1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-07-05T12:49:41.439Z",
-      "daysOld": 69,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'happyparrot-disk1'.",
+      "creationTimestamp": "2021-08-11T18:17:02.609Z",
+      "daysOld": 597,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'thankfulelephant-disk1'.",
       "diskSizeGb": 4,
-      "id": "2579768609537562624",
+      "id": "7567139784425509888",
       "kind": "compute#disk",
-      "labelFingerprint": "5hm60vv8wl=",
+      "labelFingerprint": "atjumtqjpp=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2022-02-24T09:16:07.458Z",
-      "lastDetachTimestamp": "2022-08-19T14:58:24.087Z",
-      "name": "happyparrot-disk1",
+      "lastAttachTimestamp": "2022-05-22T00:21:55.214Z",
+      "lastDetachTimestamp": "2022-11-25T09:57:16.480Z",
+      "name": "thankfulelephant-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "619310089176",
+      "projectNumber": "197254677842",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
       "region": "europe-west1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "2579768609537562624",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west1/disks/happyparrot-disk1",
-      "resourceName": "happyparrot-disk1",
+      "resourceID": "7567139784425509888",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west1/disks/thankfulelephant-disk1",
+      "resourceName": "thankfulelephant-disk1",
       "resourceType": "compute#disk",
-      "savings": 231.294,
+      "savings": 520.749,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west1/disks/happyparrot-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west1/disks/thankfulelephant-disk1",
       "service": "Storage",
       "sizeGb": 4,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
         "environment": "prod",
-        "app": "reportingService"
+        "app": "inventoryManagement"
       },
       "type": "projects/RightScale-Resat-Premium/regions/europe-west1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-04-11T18:16:04.444Z",
-      "daysOld": 604,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'lazyoctopus-disk1'.",
-      "diskSizeGb": 16,
-      "id": "1562568117769540608",
+      "creationTimestamp": "2021-03-21T00:20:57.444Z",
+      "daysOld": 127,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'thankfulquail-disk1'.",
+      "diskSizeGb": 128,
+      "id": "1845318924919005952",
       "kind": "compute#disk",
-      "labelFingerprint": "gs0vxao4ih=",
+      "labelFingerprint": "tjp0tckcmek=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-10-09T20:57:15.753Z",
-      "lastDetachTimestamp": "2022-09-15T13:22:29.701Z",
-      "name": "lazyoctopus-disk1",
+      "lastAttachTimestamp": "2021-07-28T14:02:25.682Z",
+      "lastDetachTimestamp": "2021-10-13T14:22:09.522Z",
+      "name": "thankfulquail-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "974932611228",
+      "projectNumber": "87182865909",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "europe-west6",
+      "region": "southamerica-east1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "1562568117769540608",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west6/disks/lazyoctopus-disk1",
-      "resourceName": "lazyoctopus-disk1",
+      "resourceID": "1845318924919005952",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/thankfulquail-disk1",
+      "resourceName": "thankfulquail-disk1",
       "resourceType": "compute#disk",
-      "savings": 6.751,
+      "savings": 40.754,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west6/disks/lazyoctopus-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/thankfulquail-disk1",
       "service": "Storage",
-      "sizeGb": 16,
+      "sizeGb": 128,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
+        "environment": "prod",
+        "app": "crmModule"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/europe-west6/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/southamerica-east1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-06-03T15:37:00.561Z",
-      "daysOld": 955,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'quirkyowl-disk1'.",
-      "diskSizeGb": 64,
-      "id": "5906807840126739456",
-      "kind": "compute#disk",
-      "labelFingerprint": "kmq2tt6jfuk=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-10-04T00:28:46.033Z",
-      "lastDetachTimestamp": "2022-05-02T19:26:51.079Z",
-      "name": "quirkyowl-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "866438891780",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "europe-west4",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "5906807840126739456",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west4/disks/quirkyowl-disk1",
-      "resourceName": "quirkyowl-disk1",
-      "resourceType": "compute#disk",
-      "savings": 89.842,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west4/disks/quirkyowl-disk1",
-      "service": "Storage",
-      "sizeGb": 64,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/europe-west4/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2022-05-26T00:53:53.716Z",
-      "daysOld": 571,
+      "creationTimestamp": "2021-04-27T20:17:12.360Z",
+      "daysOld": 171,
       "description": "Save cost by snapshotting and then deleting idle persistent disk 'excitedkangaroo-disk1'.",
       "diskSizeGb": 128,
-      "id": "3103221731098757632",
+      "id": "3804328411199811072",
       "kind": "compute#disk",
-      "labelFingerprint": "zra7cxp8hw=",
+      "labelFingerprint": "dqtatdawxt=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2022-11-13T14:34:29.825Z",
-      "lastDetachTimestamp": "2022-11-19T23:11:32.575Z",
+      "lastAttachTimestamp": "2021-10-30T15:17:38.279Z",
+      "lastDetachTimestamp": "2022-07-12T16:20:25.346Z",
       "name": "excitedkangaroo-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "563621618923",
+      "projectNumber": "452437798027",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "asia-southeast2",
+      "region": "europe-west6",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "3103221731098757632",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/excitedkangaroo-disk1",
+      "resourceID": "3804328411199811072",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west6/disks/excitedkangaroo-disk1",
       "resourceName": "excitedkangaroo-disk1",
       "resourceType": "compute#disk",
-      "savings": 854.19,
+      "savings": 605.748,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/excitedkangaroo-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west6/disks/excitedkangaroo-disk1",
       "service": "Storage",
       "sizeGb": 128,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/asia-southeast2/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-01-09T09:23:38.520Z",
-      "daysOld": 236,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'excitedsnake-disk1'.",
-      "diskSizeGb": 512,
-      "id": "5531688123582563328",
-      "kind": "compute#disk",
-      "labelFingerprint": "xwz5ya82sh=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-04-08T19:53:36.012Z",
-      "lastDetachTimestamp": "2022-06-28T21:33:57.353Z",
-      "name": "excitedsnake-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "523525330948",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-west1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "5531688123582563328",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/excitedsnake-disk1",
-      "resourceName": "excitedsnake-disk1",
-      "resourceType": "compute#disk",
-      "savings": 463.439,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/excitedsnake-disk1",
-      "service": "Storage",
-      "sizeGb": 512,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-06-30T04:33:49.488Z",
-      "daysOld": 236,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'youthfulviper-disk1'.",
-      "diskSizeGb": 1,
-      "id": "4610194486490499584",
-      "kind": "compute#disk",
-      "labelFingerprint": "yyfn1i0w3f=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2022-08-05T00:55:34.933Z",
-      "lastDetachTimestamp": "2022-12-24T06:22:10.099Z",
-      "name": "youthfulviper-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "397768877114",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "australia-southeast1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "4610194486490499584",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/youthfulviper-disk1",
-      "resourceName": "youthfulviper-disk1",
-      "resourceType": "compute#disk",
-      "savings": 3.504,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/youthfulviper-disk1",
-      "service": "Storage",
-      "sizeGb": 1,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/australia-southeast1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-07-20T10:26:50.247Z",
-      "daysOld": 270,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'excitedowl-disk1'.",
-      "diskSizeGb": 64,
-      "id": "6545827005895378944",
-      "kind": "compute#disk",
-      "labelFingerprint": "9o64asr1sm=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-10-29T14:37:56.620Z",
-      "lastDetachTimestamp": "2022-03-29T04:31:49.783Z",
-      "name": "excitedowl-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "393058782173",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "australia-southeast1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "6545827005895378944",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/excitedowl-disk1",
-      "resourceName": "excitedowl-disk1",
-      "resourceType": "compute#disk",
-      "savings": 641.59,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/excitedowl-disk1",
-      "service": "Storage",
-      "sizeGb": 64,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/australia-southeast1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-07-10T22:34:44.205Z",
-      "daysOld": 373,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'upbeatgiraffe-disk1'.",
-      "diskSizeGb": 4,
-      "id": "4235980543159585280",
-      "kind": "compute#disk",
-      "labelFingerprint": "maeg5sx0fc=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-07-30T13:15:03.319Z",
-      "lastDetachTimestamp": "2022-04-28T12:04:02.759Z",
-      "name": "upbeatgiraffe-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "381367544603",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-central1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "4235980543159585280",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/upbeatgiraffe-disk1",
-      "resourceName": "upbeatgiraffe-disk1",
-      "resourceType": "compute#disk",
-      "savings": 518.744,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/upbeatgiraffe-disk1",
-      "service": "Storage",
-      "sizeGb": 4,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
         "environment": "prod",
         "app": "securityModule"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/us-central1/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west6/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2022-08-28T04:12:13.985Z",
-      "daysOld": 483,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'upbeatjaguar-disk1'.",
-      "diskSizeGb": 32,
-      "id": "6277650371180774400",
+      "creationTimestamp": "2021-01-13T00:07:45.150Z",
+      "daysOld": 302,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'calmbear-disk1'.",
+      "diskSizeGb": 4,
+      "id": "1700744242409839616",
       "kind": "compute#disk",
-      "labelFingerprint": "z9kz5eq61y=",
+      "labelFingerprint": "v68cwopt9b=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2022-09-28T03:22:59.625Z",
-      "lastDetachTimestamp": "2022-10-04T12:10:06.684Z",
-      "name": "upbeatjaguar-disk1",
+      "lastAttachTimestamp": "2021-05-07T03:39:01.679Z",
+      "lastDetachTimestamp": "2021-11-07T21:05:17.414Z",
+      "name": "calmbear-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "333562664137",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "asia-northeast1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "6277650371180774400",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/upbeatjaguar-disk1",
-      "resourceName": "upbeatjaguar-disk1",
-      "resourceType": "compute#disk",
-      "savings": 29.477,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/upbeatjaguar-disk1",
-      "service": "Storage",
-      "sizeGb": 32,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/asia-northeast1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-02-02T16:44:02.573Z",
-      "daysOld": 713,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'quirkyibis-disk1'.",
-      "diskSizeGb": 1,
-      "id": "6848235960598005760",
-      "kind": "compute#disk",
-      "labelFingerprint": "r0w4v6xini=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-09-29T22:21:42.017Z",
-      "lastDetachTimestamp": "2022-09-16T02:39:12.599Z",
-      "name": "quirkyibis-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "83713331356",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-central1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "6848235960598005760",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/quirkyibis-disk1",
-      "resourceName": "quirkyibis-disk1",
-      "resourceType": "compute#disk",
-      "savings": 42.714,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/quirkyibis-disk1",
-      "service": "Storage",
-      "sizeGb": 1,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/us-central1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-11-17T20:54:29.511Z",
-      "daysOld": 648,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'youthfulant-disk1'.",
-      "diskSizeGb": 2,
-      "id": "9988134566695577600",
-      "kind": "compute#disk",
-      "labelFingerprint": "rrsi6yzgqjl=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2022-03-02T03:52:22.824Z",
-      "lastDetachTimestamp": "2022-12-20T16:16:51.879Z",
-      "name": "youthfulant-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "744787810808",
+      "projectNumber": "634344145172",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
       "region": "europe-west1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "9988134566695577600",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west1/disks/youthfulant-disk1",
-      "resourceName": "youthfulant-disk1",
+      "resourceID": "1700744242409839616",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west1/disks/calmbear-disk1",
+      "resourceName": "calmbear-disk1",
       "resourceType": "compute#disk",
-      "savings": 245.597,
+      "savings": 96.856,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west1/disks/youthfulant-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west1/disks/calmbear-disk1",
       "service": "Storage",
-      "sizeGb": 2,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/europe-west1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-09-07T05:30:47.571Z",
-      "daysOld": 961,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'lazydog-disk1'.",
-      "diskSizeGb": 128,
-      "id": "4199305162079727104",
-      "kind": "compute#disk",
-      "labelFingerprint": "40ixrhs3sf=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2022-01-25T01:11:41.044Z",
-      "lastDetachTimestamp": "2022-12-07T03:58:20.614Z",
-      "name": "lazydog-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "281907775645",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-west1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "4199305162079727104",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/lazydog-disk1",
-      "resourceName": "lazydog-disk1",
-      "resourceType": "compute#disk",
-      "savings": 259.83,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/lazydog-disk1",
-      "service": "Storage",
-      "sizeGb": 128,
+      "sizeGb": 4,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
         "environment": "staging",
         "app": "userManagement"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-06-18T16:00:58.112Z",
-      "daysOld": 991,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'quickwhale-disk1'.",
+      "creationTimestamp": "2021-01-23T13:07:27.906Z",
+      "daysOld": 96,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'fierceeel-disk1'.",
       "diskSizeGb": 16,
-      "id": "5822203629860920320",
+      "id": "7366882821218927616",
       "kind": "compute#disk",
-      "labelFingerprint": "n6u32dev8k=",
+      "labelFingerprint": "ie9k0sqngl=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-07-21T04:16:42.280Z",
-      "lastDetachTimestamp": "2022-08-27T20:37:00.340Z",
-      "name": "quickwhale-disk1",
+      "lastAttachTimestamp": "2021-10-30T00:56:47.075Z",
+      "lastDetachTimestamp": "2022-07-06T09:09:25.313Z",
+      "name": "fierceeel-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "392405062026",
+      "projectNumber": "596623421870",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "southamerica-east1",
+      "region": "us-central1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "5822203629860920320",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/quickwhale-disk1",
-      "resourceName": "quickwhale-disk1",
+      "resourceID": "7366882821218927616",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/fierceeel-disk1",
+      "resourceName": "fierceeel-disk1",
       "resourceType": "compute#disk",
-      "savings": 311.997,
+      "savings": 177.149,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/quickwhale-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/fierceeel-disk1",
       "service": "Storage",
       "sizeGb": 16,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
         "environment": "prod",
-        "app": "reportingService"
+        "app": "paymentGateway"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/southamerica-east1/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/us-central1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-03-20T08:31:05.685Z",
-      "daysOld": 452,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'fiercecat-disk1'.",
+      "creationTimestamp": "2021-10-12T16:23:31.856Z",
+      "daysOld": 683,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'happygoat-disk1'.",
       "diskSizeGb": 32,
-      "id": "4042600017277097984",
+      "id": "5956853373989554176",
       "kind": "compute#disk",
-      "labelFingerprint": "k9n7tbk0cj=",
+      "labelFingerprint": "tyqt76t49o=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-10-08T03:17:25.018Z",
-      "lastDetachTimestamp": "2021-11-14T18:17:21.772Z",
-      "name": "fiercecat-disk1",
+      "lastAttachTimestamp": "2022-07-20T15:46:00.992Z",
+      "lastDetachTimestamp": "2022-12-28T08:13:17.891Z",
+      "name": "happygoat-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "940155506135",
+      "projectNumber": "860244912239",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "asia-northeast1",
+      "region": "southamerica-east1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "4042600017277097984",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/fiercecat-disk1",
-      "resourceName": "fiercecat-disk1",
+      "resourceID": "5956853373989554176",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/happygoat-disk1",
+      "resourceName": "happygoat-disk1",
       "resourceType": "compute#disk",
-      "savings": 360.588,
+      "savings": 402.22,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/fiercecat-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/happygoat-disk1",
       "service": "Storage",
       "sizeGb": 32,
       "state": "ACTIVE",
@@ -854,450 +404,945 @@
         "environment": "prod",
         "app": "paymentGateway"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/asia-northeast1/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/southamerica-east1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-03-15T09:34:16.583Z",
-      "daysOld": 770,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'livelyhorse-disk1'.",
+      "creationTimestamp": "2021-06-23T07:36:46.247Z",
+      "daysOld": 551,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'adventurousurchin-disk1'.",
       "diskSizeGb": 64,
-      "id": "1609902350190823936",
+      "id": "2619631346831958528",
       "kind": "compute#disk",
-      "labelFingerprint": "1jf9pzlcbkk=",
+      "labelFingerprint": "bv5g9l9gtg=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-11-19T11:26:39.384Z",
-      "lastDetachTimestamp": "2022-11-06T07:27:21.018Z",
-      "name": "livelyhorse-disk1",
+      "lastAttachTimestamp": "2021-08-21T17:22:35.152Z",
+      "lastDetachTimestamp": "2022-07-03T21:56:13.479Z",
+      "name": "adventurousurchin-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "496116995020",
+      "projectNumber": "553965484243",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "northamerica-northeast1",
+      "region": "europe-west4",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "1609902350190823936",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/livelyhorse-disk1",
-      "resourceName": "livelyhorse-disk1",
+      "resourceID": "2619631346831958528",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west4/disks/adventurousurchin-disk1",
+      "resourceName": "adventurousurchin-disk1",
       "resourceType": "compute#disk",
-      "savings": 188.927,
+      "savings": 622.609,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/livelyhorse-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west4/disks/adventurousurchin-disk1",
       "service": "Storage",
       "sizeGb": 64,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-01-31T08:23:37.706Z",
-      "daysOld": 900,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'eagerfox-disk1'.",
-      "diskSizeGb": 2,
-      "id": "5283120573440200704",
-      "kind": "compute#disk",
-      "labelFingerprint": "8imghu4vjk=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-04-19T00:29:26.785Z",
-      "lastDetachTimestamp": "2022-03-10T09:38:34.393Z",
-      "name": "eagerfox-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "928122853617",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "northamerica-northeast1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "5283120573440200704",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/eagerfox-disk1",
-      "resourceName": "eagerfox-disk1",
-      "resourceType": "compute#disk",
-      "savings": 275.654,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/eagerfox-disk1",
-      "service": "Storage",
-      "sizeGb": 2,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-10-07T02:27:13.722Z",
-      "daysOld": 90,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'calmsnake-disk1'.",
-      "diskSizeGb": 16,
-      "id": "8919315291338951680",
-      "kind": "compute#disk",
-      "labelFingerprint": "a2nyokvxw9=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2022-05-24T19:15:41.860Z",
-      "lastDetachTimestamp": "2022-09-24T08:48:20.077Z",
-      "name": "calmsnake-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "49444947721",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "europe-west1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "8919315291338951680",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west1/disks/calmsnake-disk1",
-      "resourceName": "calmsnake-disk1",
-      "resourceType": "compute#disk",
-      "savings": 178.305,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west1/disks/calmsnake-disk1",
-      "service": "Storage",
-      "sizeGb": 16,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/europe-west1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-05-08T09:23:05.601Z",
-      "daysOld": 119,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'jollyjaguar-disk1'.",
-      "diskSizeGb": 16,
-      "id": "6486782378256659456",
-      "kind": "compute#disk",
-      "labelFingerprint": "udxn594ifa=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-08-19T21:28:39.431Z",
-      "lastDetachTimestamp": "2022-04-20T00:48:22.114Z",
-      "name": "jollyjaguar-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "477138822663",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "northamerica-northeast1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "6486782378256659456",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/jollyjaguar-disk1",
-      "resourceName": "jollyjaguar-disk1",
-      "resourceType": "compute#disk",
-      "savings": 164.924,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/jollyjaguar-disk1",
-      "service": "Storage",
-      "sizeGb": 16,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
         "environment": "staging",
         "app": "invoiceProcessing"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west4/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-03-17T19:17:03.077Z",
-      "daysOld": 559,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'thankfulnewt-disk1'.",
-      "diskSizeGb": 16,
-      "id": "3808342970990752256",
-      "kind": "compute#disk",
-      "labelFingerprint": "bko3dlmhrd=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2022-04-11T19:43:13.919Z",
-      "lastDetachTimestamp": "2022-09-16T00:33:45.591Z",
-      "name": "thankfulnewt-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "812628930468",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-central1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "3808342970990752256",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/thankfulnewt-disk1",
-      "resourceName": "thankfulnewt-disk1",
-      "resourceType": "compute#disk",
-      "savings": 244.498,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/thankfulnewt-disk1",
-      "service": "Storage",
-      "sizeGb": 16,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/us-central1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-10-19T03:22:58.058Z",
-      "daysOld": 226,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'upbeatgiraffe-disk1'.",
-      "diskSizeGb": 8,
-      "id": "3867259232113042944",
-      "kind": "compute#disk",
-      "labelFingerprint": "pcowdsi4fe=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2022-01-01T01:47:48.726Z",
-      "lastDetachTimestamp": "2022-02-01T15:44:36.108Z",
-      "name": "upbeatgiraffe-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "753552275523",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "southamerica-east1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "3867259232113042944",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/upbeatgiraffe-disk1",
-      "resourceName": "upbeatgiraffe-disk1",
-      "resourceType": "compute#disk",
-      "savings": 563.381,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/upbeatgiraffe-disk1",
-      "service": "Storage",
-      "sizeGb": 8,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/southamerica-east1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-09-11T21:04:36.232Z",
-      "daysOld": 833,
+      "creationTimestamp": "2021-01-03T14:25:04.531Z",
+      "daysOld": 19,
       "description": "Save cost by snapshotting and then deleting idle persistent disk 'quirkybear-disk1'.",
-      "diskSizeGb": 256,
-      "id": "423206082198745984",
+      "diskSizeGb": 4,
+      "id": "7437439167172294656",
       "kind": "compute#disk",
-      "labelFingerprint": "cbwlbv5qvs=",
+      "labelFingerprint": "8r46ucsr8a=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-11-23T12:36:42.018Z",
-      "lastDetachTimestamp": "2022-09-11T17:29:33.857Z",
+      "lastAttachTimestamp": "2022-02-11T14:00:26.251Z",
+      "lastDetachTimestamp": "2022-11-06T11:57:39.821Z",
       "name": "quirkybear-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "113394056682",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "europe-west6",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "423206082198745984",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west6/disks/quirkybear-disk1",
-      "resourceName": "quirkybear-disk1",
-      "resourceType": "compute#disk",
-      "savings": 480.118,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west6/disks/quirkybear-disk1",
-      "service": "Storage",
-      "sizeGb": 256,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/europe-west6/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-01-24T03:09:44.456Z",
-      "daysOld": 225,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'excitedsnake-disk1'.",
-      "diskSizeGb": 128,
-      "id": "4716567930867552256",
-      "kind": "compute#disk",
-      "labelFingerprint": "jfhbfaunt7h=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-02-23T04:39:24.029Z",
-      "lastDetachTimestamp": "2021-09-06T00:08:20.835Z",
-      "name": "excitedsnake-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "879128584125",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "australia-southeast1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "4716567930867552256",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/excitedsnake-disk1",
-      "resourceName": "excitedsnake-disk1",
-      "resourceType": "compute#disk",
-      "savings": 308.348,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/excitedsnake-disk1",
-      "service": "Storage",
-      "sizeGb": 128,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/australia-southeast1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-09-19T18:39:58.127Z",
-      "daysOld": 639,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'drowsydog-disk1'.",
-      "diskSizeGb": 16,
-      "id": "2107485472024290816",
-      "kind": "compute#disk",
-      "labelFingerprint": "3yimd4qn7ph=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2022-04-21T08:08:49.130Z",
-      "lastDetachTimestamp": "2022-12-01T01:31:15.020Z",
-      "name": "drowsydog-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "488720392012",
+      "projectNumber": "165638676623",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
       "region": "europe-west4",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "2107485472024290816",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west4/disks/drowsydog-disk1",
-      "resourceName": "drowsydog-disk1",
+      "resourceID": "7437439167172294656",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west4/disks/quirkybear-disk1",
+      "resourceName": "quirkybear-disk1",
       "resourceType": "compute#disk",
-      "savings": 28.427,
+      "savings": 1.355,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west4/disks/drowsydog-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west4/disks/quirkybear-disk1",
       "service": "Storage",
-      "sizeGb": 16,
+      "sizeGb": 4,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
-        "environment": "prod",
-        "app": "securityModule"
+        "environment": "dev",
+        "app": "emailService"
       },
       "type": "projects/RightScale-Resat-Premium/regions/europe-west4/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2022-04-04T08:08:44.464Z",
-      "daysOld": 764,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'happysnake-disk1'.",
-      "diskSizeGb": 64,
-      "id": "747398705528214912",
+      "creationTimestamp": "2021-03-06T14:08:30.442Z",
+      "daysOld": 979,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'innocentsnake-disk1'.",
+      "diskSizeGb": 128,
+      "id": "9987871070873094144",
       "kind": "compute#disk",
-      "labelFingerprint": "cd6r6x4neu=",
+      "labelFingerprint": "z1prz6lz3x=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2022-07-20T03:48:34.913Z",
-      "lastDetachTimestamp": "2022-11-06T12:22:48.992Z",
-      "name": "happysnake-disk1",
+      "lastAttachTimestamp": "2021-03-26T08:04:42.520Z",
+      "lastDetachTimestamp": "2022-08-14T18:37:34.329Z",
+      "name": "innocentsnake-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "581175941628",
+      "projectNumber": "818473519281",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "northamerica-northeast1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "9987871070873094144",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/innocentsnake-disk1",
+      "resourceName": "innocentsnake-disk1",
+      "resourceType": "compute#disk",
+      "savings": 202.82,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/innocentsnake-disk1",
+      "service": "Storage",
+      "sizeGb": 128,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-06-09T21:37:13.576Z",
+      "daysOld": 625,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'bravemouse-disk1'.",
+      "diskSizeGb": 128,
+      "id": "5382822090944223232",
+      "kind": "compute#disk",
+      "labelFingerprint": "v8z7y1ya16=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-09-30T19:58:17.513Z",
+      "lastDetachTimestamp": "2022-10-20T04:25:22.975Z",
+      "name": "bravemouse-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "773766595799",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "asia-northeast1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "5382822090944223232",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/bravemouse-disk1",
+      "resourceName": "bravemouse-disk1",
+      "resourceType": "compute#disk",
+      "savings": 593.95,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/bravemouse-disk1",
+      "service": "Storage",
+      "sizeGb": 128,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/asia-northeast1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-06-30T03:01:04.195Z",
+      "daysOld": 838,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'quirkyviper-disk1'.",
+      "diskSizeGb": 1,
+      "id": "558209105093767616",
+      "kind": "compute#disk",
+      "labelFingerprint": "novm2y78kt=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2021-09-27T14:03:03.011Z",
+      "lastDetachTimestamp": "2022-11-04T23:42:12.611Z",
+      "name": "quirkyviper-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "965810379808",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "asia-northeast1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "558209105093767616",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/quirkyviper-disk1",
+      "resourceName": "quirkyviper-disk1",
+      "resourceType": "compute#disk",
+      "savings": 259.129,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/quirkyviper-disk1",
+      "service": "Storage",
+      "sizeGb": 1,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/asia-northeast1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-04-18T10:36:55.191Z",
+      "daysOld": 527,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'fierceant-disk1'.",
+      "diskSizeGb": 1,
+      "id": "2534681079439833088",
+      "kind": "compute#disk",
+      "labelFingerprint": "07ehh6b36h=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2021-07-20T05:26:24.946Z",
+      "lastDetachTimestamp": "2021-09-22T15:38:07.451Z",
+      "name": "fierceant-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "227607593583",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "asia-southeast2",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "2534681079439833088",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/fierceant-disk1",
+      "resourceName": "fierceant-disk1",
+      "resourceType": "compute#disk",
+      "savings": 238.219,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/fierceant-disk1",
+      "service": "Storage",
+      "sizeGb": 1,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/asia-southeast2/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-07-03T06:12:57.654Z",
+      "daysOld": 103,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'sillyxerus-disk1'.",
+      "diskSizeGb": 64,
+      "id": "7531867331793555456",
+      "kind": "compute#disk",
+      "labelFingerprint": "9b5fer8f9o=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2021-07-25T21:02:15.456Z",
+      "lastDetachTimestamp": "2022-08-26T02:23:24.744Z",
+      "name": "sillyxerus-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "11330604683",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "australia-southeast1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "7531867331793555456",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/sillyxerus-disk1",
+      "resourceName": "sillyxerus-disk1",
+      "resourceType": "compute#disk",
+      "savings": 236.588,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/sillyxerus-disk1",
+      "service": "Storage",
+      "sizeGb": 64,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/australia-southeast1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-06-24T05:07:28.716Z",
+      "daysOld": 399,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'innocentxerus-disk1'.",
+      "diskSizeGb": 1,
+      "id": "2425920107689201152",
+      "kind": "compute#disk",
+      "labelFingerprint": "9vavnx69se=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2021-08-25T13:12:27.541Z",
+      "lastDetachTimestamp": "2022-10-08T15:02:19.730Z",
+      "name": "innocentxerus-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "695130362877",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "europe-west4",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "2425920107689201152",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west4/disks/innocentxerus-disk1",
+      "resourceName": "innocentxerus-disk1",
+      "resourceType": "compute#disk",
+      "savings": 404.613,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west4/disks/innocentxerus-disk1",
+      "service": "Storage",
+      "sizeGb": 1,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west4/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-02-16T03:03:59.066Z",
+      "daysOld": 953,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'nervousnewt-disk1'.",
+      "diskSizeGb": 128,
+      "id": "3044023987149360128",
+      "kind": "compute#disk",
+      "labelFingerprint": "8zk583qsv3=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-01-05T16:43:47.895Z",
+      "lastDetachTimestamp": "2022-06-10T22:13:19.608Z",
+      "name": "nervousnewt-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "566511019453",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "europe-west4",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "3044023987149360128",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west4/disks/nervousnewt-disk1",
+      "resourceName": "nervousnewt-disk1",
+      "resourceType": "compute#disk",
+      "savings": 554.148,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west4/disks/nervousnewt-disk1",
+      "service": "Storage",
+      "sizeGb": 128,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west4/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-08-18T00:49:38.918Z",
+      "daysOld": 378,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'eagerbear-disk1'.",
+      "diskSizeGb": 128,
+      "id": "7566494316893168640",
+      "kind": "compute#disk",
+      "labelFingerprint": "aott9liwtr=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2021-12-12T05:56:13.669Z",
+      "lastDetachTimestamp": "2022-06-02T09:06:42.761Z",
+      "name": "eagerbear-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "519177599707",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "asia-northeast1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "7566494316893168640",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/eagerbear-disk1",
+      "resourceName": "eagerbear-disk1",
+      "resourceType": "compute#disk",
+      "savings": 7.398,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/eagerbear-disk1",
+      "service": "Storage",
+      "sizeGb": 128,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/asia-northeast1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-03-13T15:13:25.024Z",
+      "daysOld": 89,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'innocentnewt-disk1'.",
+      "diskSizeGb": 64,
+      "id": "1695879801403659008",
+      "kind": "compute#disk",
+      "labelFingerprint": "87hn01251x=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2021-07-04T20:16:47.519Z",
+      "lastDetachTimestamp": "2022-01-27T16:40:37.183Z",
+      "name": "innocentnewt-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "102590109906",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "europe-west1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "1695879801403659008",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west1/disks/innocentnewt-disk1",
+      "resourceName": "innocentnewt-disk1",
+      "resourceType": "compute#disk",
+      "savings": 111.647,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west1/disks/innocentnewt-disk1",
+      "service": "Storage",
+      "sizeGb": 64,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-01-30T09:31:03.785Z",
+      "daysOld": 599,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'vivaciousquail-disk1'.",
+      "diskSizeGb": 1,
+      "id": "7562433538044745728",
+      "kind": "compute#disk",
+      "labelFingerprint": "9iwmgsqpz7=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2021-04-24T05:39:19.710Z",
+      "lastDetachTimestamp": "2021-08-12T23:16:38.957Z",
+      "name": "vivaciousquail-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "216061303633",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
       "region": "europe-west6",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "747398705528214912",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west6/disks/happysnake-disk1",
-      "resourceName": "happysnake-disk1",
+      "resourceID": "7562433538044745728",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west6/disks/vivaciousquail-disk1",
+      "resourceName": "vivaciousquail-disk1",
       "resourceType": "compute#disk",
-      "savings": 527.646,
+      "savings": 889.446,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west6/disks/happysnake-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west6/disks/vivaciousquail-disk1",
       "service": "Storage",
-      "sizeGb": 64,
+      "sizeGb": 1,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west6/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-10-06T04:58:25.125Z",
+      "daysOld": 998,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'fiercegoat-disk1'.",
+      "diskSizeGb": 512,
+      "id": "4739525688892354560",
+      "kind": "compute#disk",
+      "labelFingerprint": "cw4fohvnlqi=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-03-02T08:28:43.928Z",
+      "lastDetachTimestamp": "2022-09-19T01:14:03.763Z",
+      "name": "fiercegoat-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "869937183542",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "europe-west6",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "4739525688892354560",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west6/disks/fiercegoat-disk1",
+      "resourceName": "fiercegoat-disk1",
+      "resourceType": "compute#disk",
+      "savings": 227.616,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west6/disks/fiercegoat-disk1",
+      "service": "Storage",
+      "sizeGb": 512,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west6/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-08-18T14:43:13.664Z",
+      "daysOld": 897,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'quickhorse-disk1'.",
+      "diskSizeGb": 32,
+      "id": "6904713866815362048",
+      "kind": "compute#disk",
+      "labelFingerprint": "h7vp2uuv16=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2021-10-25T16:30:35.908Z",
+      "lastDetachTimestamp": "2021-12-27T15:21:15.725Z",
+      "name": "quickhorse-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "188953710922",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "us-west1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "6904713866815362048",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/quickhorse-disk1",
+      "resourceName": "quickhorse-disk1",
+      "resourceType": "compute#disk",
+      "savings": 443.63,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/quickhorse-disk1",
+      "service": "Storage",
+      "sizeGb": 32,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-05-20T01:58:56.511Z",
+      "daysOld": 601,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'proudcat-disk1'.",
+      "diskSizeGb": 32,
+      "id": "9367349683790168064",
+      "kind": "compute#disk",
+      "labelFingerprint": "b84j29xoen=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-06-21T15:43:32.512Z",
+      "lastDetachTimestamp": "2022-09-20T10:11:48.555Z",
+      "name": "proudcat-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "593094464231",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "us-central1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "9367349683790168064",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/proudcat-disk1",
+      "resourceName": "proudcat-disk1",
+      "resourceType": "compute#disk",
+      "savings": 181.745,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/proudcat-disk1",
+      "service": "Storage",
+      "sizeGb": 32,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/us-central1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-03-01T03:03:22.982Z",
+      "daysOld": 129,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'thankfulquail-disk1'.",
+      "diskSizeGb": 2,
+      "id": "8644305577121334272",
+      "kind": "compute#disk",
+      "labelFingerprint": "23kvbq58a1=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-01-29T00:58:19.053Z",
+      "lastDetachTimestamp": "2022-03-02T14:11:34.149Z",
+      "name": "thankfulquail-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "648665187479",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "australia-southeast1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "8644305577121334272",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/thankfulquail-disk1",
+      "resourceName": "thankfulquail-disk1",
+      "resourceType": "compute#disk",
+      "savings": 12.009,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/thankfulquail-disk1",
+      "service": "Storage",
+      "sizeGb": 2,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/australia-southeast1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-08-11T17:32:14.698Z",
+      "daysOld": 914,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'innocenthorse-disk1'.",
+      "diskSizeGb": 2,
+      "id": "957870941749723264",
+      "kind": "compute#disk",
+      "labelFingerprint": "28nzvrlgrl=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-02-18T13:54:37.738Z",
+      "lastDetachTimestamp": "2022-03-16T05:27:41.034Z",
+      "name": "innocenthorse-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "795589095081",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "northamerica-northeast1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "957870941749723264",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/innocenthorse-disk1",
+      "resourceName": "innocenthorse-disk1",
+      "resourceType": "compute#disk",
+      "savings": 19.026,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/innocenthorse-disk1",
+      "service": "Storage",
+      "sizeGb": 2,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-02-11T14:32:12.692Z",
+      "daysOld": 435,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'wittynewt-disk1'.",
+      "diskSizeGb": 512,
+      "id": "9130330375707633664",
+      "kind": "compute#disk",
+      "labelFingerprint": "coo4sruame=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-07-03T13:52:10.990Z",
+      "lastDetachTimestamp": "2022-08-10T09:15:10.423Z",
+      "name": "wittynewt-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "594674462555",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "us-west1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "9130330375707633664",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/wittynewt-disk1",
+      "resourceName": "wittynewt-disk1",
+      "resourceType": "compute#disk",
+      "savings": 183.915,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/wittynewt-disk1",
+      "service": "Storage",
+      "sizeGb": 512,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-05-05T07:53:42.287Z",
+      "daysOld": 672,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'relievedsnake-disk1'.",
+      "diskSizeGb": 512,
+      "id": "4225537564678849536",
+      "kind": "compute#disk",
+      "labelFingerprint": "0dnycovhq5=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-01-25T12:30:38.446Z",
+      "lastDetachTimestamp": "2022-03-10T17:12:28.300Z",
+      "name": "relievedsnake-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "243332822101",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "southamerica-east1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "4225537564678849536",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/relievedsnake-disk1",
+      "resourceName": "relievedsnake-disk1",
+      "resourceType": "compute#disk",
+      "savings": 181.926,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/relievedsnake-disk1",
+      "service": "Storage",
+      "sizeGb": 512,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/southamerica-east1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-02-06T01:54:13.977Z",
+      "daysOld": 636,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'merrywhale-disk1'.",
+      "diskSizeGb": 8,
+      "id": "7095253875886309376",
+      "kind": "compute#disk",
+      "labelFingerprint": "4xkpi27smc=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-04-03T09:56:16.488Z",
+      "lastDetachTimestamp": "2022-09-17T08:45:57.017Z",
+      "name": "merrywhale-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "383520661492",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "southamerica-east1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "7095253875886309376",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/merrywhale-disk1",
+      "resourceName": "merrywhale-disk1",
+      "resourceType": "compute#disk",
+      "savings": 108.473,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/merrywhale-disk1",
+      "service": "Storage",
+      "sizeGb": 8,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/southamerica-east1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2022-03-30T03:38:11.073Z",
+      "daysOld": 720,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'jollycat-disk1'.",
+      "diskSizeGb": 4,
+      "id": "4668335556523906048",
+      "kind": "compute#disk",
+      "labelFingerprint": "z5u8wyu8vq=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-07-19T12:09:13.165Z",
+      "lastDetachTimestamp": "2022-07-22T02:59:19.677Z",
+      "name": "jollycat-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "216228809807",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "europe-west6",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "4668335556523906048",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west6/disks/jollycat-disk1",
+      "resourceName": "jollycat-disk1",
+      "resourceType": "compute#disk",
+      "savings": 248.954,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west6/disks/jollycat-disk1",
+      "service": "Storage",
+      "sizeGb": 4,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
@@ -1309,308 +1354,263 @@
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-05-24T14:45:31.609Z",
-      "daysOld": 749,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'nervousyak-disk1'.",
-      "diskSizeGb": 512,
-      "id": "3196556857919661056",
+      "creationTimestamp": "2021-08-30T05:21:08.993Z",
+      "daysOld": 485,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'adventurousibis-disk1'.",
+      "diskSizeGb": 2,
+      "id": "6416603632812381184",
       "kind": "compute#disk",
-      "labelFingerprint": "pdw340yx41=",
+      "labelFingerprint": "036c95xg99=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2022-04-01T16:07:21.439Z",
-      "lastDetachTimestamp": "2022-11-05T23:23:10.601Z",
-      "name": "nervousyak-disk1",
+      "lastAttachTimestamp": "2022-03-31T16:23:55.380Z",
+      "lastDetachTimestamp": "2022-06-12T16:55:36.603Z",
+      "name": "adventurousibis-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "381433126774",
+      "projectNumber": "29106997201",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-central1",
+      "region": "asia-northeast1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "3196556857919661056",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/nervousyak-disk1",
-      "resourceName": "nervousyak-disk1",
+      "resourceID": "6416603632812381184",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/adventurousibis-disk1",
+      "resourceName": "adventurousibis-disk1",
       "resourceType": "compute#disk",
-      "savings": 176.981,
+      "savings": 335.212,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/nervousyak-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/adventurousibis-disk1",
       "service": "Storage",
-      "sizeGb": 512,
+      "sizeGb": 2,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
+        "environment": "staging",
+        "app": "userManagement"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/us-central1/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/asia-northeast1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-07-10T00:25:15.797Z",
-      "daysOld": 468,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'nervousparrot-disk1'.",
-      "diskSizeGb": 8,
-      "id": "5924914060167474176",
+      "creationTimestamp": "2021-04-27T01:34:05.048Z",
+      "daysOld": 325,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'eagergoat-disk1'.",
+      "diskSizeGb": 256,
+      "id": "7582753840845706240",
       "kind": "compute#disk",
-      "labelFingerprint": "rlamyqk0bcf=",
+      "labelFingerprint": "e0plwxl27j=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2022-07-24T05:47:54.541Z",
-      "lastDetachTimestamp": "2022-08-09T12:19:00.750Z",
-      "name": "nervousparrot-disk1",
+      "lastAttachTimestamp": "2021-12-17T04:35:45.861Z",
+      "lastDetachTimestamp": "2022-07-26T00:59:05.751Z",
+      "name": "eagergoat-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "518863823434",
+      "projectNumber": "356193437235",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
       "region": "australia-southeast1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "5924914060167474176",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/nervousparrot-disk1",
-      "resourceName": "nervousparrot-disk1",
+      "resourceID": "7582753840845706240",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/eagergoat-disk1",
+      "resourceName": "eagergoat-disk1",
       "resourceType": "compute#disk",
-      "savings": 148.389,
+      "savings": 642.075,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/nervousparrot-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/eagergoat-disk1",
       "service": "Storage",
-      "sizeGb": 8,
+      "sizeGb": 256,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
         "environment": "prod",
-        "app": "inventoryManagement"
+        "app": "securityModule"
       },
       "type": "projects/RightScale-Resat-Premium/regions/australia-southeast1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-03-02T23:23:46.463Z",
-      "daysOld": 156,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'thankfulwhale-disk1'.",
-      "diskSizeGb": 128,
-      "id": "2610744180555542016",
-      "kind": "compute#disk",
-      "labelFingerprint": "1u91gee8yhk=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-03-11T07:47:31.647Z",
-      "lastDetachTimestamp": "2021-12-30T18:01:44.458Z",
-      "name": "thankfulwhale-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "1358210800",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "northamerica-northeast1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "2610744180555542016",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/thankfulwhale-disk1",
-      "resourceName": "thankfulwhale-disk1",
-      "resourceType": "compute#disk",
-      "savings": 21.139,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/thankfulwhale-disk1",
-      "service": "Storage",
-      "sizeGb": 128,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-01-27T04:04:21.319Z",
-      "daysOld": 300,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'wittyelephant-disk1'.",
+      "creationTimestamp": "2021-07-30T00:57:15.138Z",
+      "daysOld": 636,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'nervousfox-disk1'.",
       "diskSizeGb": 2,
-      "id": "9568420311609053184",
+      "id": "9918799859889092608",
       "kind": "compute#disk",
-      "labelFingerprint": "fbwfzny38v=",
+      "labelFingerprint": "9l2kfen7kk=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-07-16T18:12:56.650Z",
-      "lastDetachTimestamp": "2022-09-29T22:44:44.176Z",
-      "name": "wittyelephant-disk1",
+      "lastAttachTimestamp": "2022-01-07T17:31:55.942Z",
+      "lastDetachTimestamp": "2022-04-25T19:38:18.553Z",
+      "name": "nervousfox-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "51534726529",
+      "projectNumber": "780999542967",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
       "region": "us-west1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "9568420311609053184",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/wittyelephant-disk1",
-      "resourceName": "wittyelephant-disk1",
+      "resourceID": "9918799859889092608",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/nervousfox-disk1",
+      "resourceName": "nervousfox-disk1",
       "resourceType": "compute#disk",
-      "savings": 136.081,
+      "savings": 669.659,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/wittyelephant-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/nervousfox-disk1",
       "service": "Storage",
       "sizeGb": 2,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
-        "environment": "dev",
-        "app": "emailService"
+        "environment": "prod",
+        "app": "crmModule"
       },
       "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-02-01T08:07:36.701Z",
-      "daysOld": 889,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'excitedcat-disk1'.",
-      "diskSizeGb": 128,
-      "id": "7144661801466376192",
+      "creationTimestamp": "2022-05-27T05:01:04.867Z",
+      "daysOld": 290,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'calmsnake-disk1'.",
+      "diskSizeGb": 4,
+      "id": "6412597306357861376",
       "kind": "compute#disk",
-      "labelFingerprint": "9hh4pbdo2j=",
+      "labelFingerprint": "zs948cu9up=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2022-08-19T16:18:43.126Z",
-      "lastDetachTimestamp": "2022-09-16T04:56:09.284Z",
-      "name": "excitedcat-disk1",
+      "lastAttachTimestamp": "2022-07-02T08:18:49.879Z",
+      "lastDetachTimestamp": "2022-08-18T17:47:48.606Z",
+      "name": "calmsnake-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "365960880449",
+      "projectNumber": "755258728541",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-west1",
+      "region": "asia-southeast2",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "7144661801466376192",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/excitedcat-disk1",
-      "resourceName": "excitedcat-disk1",
+      "resourceID": "6412597306357861376",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/calmsnake-disk1",
+      "resourceName": "calmsnake-disk1",
       "resourceType": "compute#disk",
-      "savings": 264.677,
+      "savings": 112.259,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/excitedcat-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/calmsnake-disk1",
       "service": "Storage",
-      "sizeGb": 128,
+      "sizeGb": 4,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
         "environment": "prod",
-        "app": "securityModule"
+        "app": "reportingService"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/asia-southeast2/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-03-20T22:56:15.758Z",
-      "daysOld": 727,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'jovialcat-disk1'.",
+      "creationTimestamp": "2021-04-28T03:02:59.427Z",
+      "daysOld": 948,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'quickcat-disk1'.",
       "diskSizeGb": 512,
-      "id": "7515218683660163072",
+      "id": "9654997081319141376",
       "kind": "compute#disk",
-      "labelFingerprint": "zs55tz0wd8i=",
+      "labelFingerprint": "ytcysxk7lm=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-10-23T20:00:41.048Z",
-      "lastDetachTimestamp": "2022-09-08T09:11:09.467Z",
-      "name": "jovialcat-disk1",
+      "lastAttachTimestamp": "2021-04-29T13:33:52.844Z",
+      "lastDetachTimestamp": "2022-12-13T15:55:22.343Z",
+      "name": "quickcat-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "94063513878",
+      "projectNumber": "907046490905",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
       "region": "southamerica-east1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "7515218683660163072",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/jovialcat-disk1",
-      "resourceName": "jovialcat-disk1",
+      "resourceID": "9654997081319141376",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/quickcat-disk1",
+      "resourceName": "quickcat-disk1",
       "resourceType": "compute#disk",
-      "savings": 7.65,
+      "savings": 272.99,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/jovialcat-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/quickcat-disk1",
       "service": "Storage",
       "sizeGb": 512,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
-        "environment": "prod",
-        "app": "securityModule"
+        "environment": "staging",
+        "app": "invoiceProcessing"
       },
       "type": "projects/RightScale-Resat-Premium/regions/southamerica-east1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-07-30T05:25:27.881Z",
-      "daysOld": 538,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'kindowl-disk1'.",
+      "creationTimestamp": "2021-02-26T04:59:28.127Z",
+      "daysOld": 66,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'jollyquail-disk1'.",
       "diskSizeGb": 32,
-      "id": "3807016985440945152",
+      "id": "2975273829073805824",
       "kind": "compute#disk",
-      "labelFingerprint": "x8qlzwbe8y=",
+      "labelFingerprint": "t16e69jgnvg=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-08-20T22:53:41.162Z",
-      "lastDetachTimestamp": "2022-01-20T11:51:32.484Z",
-      "name": "kindowl-disk1",
+      "lastAttachTimestamp": "2021-03-25T18:37:25.279Z",
+      "lastDetachTimestamp": "2021-06-30T08:47:58.939Z",
+      "name": "jollyquail-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "353172808315",
+      "projectNumber": "535297747027",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "australia-southeast1",
+      "region": "us-west1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "3807016985440945152",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/kindowl-disk1",
-      "resourceName": "kindowl-disk1",
+      "resourceID": "2975273829073805824",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/jollyquail-disk1",
+      "resourceName": "jollyquail-disk1",
       "resourceType": "compute#disk",
-      "savings": 63.779,
+      "savings": 750.91,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/australia-southeast1/disks/kindowl-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/jollyquail-disk1",
       "service": "Storage",
       "sizeGb": 32,
       "state": "ACTIVE",
@@ -1619,43 +1619,358 @@
         "environment": "prod",
         "app": "paymentGateway"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/australia-southeast1/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-07-17T07:59:29.282Z",
-      "daysOld": 452,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'adventurousfox-disk1'.",
-      "diskSizeGb": 16,
-      "id": "9077422018143128576",
+      "creationTimestamp": "2021-05-11T21:10:55.097Z",
+      "daysOld": 454,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'obedientviper-disk1'.",
+      "diskSizeGb": 256,
+      "id": "2521982945637604352",
       "kind": "compute#disk",
-      "labelFingerprint": "bmhogtd2ib=",
+      "labelFingerprint": "7n1if4a3u7=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-12-17T18:21:51.487Z",
-      "lastDetachTimestamp": "2022-02-15T12:50:58.982Z",
-      "name": "adventurousfox-disk1",
+      "lastAttachTimestamp": "2022-03-24T04:45:59.909Z",
+      "lastDetachTimestamp": "2022-11-22T12:17:58.878Z",
+      "name": "obedientviper-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "418645927589",
+      "projectNumber": "627365882729",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "europe-west6",
+      "region": "asia-northeast1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "9077422018143128576",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west6/disks/adventurousfox-disk1",
-      "resourceName": "adventurousfox-disk1",
+      "resourceID": "2521982945637604352",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/obedientviper-disk1",
+      "resourceName": "obedientviper-disk1",
       "resourceType": "compute#disk",
-      "savings": 275.38,
+      "savings": 59.503,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west6/disks/adventurousfox-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/obedientviper-disk1",
+      "service": "Storage",
+      "sizeGb": 256,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/asia-northeast1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-04-07T03:33:29.448Z",
+      "daysOld": 599,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'relievedurchin-disk1'.",
+      "diskSizeGb": 128,
+      "id": "6642853580358218752",
+      "kind": "compute#disk",
+      "labelFingerprint": "y9waddwnnul=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-04-09T16:22:48.189Z",
+      "lastDetachTimestamp": "2022-12-29T15:08:09.081Z",
+      "name": "relievedurchin-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "259554343775",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "northamerica-northeast1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "6642853580358218752",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/relievedurchin-disk1",
+      "resourceName": "relievedurchin-disk1",
+      "resourceType": "compute#disk",
+      "savings": 532.715,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/relievedurchin-disk1",
+      "service": "Storage",
+      "sizeGb": 128,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-01-23T02:06:01.102Z",
+      "daysOld": 87,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'nervousparrot-disk1'.",
+      "diskSizeGb": 4,
+      "id": "2078234579216127232",
+      "kind": "compute#disk",
+      "labelFingerprint": "9zf8qsg604h=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2021-01-29T09:54:33.834Z",
+      "lastDetachTimestamp": "2021-06-24T07:39:37.953Z",
+      "name": "nervousparrot-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "573180392304",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "europe-west1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "2078234579216127232",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west1/disks/nervousparrot-disk1",
+      "resourceName": "nervousparrot-disk1",
+      "resourceType": "compute#disk",
+      "savings": 431.853,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west1/disks/nervousparrot-disk1",
+      "service": "Storage",
+      "sizeGb": 4,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-03-18T22:11:42.955Z",
+      "daysOld": 490,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'eagereel-disk1'.",
+      "diskSizeGb": 32,
+      "id": "8537963109293389824",
+      "kind": "compute#disk",
+      "labelFingerprint": "dkwls5q0ti=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-07-23T00:27:36.719Z",
+      "lastDetachTimestamp": "2022-10-22T07:56:14.805Z",
+      "name": "eagereel-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "854396342477",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "southamerica-east1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "8537963109293389824",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/eagereel-disk1",
+      "resourceName": "eagereel-disk1",
+      "resourceType": "compute#disk",
+      "savings": 542.107,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/eagereel-disk1",
+      "service": "Storage",
+      "sizeGb": 32,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/southamerica-east1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-02-17T13:39:02.123Z",
+      "daysOld": 144,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'braveant-disk1'.",
+      "diskSizeGb": 2,
+      "id": "9241875934313576448",
+      "kind": "compute#disk",
+      "labelFingerprint": "s21oijg4q2=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-07-07T05:33:29.190Z",
+      "lastDetachTimestamp": "2022-08-08T16:52:10.982Z",
+      "name": "braveant-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "635662310745",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "asia-northeast1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "9241875934313576448",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/braveant-disk1",
+      "resourceName": "braveant-disk1",
+      "resourceType": "compute#disk",
+      "savings": 73.968,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/braveant-disk1",
+      "service": "Storage",
+      "sizeGb": 2,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/asia-northeast1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-05-06T01:45:01.674Z",
+      "daysOld": 621,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'proudibis-disk1'.",
+      "diskSizeGb": 2,
+      "id": "80075595833877248",
+      "kind": "compute#disk",
+      "labelFingerprint": "pelxefi81j=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-02-08T10:51:05.353Z",
+      "lastDetachTimestamp": "2022-10-13T15:26:13.292Z",
+      "name": "proudibis-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "277059640702",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "us-central1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "80075595833877248",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/proudibis-disk1",
+      "resourceName": "proudibis-disk1",
+      "resourceType": "compute#disk",
+      "savings": 159.036,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/proudibis-disk1",
+      "service": "Storage",
+      "sizeGb": 2,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/us-central1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2022-02-25T19:58:28.452Z",
+      "daysOld": 907,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'drowsyant-disk1'.",
+      "diskSizeGb": 64,
+      "id": "9774089250720212992",
+      "kind": "compute#disk",
+      "labelFingerprint": "gw7byxkgoy=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-10-12T04:35:32.021Z",
+      "lastDetachTimestamp": "2022-12-25T17:58:43.330Z",
+      "name": "drowsyant-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "477033311116",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "asia-southeast2",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "9774089250720212992",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/drowsyant-disk1",
+      "resourceName": "drowsyant-disk1",
+      "resourceType": "compute#disk",
+      "savings": 116.599,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/drowsyant-disk1",
+      "service": "Storage",
+      "sizeGb": 64,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/asia-southeast2/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-10-25T23:45:15.487Z",
+      "daysOld": 570,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'quickrabbit-disk1'.",
+      "diskSizeGb": 16,
+      "id": "1593594844765777664",
+      "kind": "compute#disk",
+      "labelFingerprint": "c6njsc6q9v=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2022-04-21T04:40:14.787Z",
+      "lastDetachTimestamp": "2022-05-28T09:12:34.934Z",
+      "name": "quickrabbit-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "117540111588",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "us-central1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "1593594844765777664",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/quickrabbit-disk1",
+      "resourceName": "quickrabbit-disk1",
+      "resourceType": "compute#disk",
+      "savings": 116.172,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/quickrabbit-disk1",
       "service": "Storage",
       "sizeGb": 16,
       "state": "ACTIVE",
@@ -1664,358 +1979,133 @@
         "environment": "dev",
         "app": "emailService"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/europe-west6/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/us-central1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2022-07-10T00:43:32.932Z",
-      "daysOld": 207,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'youthfulsnake-disk1'.",
-      "diskSizeGb": 8,
-      "id": "8507485718010723328",
+      "creationTimestamp": "2021-03-07T06:23:39.848Z",
+      "daysOld": 448,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'kindelephant-disk1'.",
+      "diskSizeGb": 32,
+      "id": "5611154650624072704",
       "kind": "compute#disk",
-      "labelFingerprint": "2tv2biuwssl=",
+      "labelFingerprint": "c1vkrs3byo=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2022-11-27T03:26:25.387Z",
-      "lastDetachTimestamp": "2022-11-27T13:51:07.024Z",
-      "name": "youthfulsnake-disk1",
+      "lastAttachTimestamp": "2021-04-16T09:20:13.843Z",
+      "lastDetachTimestamp": "2022-07-17T07:14:46.073Z",
+      "name": "kindelephant-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "977216819340",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-west1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "8507485718010723328",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/youthfulsnake-disk1",
-      "resourceName": "youthfulsnake-disk1",
-      "resourceType": "compute#disk",
-      "savings": 136.242,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/youthfulsnake-disk1",
-      "service": "Storage",
-      "sizeGb": 8,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-04-28T11:00:00.306Z",
-      "daysOld": 963,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'adventuroussnake-disk1'.",
-      "diskSizeGb": 8,
-      "id": "11181105002373570",
-      "kind": "compute#disk",
-      "labelFingerprint": "zc1xnj06v1f=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-05-04T07:44:27.533Z",
-      "lastDetachTimestamp": "2022-10-12T15:07:24.004Z",
-      "name": "adventuroussnake-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "531898683208",
+      "projectNumber": "845086809628",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
       "region": "europe-west6",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "11181105002373570",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west6/disks/adventuroussnake-disk1",
-      "resourceName": "adventuroussnake-disk1",
+      "resourceID": "5611154650624072704",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west6/disks/kindelephant-disk1",
+      "resourceName": "kindelephant-disk1",
       "resourceType": "compute#disk",
-      "savings": 101.646,
+      "savings": 643.485,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west6/disks/adventuroussnake-disk1",
-      "service": "Storage",
-      "sizeGb": 8,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/europe-west6/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-12-12T14:56:08.806Z",
-      "daysOld": 616,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'gentlexerus-disk1'.",
-      "diskSizeGb": 4,
-      "id": "738616340328033280",
-      "kind": "compute#disk",
-      "labelFingerprint": "959pox8tj3=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2022-04-27T21:29:37.554Z",
-      "lastDetachTimestamp": "2022-07-07T10:12:00.195Z",
-      "name": "gentlexerus-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "119510128963",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "asia-northeast1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "738616340328033280",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/gentlexerus-disk1",
-      "resourceName": "gentlexerus-disk1",
-      "resourceType": "compute#disk",
-      "savings": 71.728,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-northeast1/disks/gentlexerus-disk1",
-      "service": "Storage",
-      "sizeGb": 4,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/asia-northeast1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-09-11T19:25:03.398Z",
-      "daysOld": 456,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'lazyrabbit-disk1'.",
-      "diskSizeGb": 32,
-      "id": "2158520031079098624",
-      "kind": "compute#disk",
-      "labelFingerprint": "mt0f7mznef=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-11-30T03:40:59.860Z",
-      "lastDetachTimestamp": "2022-11-01T21:10:54.647Z",
-      "name": "lazyrabbit-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "712699522511",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-west1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "2158520031079098624",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/lazyrabbit-disk1",
-      "resourceName": "lazyrabbit-disk1",
-      "resourceType": "compute#disk",
-      "savings": 103.47,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/lazyrabbit-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west6/disks/kindelephant-disk1",
       "service": "Storage",
       "sizeGb": 32,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
         "environment": "prod",
-        "app": "inventoryManagement"
+        "app": "crmModule"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west6/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-07-10T17:17:44.746Z",
-      "daysOld": 434,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'adventurouslion-disk1'.",
-      "diskSizeGb": 1,
-      "id": "1690099127783717376",
+      "creationTimestamp": "2021-10-17T17:31:45.034Z",
+      "daysOld": 810,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'thankfulviper-disk1'.",
+      "diskSizeGb": 128,
+      "id": "393158532468511616",
       "kind": "compute#disk",
-      "labelFingerprint": "t43a0l4vht=",
+      "labelFingerprint": "rep9ym4rej=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-11-02T21:32:24.700Z",
-      "lastDetachTimestamp": "2022-05-31T20:33:56.177Z",
-      "name": "adventurouslion-disk1",
+      "lastAttachTimestamp": "2021-12-01T11:38:03.178Z",
+      "lastDetachTimestamp": "2022-06-08T14:04:01.077Z",
+      "name": "thankfulviper-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "835535617244",
+      "projectNumber": "379330128967",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-central1",
+      "region": "europe-west1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "1690099127783717376",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/adventurouslion-disk1",
-      "resourceName": "adventurouslion-disk1",
+      "resourceID": "393158532468511616",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west1/disks/thankfulviper-disk1",
+      "resourceName": "thankfulviper-disk1",
       "resourceType": "compute#disk",
-      "savings": 115.857,
+      "savings": 251.38,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/adventurouslion-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west1/disks/thankfulviper-disk1",
       "service": "Storage",
-      "sizeGb": 1,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/us-central1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-02-10T10:20:40.414Z",
-      "daysOld": 89,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'upbeatant-disk1'.",
-      "diskSizeGb": 8,
-      "id": "7269920465693715456",
-      "kind": "compute#disk",
-      "labelFingerprint": "6ycd4avk6g=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-09-14T18:20:31.715Z",
-      "lastDetachTimestamp": "2022-12-19T13:57:15.853Z",
-      "name": "upbeatant-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "430594819929",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "southamerica-east1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "7269920465693715456",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/upbeatant-disk1",
-      "resourceName": "upbeatant-disk1",
-      "resourceType": "compute#disk",
-      "savings": 703.16,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/southamerica-east1/disks/upbeatant-disk1",
-      "service": "Storage",
-      "sizeGb": 8,
+      "sizeGb": 128,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
         "environment": "prod",
-        "app": "crmModule"
+        "app": "securityModule"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/southamerica-east1/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2022-01-03T09:56:57.085Z",
-      "daysOld": 915,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'eagerzebra-disk1'.",
-      "diskSizeGb": 512,
-      "id": "3417822087115853824",
-      "kind": "compute#disk",
-      "labelFingerprint": "28hyfukeeq=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2022-01-16T14:35:36.792Z",
-      "lastDetachTimestamp": "2022-04-21T08:03:30.656Z",
-      "name": "eagerzebra-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "207546114279",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "northamerica-northeast1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "3417822087115853824",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/eagerzebra-disk1",
-      "resourceName": "eagerzebra-disk1",
-      "resourceType": "compute#disk",
-      "savings": 23.499,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/eagerzebra-disk1",
-      "service": "Storage",
-      "sizeGb": 512,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-08-31T16:58:30.944Z",
-      "daysOld": 611,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'braveviper-disk1'.",
+      "creationTimestamp": "2021-02-21T12:11:50.286Z",
+      "daysOld": 55,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'lazypenguin-disk1'.",
       "diskSizeGb": 128,
-      "id": "8230545713183136768",
+      "id": "6847408585752932352",
       "kind": "compute#disk",
-      "labelFingerprint": "1l1bzmhzwb=",
+      "labelFingerprint": "cnqx9jand=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-09-09T00:54:32.454Z",
-      "lastDetachTimestamp": "2022-12-24T21:11:03.774Z",
-      "name": "braveviper-disk1",
+      "lastAttachTimestamp": "2022-01-19T21:52:48.288Z",
+      "lastDetachTimestamp": "2022-09-14T02:09:30.673Z",
+      "name": "lazypenguin-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "382484113043",
+      "projectNumber": "368111732867",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "northamerica-northeast1",
+      "region": "us-west1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "8230545713183136768",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/braveviper-disk1",
-      "resourceName": "braveviper-disk1",
+      "resourceID": "6847408585752932352",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/lazypenguin-disk1",
+      "resourceName": "lazypenguin-disk1",
       "resourceType": "compute#disk",
-      "savings": 206.924,
+      "savings": 195.019,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/braveviper-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/lazypenguin-disk1",
       "service": "Storage",
       "sizeGb": 128,
       "state": "ACTIVE",
@@ -2024,45 +2114,90 @@
         "environment": "prod",
         "app": "inventoryManagement"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
     },
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-10-10T11:27:55.312Z",
-      "daysOld": 362,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'fiercewhale-disk1'.",
-      "diskSizeGb": 32,
-      "id": "2309432740084882432",
+      "creationTimestamp": "2021-11-26T17:46:03.431Z",
+      "daysOld": 122,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'jovialfox-disk1'.",
+      "diskSizeGb": 512,
+      "id": "5315970440566957056",
       "kind": "compute#disk",
-      "labelFingerprint": "5euhtpbmj1=",
+      "labelFingerprint": "f28iw764vsf=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2021-12-31T01:22:46.978Z",
-      "lastDetachTimestamp": "2022-08-14T22:46:37.663Z",
-      "name": "fiercewhale-disk1",
+      "lastAttachTimestamp": "2022-10-21T20:07:05.820Z",
+      "lastDetachTimestamp": "2022-11-05T03:17:10.625Z",
+      "name": "jovialfox-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "681667933179",
+      "projectNumber": "100076315464",
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "region": "northamerica-northeast1",
+      "replicaZones": [
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
+        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
+      ],
+      "resourceID": "5315970440566957056",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/jovialfox-disk1",
+      "resourceName": "jovialfox-disk1",
+      "resourceType": "compute#disk",
+      "savings": 1.971,
+      "savingsCurrency": "US$",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/northamerica-northeast1/disks/jovialfox-disk1",
+      "service": "Storage",
+      "sizeGb": 512,
+      "state": "ACTIVE",
+      "status": "READY",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "type": "projects/RightScale-Resat-Premium/regions/northamerica-northeast1/diskTypes/pd-ssd"
+    },
+    {
+      "accountID": "rightscale.com:resat-prem",
+      "accountName": "RightScale-Resat-Premium",
+      "creationTimestamp": "2021-03-08T02:23:30.637Z",
+      "daysOld": 992,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'fiercenewt-disk1'.",
+      "diskSizeGb": 4,
+      "id": "6873416653767621632",
+      "kind": "compute#disk",
+      "labelFingerprint": "2bbllukfu8l=",
+      "labels": {
+        "goog-gke-volume": ""
+      },
+      "lastAttachTimestamp": "2021-11-28T15:57:11.923Z",
+      "lastDetachTimestamp": "2022-06-12T17:07:06.565Z",
+      "name": "fiercenewt-disk1",
+      "physicalBlockSizeBytes": "4096",
+      "primaryImpact": {
+        "category": "COST"
+      },
+      "priority": "P4",
+      "projectNumber": "425206071620",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
       "region": "us-central1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "2309432740084882432",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/fiercewhale-disk1",
-      "resourceName": "fiercewhale-disk1",
+      "resourceID": "6873416653767621632",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-central1/disks/fiercenewt-disk1",
+      "resourceName": "fiercenewt-disk1",
       "resourceType": "compute#disk",
-      "savings": 179.006,
+      "savings": 376.406,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/fiercewhale-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-central1/disks/fiercenewt-disk1",
       "service": "Storage",
-      "sizeGb": 32,
+      "sizeGb": 4,
       "state": "ACTIVE",
       "status": "READY",
       "tags": {
@@ -2074,128 +2209,38 @@
     {
       "accountID": "rightscale.com:resat-prem",
       "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-12-22T09:52:37.732Z",
-      "daysOld": 511,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'fiercegiraffe-disk1'.",
+      "creationTimestamp": "2021-12-11T21:38:13.993Z",
+      "daysOld": 124,
+      "description": "Save cost by snapshotting and then deleting idle persistent disk 'proudviper-disk1'.",
       "diskSizeGb": 32,
-      "id": "6698334997156258816",
+      "id": "1623281551541784320",
       "kind": "compute#disk",
-      "labelFingerprint": "ugia0wvvw=",
+      "labelFingerprint": "eoa3fsrbdo=",
       "labels": {
         "goog-gke-volume": ""
       },
-      "lastAttachTimestamp": "2022-03-11T11:15:40.431Z",
-      "lastDetachTimestamp": "2022-04-29T15:36:50.253Z",
-      "name": "fiercegiraffe-disk1",
+      "lastAttachTimestamp": "2021-12-15T18:45:56.015Z",
+      "lastDetachTimestamp": "2022-03-04T05:33:03.017Z",
+      "name": "proudviper-disk1",
       "physicalBlockSizeBytes": "4096",
       "primaryImpact": {
         "category": "COST"
       },
       "priority": "P4",
-      "projectNumber": "937054281653",
+      "projectNumber": "281930060039",
       "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "asia-southeast2",
+      "region": "europe-west1",
       "replicaZones": [
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
         "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
       ],
-      "resourceID": "6698334997156258816",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/fiercegiraffe-disk1",
-      "resourceName": "fiercegiraffe-disk1",
+      "resourceID": "1623281551541784320",
+      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west1/disks/proudviper-disk1",
+      "resourceName": "proudviper-disk1",
       "resourceType": "compute#disk",
-      "savings": 23.433,
+      "savings": 61.667,
       "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/fiercegiraffe-disk1",
-      "service": "Storage",
-      "sizeGb": 32,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/asia-southeast2/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-05-04T18:13:24.474Z",
-      "daysOld": 419,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'bravekangaroo-disk1'.",
-      "diskSizeGb": 1,
-      "id": "562702223717135296",
-      "kind": "compute#disk",
-      "labelFingerprint": "najc7g7h8x=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-10-20T15:34:30.821Z",
-      "lastDetachTimestamp": "2022-03-30T15:10:35.943Z",
-      "name": "bravekangaroo-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "728931876053",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "us-west1",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "562702223717135296",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/us-west1/disks/bravekangaroo-disk1",
-      "resourceName": "bravekangaroo-disk1",
-      "resourceType": "compute#disk",
-      "savings": 311.089,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/us-west1/disks/bravekangaroo-disk1",
-      "service": "Storage",
-      "sizeGb": 1,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/us-west1/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-04-16T15:04:14.802Z",
-      "daysOld": 90,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'wittyelephant-disk1'.",
-      "diskSizeGb": 32,
-      "id": "6964024516899138560",
-      "kind": "compute#disk",
-      "labelFingerprint": "pm8tjlg4nj=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2022-02-25T01:07:59.666Z",
-      "lastDetachTimestamp": "2022-08-17T04:05:47.570Z",
-      "name": "wittyelephant-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "331892201746",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "europe-west4",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "6964024516899138560",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/europe-west4/disks/wittyelephant-disk1",
-      "resourceName": "wittyelephant-disk1",
-      "resourceType": "compute#disk",
-      "savings": 874.663,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west4/disks/wittyelephant-disk1",
+      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/europe-west1/disks/proudviper-disk1",
       "service": "Storage",
       "sizeGb": 32,
       "state": "ACTIVE",
@@ -2204,52 +2249,7 @@
         "environment": "dev",
         "app": "dataAnalytics"
       },
-      "type": "projects/RightScale-Resat-Premium/regions/europe-west4/diskTypes/pd-ssd"
-    },
-    {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "creationTimestamp": "2021-11-01T07:41:17.900Z",
-      "daysOld": 285,
-      "description": "Save cost by snapshotting and then deleting idle persistent disk 'fiercezebra-disk1'.",
-      "diskSizeGb": 256,
-      "id": "8034787085735348224",
-      "kind": "compute#disk",
-      "labelFingerprint": "0778p2ssh=",
-      "labels": {
-        "goog-gke-volume": ""
-      },
-      "lastAttachTimestamp": "2021-11-16T11:27:05.967Z",
-      "lastDetachTimestamp": "2022-04-10T18:06:13.814Z",
-      "name": "fiercezebra-disk1",
-      "physicalBlockSizeBytes": "4096",
-      "primaryImpact": {
-        "category": "COST"
-      },
-      "priority": "P4",
-      "projectNumber": "941800409009",
-      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
-      "region": "asia-southeast2",
-      "replicaZones": [
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-b",
-        "https://www.googleapis.com/compute/v1/projects/ch-nonprod-devl-copabus-000001/zones/europe-west1-d"
-      ],
-      "resourceID": "8034787085735348224",
-      "resourceLink": "projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/fiercezebra-disk1",
-      "resourceName": "fiercezebra-disk1",
-      "resourceType": "compute#disk",
-      "savings": 553.711,
-      "savingsCurrency": "US$",
-      "selfLink": "https://www.googleapis.com/compute/v1/projects/RightScale-Resat-Premium/regions/asia-southeast2/disks/fiercezebra-disk1",
-      "service": "Storage",
-      "sizeGb": 256,
-      "state": "ACTIVE",
-      "status": "READY",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      },
-      "type": "projects/RightScale-Resat-Premium/regions/asia-southeast2/diskTypes/pd-ssd"
+      "type": "projects/RightScale-Resat-Premium/regions/europe-west1/diskTypes/pd-ssd"
     }
   ]
 }
