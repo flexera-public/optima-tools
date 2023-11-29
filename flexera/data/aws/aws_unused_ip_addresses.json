@@ -1,95 +1,63 @@
 {
-  "accountID": "516702013600",
+  "accountID": "665319725593",
   "ip_list": [
     {
-      "accountID": "925894598672",
-      "accountName": "excitedjaguar",
-      "allocationID": "eipalloc-136957085",
+      "accountID": "620368136857",
+      "accountName": "sillyrabbit",
+      "allocationID": "eipalloc-499715014",
       "domain": "vpc",
-      "publicIp": "62.4.44.5",
-      "region": "ap-northeast-3",
-      "resourceName": "adventurousgiraffe/zc1zj",
-      "savings": 1.025,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "accountID": "138186646095",
-      "accountName": "happyelephant",
-      "allocationID": "eipalloc-125986306",
-      "domain": "vpc",
-      "publicIp": "14.36.52.96",
-      "region": "us-east-1",
-      "resourceName": "vivaciousyak/878q",
-      "savings": 0.332,
+      "publicIp": "57.8.22.59",
+      "region": "us-east-2",
+      "resourceName": "obedientpenguin/w34r",
+      "savings": 2.694,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
         "environment": "staging",
-        "app": "userManagement"
+        "app": "invoiceProcessing"
       }
     },
     {
-      "accountID": "165283112664",
-      "accountName": "kindhorse",
-      "allocationID": "eipalloc-75509679",
+      "accountID": "665319725593",
+      "accountName": "innocentbear",
+      "allocationID": "eipalloc-008773733",
       "domain": "vpc",
-      "publicIp": "17.32.57.55",
-      "region": "eu-west-2",
-      "resourceName": "gentlegoat/gfrl",
-      "savings": 1.356,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "accountID": "138186646095",
-      "accountName": "relievedhorse",
-      "allocationID": "eipalloc-284632164",
-      "domain": "vpc",
-      "publicIp": "44.3.14.66",
+      "publicIp": "87.59.5.81",
       "region": "eu-west-1",
-      "resourceName": "lazyibis/q42f",
-      "savings": 0.766,
+      "resourceName": "upbeatdog/ha3i",
+      "savings": 3.781,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      }
+    },
+    {
+      "accountID": "999773517191",
+      "accountName": "eagerhorse",
+      "allocationID": "eipalloc-210535793",
+      "domain": "vpc",
+      "publicIp": "32.18.22.51",
+      "region": "us-east-2",
+      "resourceName": "drowsynewt/dvdl",
+      "savings": 0.244,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
         "environment": "prod",
-        "app": "inventoryManagement"
+        "app": "securityModule"
       }
     },
     {
-      "accountID": "138186646095",
-      "accountName": "vivacioussnake",
-      "allocationID": "eipalloc-928816882",
+      "accountID": "627286410625",
+      "accountName": "zealoussnake",
+      "allocationID": "eipalloc-3759475",
       "domain": "vpc",
-      "publicIp": "61.15.40.22",
-      "region": "eu-central-1",
-      "resourceName": "quickurchin/x1yk",
-      "savings": 2.867,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "accountID": "925894598672",
-      "accountName": "vivaciousowl",
-      "allocationID": "eipalloc-970846575",
-      "domain": "vpc",
-      "publicIp": "19.15.7.99",
-      "region": "eu-central-1",
-      "resourceName": "jollyjaguar/0dz5j",
-      "savings": 0.958,
+      "publicIp": "34.94.39.57",
+      "region": "eu-west-2",
+      "resourceName": "upbeatcat/3xzlf",
+      "savings": 0.849,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
@@ -99,13 +67,29 @@
     },
     {
       "accountID": "999773517191",
-      "accountName": "jollyibis",
-      "allocationID": "eipalloc-415005214",
+      "accountName": "excitedviper",
+      "allocationID": "eipalloc-40447316",
       "domain": "vpc",
-      "publicIp": "48.82.7.54",
-      "region": "us-east-1",
-      "resourceName": "drowsyzebra/xgjrj",
-      "savings": 2.413,
+      "publicIp": "50.12.77.91",
+      "region": "us-east-2",
+      "resourceName": "lazykangaroo/uyod",
+      "savings": 4.354,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      }
+    },
+    {
+      "accountID": "999773517191",
+      "accountName": "bravebear",
+      "allocationID": "eipalloc-706991617",
+      "domain": "vpc",
+      "publicIp": "14.41.92.26",
+      "region": "us-west-1",
+      "resourceName": "eagerxerus/gfd5",
+      "savings": 4.196,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
@@ -114,30 +98,94 @@
       }
     },
     {
-      "accountID": "138186646095",
-      "accountName": "jovialgoat",
-      "allocationID": "eipalloc-102131285",
+      "accountID": "665319725593",
+      "accountName": "eagermouse",
+      "allocationID": "eipalloc-939440115",
       "domain": "vpc",
-      "publicIp": "62.76.84.45",
-      "region": "us-east-2",
-      "resourceName": "adventurousjaguar/t9po",
-      "savings": 0.044,
+      "publicIp": "69.40.64.29",
+      "region": "us-east-1",
+      "resourceName": "wittyyak/vm6w",
+      "savings": 1.474,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
         "environment": "dev",
-        "app": "emailService"
+        "app": "customerSupport"
       }
     },
     {
-      "accountID": "925894598672",
-      "accountName": "quicknewt",
-      "allocationID": "eipalloc-314000506",
+      "accountID": "646728909564",
+      "accountName": "excitedeel",
+      "allocationID": "eipalloc-180294375",
       "domain": "vpc",
-      "publicIp": "8.41.79.60",
-      "region": "us-west-1",
-      "resourceName": "bravetiger/pgwk",
-      "savings": 3.195,
+      "publicIp": "77.95.30.50",
+      "region": "us-west-2",
+      "resourceName": "eagerwhale/31cq",
+      "savings": 3.067,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      }
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "calmdog",
+      "allocationID": "eipalloc-811194756",
+      "domain": "vpc",
+      "publicIp": "39.98.11.83",
+      "region": "eu-west-2",
+      "resourceName": "drowsygiraffe/3x15l",
+      "savings": 1.074,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      }
+    },
+    {
+      "accountID": "627286410625",
+      "accountName": "upbeatparrot",
+      "allocationID": "eipalloc-020116231",
+      "domain": "vpc",
+      "publicIp": "28.69.55.88",
+      "region": "us-west-2",
+      "resourceName": "upbeatelephant/trt9",
+      "savings": 0.648,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      }
+    },
+    {
+      "accountID": "138186646095",
+      "accountName": "sillysnake",
+      "allocationID": "eipalloc-018094674",
+      "domain": "vpc",
+      "publicIp": "26.73.57.52",
+      "region": "eu-west-1",
+      "resourceName": "proudelephant/jccv",
+      "savings": 5.274,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      }
+    },
+    {
+      "accountID": "646728909564",
+      "accountName": "excitedparrot",
+      "allocationID": "eipalloc-554933464",
+      "domain": "vpc",
+      "publicIp": "47.5.17.51",
+      "region": "us-west-2",
+      "resourceName": "livelydog/0hzy",
+      "savings": 0.346,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
@@ -147,77 +195,29 @@
     },
     {
       "accountID": "165283112664",
-      "accountName": "sillydog",
-      "allocationID": "eipalloc-705382121",
+      "accountName": "braveowl",
+      "allocationID": "eipalloc-454229622",
       "domain": "vpc",
-      "publicIp": "27.66.16.67",
-      "region": "us-west-2",
-      "resourceName": "quirkyviper/f61ig",
-      "savings": 4.958,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "accountID": "925894598672",
-      "accountName": "braveparrot",
-      "allocationID": "eipalloc-831609368",
-      "domain": "vpc",
-      "publicIp": "99.2.55.46",
-      "region": "us-east-1",
-      "resourceName": "proudzebra/j77n",
-      "savings": 2.204,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "accountID": "925894598672",
-      "accountName": "braveparrot",
-      "allocationID": "eipalloc-814483047",
-      "domain": "vpc",
-      "publicIp": "45.25.94.91",
+      "publicIp": "36.0.24.38",
       "region": "us-west-1",
-      "resourceName": "joviallion/vpre",
-      "savings": 1.872,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "accountID": "999773517191",
-      "accountName": "jovialdog",
-      "allocationID": "eipalloc-085099981",
-      "domain": "vpc",
-      "publicIp": "82.15.5.18",
-      "region": "eu-west-2",
-      "resourceName": "quirkykangaroo/f9r1",
-      "savings": 0.186,
+      "resourceName": "proudxerus/nkwn",
+      "savings": 0.166,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
         "environment": "dev",
-        "app": "emailService"
+        "app": "dataAnalytics"
       }
     },
     {
-      "accountID": "620368136857",
-      "accountName": "obedienthorse",
-      "allocationID": "eipalloc-862270117",
+      "accountID": "516702013600",
+      "accountName": "calmowl",
+      "allocationID": "eipalloc-696826285",
       "domain": "vpc",
-      "publicIp": "10.88.24.89",
-      "region": "us-east-2",
-      "resourceName": "livelyyak/xo93",
-      "savings": 1.693,
+      "publicIp": "9.98.46.65",
+      "region": "eu-west-1",
+      "resourceName": "upbeatzebra/fegr",
+      "savings": 4.411,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
@@ -226,30 +226,46 @@
       }
     },
     {
-      "accountID": "999773517191",
-      "accountName": "adventurousowl",
-      "allocationID": "eipalloc-761294675",
+      "accountID": "138186646095",
+      "accountName": "innocenteel",
+      "allocationID": "eipalloc-260511879",
       "domain": "vpc",
-      "publicIp": "65.88.40.63",
-      "region": "eu-central-1",
-      "resourceName": "eageribis/iet2",
-      "savings": 3.769,
+      "publicIp": "31.84.90.32",
+      "region": "us-west-2",
+      "resourceName": "gentlefox/407s",
+      "savings": 0.403,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
-        "environment": "staging",
-        "app": "userManagement"
+        "environment": "prod",
+        "app": "securityModule"
       }
     },
     {
-      "accountID": "138186646095",
-      "accountName": "happygiraffe",
-      "allocationID": "eipalloc-176352351",
+      "accountID": "665319725593",
+      "accountName": "quickoctopus",
+      "allocationID": "eipalloc-843486575",
       "domain": "vpc",
-      "publicIp": "84.69.56.31",
-      "region": "eu-central-1",
-      "resourceName": "youthfuljaguar/pfbf",
-      "savings": 0.209,
+      "publicIp": "36.80.51.77",
+      "region": "eu-west-1",
+      "resourceName": "vivaciouspenguin/fy4i",
+      "savings": 0.567,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      }
+    },
+    {
+      "accountID": "165283112664",
+      "accountName": "adventuroustiger",
+      "allocationID": "eipalloc-320444801",
+      "domain": "vpc",
+      "publicIp": "24.45.97.98",
+      "region": "ap-east-1",
+      "resourceName": "braveurchin/vptr",
+      "savings": 2.3,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
@@ -259,13 +275,93 @@
     },
     {
       "accountID": "627286410625",
-      "accountName": "kindhorse",
-      "allocationID": "eipalloc-617394785",
+      "accountName": "calmzebra",
+      "allocationID": "eipalloc-597295337",
       "domain": "vpc",
-      "publicIp": "13.12.6.16",
+      "publicIp": "79.9.44.55",
+      "region": "us-west-2",
+      "resourceName": "livelycat/6n57",
+      "savings": 2.873,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      }
+    },
+    {
+      "accountID": "138186646095",
+      "accountName": "jovialjaguar",
+      "allocationID": "eipalloc-234743238",
+      "domain": "vpc",
+      "publicIp": "69.32.74.65",
+      "region": "ap-northeast-3",
+      "resourceName": "jovialbear/k1cb",
+      "savings": 5.453,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      }
+    },
+    {
+      "accountID": "646728909564",
+      "accountName": "kindelephant",
+      "allocationID": "eipalloc-171217404",
+      "domain": "vpc",
+      "publicIp": "3.0.97.84",
       "region": "ap-east-1",
-      "resourceName": "livelyowl/x4nx",
-      "savings": 1.57,
+      "resourceName": "calmgiraffe/gr5o",
+      "savings": 5.729,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      }
+    },
+    {
+      "accountID": "165283112664",
+      "accountName": "kindzebra",
+      "allocationID": "eipalloc-773900317",
+      "domain": "vpc",
+      "publicIp": "88.35.72.91",
+      "region": "eu-central-1",
+      "resourceName": "gentlemouse/u8mm",
+      "savings": 0.183,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      }
+    },
+    {
+      "accountID": "353197488767",
+      "accountName": "fiercedog",
+      "allocationID": "eipalloc-050366435",
+      "domain": "vpc",
+      "publicIp": "29.17.99.0",
+      "region": "us-west-2",
+      "resourceName": "lazyhorse/pywk",
+      "savings": 4.992,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      }
+    },
+    {
+      "accountID": "925894598672",
+      "accountName": "excitedquail",
+      "allocationID": "eipalloc-905755098",
+      "domain": "vpc",
+      "publicIp": "29.95.4.1",
+      "region": "us-east-2",
+      "resourceName": "calmjaguar/spj7",
+      "savings": 0.306,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
@@ -274,222 +370,78 @@
       }
     },
     {
-      "accountID": "999773517191",
-      "accountName": "jovialant",
-      "allocationID": "eipalloc-656829698",
+      "accountID": "925894598672",
+      "accountName": "quirkymouse",
+      "allocationID": "eipalloc-743959087",
       "domain": "vpc",
-      "publicIp": "80.38.66.86",
-      "region": "ap-east-1",
-      "resourceName": "merryviper/abqh",
-      "savings": 3.8,
+      "publicIp": "50.87.66.53",
+      "region": "us-west-1",
+      "resourceName": "bravewhale/x1gf",
+      "savings": 1.034,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
+        "environment": "prod",
+        "app": "securityModule"
       }
     },
     {
       "accountID": "620368136857",
-      "accountName": "kindnewt",
-      "allocationID": "eipalloc-026779547",
+      "accountName": "relievedbear",
+      "allocationID": "eipalloc-262818562",
       "domain": "vpc",
-      "publicIp": "77.61.0.94",
-      "region": "ca-central-1",
-      "resourceName": "calmwhale/ovdt",
-      "savings": 2.288,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "accountID": "516702013600",
-      "accountName": "zealousnewt",
-      "allocationID": "eipalloc-620767952",
-      "domain": "vpc",
-      "publicIp": "60.97.88.93",
+      "publicIp": "33.11.34.80",
       "region": "eu-west-2",
-      "resourceName": "relievedeel/jqfh",
-      "savings": 0.812,
+      "resourceName": "sillydog/srh2",
+      "savings": 0.581,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      }
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "bravequail",
+      "allocationID": "eipalloc-107670694",
+      "domain": "vpc",
+      "publicIp": "41.41.60.82",
+      "region": "eu-central-1",
+      "resourceName": "quirkylion/5yi4h",
+      "savings": 3.805,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
         "environment": "prod",
         "app": "securityModule"
-      }
-    },
-    {
-      "accountID": "646728909564",
-      "accountName": "quickibis",
-      "allocationID": "eipalloc-385164041",
-      "domain": "vpc",
-      "publicIp": "49.36.29.56",
-      "region": "ca-central-1",
-      "resourceName": "wittytiger/7lyi",
-      "savings": 0.534,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "accountID": "165283112664",
-      "accountName": "adventurouspenguin",
-      "allocationID": "eipalloc-866073068",
-      "domain": "vpc",
-      "publicIp": "37.37.71.70",
-      "region": "ap-east-1",
-      "resourceName": "obedientsnake/gfl4",
-      "savings": 0.564,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "accountID": "646728909564",
-      "accountName": "vivaciousgiraffe",
-      "allocationID": "eipalloc-413329998",
-      "domain": "vpc",
-      "publicIp": "52.51.92.32",
-      "region": "us-west-1",
-      "resourceName": "nervousviper/0zvj",
-      "savings": 3.375,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "accountID": "138186646095",
-      "accountName": "nervousgoat",
-      "allocationID": "eipalloc-126427358",
-      "domain": "vpc",
-      "publicIp": "34.2.74.82",
-      "region": "eu-west-1",
-      "resourceName": "bravewhale/pzq7",
-      "savings": 2.519,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
       }
     },
     {
       "accountID": "925894598672",
-      "accountName": "quirkyelephant",
-      "allocationID": "eipalloc-022244217",
+      "accountName": "jollyfox",
+      "allocationID": "eipalloc-401966261",
       "domain": "vpc",
-      "publicIp": "70.7.42.72",
+      "publicIp": "45.54.47.51",
+      "region": "us-east-1",
+      "resourceName": "lazyquail/hnyt",
+      "savings": 2.383,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      }
+    },
+    {
+      "accountID": "627286410625",
+      "accountName": "wittyurchin",
+      "allocationID": "eipalloc-523062585",
+      "domain": "vpc",
+      "publicIp": "71.34.99.23",
       "region": "eu-central-1",
-      "resourceName": "innocentoctopus/xeu8f",
-      "savings": 1.495,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      }
-    },
-    {
-      "accountID": "516702013600",
-      "accountName": "zealouslion",
-      "allocationID": "eipalloc-747534179",
-      "domain": "vpc",
-      "publicIp": "20.69.42.58",
-      "region": "us-east-1",
-      "resourceName": "proudnewt/8f1i",
-      "savings": 4.228,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "accountID": "999773517191",
-      "accountName": "lazyzebra",
-      "allocationID": "eipalloc-434116799",
-      "domain": "vpc",
-      "publicIp": "81.29.24.35",
-      "region": "ap-northeast-3",
-      "resourceName": "excitedsnake/gx9wk",
-      "savings": 3.717,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "accountID": "353197488767",
-      "accountName": "sillyquail",
-      "allocationID": "eipalloc-717494788",
-      "domain": "vpc",
-      "publicIp": "33.51.26.54",
-      "region": "us-east-2",
-      "resourceName": "calmlion/s363",
-      "savings": 5.401,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "accountID": "646728909564",
-      "accountName": "quirkygoat",
-      "allocationID": "eipalloc-564550322",
-      "domain": "vpc",
-      "publicIp": "98.32.80.27",
-      "region": "eu-west-1",
-      "resourceName": "eagerowl/oeqi",
-      "savings": 0.67,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "accountID": "999773517191",
-      "accountName": "excitedkangaroo",
-      "allocationID": "eipalloc-154484915",
-      "domain": "vpc",
-      "publicIp": "17.90.78.36",
-      "region": "us-east-1",
-      "resourceName": "quirkyhorse/9llc",
-      "savings": 0.356,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "accountID": "999773517191",
-      "accountName": "excitedfox",
-      "allocationID": "eipalloc-571919594",
-      "domain": "vpc",
-      "publicIp": "67.72.74.61",
-      "region": "ap-east-1",
-      "resourceName": "obedientlion/3izw",
-      "savings": 2.024,
+      "resourceName": "calmoctopus/r303",
+      "savings": 1.333,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
@@ -498,158 +450,30 @@
       }
     },
     {
-      "accountID": "999773517191",
-      "accountName": "bravewhale",
-      "allocationID": "eipalloc-739220418",
+      "accountID": "138186646095",
+      "accountName": "innocentgiraffe",
+      "allocationID": "eipalloc-55974842",
       "domain": "vpc",
-      "publicIp": "1.57.71.96",
-      "region": "us-west-2",
-      "resourceName": "zealoussnake/y9vw",
-      "savings": 3.506,
+      "publicIp": "95.26.31.90",
+      "region": "ca-central-1",
+      "resourceName": "quickelephant/wvjrk",
+      "savings": 1.14,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
+        "environment": "dev",
+        "app": "customerSupport"
       }
     },
     {
       "accountID": "138186646095",
-      "accountName": "eagersnake",
-      "allocationID": "eipalloc-851828701",
+      "accountName": "kindmouse",
+      "allocationID": "eipalloc-829127998",
       "domain": "vpc",
-      "publicIp": "14.79.16.7",
-      "region": "ap-northeast-3",
-      "resourceName": "eagersnake/uxlq",
-      "savings": 0.315,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "accountID": "165283112664",
-      "accountName": "bravewhale",
-      "allocationID": "eipalloc-708621529",
-      "domain": "vpc",
-      "publicIp": "15.10.36.30",
-      "region": "ap-northeast-3",
-      "resourceName": "braveowl/tbe2",
-      "savings": 2.419,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "accountID": "138186646095",
-      "accountName": "thankfulyak",
-      "allocationID": "eipalloc-459949669",
-      "domain": "vpc",
-      "publicIp": "92.24.54.94",
-      "region": "us-east-1",
-      "resourceName": "excitedeel/50ial",
-      "savings": 0.488,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "accountID": "353197488767",
-      "accountName": "excitedtiger",
-      "allocationID": "eipalloc-660106907",
-      "domain": "vpc",
-      "publicIp": "28.33.99.14",
-      "region": "us-east-1",
-      "resourceName": "eagerrabbit/xru4",
-      "savings": 8.965,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "accountID": "999773517191",
-      "accountName": "innocentibis",
-      "allocationID": "eipalloc-118449473",
-      "domain": "vpc",
-      "publicIp": "67.2.4.89",
-      "region": "eu-west-2",
-      "resourceName": "drowsyjaguar/k50ti",
-      "savings": 3.514,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "accountID": "925894598672",
-      "accountName": "quickcat",
-      "allocationID": "eipalloc-871572231",
-      "domain": "vpc",
-      "publicIp": "14.81.80.77",
-      "region": "us-east-1",
-      "resourceName": "innocentwhale/mfn6",
-      "savings": 3.414,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "accountID": "646728909564",
-      "accountName": "calmwhale",
-      "allocationID": "eipalloc-794887696",
-      "domain": "vpc",
-      "publicIp": "94.50.94.49",
-      "region": "ap-east-1",
-      "resourceName": "eagerlion/v3g1",
-      "savings": 0.27,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      }
-    },
-    {
-      "accountID": "925894598672",
-      "accountName": "gentleparrot",
-      "allocationID": "eipalloc-920854135",
-      "domain": "vpc",
-      "publicIp": "0.80.16.23",
-      "region": "us-west-2",
-      "resourceName": "eagerparrot/63zk",
-      "savings": 2.562,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "accountID": "353197488767",
-      "accountName": "fierceyak",
-      "allocationID": "eipalloc-948402694",
-      "domain": "vpc",
-      "publicIp": "30.10.45.26",
+      "publicIp": "48.27.89.38",
       "region": "us-west-1",
-      "resourceName": "gentleibis/3huj",
-      "savings": 0.967,
+      "resourceName": "thankfullion/53spl",
+      "savings": 2.376,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
@@ -658,110 +482,126 @@
       }
     },
     {
-      "accountID": "165283112664",
+      "accountID": "665319725593",
+      "accountName": "sillywhale",
+      "allocationID": "eipalloc-155998864",
+      "domain": "vpc",
+      "publicIp": "9.94.44.11",
+      "region": "eu-west-1",
+      "resourceName": "gentlepenguin/u8pu",
+      "savings": 0.895,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      }
+    },
+    {
+      "accountID": "138186646095",
+      "accountName": "jollyowl",
+      "allocationID": "eipalloc-887492381",
+      "domain": "vpc",
+      "publicIp": "78.92.34.93",
+      "region": "us-east-1",
+      "resourceName": "innocentrabbit/ju2y",
+      "savings": 8.277,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      }
+    },
+    {
+      "accountID": "516702013600",
+      "accountName": "eagernewt",
+      "allocationID": "eipalloc-910055975",
+      "domain": "vpc",
+      "publicIp": "59.72.78.9",
+      "region": "us-east-2",
+      "resourceName": "excitedeel/xwfn",
+      "savings": 1.447,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      }
+    },
+    {
+      "accountID": "138186646095",
+      "accountName": "jovialelephant",
+      "allocationID": "eipalloc-297309488",
+      "domain": "vpc",
+      "publicIp": "66.66.57.69",
+      "region": "us-east-1",
+      "resourceName": "proudkangaroo/q4ha",
+      "savings": 5.904,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      }
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "nervousurchin",
+      "allocationID": "eipalloc-059799214",
+      "domain": "vpc",
+      "publicIp": "66.61.56.77",
+      "region": "ap-east-1",
+      "resourceName": "calmsnake/jrpch",
+      "savings": 1.515,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      }
+    },
+    {
+      "accountID": "353197488767",
+      "accountName": "nervousquail",
+      "allocationID": "eipalloc-965273009",
+      "domain": "vpc",
+      "publicIp": "1.13.67.5",
+      "region": "us-west-1",
+      "resourceName": "obedienteel/71sg",
+      "savings": 2.272,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      }
+    },
+    {
+      "accountID": "353197488767",
       "accountName": "obedientmouse",
-      "allocationID": "eipalloc-707417044",
+      "allocationID": "eipalloc-172785744",
       "domain": "vpc",
-      "publicIp": "26.2.94.37",
-      "region": "us-east-2",
-      "resourceName": "happyoctopus/esqn",
-      "savings": 2.313,
+      "publicIp": "45.79.15.71",
+      "region": "ca-central-1",
+      "resourceName": "calmelephant/9ivx",
+      "savings": 7.177,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
         "environment": "prod",
-        "app": "paymentGateway"
+        "app": "reportingService"
       }
     },
     {
       "accountID": "646728909564",
-      "accountName": "quirkysnake",
-      "allocationID": "eipalloc-747325069",
+      "accountName": "fierceowl",
+      "allocationID": "eipalloc-261657885",
       "domain": "vpc",
-      "publicIp": "84.4.9.59",
-      "region": "eu-west-2",
-      "resourceName": "kindoctopus/oivr",
-      "savings": 5.12,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "accountID": "353197488767",
-      "accountName": "relievedjaguar",
-      "allocationID": "eipalloc-67516164",
-      "domain": "vpc",
-      "publicIp": "40.91.61.78",
-      "region": "ap-east-1",
-      "resourceName": "quirkyzebra/p3bp",
-      "savings": 3.474,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "accountID": "627286410625",
-      "accountName": "kindoctopus",
-      "allocationID": "eipalloc-222764095",
-      "domain": "vpc",
-      "publicIp": "60.17.50.20",
-      "region": "us-west-2",
-      "resourceName": "quirkykangaroo/y4q4",
-      "savings": 0.012,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "accountID": "165283112664",
-      "accountName": "vivacioushorse",
-      "allocationID": "eipalloc-949822232",
-      "domain": "vpc",
-      "publicIp": "39.78.18.94",
-      "region": "us-east-2",
-      "resourceName": "happybear/wgf",
-      "savings": 1.191,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "accountID": "138186646095",
-      "accountName": "calmbear",
-      "allocationID": "eipalloc-570302351",
-      "domain": "vpc",
-      "publicIp": "55.66.75.94",
-      "region": "eu-west-2",
-      "resourceName": "bravedog/ywd",
-      "savings": 0.053,
-      "savingsCurrency": "$",
-      "service": "EC2",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "accountID": "165283112664",
-      "accountName": "youthfulowl",
-      "allocationID": "eipalloc-774485864",
-      "domain": "vpc",
-      "publicIp": "46.64.1.74",
-      "region": "us-west-2",
-      "resourceName": "kindsnake/ug4ji",
-      "savings": 3.267,
+      "publicIp": "95.59.12.53",
+      "region": "eu-west-1",
+      "resourceName": "adventurousowl/jkp1h",
+      "savings": 3.026,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
@@ -770,14 +610,62 @@
       }
     },
     {
-      "accountID": "516702013600",
-      "accountName": "obedientquail",
-      "allocationID": "eipalloc-500543316",
+      "accountID": "165283112664",
+      "accountName": "happyrabbit",
+      "allocationID": "eipalloc-344873507",
       "domain": "vpc",
-      "publicIp": "3.85.60.77",
+      "publicIp": "33.64.73.70",
       "region": "us-west-1",
-      "resourceName": "innocentdog/hot",
-      "savings": 2.559,
+      "resourceName": "vivaciousrabbit/huan",
+      "savings": 0.479,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      }
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "innocentlion",
+      "allocationID": "eipalloc-224731565",
+      "domain": "vpc",
+      "publicIp": "50.13.39.9",
+      "region": "eu-west-2",
+      "resourceName": "youthfulowl/pb6f",
+      "savings": 0.446,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      }
+    },
+    {
+      "accountID": "516702013600",
+      "accountName": "jovialpenguin",
+      "allocationID": "eipalloc-650547544",
+      "domain": "vpc",
+      "publicIp": "6.82.60.21",
+      "region": "ap-northeast-3",
+      "resourceName": "sillyoctopus/wdwb",
+      "savings": 3.746,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      }
+    },
+    {
+      "accountID": "165283112664",
+      "accountName": "quirkywhale",
+      "allocationID": "eipalloc-414961854",
+      "domain": "vpc",
+      "publicIp": "65.36.31.69",
+      "region": "ap-northeast-3",
+      "resourceName": "happypenguin/r0gg",
+      "savings": 1.418,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
@@ -787,18 +675,130 @@
     },
     {
       "accountID": "925894598672",
-      "accountName": "relievedurchin",
-      "allocationID": "eipalloc-383150398",
+      "accountName": "relievedviper",
+      "allocationID": "eipalloc-575497359",
       "domain": "vpc",
-      "publicIp": "52.46.54.63",
-      "region": "us-west-2",
-      "resourceName": "drowsyfox/f1v5k",
-      "savings": 0.061,
+      "publicIp": "58.83.25.52",
+      "region": "ap-northeast-3",
+      "resourceName": "relievedparrot/6jg8",
+      "savings": 3.683,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      }
+    },
+    {
+      "accountID": "925894598672",
+      "accountName": "livelycat",
+      "allocationID": "eipalloc-467972981",
+      "domain": "vpc",
+      "publicIp": "12.1.20.2",
+      "region": "us-west-1",
+      "resourceName": "wittyhorse/uv5v",
+      "savings": 0.156,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      }
+    },
+    {
+      "accountID": "138186646095",
+      "accountName": "bravetiger",
+      "allocationID": "eipalloc-817561181",
+      "domain": "vpc",
+      "publicIp": "39.30.72.83",
+      "region": "us-west-1",
+      "resourceName": "innocentzebra/2dz6",
+      "savings": 1.772,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      }
+    },
+    {
+      "accountID": "516702013600",
+      "accountName": "youthfulmouse",
+      "allocationID": "eipalloc-337159733",
+      "domain": "vpc",
+      "publicIp": "15.39.94.23",
+      "region": "eu-west-2",
+      "resourceName": "jollygiraffe/28ye",
+      "savings": 4.982,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      }
+    },
+    {
+      "accountID": "627286410625",
+      "accountName": "innocentxerus",
+      "allocationID": "eipalloc-082448448",
+      "domain": "vpc",
+      "publicIp": "68.11.6.46",
+      "region": "eu-west-2",
+      "resourceName": "livelykangaroo/xh8y",
+      "savings": 1.673,
       "savingsCurrency": "$",
       "service": "EC2",
       "tags": {
         "environment": "dev",
-        "app": "dataAnalytics"
+        "app": "emailService"
+      }
+    },
+    {
+      "accountID": "925894598672",
+      "accountName": "fiercejaguar",
+      "allocationID": "eipalloc-138848082",
+      "domain": "vpc",
+      "publicIp": "46.0.0.49",
+      "region": "us-west-1",
+      "resourceName": "adventurousxerus/e6d4",
+      "savings": 1.24,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      }
+    },
+    {
+      "accountID": "999773517191",
+      "accountName": "livelygoat",
+      "allocationID": "eipalloc-857819848",
+      "domain": "vpc",
+      "publicIp": "84.55.62.19",
+      "region": "ca-central-1",
+      "resourceName": "kindant/5d66",
+      "savings": 2.824,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      }
+    },
+    {
+      "accountID": "620368136857",
+      "accountName": "excitedibis",
+      "allocationID": "eipalloc-390121823",
+      "domain": "vpc",
+      "publicIp": "22.90.86.35",
+      "region": "eu-west-2",
+      "resourceName": "youthfulibis/ckef",
+      "savings": 1.355,
+      "savingsCurrency": "$",
+      "service": "EC2",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
       }
     }
   ],
