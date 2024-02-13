@@ -4,50 +4,23 @@
     {
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
-      "region": "northeurope",
-      "resourceGroup": "JOLLYEEL-ADVENTUROUSQUAIL",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/JOLLYEEL-ADVENTUROUSQUAIL/providers/Microsoft.Sql/servers/jollycat/databases/excitedlion",
+      "region": "eastus2",
+      "resourceGroup": "SILLYFOX-DROWSYPENGUIN",
+      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/SILLYFOX-DROWSYPENGUIN/providers/Microsoft.Sql/servers/relievedquail/databases/jollyquail",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "jollycat/excitedlion",
-      "resourceType": "Standard_20",
-      "savings": 187.526,
+      "resourceName": "relievedquail/jollyquail",
+      "resourceType": "Standard_50",
+      "savings": 923.957,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
-        "capacity": 20,
+        "capacity": 50,
         "name": "Standard",
         "tier": "Standard",
-        "resourceType": "Standard_20"
+        "resourceType": "Standard_50"
       },
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "vivaciousparrot",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "southcentralus",
-      "resourceGroup": "MERRYIBIS-INNOCENTSNAKE",
-      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/MERRYIBIS-INNOCENTSNAKE/providers/Microsoft.Sql/servers/quirkyelephant/databases/obedientyak",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "quirkyelephant/obedientyak",
-      "resourceType": "GP_Gen5_32",
-      "savings": 139.539,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 32,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_32"
-      },
-      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "youthfulelephant",
+      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "happyquail",
       "tags": {
         "environment": "prod",
         "app": "inventoryManagement"
@@ -57,39 +30,39 @@
     {
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
-      "region": "westus2",
-      "resourceGroup": "NERVOUSZEBRA-JOLLYJAGUAR",
-      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/NERVOUSZEBRA-JOLLYJAGUAR/providers/Microsoft.Sql/servers/wittyrabbit/databases/quickxerus",
+      "region": "centralindia",
+      "resourceGroup": "ZEALOUSMOUSE-MERRYTIGER",
+      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/ZEALOUSMOUSE-MERRYTIGER/providers/Microsoft.Sql/servers/braveeel/databases/quirkyowl",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "wittyrabbit/quickxerus",
-      "resourceType": "Standard_50",
-      "savings": 265.271,
+      "resourceName": "braveeel/quirkyowl",
+      "resourceType": "Standard_100",
+      "savings": 274.315,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
-        "capacity": 50,
+        "capacity": 100,
         "name": "Standard",
         "tier": "Standard",
-        "resourceType": "Standard_50"
+        "resourceType": "Standard_100"
       },
-      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "lazyxerus",
+      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "wittyparrot",
       "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
+        "environment": "prod",
+        "app": "inventoryManagement"
       },
       "unit": "Count"
     },
     {
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
-      "region": "eastus",
-      "resourceGroup": "WITTYIBIS-ADVENTUROUSCAT",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/WITTYIBIS-ADVENTUROUSCAT/providers/Microsoft.Sql/servers/livelymouse/databases/relievedviper",
+      "region": "centralus",
+      "resourceGroup": "EAGERURCHIN-HAPPYRABBIT",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/EAGERURCHIN-HAPPYRABBIT/providers/Microsoft.Sql/servers/wittyeel/databases/merryelephant",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "livelymouse/relievedviper",
+      "resourceName": "wittyeel/merryelephant",
       "resourceType": "Standard_20",
-      "savings": 457.372,
+      "savings": 493.161,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -98,63 +71,37 @@
         "tier": "Standard",
         "resourceType": "Standard_20"
       },
-      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "eagerrabbit",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "northeurope",
-      "resourceGroup": "CALMBEAR-EXCITEDKANGAROO",
-      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/CALMBEAR-EXCITEDKANGAROO/providers/Microsoft.Sql/servers/quicksnake/databases/upbeaturchin",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "quicksnake/upbeaturchin",
-      "resourceType": "Standard_100",
-      "savings": 80.654,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 100,
-        "name": "Standard",
-        "tier": "Standard",
-        "resourceType": "Standard_100"
-      },
       "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "innocentdog",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "westus2",
-      "resourceGroup": "RELIEVEDHORSE-QUICKMOUSE",
-      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/RELIEVEDHORSE-QUICKMOUSE/providers/Microsoft.Sql/servers/lazytiger/databases/fierceurchin",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "lazytiger/fierceurchin",
-      "resourceType": "Standard_100",
-      "savings": 337.973,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 100,
-        "name": "Standard",
-        "tier": "Standard",
-        "resourceType": "Standard_100"
-      },
-      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "vivaciousgiraffe",
+      "subscriptionName": "wittyjaguar",
       "tags": {
         "environment": "dev",
         "app": "emailService"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "eastus2",
+      "resourceGroup": "EXCITEDFOX-INNOCENTOWL",
+      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/EXCITEDFOX-INNOCENTOWL/providers/Microsoft.Sql/servers/excitedibis/databases/merryfox",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "excitedibis/merryfox",
+      "resourceType": "Standard_100",
+      "savings": 66.351,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 100,
+        "name": "Standard",
+        "tier": "Standard",
+        "resourceType": "Standard_100"
+      },
+      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "happygiraffe",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
       },
       "unit": "Count"
     },
@@ -162,254 +109,12 @@
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
       "region": "southeastasia",
-      "resourceGroup": "LIVELYANT-MERRYELEPHANT",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/LIVELYANT-MERRYELEPHANT/providers/Microsoft.Sql/servers/bravesnake/databases/thankfulzebra",
+      "resourceGroup": "CALMIBIS-CALMPARROT",
+      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/CALMIBIS-CALMPARROT/providers/Microsoft.Sql/servers/calmgiraffe/databases/vivaciousquail",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "bravesnake/thankfulzebra",
-      "resourceType": "GP_Gen5_8",
-      "savings": 804.988,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 8,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_8"
-      },
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "drowsyhorse",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "eastus",
-      "resourceGroup": "PROUDXERUS-THANKFULURCHIN",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/PROUDXERUS-THANKFULURCHIN/providers/Microsoft.Sql/servers/jovialtiger/databases/happyeel",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "jovialtiger/happyeel",
-      "resourceType": "GP_Gen5_8",
-      "savings": 151.32,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 8,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_8"
-      },
-      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "quirkyyak",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "northeurope",
-      "resourceGroup": "SILLYIBIS-DROWSYOCTOPUS",
-      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/SILLYIBIS-DROWSYOCTOPUS/providers/Microsoft.Sql/servers/calmviper/databases/youthfulxerus",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "calmviper/youthfulxerus",
-      "resourceType": "GP_Gen5_4",
-      "savings": 70.061,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 4,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_4"
-      },
-      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "excitedsnake",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "centralindia",
-      "resourceGroup": "ZEALOUSHORSE-LAZYZEBRA",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/ZEALOUSHORSE-LAZYZEBRA/providers/Microsoft.Sql/servers/vivaciouspenguin/databases/obedientcat",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "vivaciouspenguin/obedientcat",
-      "resourceType": "GP_Gen5_16",
-      "savings": 159.449,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 16,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_16"
-      },
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "drowsyquail",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "australiaeast",
-      "resourceGroup": "QUIRKYOCTOPUS-INNOCENTFOX",
-      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/QUIRKYOCTOPUS-INNOCENTFOX/providers/Microsoft.Sql/servers/drowsyyak/databases/happyviper",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "drowsyyak/happyviper",
-      "resourceType": "Standard_100",
-      "savings": 14.138,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 100,
-        "name": "Standard",
-        "tier": "Standard",
-        "resourceType": "Standard_100"
-      },
-      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "youthfultiger",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "eastus2",
-      "resourceGroup": "PROUDHORSE-INNOCENTNEWT",
-      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/PROUDHORSE-INNOCENTNEWT/providers/Microsoft.Sql/servers/wittyparrot/databases/merryfox",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "wittyparrot/merryfox",
-      "resourceType": "GP_Gen5_32",
-      "savings": 103.059,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 32,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_32"
-      },
-      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "gentleyak",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "centralindia",
-      "resourceGroup": "INNOCENTKANGAROO-EXCITEDXERUS",
-      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/INNOCENTKANGAROO-EXCITEDXERUS/providers/Microsoft.Sql/servers/zealousquail/databases/obedientoctopus",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "zealousquail/obedientoctopus",
-      "resourceType": "GP_Gen5_8",
-      "savings": 19.325,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 8,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_8"
-      },
-      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "adventuroussnake",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "eastus",
-      "resourceGroup": "QUICKXERUS-OBEDIENTSNAKE",
-      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/QUICKXERUS-OBEDIENTSNAKE/providers/Microsoft.Sql/servers/quicknewt/databases/calmhorse",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "quicknewt/calmhorse",
-      "resourceType": "GP_Gen5_32",
-      "savings": 130.38,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 32,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_32"
-      },
-      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "relievedgiraffe",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "centralindia",
-      "resourceGroup": "VIVACIOUSOWL-EXCITEDWHALE",
-      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/VIVACIOUSOWL-EXCITEDWHALE/providers/Microsoft.Sql/servers/fiercenewt/databases/innocentgiraffe",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "fiercenewt/innocentgiraffe",
-      "resourceType": "GP_Gen5_16",
-      "savings": 676.433,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 16,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_16"
-      },
-      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "youthfulzebra",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "eastus2",
-      "resourceGroup": "CALMMOUSE-JOLLYLION",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/CALMMOUSE-JOLLYLION/providers/Microsoft.Sql/servers/quickhorse/databases/quickgiraffe",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "quickhorse/quickgiraffe",
+      "resourceName": "calmgiraffe/vivaciousquail",
       "resourceType": "Standard_10",
-      "savings": 90.075,
+      "savings": 34.844,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -418,11 +123,91 @@
         "tier": "Standard",
         "resourceType": "Standard_10"
       },
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "adventurouslion",
+      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "merrytiger",
       "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "eastus2",
+      "resourceGroup": "UPBEATXERUS-JOVIALQUAIL",
+      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/UPBEATXERUS-JOVIALQUAIL/providers/Microsoft.Sql/servers/quicknewt/databases/jovialgiraffe",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "quicknewt/jovialgiraffe",
+      "resourceType": "GP_Gen5_8",
+      "savings": 786.638,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 8,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_8"
+      },
+      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "quickeel",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "uksouth",
+      "resourceGroup": "MERRYYAK-ZEALOUSCAT",
+      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/MERRYYAK-ZEALOUSCAT/providers/Microsoft.Sql/servers/vivaciouslion/databases/relievedparrot",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "vivaciouslion/relievedparrot",
+      "resourceType": "GP_Gen5_8",
+      "savings": 488.308,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 8,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_8"
+      },
+      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "drowsynewt",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "eastus",
+      "resourceGroup": "GENTLEGIRAFFE-QUICKURCHIN",
+      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/GENTLEGIRAFFE-QUICKURCHIN/providers/Microsoft.Sql/servers/obedientcat/databases/quickrabbit",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "obedientcat/quickrabbit",
+      "resourceType": "Standard_50",
+      "savings": 9.41,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 50,
+        "name": "Standard",
+        "tier": "Standard",
+        "resourceType": "Standard_50"
+      },
+      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "obedientyak",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
       },
       "unit": "Count"
     },
@@ -430,12 +215,12 @@
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
       "region": "centralus",
-      "resourceGroup": "CALMSNAKE-ZEALOUSBEAR",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/CALMSNAKE-ZEALOUSBEAR/providers/Microsoft.Sql/servers/happyibis/databases/adventurousxerus",
+      "resourceGroup": "SILLYOWL-EAGERURCHIN",
+      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/SILLYOWL-EAGERURCHIN/providers/Microsoft.Sql/servers/excitedbear/databases/happymouse",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "happyibis/adventurousxerus",
+      "resourceName": "excitedbear/happymouse",
       "resourceType": "GP_Gen5_2",
-      "savings": 43.388,
+      "savings": 60.605,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -445,168 +230,8 @@
         "tier": "GeneralPurpose",
         "resourceType": "GP_Gen5_2"
       },
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "zealousant",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "australiaeast",
-      "resourceGroup": "PROUDMOUSE-HAPPYEEL",
-      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/PROUDMOUSE-HAPPYEEL/providers/Microsoft.Sql/servers/calmfox/databases/lazysnake",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "calmfox/lazysnake",
-      "resourceType": "GP_Gen5_32",
-      "savings": 668.441,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 32,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_32"
-      },
-      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "jovialgiraffe",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "australiaeast",
-      "resourceGroup": "QUIRKYANT-MERRYTIGER",
-      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/QUIRKYANT-MERRYTIGER/providers/Microsoft.Sql/servers/kindmouse/databases/proudtiger",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "kindmouse/proudtiger",
-      "resourceType": "Standard_20",
-      "savings": 257.635,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 20,
-        "name": "Standard",
-        "tier": "Standard",
-        "resourceType": "Standard_20"
-      },
-      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "relievedxerus",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "southcentralus",
-      "resourceGroup": "UPBEATBEAR-OBEDIENTPENGUIN",
-      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/UPBEATBEAR-OBEDIENTPENGUIN/providers/Microsoft.Sql/servers/thankfulbear/databases/excitedjaguar",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "thankfulbear/excitedjaguar",
-      "resourceType": "GP_Gen5_32",
-      "savings": 652.514,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 32,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_32"
-      },
-      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "excitedbear",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "centralus",
-      "resourceGroup": "LIVELYIBIS-DROWSYMOUSE",
-      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/LIVELYIBIS-DROWSYMOUSE/providers/Microsoft.Sql/servers/kindyak/databases/zealousfox",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "kindyak/zealousfox",
-      "resourceType": "GP_Gen5_16",
-      "savings": 667.947,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 16,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_16"
-      },
-      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "thankfuldog",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "uksouth",
-      "resourceGroup": "VIVACIOUSVIPER-CALMGIRAFFE",
-      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/VIVACIOUSVIPER-CALMGIRAFFE/providers/Microsoft.Sql/servers/proudibis/databases/nervousparrot",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "proudibis/nervousparrot",
-      "resourceType": "Standard_100",
-      "savings": 296.518,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 100,
-        "name": "Standard",
-        "tier": "Standard",
-        "resourceType": "Standard_100"
-      },
-      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "lazyparrot",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "australiaeast",
-      "resourceGroup": "EXCITEDANT-PROUDZEBRA",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/EXCITEDANT-PROUDZEBRA/providers/Microsoft.Sql/servers/quirkyurchin/databases/excitedquail",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "quirkyurchin/excitedquail",
-      "resourceType": "GP_Gen5_8",
-      "savings": 271.241,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 8,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_8"
-      },
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "eagerhorse",
+      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+      "subscriptionName": "eagereel",
       "tags": {
         "environment": "prod",
         "app": "reportingService"
@@ -616,23 +241,50 @@
     {
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
-      "region": "westus2",
-      "resourceGroup": "FIERCESNAKE-UPBEATTIGER",
-      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/FIERCESNAKE-UPBEATTIGER/providers/Microsoft.Sql/servers/obedientlion/databases/proudeel",
+      "region": "southeastasia",
+      "resourceGroup": "DROWSYGOAT-THANKFULOCTOPUS",
+      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/DROWSYGOAT-THANKFULOCTOPUS/providers/Microsoft.Sql/servers/nervoushorse/databases/braveant",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "obedientlion/proudeel",
-      "resourceType": "Standard_50",
-      "savings": 23.529,
+      "resourceName": "nervoushorse/braveant",
+      "resourceType": "Standard_20",
+      "savings": 77.298,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
-        "capacity": 50,
+        "capacity": 20,
         "name": "Standard",
         "tier": "Standard",
-        "resourceType": "Standard_50"
+        "resourceType": "Standard_20"
       },
-      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "kindparrot",
+      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "happyjaguar",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "southeastasia",
+      "resourceGroup": "JOLLYNEWT-EXCITEDQUAIL",
+      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/JOLLYNEWT-EXCITEDQUAIL/providers/Microsoft.Sql/servers/drowsyhorse/databases/quickowl",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "drowsyhorse/quickowl",
+      "resourceType": "GP_Gen5_2",
+      "savings": 787.142,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 2,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_2"
+      },
+      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "gentleurchin",
       "tags": {
         "environment": "dev",
         "app": "emailService"
@@ -642,39 +294,13 @@
     {
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
-      "region": "centralus",
-      "resourceGroup": "YOUTHFULOCTOPUS-WITTYJAGUAR",
-      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/YOUTHFULOCTOPUS-WITTYJAGUAR/providers/Microsoft.Sql/servers/fierceibis/databases/excitedelephant",
+      "region": "southcentralus",
+      "resourceGroup": "UPBEATGOAT-OBEDIENTZEBRA",
+      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/UPBEATGOAT-OBEDIENTZEBRA/providers/Microsoft.Sql/servers/gentleant/databases/quirkyparrot",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "fierceibis/excitedelephant",
-      "resourceType": "Standard_10",
-      "savings": 225.152,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 10,
-        "name": "Standard",
-        "tier": "Standard",
-        "resourceType": "Standard_10"
-      },
-      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "excitedwhale",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "uksouth",
-      "resourceGroup": "THANKFULURCHIN-ADVENTUROUSRABBIT",
-      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/THANKFULURCHIN-ADVENTUROUSRABBIT/providers/Microsoft.Sql/servers/lazyurchin/databases/relievedtiger",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "lazyurchin/relievedtiger",
+      "resourceName": "gentleant/quirkyparrot",
       "resourceType": "GP_Gen5_8",
-      "savings": 31.137,
+      "savings": 150.294,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -684,8 +310,277 @@
         "tier": "GeneralPurpose",
         "resourceType": "GP_Gen5_8"
       },
+      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+      "subscriptionName": "quirkykangaroo",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "centralus",
+      "resourceGroup": "WITTYJAGUAR-THANKFULCAT",
+      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/WITTYJAGUAR-THANKFULCAT/providers/Microsoft.Sql/servers/thankfulviper/databases/adventurousdog",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "thankfulviper/adventurousdog",
+      "resourceType": "GP_Gen5_4",
+      "savings": 834.269,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 4,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_4"
+      },
+      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "thankfuldog",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "centralindia",
+      "resourceGroup": "UPBEATQUAIL-EXCITEDOWL",
+      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/UPBEATQUAIL-EXCITEDOWL/providers/Microsoft.Sql/servers/happyfox/databases/proudhorse",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "happyfox/proudhorse",
+      "resourceType": "GP_Gen5_8",
+      "savings": 181.872,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 8,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_8"
+      },
+      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+      "subscriptionName": "excitedoctopus",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "australiaeast",
+      "resourceGroup": "FIERCEOCTOPUS-HAPPYHORSE",
+      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/FIERCEOCTOPUS-HAPPYHORSE/providers/Microsoft.Sql/servers/calmfox/databases/sillymouse",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "calmfox/sillymouse",
+      "resourceType": "GP_Gen5_4",
+      "savings": 234.598,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 4,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_4"
+      },
+      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+      "subscriptionName": "zealoussnake",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "australiaeast",
+      "resourceGroup": "INNOCENTPENGUIN-DROWSYPENGUIN",
+      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/INNOCENTPENGUIN-DROWSYPENGUIN/providers/Microsoft.Sql/servers/excitedcat/databases/quickrabbit",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "excitedcat/quickrabbit",
+      "resourceType": "GP_Gen5_4",
+      "savings": 27.335,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 4,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_4"
+      },
+      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "eagerparrot",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "uksouth",
+      "resourceGroup": "PROUDRABBIT-RELIEVEDGIRAFFE",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/PROUDRABBIT-RELIEVEDGIRAFFE/providers/Microsoft.Sql/servers/upbeatbear/databases/gentlepenguin",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "upbeatbear/gentlepenguin",
+      "resourceType": "GP_Gen5_32",
+      "savings": 167.104,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 32,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_32"
+      },
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "obedientsnake",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "southeastasia",
+      "resourceGroup": "WITTYCAT-ZEALOUSTIGER",
+      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/WITTYCAT-ZEALOUSTIGER/providers/Microsoft.Sql/servers/eagerrabbit/databases/fiercetiger",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "eagerrabbit/fiercetiger",
+      "resourceType": "GP_Gen5_8",
+      "savings": 422.207,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 8,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_8"
+      },
+      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+      "subscriptionName": "nervouskangaroo",
+      "tags": {
+        "environment": "staging",
+        "app": "invoiceProcessing"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "centralindia",
+      "resourceGroup": "MERRYLION-LIVELYFOX",
+      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/MERRYLION-LIVELYFOX/providers/Microsoft.Sql/servers/nervousparrot/databases/gentlegoat",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "nervousparrot/gentlegoat",
+      "resourceType": "Standard_10",
+      "savings": 40.905,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 10,
+        "name": "Standard",
+        "tier": "Standard",
+        "resourceType": "Standard_10"
+      },
+      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+      "subscriptionName": "kindkangaroo",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "centralindia",
+      "resourceGroup": "YOUTHFULGOAT-LAZYEEL",
+      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/YOUTHFULGOAT-LAZYEEL/providers/Microsoft.Sql/servers/lazyant/databases/upbeatant",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "lazyant/upbeatant",
+      "resourceType": "GP_Gen5_8",
+      "savings": 712.507,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 8,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_8"
+      },
+      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "proudmouse",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "centralindia",
+      "resourceGroup": "ZEALOUSEEL-MERRYLION",
+      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/ZEALOUSEEL-MERRYLION/providers/Microsoft.Sql/servers/drowsyelephant/databases/sillyeel",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "drowsyelephant/sillyeel",
+      "resourceType": "GP_Gen5_32",
+      "savings": 749.033,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 32,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_32"
+      },
+      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "jollyzebra",
+      "tags": {
+        "environment": "dev",
+        "app": "emailService"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "australiaeast",
+      "resourceGroup": "FIERCEHORSE-EAGERWHALE",
+      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/FIERCEHORSE-EAGERWHALE/providers/Microsoft.Sql/servers/sillyrabbit/databases/bravetiger",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "sillyrabbit/bravetiger",
+      "resourceType": "GP_Gen5_4",
+      "savings": 252.511,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 4,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_4"
+      },
       "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "youthfulant",
+      "subscriptionName": "braveparrot",
       "tags": {
         "environment": "prod",
         "app": "crmModule"
@@ -695,13 +590,199 @@
     {
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
-      "region": "eastus2",
-      "resourceGroup": "ADVENTUROUSELEPHANT-WITTYHORSE",
-      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/ADVENTUROUSELEPHANT-WITTYHORSE/providers/Microsoft.Sql/servers/excitedjaguar/databases/happyjaguar",
+      "region": "southcentralus",
+      "resourceGroup": "THANKFULFOX-SILLYHORSE",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/THANKFULFOX-SILLYHORSE/providers/Microsoft.Sql/servers/eagercat/databases/merrymouse",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "excitedjaguar/happyjaguar",
+      "resourceName": "eagercat/merrymouse",
+      "resourceType": "Standard_100",
+      "savings": 515.082,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 100,
+        "name": "Standard",
+        "tier": "Standard",
+        "resourceType": "Standard_100"
+      },
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "bravezebra",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "southcentralus",
+      "resourceGroup": "JOVIALSNAKE-LIVELYBEAR",
+      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/JOVIALSNAKE-LIVELYBEAR/providers/Microsoft.Sql/servers/jovialibis/databases/kindrabbit",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "jovialibis/kindrabbit",
+      "resourceType": "GP_Gen5_2",
+      "savings": 50.715,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 2,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_2"
+      },
+      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+      "subscriptionName": "zealousyak",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "northeurope",
+      "resourceGroup": "WITTYGOAT-PROUDLION",
+      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/WITTYGOAT-PROUDLION/providers/Microsoft.Sql/servers/proudibis/databases/kindquail",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "proudibis/kindquail",
+      "resourceType": "Standard_50",
+      "savings": 93.3,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 50,
+        "name": "Standard",
+        "tier": "Standard",
+        "resourceType": "Standard_50"
+      },
+      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "nervouseel",
+      "tags": {
+        "environment": "prod",
+        "app": "crmModule"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "southcentralus",
+      "resourceGroup": "PROUDURCHIN-NERVOUSNEWT",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/PROUDURCHIN-NERVOUSNEWT/providers/Microsoft.Sql/servers/adventuroussnake/databases/adventuroussnake",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "adventuroussnake/adventuroussnake",
+      "resourceType": "GP_Gen5_4",
+      "savings": 125.509,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 4,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_4"
+      },
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "livelyrabbit",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "northeurope",
+      "resourceGroup": "THANKFULTIGER-ADVENTUROUSBEAR",
+      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/THANKFULTIGER-ADVENTUROUSBEAR/providers/Microsoft.Sql/servers/quirkyviper/databases/excitedhorse",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "quirkyviper/excitedhorse",
+      "resourceType": "GP_Gen5_16",
+      "savings": 662.007,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 16,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_16"
+      },
+      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+      "subscriptionName": "upbeatlion",
+      "tags": {
+        "environment": "staging",
+        "app": "userManagement"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "northeurope",
+      "resourceGroup": "NERVOUSGOAT-LAZYGOAT",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/NERVOUSGOAT-LAZYGOAT/providers/Microsoft.Sql/servers/sillyurchin/databases/livelyoctopus",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "sillyurchin/livelyoctopus",
+      "resourceType": "GP_Gen5_2",
+      "savings": 589.399,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 2,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_2"
+      },
+      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "jovialxerus",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "uksouth",
+      "resourceGroup": "EXCITEDBEAR-ADVENTUROUSQUAIL",
+      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/EXCITEDBEAR-ADVENTUROUSQUAIL/providers/Microsoft.Sql/servers/obedientpenguin/databases/braveant",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "obedientpenguin/braveant",
+      "resourceType": "Standard_50",
+      "savings": 77.967,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 50,
+        "name": "Standard",
+        "tier": "Standard",
+        "resourceType": "Standard_50"
+      },
+      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+      "subscriptionName": "relievedkangaroo",
+      "tags": {
+        "environment": "prod",
+        "app": "securityModule"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "eastus",
+      "resourceGroup": "VIVACIOUSFOX-EXCITEDFOX",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/VIVACIOUSFOX-EXCITEDFOX/providers/Microsoft.Sql/servers/eagerfox/databases/merrygoat",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "eagerfox/merrygoat",
       "resourceType": "Standard_20",
-      "savings": 292.466,
+      "savings": 328.348,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -710,51 +791,51 @@
         "tier": "Standard",
         "resourceType": "Standard_20"
       },
-      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "innocentowl",
+      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "fiercenewt",
       "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
+        "environment": "prod",
+        "app": "inventoryManagement"
       },
       "unit": "Count"
     },
     {
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
-      "region": "uksouth",
-      "resourceGroup": "EXCITEDANT-ADVENTUROUSTIGER",
-      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/EXCITEDANT-ADVENTUROUSTIGER/providers/Microsoft.Sql/servers/nervousparrot/databases/proudgoat",
+      "region": "southcentralus",
+      "resourceGroup": "OBEDIENTDOG-WITTYGIRAFFE",
+      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/OBEDIENTDOG-WITTYGIRAFFE/providers/Microsoft.Sql/servers/adventurousnewt/databases/sillyurchin",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "nervousparrot/proudgoat",
-      "resourceType": "GP_Gen5_4",
-      "savings": 320.109,
+      "resourceName": "adventurousnewt/sillyurchin",
+      "resourceType": "GP_Gen5_8",
+      "savings": 250.395,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
-        "capacity": 4,
+        "capacity": 8,
         "family": "Gen5",
         "name": "GP_Gen5",
         "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_4"
+        "resourceType": "GP_Gen5_8"
       },
-      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "wittylion",
+      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+      "subscriptionName": "eagermouse",
       "tags": {
-        "environment": "prod",
-        "app": "securityModule"
+        "environment": "dev",
+        "app": "emailService"
       },
       "unit": "Count"
     },
     {
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
-      "region": "eastus",
-      "resourceGroup": "HAPPYHORSE-THANKFULXERUS",
-      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/HAPPYHORSE-THANKFULXERUS/providers/Microsoft.Sql/servers/livelysnake/databases/kindmouse",
+      "region": "westus2",
+      "resourceGroup": "QUIRKYIBIS-GENTLEEEL",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/QUIRKYIBIS-GENTLEEEL/providers/Microsoft.Sql/servers/obedientviper/databases/nervousxerus",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "livelysnake/kindmouse",
+      "resourceName": "obedientviper/nervousxerus",
       "resourceType": "Standard_10",
-      "savings": 40.05,
+      "savings": 120.388,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -763,11 +844,11 @@
         "tier": "Standard",
         "resourceType": "Standard_10"
       },
-      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "excitedowl",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "livelybear",
       "tags": {
         "environment": "prod",
-        "app": "securityModule"
+        "app": "inventoryManagement"
       },
       "unit": "Count"
     },
@@ -775,12 +856,12 @@
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
       "region": "uksouth",
-      "resourceGroup": "WITTYJAGUAR-CALMEEL",
-      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/WITTYJAGUAR-CALMEEL/providers/Microsoft.Sql/servers/jollylion/databases/adventurousibis",
+      "resourceGroup": "MERRYPENGUIN-LAZYEEL",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/MERRYPENGUIN-LAZYEEL/providers/Microsoft.Sql/servers/kindrabbit/databases/vivaciouskangaroo",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "jollylion/adventurousibis",
+      "resourceName": "kindrabbit/vivaciouskangaroo",
       "resourceType": "GP_Gen5_32",
-      "savings": 554.042,
+      "savings": 605.693,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -790,8 +871,8 @@
         "tier": "GeneralPurpose",
         "resourceType": "GP_Gen5_32"
       },
-      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "merrynewt",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "sillyparrot",
       "tags": {
         "environment": "dev",
         "app": "emailService"
@@ -802,26 +883,106 @@
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
       "region": "centralindia",
-      "resourceGroup": "KINDDOG-RELIEVEDELEPHANT",
-      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/KINDDOG-RELIEVEDELEPHANT/providers/Microsoft.Sql/servers/upbeatant/databases/zealoushorse",
+      "resourceGroup": "FIERCEYAK-CALMOWL",
+      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/FIERCEYAK-CALMOWL/providers/Microsoft.Sql/servers/obedientjaguar/databases/relievedmouse",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "upbeatant/zealoushorse",
-      "resourceType": "GP_Gen5_16",
-      "savings": 94.617,
+      "resourceName": "obedientjaguar/relievedmouse",
+      "resourceType": "GP_Gen5_8",
+      "savings": 90.417,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
-        "capacity": 16,
+        "capacity": 8,
         "family": "Gen5",
         "name": "GP_Gen5",
         "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_16"
+        "resourceType": "GP_Gen5_8"
       },
-      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "lazyzebra",
+      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+      "subscriptionName": "nervousnewt",
       "tags": {
         "environment": "staging",
-        "app": "userManagement"
+        "app": "invoiceProcessing"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "westus2",
+      "resourceGroup": "EXCITEDURCHIN-MERRYBEAR",
+      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/EXCITEDURCHIN-MERRYBEAR/providers/Microsoft.Sql/servers/happyeel/databases/quirkylion",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "happyeel/quirkylion",
+      "resourceType": "GP_Gen5_32",
+      "savings": 17.231,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 32,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_32"
+      },
+      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "wittykangaroo",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "centralus",
+      "resourceGroup": "WITTYEEL-HAPPYJAGUAR",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/WITTYEEL-HAPPYJAGUAR/providers/Microsoft.Sql/servers/vivaciouselephant/databases/calmibis",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "vivaciouselephant/calmibis",
+      "resourceType": "Standard_10",
+      "savings": 1.12,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 10,
+        "name": "Standard",
+        "tier": "Standard",
+        "resourceType": "Standard_10"
+      },
+      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "proudcat",
+      "tags": {
+        "environment": "prod",
+        "app": "paymentGateway"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "australiaeast",
+      "resourceGroup": "RELIEVEDXERUS-EXCITEDZEBRA",
+      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/RELIEVEDXERUS-EXCITEDZEBRA/providers/Microsoft.Sql/servers/thankfulsnake/databases/vivaciousxerus",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "thankfulsnake/vivaciousxerus",
+      "resourceType": "GP_Gen5_4",
+      "savings": 71.562,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 4,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_4"
+      },
+      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "vivaciouscat",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
       },
       "unit": "Count"
     },
@@ -829,12 +990,12 @@
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
       "region": "southeastasia",
-      "resourceGroup": "VIVACIOUSOCTOPUS-JOVIALELEPHANT",
-      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/VIVACIOUSOCTOPUS-JOVIALELEPHANT/providers/Microsoft.Sql/servers/obedienturchin/databases/gentleurchin",
+      "resourceGroup": "SILLYSNAKE-ZEALOUSSNAKE",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/SILLYSNAKE-ZEALOUSSNAKE/providers/Microsoft.Sql/servers/adventurousnewt/databases/jollyeel",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "obedienturchin/gentleurchin",
+      "resourceName": "adventurousnewt/jollyeel",
       "resourceType": "GP_Gen5_16",
-      "savings": 333.873,
+      "savings": 462.509,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -844,8 +1005,113 @@
         "tier": "GeneralPurpose",
         "resourceType": "GP_Gen5_16"
       },
-      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "vivaciousurchin",
+      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "thankfulrabbit",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "uksouth",
+      "resourceGroup": "UPBEATLION-OBEDIENTGOAT",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/UPBEATLION-OBEDIENTGOAT/providers/Microsoft.Sql/servers/excitedparrot/databases/nervousoctopus",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "excitedparrot/nervousoctopus",
+      "resourceType": "Standard_20",
+      "savings": 148.553,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 20,
+        "name": "Standard",
+        "tier": "Standard",
+        "resourceType": "Standard_20"
+      },
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "jollyxerus",
+      "tags": {
+        "environment": "prod",
+        "app": "inventoryManagement"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "southcentralus",
+      "resourceGroup": "LAZYKANGAROO-LIVELYWHALE",
+      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/LAZYKANGAROO-LIVELYWHALE/providers/Microsoft.Sql/servers/kindrabbit/databases/zealoustiger",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "kindrabbit/zealoustiger",
+      "resourceType": "GP_Gen5_32",
+      "savings": 110.854,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 32,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_32"
+      },
+      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+      "subscriptionName": "nervousjaguar",
+      "tags": {
+        "environment": "dev",
+        "app": "dataAnalytics"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "northeurope",
+      "resourceGroup": "UPBEATIBIS-CALMXERUS",
+      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/UPBEATIBIS-CALMXERUS/providers/Microsoft.Sql/servers/jollyhorse/databases/quickzebra",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "jollyhorse/quickzebra",
+      "resourceType": "Standard_50",
+      "savings": 218.824,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 50,
+        "name": "Standard",
+        "tier": "Standard",
+        "resourceType": "Standard_50"
+      },
+      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "youthfulkangaroo",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "uksouth",
+      "resourceGroup": "WITTYPARROT-VIVACIOUSGIRAFFE",
+      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/WITTYPARROT-VIVACIOUSGIRAFFE/providers/Microsoft.Sql/servers/wittyyak/databases/happynewt",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "wittyyak/happynewt",
+      "resourceType": "Standard_20",
+      "savings": 469.445,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 20,
+        "name": "Standard",
+        "tier": "Standard",
+        "resourceType": "Standard_20"
+      },
+      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+      "subscriptionName": "livelyelephant",
       "tags": {
         "environment": "prod",
         "app": "paymentGateway"
@@ -856,38 +1122,12 @@
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
       "region": "uksouth",
-      "resourceGroup": "MERRYPARROT-JOVIALXERUS",
-      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/MERRYPARROT-JOVIALXERUS/providers/Microsoft.Sql/servers/vivaciousquail/databases/zealousxerus",
+      "resourceGroup": "KINDCAT-EXCITEDEEL",
+      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/KINDCAT-EXCITEDEEL/providers/Microsoft.Sql/servers/bravebear/databases/sillyelephant",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "vivaciousquail/zealousxerus",
-      "resourceType": "Standard_100",
-      "savings": 249.705,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 100,
-        "name": "Standard",
-        "tier": "Standard",
-        "resourceType": "Standard_100"
-      },
-      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "upbeatpenguin",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "australiaeast",
-      "resourceGroup": "VIVACIOUSCAT-ADVENTUROUSWHALE",
-      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/VIVACIOUSCAT-ADVENTUROUSWHALE/providers/Microsoft.Sql/servers/jollymouse/databases/jovialparrot",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "jollymouse/jovialparrot",
+      "resourceName": "bravebear/sillyelephant",
       "resourceType": "GP_Gen5_4",
-      "savings": 79.522,
+      "savings": 564.226,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -897,62 +1137,8 @@
         "tier": "GeneralPurpose",
         "resourceType": "GP_Gen5_4"
       },
-      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "happygiraffe",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "australiaeast",
-      "resourceGroup": "INNOCENTHORSE-NERVOUSWHALE",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/INNOCENTHORSE-NERVOUSWHALE/providers/Microsoft.Sql/servers/zealousxerus/databases/thankfulzebra",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "zealousxerus/thankfulzebra",
-      "resourceType": "GP_Gen5_8",
-      "savings": 54.569,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 8,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_8"
-      },
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "jollybear",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "australiaeast",
-      "resourceGroup": "DROWSYURCHIN-UPBEATKANGAROO",
-      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/DROWSYURCHIN-UPBEATKANGAROO/providers/Microsoft.Sql/servers/happywhale/databases/proudeel",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "happywhale/proudeel",
-      "resourceType": "GP_Gen5_16",
-      "savings": 105.608,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 16,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_16"
-      },
-      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "nervousurchin",
+      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+      "subscriptionName": "bravenewt",
       "tags": {
         "environment": "prod",
         "app": "securityModule"
@@ -962,26 +1148,80 @@
     {
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
-      "region": "centralindia",
-      "resourceGroup": "GENTLEJAGUAR-LIVELYOWL",
-      "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/GENTLEJAGUAR-LIVELYOWL/providers/Microsoft.Sql/servers/happyxerus/databases/excitedeel",
+      "region": "southcentralus",
+      "resourceGroup": "ADVENTUROUSGIRAFFE-VIVACIOUSHORSE",
+      "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/ADVENTUROUSGIRAFFE-VIVACIOUSHORSE/providers/Microsoft.Sql/servers/excitedparrot/databases/thankfuloctopus",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "happyxerus/excitedeel",
-      "resourceType": "Standard_100",
-      "savings": 838.407,
+      "resourceName": "excitedparrot/thankfuloctopus",
+      "resourceType": "Standard_10",
+      "savings": 412.586,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
-        "capacity": 100,
+        "capacity": 10,
         "name": "Standard",
         "tier": "Standard",
-        "resourceType": "Standard_100"
+        "resourceType": "Standard_10"
       },
-      "subscriptionID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "gentleyak",
+      "subscriptionID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+      "subscriptionName": "quirkyjaguar",
       "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
+        "environment": "dev",
+        "app": "dataAnalytics"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "northeurope",
+      "resourceGroup": "EXCITEDNEWT-QUICKHORSE",
+      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/EXCITEDNEWT-QUICKHORSE/providers/Microsoft.Sql/servers/adventurouselephant/databases/braveoctopus",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "adventurouselephant/braveoctopus",
+      "resourceType": "GP_Gen5_8",
+      "savings": 134.486,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 8,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_8"
+      },
+      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "innocentelephant",
+      "tags": {
+        "environment": "dev",
+        "app": "customerSupport"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "southcentralus",
+      "resourceGroup": "MERRYVIPER-VIVACIOUSPENGUIN",
+      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/MERRYVIPER-VIVACIOUSPENGUIN/providers/Microsoft.Sql/servers/relievedsnake/databases/gentlenewt",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "relievedsnake/gentlenewt",
+      "resourceType": "GP_Gen5_2",
+      "savings": 544.947,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 2,
+        "family": "Gen5",
+        "name": "GP_Gen5",
+        "tier": "GeneralPurpose",
+        "resourceType": "GP_Gen5_2"
+      },
+      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+      "subscriptionName": "calmeel",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
       },
       "unit": "Count"
     },
@@ -989,64 +1229,12 @@
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
       "region": "eastus2",
-      "resourceGroup": "SILLYIBIS-INNOCENTMOUSE",
-      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/SILLYIBIS-INNOCENTMOUSE/providers/Microsoft.Sql/servers/gentlehorse/databases/sillylion",
+      "resourceGroup": "RELIEVEDELEPHANT-UPBEATNEWT",
+      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/RELIEVEDELEPHANT-UPBEATNEWT/providers/Microsoft.Sql/servers/fierceparrot/databases/adventurouswhale",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "gentlehorse/sillylion",
-      "resourceType": "Standard_10",
-      "savings": 194.803,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 10,
-        "name": "Standard",
-        "tier": "Standard",
-        "resourceType": "Standard_10"
-      },
-      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "happyeel",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "centralus",
-      "resourceGroup": "PROUDOWL-ZEALOUSJAGUAR",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/PROUDOWL-ZEALOUSJAGUAR/providers/Microsoft.Sql/servers/innocenthorse/databases/wittyelephant",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "innocenthorse/wittyelephant",
-      "resourceType": "Standard_10",
-      "savings": 14.566,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 10,
-        "name": "Standard",
-        "tier": "Standard",
-        "resourceType": "Standard_10"
-      },
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "vivaciousyak",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "centralindia",
-      "resourceGroup": "HAPPYBEAR-GENTLECAT",
-      "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/HAPPYBEAR-GENTLECAT/providers/Microsoft.Sql/servers/innocentowl/databases/proudelephant",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "innocentowl/proudelephant",
+      "resourceName": "fierceparrot/adventurouswhale",
       "resourceType": "GP_Gen5_4",
-      "savings": 104.74,
+      "savings": 130.402,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -1055,171 +1243,9 @@
         "name": "GP_Gen5",
         "tier": "GeneralPurpose",
         "resourceType": "GP_Gen5_4"
-      },
-      "subscriptionID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "bravebear",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "southeastasia",
-      "resourceGroup": "QUICKTIGER-ADVENTUROUSTIGER",
-      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/QUICKTIGER-ADVENTUROUSTIGER/providers/Microsoft.Sql/servers/lazyyak/databases/vivaciouscat",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "lazyyak/vivaciouscat",
-      "resourceType": "GP_Gen5_8",
-      "savings": 179.972,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 8,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_8"
       },
       "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "excitedxerus",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "uksouth",
-      "resourceGroup": "KINDRABBIT-PROUDANT",
-      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/KINDRABBIT-PROUDANT/providers/Microsoft.Sql/servers/proudibis/databases/jovialgoat",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "proudibis/jovialgoat",
-      "resourceType": "GP_Gen5_16",
-      "savings": 460.19,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 16,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_16"
-      },
-      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "quickhorse",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "southcentralus",
-      "resourceGroup": "NERVOUSMOUSE-MERRYWHALE",
-      "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/NERVOUSMOUSE-MERRYWHALE/providers/Microsoft.Sql/servers/drowsyoctopus/databases/innocentibis",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "drowsyoctopus/innocentibis",
-      "resourceType": "GP_Gen5_32",
-      "savings": 584.595,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 32,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_32"
-      },
-      "subscriptionID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "sillyhorse",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "centralus",
-      "resourceGroup": "THANKFULXERUS-DROWSYMOUSE",
-      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/THANKFULXERUS-DROWSYMOUSE/providers/Microsoft.Sql/servers/thankfulfox/databases/joviallion",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "thankfulfox/joviallion",
-      "resourceType": "GP_Gen5_8",
-      "savings": 272.157,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 8,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_8"
-      },
-      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "calmfox",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "eastus",
-      "resourceGroup": "THANKFULXERUS-JOVIALBEAR",
-      "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/THANKFULXERUS-JOVIALBEAR/providers/Microsoft.Sql/servers/obedientyak/databases/thankfulowl",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "obedientyak/thankfulowl",
-      "resourceType": "GP_Gen5_4",
-      "savings": 211.86,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 4,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_4"
-      },
-      "subscriptionID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "lazyoctopus",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "eastus",
-      "resourceGroup": "QUIRKYGIRAFFE-PROUDHORSE",
-      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/QUIRKYGIRAFFE-PROUDHORSE/providers/Microsoft.Sql/servers/happycat/databases/vivaciouscat",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "happycat/vivaciouscat",
-      "resourceType": "GP_Gen5_4",
-      "savings": 749.075,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 4,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_4"
-      },
-      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "eagerelephant",
+      "subscriptionName": "calmquail",
       "tags": {
         "environment": "dev",
         "app": "emailService"
@@ -1229,13 +1255,13 @@
     {
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
-      "region": "southcentralus",
-      "resourceGroup": "GENTLEMOUSE-DROWSYOWL",
-      "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/GENTLEMOUSE-DROWSYOWL/providers/Microsoft.Sql/servers/excitedhorse/databases/obedientmouse",
+      "region": "eastus2",
+      "resourceGroup": "UPBEATXERUS-YOUTHFULGIRAFFE",
+      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/UPBEATXERUS-YOUTHFULGIRAFFE/providers/Microsoft.Sql/servers/obedientfox/databases/braveyak",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "excitedhorse/obedientmouse",
+      "resourceName": "obedientfox/braveyak",
       "resourceType": "GP_Gen5_16",
-      "savings": 553.505,
+      "savings": 106.068,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -1245,8 +1271,34 @@
         "tier": "GeneralPurpose",
         "resourceType": "GP_Gen5_16"
       },
-      "subscriptionID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "adventurouswhale",
+      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "gentlefox",
+      "tags": {
+        "environment": "prod",
+        "app": "reportingService"
+      },
+      "unit": "Count"
+    },
+    {
+      "lookbackPeriod": "30 days",
+      "platform": "Azure SQL Database",
+      "region": "northeurope",
+      "resourceGroup": "HAPPYYAK-LIVELYEEL",
+      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/HAPPYYAK-LIVELYEEL/providers/Microsoft.Sql/servers/nervouselephant/databases/jovialurchin",
+      "resourceKind": "v12.0,user,vcore",
+      "resourceName": "nervouselephant/jovialurchin",
+      "resourceType": "Standard_20",
+      "savings": 250.399,
+      "savingsCurrency": "US$",
+      "service": "Microsoft.Sql",
+      "sku": {
+        "capacity": 20,
+        "name": "Standard",
+        "tier": "Standard",
+        "resourceType": "Standard_20"
+      },
+      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+      "subscriptionName": "eagertiger",
       "tags": {
         "environment": "prod",
         "app": "securityModule"
@@ -1256,40 +1308,13 @@
     {
       "lookbackPeriod": "30 days",
       "platform": "Azure SQL Database",
-      "region": "southcentralus",
-      "resourceGroup": "KINDJAGUAR-OBEDIENTGIRAFFE",
-      "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/KINDJAGUAR-OBEDIENTGIRAFFE/providers/Microsoft.Sql/servers/obedientowl/databases/jovialkangaroo",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "obedientowl/jovialkangaroo",
-      "resourceType": "GP_Gen5_4",
-      "savings": 22.413,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 4,
-        "family": "Gen5",
-        "name": "GP_Gen5",
-        "tier": "GeneralPurpose",
-        "resourceType": "GP_Gen5_4"
-      },
-      "subscriptionID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "fierceurchin",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
       "region": "centralus",
-      "resourceGroup": "RELIEVEDWHALE-DROWSYOCTOPUS",
-      "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/RELIEVEDWHALE-DROWSYOCTOPUS/providers/Microsoft.Sql/servers/quirkyquail/databases/vivaciousquail",
+      "resourceGroup": "BRAVENEWT-HAPPYZEBRA",
+      "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/BRAVENEWT-HAPPYZEBRA/providers/Microsoft.Sql/servers/excitedfox/databases/sillyant",
       "resourceKind": "v12.0,user,vcore",
-      "resourceName": "quirkyquail/vivaciousquail",
+      "resourceName": "excitedfox/sillyant",
       "resourceType": "GP_Gen5_8",
-      "savings": 134.908,
+      "savings": 83.145,
       "savingsCurrency": "US$",
       "service": "Microsoft.Sql",
       "sku": {
@@ -1299,37 +1324,11 @@
         "tier": "GeneralPurpose",
         "resourceType": "GP_Gen5_8"
       },
-      "subscriptionID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "zealoussnake",
+      "subscriptionID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+      "subscriptionName": "quickgiraffe",
       "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      },
-      "unit": "Count"
-    },
-    {
-      "lookbackPeriod": "30 days",
-      "platform": "Azure SQL Database",
-      "region": "uksouth",
-      "resourceGroup": "EAGERIBIS-KINDLION",
-      "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/EAGERIBIS-KINDLION/providers/Microsoft.Sql/servers/jovialparrot/databases/excitednewt",
-      "resourceKind": "v12.0,user,vcore",
-      "resourceName": "jovialparrot/excitednewt",
-      "resourceType": "Standard_100",
-      "savings": 115.375,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Sql",
-      "sku": {
-        "capacity": 100,
-        "name": "Standard",
-        "tier": "Standard",
-        "resourceType": "Standard_100"
-      },
-      "subscriptionID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "fierceeel",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
+        "environment": "staging",
+        "app": "userManagement"
       },
       "unit": "Count"
     }
