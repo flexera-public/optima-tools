@@ -46,8 +46,8 @@ jobs:
           commit-message: "Update CCO Demo Data"
           title: "Update CCO Demo Data"
           body: "Updated CCO Demo from GitHub Actions Workflow [${{ github.workflow }}](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
-          branch: "task/update-cco-demo-data"
-          delete-branch: true
+          branch: "master"
+          delete-branch: false
           labels: "automation, data"
 
       - name: Check outputs
