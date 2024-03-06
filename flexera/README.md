@@ -17,5 +17,5 @@ Upload the desired policies to your demo environment in Flexera One and apply. T
 
 ## Data Generation
 
-- The same-named .js files in the data folder were used to generate the demo data and can be modified and used to generate new data as needed.
-- The update_all.sh bash script in the data folder can be run to update the demo data all at once. This script requires that the user have node.js installed so that the node command can be used to run the scripts.
+- The `./update_demo_data.rb` file is used to generate the demo data. Demo data is stored in the `./flexera/data` directory.
+- This script runs automatically on a weekly cadence via Github actions and stores the updated demo data in the `task/update-cco-demo-data` branch. This branch is where the policies pull the data from.
