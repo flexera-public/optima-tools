@@ -15,25 +15,8 @@ current_year = Time.now.year
 
 
 ###############################################################################
-# Utility Methods
+# AWS Data Methods
 ###############################################################################
-
-def get_random_tags
-  tag_list = [
-    "environment=prod, app=paymentGateway",
-    "environment=dev, app=dataAnalytics",
-    "environment=prod, app=userManagement",
-    "environment=dev, app=reportingService",
-    "environment=staging, app=invoiceProcessing",
-    "environment=prod, app=emailService",
-    "environment=prod, app=securityModule",
-    "environment=dev, app=inventoryManagement",
-    "environment=prod, app=customerSupport",
-    "environment=staging, app=crmModule"
-  ]
-
-  return tag_list.sample
-end
 
 def get_random_aws_account
   aws_account_list = [
@@ -104,6 +87,172 @@ def get_random_aws_ec2_size
   return aws_ec2_type_list.sample
 end
 
+###############################################################################
+# Azure Data Methods
+###############################################################################
+
+def get_random_azure_account
+  azure_account_list = [
+    "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "ceee86e2-a6cf-4a62-8004-1313cc581679",
+    "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+    "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+    "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+    "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+    "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+    "9c6588cd-ca5e-429d-adc7-5292d3880914",
+    "912102ae-2e57-4094-bb8a-63a7d1c38207",
+    "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "f048a88c-9bc9-43cf-a30d-f48c94708866"
+  ]
+
+  return azure_account_list.sample
+end
+
+def get_random_azure_region
+  azure_region_list = [
+    "southcentralus",
+    "eastus",
+    "eastus2",
+    "westus2",
+    "australiaeast",
+    "southeastasia",
+    "northeurope",
+    "uksouth",
+    "centralus",
+    "centralindia"
+  ]
+
+  return azure_region_list.sample
+end
+
+def get_random_azure_compute_size
+  azure_compute_type_list = [
+    [ "Standard_A2_v2",    "Standard_A1_v2"    ],
+    [ "Standard_A4_v2",    "Standard_A3_v2"    ],
+    [ "Standard_B12ms",    "Standard_B8ms"     ],
+    [ "Standard_B16as_v2", "Standard_B12as_v2" ],
+    [ "Standard_B16ms",    "Standard_B12ms"    ],
+    [ "Standard_B2ms",     "Standard_B1ms"     ],
+    [ "Standard_B2s",      "Standard_B1s"      ],
+    [ "Standard_B32as_v2", "Standard_B16as_v2" ],
+    [ "Standard_D16_v3",   "Standard_D8_v3"    ],
+    [ "Standard_B4ms",     "Standard_B2ms"     ]
+  ]
+
+  return azure_compute_type_list.sample
+end
+
+def get_random_azure_db_ri_sku
+  azure_db_sku_list = [
+    "SQLMI_BC_Compute_Gen5",
+    "SQLDB_HyperScale_Compute_Gen5",
+    "SQLDB_BC_Compute_Gen5",
+    "SQLDB_GP_Compute_Gen5",
+    "SQLMI_BC_Compute_Gen5",
+    "SQLMI_GP_Compute_Gen5",
+    "SQLMI_BC_Compute_Gen5",
+    "SQLDB_HyperScale_Compute_Gen5",
+    "SQLDB_BC_Compute_Gen5",
+    "SQLDB_GP_Compute_Gen5"
+  ]
+
+  return azure_db_ri_sku_list.sample
+end
+
+def get_random_azure_meter
+  azure_meter_list = [
+    "b63d64fe-ebd5-42b6-b3f9-a4d129af7cb1",
+    "93d67b35-6ba6-4d8f-8d2e-7348b4fe67e9",
+    "8175f1bd-7d38-4fd7-a38f-789dbaa8594d",
+    "d2c568ba-3bf1-4b2c-867a-c6fe097a79a2",
+    "6d6e5e2b-45c9-42c3-8fe5-1f50a6a63f96",
+    "f8bb8cde-69d2-460d-9277-3d5466da6aa7",
+    "64b0fb7d-a3cd-4f16-8aeb-8b47fb47a56c",
+    "d1b4cb48-2dc5-4626-a5cb-f4d97c00e99a",
+    "a4f6cb5a-40fb-4061-9b37-e4c61b6a4c51",
+    "c7b13d8e-9c9c-4a67-8cfd-824b9b4f79a8"
+  ]
+
+  return azure_meter_list.sample
+end
+
+###############################################################################
+# Google Data Methods
+###############################################################################
+
+def get_random_google_compute_size
+  google_compute_type_list = [
+    [ "e2-standard-8",   "e2-standard-4"   ],
+    [ "n2-standard-16",  "n2-standard-8"   ],
+    [ "n2-highmem-8",    "n2-highmem-4"    ],
+    [ "n2-highcpu-32",   "n2-highcpu-16"   ],
+    [ "n2d-standard-64", "n2d-standard-32" ],
+    [ "c2-standard-30",  "c2-standard-16"  ],
+    [ "m2-ultramem-208", "m2-ultramem-104" ],
+    [ "n1-standard-16",  "n1-standard-8"   ],
+    [ "n1-highmem-2",    "n1-highmem-1"    ],
+    [ "e2-micro",        "e2-nano"         ]
+  ]
+
+  return google_compute_type_list.sample
+end
+
+def get_random_google_region
+  google_region_list = [
+    "us-central1",
+    "europe-west1",
+    "asia-northeast1",
+    "us-west1",
+    "australia-southeast1",
+    "southamerica-east1",
+    "northamerica-northeast1",
+    "europe-west4",
+    "asia-southeast2",
+    "europe-west6"
+  ]
+
+  return google_region_list.sample
+end
+
+def get_random_google_cud_description
+  google_cud_description_list = [
+    "Purchase a 1 year new standard CUD for RegularCore CPU",
+    "Purchase a 1 year new standard CUD for RegularRAM memory",
+    "Purchase a 1 year new standard CUD for E2Core CPU",
+    "Purchase a 1 year new standard CUD for E2RAM memory",
+    "Purchase a 1 year new standard CUD for N2DRAM memory",
+    "Purchase a 1 year new standard CUD for N2DCore CPU",
+    "Purchase a 1 year additional standard CUD for RegularCore CPU",
+    "Purchase a 1 year additional standard CUD for RegularRAM memory",
+    "Purchase a 1 year additional standard CUD for E2RAM memory",
+    "Purchase a 1 year additional standard CUD for N2DCore CPU"
+  ]
+
+  return google_cud_description_list.sample
+end
+
+###############################################################################
+# General Data Methods
+###############################################################################
+
+def get_random_tags
+  tag_list = [
+    "environment=prod, app=paymentGateway",
+    "environment=dev, app=dataAnalytics",
+    "environment=prod, app=userManagement",
+    "environment=dev, app=reportingService",
+    "environment=staging, app=invoiceProcessing",
+    "environment=prod, app=emailService",
+    "environment=prod, app=securityModule",
+    "environment=dev, app=inventoryManagement",
+    "environment=prod, app=customerSupport",
+    "environment=staging, app=crmModule"
+  ]
+
+  return tag_list.sample
+end
+
 def get_random_name
   adjectives = [
     "quick", "lazy", "drowsy", "excited", "adventurous", "jolly", "brave", "calm",
@@ -126,20 +275,13 @@ def get_random_name
 end
 
 def get_random_time
-  times_list = [
-    "2022-02-11T00:34:25.000Z",
-    "2023-05-01T01:24:20.000Z",
-    "2022-03-15T02:35:15.000Z",
-    "2022-02-17T05:11:35.000Z",
-    "2022-07-18T08:22:48.000Z",
-    "2022-02-22T11:33:57.000Z",
-    "2022-12-27T14:44:46.000Z",
-    "2022-11-05T17:55:35.000Z",
-    "2022-10-12T22:45:23.000Z",
-    "2022-09-13T15:21:11.000Z"
-  ]
+  six_months = 6 * 30 * 24 * 60 * 60
+  three_years = 3 * 365 * 24 * 60 * 60
 
-  return times_list.sample
+  random_seconds = rand(six_months..three_years)
+  random_past_time = Time.now - random_seconds
+
+  return random_past_time.iso8601
 end
 
 def get_random_date(year)
@@ -150,6 +292,9 @@ def get_random_date(year)
   return random_time.iso8601 # Return the ISO 8601 string representation of the random date
 end
 
+###############################################################################
+# Misc. Methods
+###############################################################################
 
 def write_demo_data(data, filepath)
   File.open(filepath, "w") do |file|
@@ -166,5 +311,5 @@ def aws_compute_rightsizing_idle_data
 end
 
 ###############################################################################
-# Required Libraries
+# Script
 ###############################################################################
