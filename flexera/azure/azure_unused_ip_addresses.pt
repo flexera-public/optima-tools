@@ -7,7 +7,7 @@ severity "low"
 category "Cost"
 default_frequency "weekly"
 info(
-  version: "4.6",
+  version: "7.1",
   provider: "Azure",
   service: "Compute",
   policy_set: "Unused IP Addresses",
@@ -22,7 +22,7 @@ datasource "ds_ip_cost_mapping" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/master/flexera/data/azure/azure_unused_ip_addresses.json"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/azure/azure_unused_ip_addresses.json"
     header "User-Agent", "RS Policies"
   end
 end
@@ -32,60 +32,69 @@ end
 ###############################################################################
 
 policy "pol_unused_ip_addresses" do
-  validate $ds_ip_cost_mapping do
-    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.ip_list }} Unused IP Addresses Found"
-    hash_exclude "savingsCurrency", "savings"
-    detail_template <<-EOS
-    {{ data.message }}
-EOS
-    check eq(1, 0)
-    export "ip_list" do
+  validate_each $ds_ip_cost_mapping do
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Azure Unused IP Addresses Found"
+    detail_template <<-'EOS'
+    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
+
+    {{ with index data 0 }}{{ .message }}{{ end }}
+    EOS
+    check eq(val(item, "resourceID"), "")
+    hash_exclude "total_savings", "message", "tags", "savings", "savingsCurrency"
+    export do
       resource_level true
       field "accountID" do
         label "Subscription ID"
-        path "subscriptionId"
       end
       field "accountName" do
         label "Subscription Name"
-        path "subscriptionName"
       end
       field "resourceGroup" do
         label "Resource Group"
       end
-      field "resourceName" do
-        label "Resource Name"
-      end
-      field "savings" do
-        label "Estimated Monthly Savings"
-      end
       field "ipAddress"do
         label "IP Address"
-        path "properties.ipAddress"
       end
-      field "region" do
-        label "Region"
-      end
-      field "tags" do
-        label "Tags"
-      end
-      field "resourceID" do
-        label "Resource ID"
-        path "resourceId"
+      field "resourceName" do
+        label "Resource Name"
       end
       field "resourceType" do
         label "Resource Type"
       end
-      field "service" do
-        label "Service"
+      field "recommendationDetails" do
+        label "Recommendation"
+      end
+      field "age" do
+        label "Days Unattached"
+      end
+      field "region" do
+        label "Region"
+      end
+      field "allocation" do
+        label "Allocation"
+      end
+      field "tags" do
+        label "Tags"
+      end
+      field "savings" do
+        label "Estimated Monthly Savings"
       end
       field "savingsCurrency" do
         label "Savings Currency"
       end
-      field "id" do
+      field "service" do
+        label "Service"
+      end
+      field "lookbackPeriod" do
+        label "Look Back Period (Days)"
+      end
+      field "resourceID" do
         label "Resource ID"
-        path "resourceId"
+      end
+      field "id" do
+        label "ID"
+        path "resourceID"
       end
     end
-    hash_exclude "ip_list"
   end
 end

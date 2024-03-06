@@ -40,7 +40,6 @@ policy "pol_aws_ri_recommendations" do
     {{ with index data 0 }}{{ .message }}{{ end }}
     EOS
     check lt(val(item, "savings"), 0)
-    escalate $esc_email
     export do
       resource_level false
       field "accountID" do

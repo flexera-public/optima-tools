@@ -5,9 +5,9 @@ short_description "Demo policy for generating recommendations. See [README](http
 long_description ""
 severity "medium"
 category "Cost"
-default_frequency "daily"
+default_frequency "weekly"
 info(
-  version: "2.17",
+  version: "3.3",
   provider: "Azure",
   service: "Compute",
   policy_set: "Reserved Instances",
@@ -18,11 +18,11 @@ info(
 # Datasources
 ###############################################################################
 
-datasource "ds_ri_normalization" do
+datasource "ds_ri_incident" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/master/flexera/data/azure/azure_reserved_instance_recommendations.json"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/azure/azure_reserved_instance_recommendations.json"
     header "User-Agent", "RS Policies"
   end
 end
@@ -31,70 +31,73 @@ end
 # Policy
 ###############################################################################
 
-policy "azure_ri_recommendations" do
-  validate_each $ds_ri_normalization do
-    summary_template "{{ len data }} Azure Reservation Purchase Recommendations"
-    check lt(to_n(val(item, "netSavings")), 1)
+policy "pol_azure_ri_recommendations" do
+  validate_each $ds_ri_incident do
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Azure Reserved Instances Purchase Recommendations"
+    detail_template <<-'EOS'
+    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
+
+    {{ with index data 0 }}{{ .message }}{{ end }}
+    EOS
+    check lt(val(item, "savings"), 0)
     export do
       resource_level false
       field "accountID" do
         label "Subscription ID"
-        path "subscriptionId"
       end
       field "accountName" do
         label "Subscription Name"
-        path "subscriptionName"
       end
       field "service" do
         label "Service"
       end
       field "resourceType" do
         label "Resource Type"
-        path "skuName"
       end
       field "region" do
-        label "Location"
+        label "Region"
       end
       field "term" do
         label "Term"
       end
-      field "savings" do
-        label "Net Savings"
-        path "netSavings"
-      end
       field "recommendedQuantity" do
         label "Recommended Quantity to Purchase"
       end
+      field "savingsCurrency" do
+        label "Currency"
+      end
       field "costWithNoRI" do
-        label "Total Current Cost (without RI)"
+        label "Current Monthly Cost"
       end
       field "totalCostWithRI" do
-        label "Total Cost if RI was purchased"
+        label "New Monthly Cost with Reservations"
+      end
+      field "savings" do
+        label "Estimated Monthly Savings"
       end
       field "firstUsageDate" do
         label "First Usage Date"
       end
       field "id" do
-        label "Resource MeterID"
-        path "meterId"
-      end
-      field "instanceFlexibilityGroup" do
-        label "instanceFlexibilityGroup"
-      end
-      field "instanceFlexibilityRatio" do
-        label "instanceFlexibilityRatio"
-      end
-      field "normalizedSize" do
-        label "normalizedSize"
-      end
-      field "recommendedQuantityNormalized" do
-        label "recommendedQuantityNormalized"
+        label "Resource Meter ID"
       end
       field "scope" do
         label "Scope"
       end
+      field "instanceFlexibilityGroup" do
+        label "Flexibility Group"
+      end
+      field "instanceFlexibilityRatio" do
+        label "Flexibility Ratio"
+      end
+      field "normalizedSize" do
+        label "Normalized Resource Type"
+      end
+      field "recommendedQuantityNormalized" do
+        label "Normalized Recommended Quantity to Purchase"
+      end
       field "lookbackPeriod" do
-        label "Lookback Period"
+        label "Look Back Period"
       end
     end
   end

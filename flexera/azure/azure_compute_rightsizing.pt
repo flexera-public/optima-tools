@@ -7,7 +7,7 @@ category "Cost"
 severity "low"
 default_frequency "weekly"
 info(
-  version: "2.4",
+  version: "5.0",
   provider: "Azure",
   service: "Compute",
   policy_set: "Rightsize Compute Instances",
@@ -18,11 +18,20 @@ info(
 # Datasources
 ###############################################################################
 
-datasource "ds_combined_data" do
+datasource "ds_underutilized_instances" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/master/flexera/data/azure/azure_compute_rightsizing.json"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/azure/azure_compute_rightsizing_underutil.json"
+    header "User-Agent", "RS Policies"
+  end
+end
+
+datasource "ds_idle_instances" do
+  request do
+    verb "GET"
+    host "raw.githubusercontent.com"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/azure/azure_compute_rightsizing_idle.json"
     header "User-Agent", "RS Policies"
   end
 end
@@ -30,20 +39,23 @@ end
 ###############################################################################
 # Policy
 ###############################################################################
+policy "pol_utilization" do
+  validate_each $ds_underutilized_instances do
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Azure Underutilized Virtual Machines Found"
+    detail_template <<-'EOS'
+    **Potential Monthly Savings:** {{ with index data 0 }}{{ .underutil_total_savings }}{{ end }}
 
-policy "policy_azure_rightsizing_data" do
-  validate_each $ds_combined_data do
-    summary_template "{{ len data }} Azure Underutilized Virtual Machines Found"
-    check ne(val(item, "recommendationType"), "Downsize")
+    {{ with index data 0 }}{{ .underutil_message }}{{ end }}
+    EOS
+    check eq(val(item, "resourceID"), "")
+    hash_exclude "underutil_message", "idle_message", "underutil_total_savings", "idle_total_savings", "tags", "savings", "savingsCurrency", "cpu_maximum", "cpu_minimum", "cpu_average", "mem_maximum", "mem_minimum", "mem_average"
     export do
       resource_level true
       field "accountID" do
         label "Subscription ID"
-        path "subscriptionId"
       end
       field "accountName" do
         label "Subscription Name"
-        path "subscriptionName"
       end
       field "resourceGroup" do
         label "Resource Group"
@@ -53,7 +65,6 @@ policy "policy_azure_rightsizing_data" do
       end
       field "resourceID" do
         label "Resource ID"
-        path "resourceId"
       end
       field "tags" do
         label "Resource Tags"
@@ -123,22 +134,26 @@ policy "policy_azure_rightsizing_data" do
       end
       field "id" do
         label "ID"
-        path "resourceId"
+        path "resourceID"
       end
     end
   end
-  validate_each $ds_combined_data do
-    summary_template "{{ len data }} Azure Idle Virtual Machines Found"
-    check ne(val(item, "recommendationType"), "Delete")
+  validate_each $ds_idle_instances do
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Azure Idle Virtual Machines Found"
+    detail_template <<-'EOS'
+    **Potential Monthly Savings:** {{ with index data 0 }}{{ .idle_total_savings }}{{ end }}
+
+    {{ with index data 0 }}{{ .idle_message }}{{ end }}
+    EOS
+    check eq(val(item, "resourceID"), "")
+    hash_exclude "underutil_message", "idle_message", "underutil_total_savings", "idle_total_savings", "tags", "savings", "savingsCurrency", "cpu_maximum", "cpu_minimum", "cpu_average", "mem_maximum", "mem_minimum", "mem_average"
     export do
       resource_level true
       field "accountID" do
         label "Subscription ID"
-        path "subscriptionId"
       end
       field "accountName" do
         label "Subscription Name"
-        path "subscriptionName"
       end
       field "resourceGroup" do
         label "Resource Group"
@@ -148,7 +163,6 @@ policy "policy_azure_rightsizing_data" do
       end
       field "resourceID" do
         label "Resource ID"
-        path "resourceId"
       end
       field "tags" do
         label "Resource Tags"
@@ -215,7 +229,7 @@ policy "policy_azure_rightsizing_data" do
       end
       field "id" do
         label "ID"
-        path "resourceId"
+        path "resourceID"
       end
     end
   end

@@ -2,12 +2,11 @@ name "Azure Old Snapshots [Demo]"
 rs_pt_ver 20180301
 type "policy"
 short_description "Demo policy for generating recommendations. See [README](https://github.com/flexera-public/optima-tools/tree/master/flexera/) for more information."
-long_description ""
 severity "low"
 category "Cost"
-default_frequency "daily"
+default_frequency "weekly"
 info(
-  version: "4.5",
+  version: "7.0",
   provider: "Azure",
   service: "Storage",
   policy_set: "Old Snapshots",
@@ -18,11 +17,11 @@ info(
 # Datasources
 ###############################################################################
 
-datasource "ds_snapshot_cost_mapping" do
+datasource "ds_azure_snapshots_incident" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/master/flexera/data/azure/azure_delete_old_snapshots.json"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/azure/azure_delete_old_snapshots.json"
     header "User-Agent", "RS Policies"
   end
 end
@@ -31,46 +30,47 @@ end
 # Policy
 ###############################################################################
 
-policy "pol_azure_delete_old_snapshots" do
-  validate $ds_snapshot_cost_mapping do
-    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.instances }} Old Snapshots Found"
-    detail_template <<-EOS
-{{data.message}}.
-EOS
-    check eq(1, 0)
-    export "instances" do
+policy "pol_azure_old_snapshots" do
+  validate_each $ds_azure_snapshots_incident do
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Azure Old Snapshots Found"
+    detail_template <<-'EOS'
+    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
+
+    {{ with index data 0 }}{{ .message }}{{ end }}
+    EOS
+    check eq(val(item, "resourceID"), "")
+    hash_exclude "total_savings", "message", "tags", "age", "savings", "savingsCurrency"
+    export do
       resource_level true
       field "accountID" do
         label "Subscription ID"
-        path "subscriptionID"
       end
       field "accountName" do
         label "Subscription Name"
-        path "subscriptionName"
-      end
-      field "resourceID" do
-        label "Resource Id"
-      end
-      field "resourceName" do
-        label "Resource Name"
       end
       field "resourceGroup" do
         label "Resource Group"
       end
-      field "resourceType" do
-        label "Resource Type"
+      field "resourceName" do
+        label "Resource Name"
       end
-      field "region" do
-        label "Region"
+      field "tags" do
+        label "Resource Tags"
       end
       field "age" do
         label "Age In Days"
       end
-      field "tags" do
-        label "Tags"
+      field "size" do
+        label "Size (GB)"
       end
       field "service" do
         label "Service"
+      end
+      field "region" do
+        label "Region"
+      end
+      field "recommendationDetails" do
+        label "Recommendation"
       end
       field "savings" do
         label "Estimated Monthly Savings"
@@ -78,12 +78,18 @@ EOS
       field "savingsCurrency" do
         label "Savings Currency"
       end
+      field "resourceType" do
+        label "Resource Type"
+      end
+      field "lookbackPeriod" do
+        label "Snapshot Age Threshold (Days)"
+      end
+      field "resourceID" do
+        label "Resource ID"
+      end
       field "id" do
         label "ID"
         path "resourceID"
-      end
-      field "size" do
-        label "Size (GB)"
       end
     end
   end

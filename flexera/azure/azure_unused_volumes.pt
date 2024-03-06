@@ -1,16 +1,16 @@
-name "Azure Unused SQL Databases [Demo]"
+name "Azure Unused Volumes [Demo]"
 rs_pt_ver 20180301
 type "policy"
 short_description "Demo policy for generating recommendations. See [README](https://github.com/flexera-public/optima-tools/tree/master/flexera/) for more information."
 long_description ""
 severity "low"
 category "Cost"
-default_frequency "daily"
+default_frequency "weekly"
 info(
-  version: "4.6",
+  version: "8.0",
   provider: "Azure",
-  service: "SQL",
-  policy_set: "Unused Database Services",
+  service: "Storage",
+  policy_set: "Unused Volumes",
   recommendation_type: "Usage Reduction"
 )
 
@@ -18,11 +18,11 @@ info(
 # Datasources
 ###############################################################################
 
-datasource "ds_instance_cost_mapping" do
+datasource "ds_volume_cost_mapping" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/master/flexera/data/azure/azure_unused_sql_databases.json"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/azure/azure_unused_volumes.json"
     header "User-Agent", "RS Policies"
   end
 end
@@ -31,40 +31,53 @@ end
 # Policy
 ###############################################################################
 
-policy "policy_azure_db_utilization" do
-  validate $ds_instance_cost_mapping do
-    summary_template "{{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ len data.instance_list }} Unused Azure Databases Found"
-    detail_template <<-EOS
-{{data.message}}.
-EOS
-    check eq(1, 0)
-    export "instance_list" do
+policy "pol_azure_unattached_volumes" do
+  validate_each $ds_volume_cost_mapping do
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Azure Unused Volumes Found"
+    detail_template <<-'EOS'
+    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
+
+    {{ with index data 0 }}{{ .message }}{{ end }}
+    EOS
+    check eq(val(item, "resourceID"), "")
+    hash_exclude "savings", "savingsCurrency", "age", "size"
+    export do
       resource_level true
       field "accountID" do
         label "Subscription ID"
-        path "subscriptionID"
       end
       field "accountName" do
         label "Subscription Name"
-        path "subscriptionName"
-      end
-      field "resourceID" do
-        label "Resource ID"
-      end
-      field "resourceName" do
-        label "Resource Name"
       end
       field "resourceGroup" do
         label "Resource Group"
       end
-      field "region" do
-        label "Region"
+      field "resourceName" do
+        label "Resource Name"
       end
-      field "resourceKind" do
-        label "Resource Kind"
+      field "tags" do
+        label "Tags"
+      end
+      field "age" do
+        label "Age (Days)"
+      end
+      field "timeCreated" do
+        label "Created At"
+      end
+      field "recommendationDetails" do
+        label "Recommendation"
       end
       field "resourceType" do
         label "Resource Type"
+      end
+      field "region" do
+        label "Region"
+      end
+      field "size" do
+        label "Disk Size (GB)"
+      end
+      field "state" do
+        label "State"
       end
       field "savings" do
         label "Estimated Monthly Savings"
@@ -72,33 +85,21 @@ EOS
       field "savingsCurrency" do
         label "Savings Currency"
       end
-      field "tags" do
-        label "Tags"
+      field "attached_vm" do
+        label "Attached VM ID"
       end
       field "service" do
         label "Service"
       end
-      field "skuName" do
-        label "SKU - Name"
-        path "sku.name"
-      end
-      field "skuTier" do
-        label "SKU - Tier"
-        path "sku.tier"
-      end
-      field "skuCapacity" do
-        label "SKU - Capacity"
-        path "sku.capacity"
-      end
-      field "id" do
-        label "ID"
-        path "resourceID"
+      field "resourceID" do
+        label "Resource ID"
       end
       field "lookbackPeriod" do
         label "Lookback Period"
       end
-      field "platform" do
-        label "Platform"
+      field "id" do
+        label "ID"
+        path "resourceID"
       end
     end
   end
