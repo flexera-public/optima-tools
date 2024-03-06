@@ -4,9 +4,9 @@ type "policy"
 short_description "Demo policy for generating recommendations. See [README](https://github.com/flexera-public/optima-tools/tree/master/flexera/) for more information."
 category "Cost"
 severity "low"
-default_frequency "daily"
+default_frequency "weekly"
 info(
-  version: "6.1",
+  version: "8.0",
   provider: "AWS",
   service: "EBS",
   policy_set: "Unused Volumes",
@@ -21,50 +21,60 @@ datasource "ds_volume_cost_mapping" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/master/flexera/data/aws/aws_delete_unused_volumes.json"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/aws/aws_delete_unused_volumes.json"
     header "User-Agent", "RS Policies"
   end
 end
 
-###############################################################################
+##############################################################################
 # Policy
 ###############################################################################
 
 policy "pol_unused_volumes" do
-  validate $ds_volume_cost_mapping do
-    summary_template "AWS Account ID: {{ data.accountID }} - {{ len data.unused_volumes }} Unused Volumes Found"
-    detail_template "{{ data.message }}"
-    check eq(1, 0)
-    export "unused_volumes" do
+  validate_each $ds_volume_cost_mapping do
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Unused Volumes Found"
+    detail_template <<-'EOS'
+    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
+
+    {{ with index data 0 }}{{ .message }}{{ end }}
+    EOS
+    check eq(val(item, "resourceID"), "")
+    hash_exclude "age", "message", "total_savings", "tags", "savings", "savingsCurrency"
+    export do
       resource_level true
       field "accountID" do
-        label "Account Id"
+        label "Account ID"
       end
       field "accountName" do
         label "Account Name"
       end
-      field "region" do
-        label "Region"
-      end
       field "resourceID" do
-        label "Resource Id"
-        path "volumeId"
-      end
-      field "resourceType" do
-        label "Resource Type"
+        label "Resource ID"
       end
       field "resourceName" do
         label "Resource Name"
       end
+      field "tags" do
+        label "Resource Tags"
+      end
+      field "age" do
+        label "Age (Days)"
+      end
+      field "recommendationDetails" do
+        label "Recommendation"
+      end
+      field "resourceType" do
+        label "Resource Type"
+      end
+      field "region" do
+        label "Region"
+      end
+      field "size" do
+        label "Size (GB)"
+      end
       field "state" do
         label "Status"
         path "status"
-      end
-      field "size" do
-        label "Size"
-      end
-      field "tags" do
-        label "Tags"
       end
       field "savings" do
         label "Estimated Monthly Savings"
@@ -73,17 +83,14 @@ policy "pol_unused_volumes" do
         label "Savings Currency"
       end
       field "lookbackPeriod" do
-        label "Lookback Period"
-      end
-      field "age" do
-        label "Age"
-      end
-      field "id" do
-        label "ID"
-        path "volumeId"
+        label "Lookback Period (Days)"
       end
       field "service" do
         label "Service"
+      end
+      field "id" do
+        label "ID"
+        path "resourceID"
       end
     end
   end

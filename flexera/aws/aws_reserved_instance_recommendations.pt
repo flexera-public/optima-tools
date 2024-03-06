@@ -5,11 +5,11 @@ short_description "Demo policy for generating recommendations. See [README](http
 long_description ""
 severity "medium"
 category "Cost"
-default_frequency "daily"
+default_frequency "weekly"
 info(
-  version: "2.19",
+  version: "3.4",
   provider: "AWS",
-  service: "EC2",
+  service: "Compute",
   policy_set: "Reserved Instances",
   recommendation_type: "Rate Reduction"
 )
@@ -22,7 +22,7 @@ datasource "ds_ri_normalization" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/master/flexera/data/aws/aws_reserved_instance_recommendations.json"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/aws/aws_reserved_instance_recommendations.json"
     header "User-Agent", "RS Policies"
   end
 end
@@ -31,31 +31,38 @@ end
 # Policy
 ###############################################################################
 
-policy "aws_ri_recommendations" do
+policy "pol_aws_ri_recommendations" do
   validate_each $ds_ri_normalization do
-    summary_template "{{ len data }} AWS Reserved Instances Purchase Recommendations"
-    check lt(to_n(val(item,"estimatedMonthlySavingsAmount")), 1)
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} AWS Reserved Instances Purchase Recommendations"
+    detail_template <<-'EOS'
+    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
+
+    {{ with index data 0 }}{{ .message }}{{ end }}
+    EOS
+    check lt(val(item, "savings"), 0)
+    escalate $esc_email
     export do
       resource_level false
-      field "region" do
-        label "Region"
-      end
-      field "service" do
-        label "Service"
-      end
       field "accountID" do
         label "Account ID"
       end
       field "accountName" do
         label "Account Name"
       end
+      field "region" do
+        label "Region"
+      end
+      field "service" do
+        label "Service"
+      end
+      field "savingsCurrency" do
+        label "Currency"
+      end
       field "savings" do
         label "Estimated Monthly Savings Amount"
-        path "estimatedMonthlySavingsAmount"
       end
       field "scope" do
         label "Account Scope"
-        path "accountScope"
       end
       field "averageNormalizedUnitsUsedPerHour" do
         label "Average Normalized Units Used Per Hour"
@@ -103,8 +110,7 @@ policy "aws_ri_recommendations" do
         label "License Model"
       end
       field "lookbackPeriod" do
-        label "Look Back Period In Days"
-        path "lookbackPeriodInDays"
+        label "Look Back Period (Days)"
       end
       field "maximumNormalizedUnitsUsedPerHour" do
         label "Maximum Normalized Units Used Per Hour"
@@ -135,7 +141,6 @@ policy "aws_ri_recommendations" do
       end
       field "recommendedQuantity" do
         label "Recommended Number Of Instances To Purchase"
-        path "recommendedNumberOfInstancesToPurchase"
       end
       field "recurringStandardMonthlyCost" do
         label "Recurring Standard Monthly Cost"

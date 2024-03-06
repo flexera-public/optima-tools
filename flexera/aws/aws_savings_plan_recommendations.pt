@@ -5,11 +5,11 @@ short_description "Demo policy for generating recommendations. See [README](http
 long_description ""
 severity "medium"
 category "Cost"
-default_frequency "daily"
+default_frequency "weekly"
 info(
-  version: "2.17",
+  version: "3.1",
   provider: "AWS",
-  service: "",
+  service: "Compute",
   policy_set: "Savings Plans",
   recommendation_type: "Rate Reduction"
 )
@@ -22,7 +22,7 @@ datasource "ds_sp_normalization" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/master/flexera/data/aws/aws_savings_plan_recommendations.json"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/aws/aws_savings_plan_recommendations.json"
     header "User-Agent", "RS Policies"
   end
 end
@@ -31,12 +31,17 @@ end
 # Policy
 ###############################################################################
 
-policy "aws_sp_recommendations" do
+policy "pol_aws_sp_recommendations" do
   validate_each $ds_sp_normalization do
-    summary_template "AWS Savings Plan Purchase Recommendations"
-    check lt(to_n(val(item,"estimatedMonthlySavingsAmount")), 1)
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} AWS Savings Plan Purchase Recommendations"
+    detail_template <<-'EOS'
+    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
+
+    {{ with index data 0 }}{{ .message }}{{ end }}
+    EOS
+    check lt(val(item, "savings"), 0)
     export do
-      resource_level true
+      resource_level false
       field "accountID" do
         label "Account ID"
       end
@@ -46,56 +51,53 @@ policy "aws_sp_recommendations" do
       field "region" do
         label "Region"
       end
-      field "estimatedMonthlySavingsAmountWithCurrencyCode" do
+      field "service" do
+        label "Service"
+      end
+      field "savingsCurrency" do
+        label "Currency"
+      end
+      field "savings" do
         label "Estimated Monthly Savings"
       end
       field "estimatedSavingsPercentage" do
         label "Estimated Savings Percentage"
       end
-      field "estimatedSavingsPlanCostWithCurrencyCode" do
+      field "estimatedSavingsPlanCost" do
         label "Estimated Savings Plan Cost"
       end
-      field "recommendedQuantity" do
-        label "Quantity to Purchase"
-        path "hourlyCommitmentToPurchaseWithCurrencyCode"
+      field "lookbackPeriod" do
+        label "Look Back Period (Days)"
       end
-      field "upfrontCostWithCurrencyCode" do
+      field "paymentOption" do
+        label "Payment Option"
+      end
+      field "recommendedQuantity" do
+        label "Recommendeded Quantity to Purchase"
+      end
+      field "upfrontCost" do
         label "Upfront Cost"
       end
-      field "instanceFamily" do
-        label "Instance Family"
+      field "currentAverageHourlyOnDemandSpend" do
+        label "Current Average Hourly On-Demand Spend"
       end
-      field "currentAverageHourlyOnDemandSpendWithCurrencyCode" do
-        label "Current Avg Hourly OnDemand Spend"
+      field "currentMaximumHourlyOnDemandSpend" do
+        label "Current Maximum Hourly On-Demand Spend"
       end
-      field "currentMaximumHourlyOnDemandSpendWithCurrencyCode" do
-        label "Current Max Hourly OnDemand Spend"
-      end
-      field "currentMinimumHourlyOnDemandSpendWithCurrencyCode" do
-        label "Current Min Hourly OnDemand Spend"
+      field "currentMinimumHourlyOnDemandSpend" do
+        label "Current Minimum Hourly On-Demand Spend"
       end
       field "offeringId" do
         label "Offering Id"
       end
-      field "id" do
-        label "Account Id"
-        path "accountID"
-      end
-      field "savings" do
-        label "Estimated Savings"
-        path "estimatedMonthlySavingsAmount"
-      end
-      field "term" do
-        label "Term"
-      end
-      field "paymentOption" do
-        label "Purchasing Option"
+      field "instanceFamily" do
+        label "Instance Family"
       end
       field "resourceType" do
         label "Resource Type"
       end
-      field "lookbackPeriod" do
-        label "Lookback Period"
+      field "term" do
+        label "Term"
       end
     end
   end
