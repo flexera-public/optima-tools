@@ -8,13 +8,6 @@ require 'yaml'
 require 'time'
 
 ###############################################################################
-# Stored Dummy Data
-###############################################################################
-
-current_year = Time.now.year
-
-
-###############################################################################
 # AWS Data Methods
 ###############################################################################
 
@@ -306,10 +299,132 @@ end
 # Demo Data Generation Methods
 ###############################################################################
 
-def aws_compute_rightsizing_idle_data
+def aws_delete_old_snapshots(iterations = 50)
+  current_year = Time.now.year
+end
+
+def aws_delete_unused_volumes(iterations = 50)
+
+end
+
+def aws_reserved_instance_recommendations(iterations = 50)
+
+end
+
+def aws_rightsize_ec2_instances_underutil(iterations = 50)
+
+end
+
+def aws_rightsize_ec2_instances_idle(iterations = 50)
+
+end
+
+def aws_rightsize_rds_instance_underutil(iterations = 50)
+
+end
+
+def aws_rightsize_rds_instances_idle(iterations = 50)
+
+end
+
+def aws_savings_plan_recommendations(iterations = 50)
+
+end
+
+def aws_unused_ip_addresses(iterations = 50)
+
+end
+
+def azure_compute_rightsizing_underutil_data(iterations = 50)
+
+end
+
+def azure_compute_rightsizing_idle_data(iterations = 50)
+
+end
+
+def azure_delete_old_snapshots_data(iterations = 50)
+
+end
+
+def azure_delete_unattached_volumes_data(iterations = 50)
+
+end
+
+def azure_reserved_instance_recommendations(iterations = 50)
+
+end
+
+def azure_rightsize_sql_instances_downsize(iterations = 50)
+
+end
+
+def azure_rightsize_sql_instances_unused(iterations = 50)
+
+end
+
+def azure_savings_plan_recommendations(iterations = 50)
+
+end
+
+def azure_unused_ip_addresses(iterations = 50)
+
+end
+
+def azure_unused_volumes(iterations = 50)
+
+end
+
+def google_committed_use_discount_recommendations(iterations = 50)
+
+end
+
+def google_idle_ip_address_recommendations(iterations = 50)
+
+end
+
+def google_idle_persistent_disk_recommendations(iterations = 50)
+
+end
+
+def google_rightsize_vm_recommendations_underutil(iterations = 50)
+
+end
+
+def google_rightsize_vm_recommendations_idle(iterations = 50)
+
+end
+
+def google_sql_idle_instance_recommendations(iterations = 50)
 
 end
 
 ###############################################################################
-# Script
+# Write Demo Files
 ###############################################################################
+
+write_demo_data(aws_delete_old_snapshots, "./flexera/data/aws/aws_delete_old_snapshots.json")
+write_demo_data(aws_delete_unused_volumes, "./flexera/data/aws/aws_delete_unused_volumes.json")
+write_demo_data(aws_reserved_instance_recommendations, "./flexera/data/aws/aws_reserved_instance_recommendations.json")
+write_demo_data(aws_rightsize_ec2_instances_underutil, "./flexera/data/aws/aws_rightsize_ec2_instances_underutil.json")
+write_demo_data(aws_rightsize_ec2_instances_idle, "./flexera/data/aws/aws_rightsize_ec2_instances_idle.json")
+write_demo_data(aws_rightsize_rds_instance_underutil, "./flexera/data/aws/aws_rightsize_rds_instance_underutil.json")
+write_demo_data(aws_rightsize_rds_instances_idle, "./flexera/data/aws/aws_rightsize_rds_instances_idle.json")
+write_demo_data(aws_savings_plan_recommendations, "./flexera/data/aws/aws_savings_plan_recommendations.json")
+write_demo_data(aws_unused_ip_addresses, "./flexera/data/aws/aws_unused_ip_addresses.json")
+write_demo_data(azure_compute_rightsizing_underutil_data, "./flexera/data/azure/azure_compute_rightsizing_underutil_data.json")
+write_demo_data(azure_compute_rightsizing_idle_data, "./flexera/data/azure/azure_compute_rightsizing_idle_data.json")
+write_demo_data(azure_delete_old_snapshots_data, "./flexera/data/azure/azure_delete_old_snapshots_data.json")
+write_demo_data(azure_delete_unattached_volumes_data, "./flexera/data/azure/azure_delete_unattached_volumes_data.json")
+write_demo_data(azure_reserved_instance_recommendations, "./flexera/data/azure/azure_reserved_instance_recommendations.json")
+write_demo_data(azure_rightsize_sql_instances_downsize, "./flexera/data/azure/azure_rightsize_sql_instances_downsize.json")
+write_demo_data(azure_rightsize_sql_instances_unused, "./flexera/data/azure/azure_rightsize_sql_instances_unused.json")
+write_demo_data(azure_savings_plan_recommendations, "./flexera/data/azure/azure_savings_plan_recommendations.json")
+write_demo_data(azure_unused_ip_addresses, "./flexera/data/azure/azure_unused_ip_addresses.json")
+write_demo_data(azure_unused_volumes, "./flexera/data/azure/azure_unused_volumes.json")
+write_demo_data(google_committed_use_discount_recommendations, "./flexera/data/google/google_committed_use_discount_recommendations.json")
+write_demo_data(google_idle_ip_address_recommendations, "./flexera/data/google/google_idle_ip_address_recommendations.json")
+write_demo_data(google_idle_persistent_disk_recommendations, "./flexera/data/google/google_idle_persistent_disk_recommendations.json")
+write_demo_data(google_rightsize_vm_recommendations_underutil, "./flexera/data/google/google_rightsize_vm_recommendations_underutil.json")
+write_demo_data(google_rightsize_vm_recommendations_idle, "./flexera/data/google/google_rightsize_vm_recommendations_idle.json")
+write_demo_data(google_sql_idle_instance_recommendations, "./flexera/data/google/google_sql_idle_instance_recommendations.json")
