@@ -17,5 +17,5 @@ Upload the desired policies to your demo environment in Flexera One and apply. T
 
 ## Data Generation
 
-- The `./update_demo_data.rb` script is used to generate the demo data. Demo data is stored in the `./flexera/data` directory.
-- The `./update_demo_data.rb` script runs automatically on a weekly cadence via Github actions and stores the updated demo data in the `task/update-cco-demo-data` branch. This branch is where the policies pull the data from.
+- The `./update_demo_data.rb` script is used to generate the demo data.
+- Demo data is stored in the `./flexera/data` directory in the `task/update-cco-demo-data` branch. This is where the policies pull the data from.
