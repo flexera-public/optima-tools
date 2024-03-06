@@ -32,10 +32,9 @@ jobs:
 
       - uses: ruby/setup-ruby@v1
         with:
-          # ruby-version: 2.4.1 # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: Configure Testing Environment
+      - name: Configure Ruby Environment
         shell: bash -l {0} # https://github.com/actions/virtual-environments/issues/4
         run: |
           nvm install
@@ -43,14 +42,8 @@ jobs:
           npm install
           bundle install --without documentation --path bundle
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-
-      - name: Install underscore library
-        run: npm install underscore --legacy-peer-deps
-
       - name: Run the update script
-        run: bash ./update_demo_data.sh
+        run: ruby ./update_demo_data.rb
 
       - name: Create Pull Request
         id: cpr
