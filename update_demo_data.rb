@@ -1,3 +1,6 @@
+# Update Demo Data
+# This script updates the demo data.
+
 ###############################################################################
 # Required Libraries
 ###############################################################################
@@ -299,103 +302,849 @@ end
 ###############################################################################
 
 def aws_delete_old_snapshots(iterations = 50)
-  current_year = Time.now.year
+  result = []
+
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceID": "",
+      "resourceName": "",
+      "tags": "",
+      "age": "",
+      "size": "",
+      "service": "",
+      "recommendationDetails": "",
+      "parentType": "",
+      "parentId": "",
+      "snapshotType": "",
+      "description": "",
+      "resourceName": "",
+      "resourceType": "",
+      "imageId": "",
+      "region": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "resourceType": "",
+      "lookbackPeriod": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def aws_delete_unused_volumes(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceID": "",
+      "resourceName": "",
+      "tags": "",
+      "age": "",
+      "recommendationDetails": "",
+      "resourceType": "",
+      "region": "",
+      "size": "",
+      "status": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "lookbackPeriod": "",
+      "service": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def aws_reserved_instance_recommendations(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "region": "",
+      "service": "",
+      "savingsCurrency": "",
+      "savings": "",
+      "scope": "",
+      "averageNormalizedUnitsUsedPerHour": "",
+      "averageNumberOfInstancesUsedPerHour": "",
+      "averageUtilization": "",
+      "databaseEdition": "",
+      "databaseEngine": "",
+      "deploymentOption": "",
+      "estimatedBreakEvenInMonths": "",
+      "estimatedMonthlyOnDemandCost": "",
+      "estimatedMonthlySavingsPercentage": "",
+      "estimatedReservationCostForLookbackPeriod": "",
+      "family": "",
+      "instanceClass": "",
+      "instanceSize": "",
+      "instanceType": "",
+      "licenseModel": "",
+      "lookbackPeriod": "",
+      "maximumNormalizedUnitsUsedPerHour": "",
+      "maximumNumberOfInstancesUsedPerHour": "",
+      "minimumNormalizedUnitsUsedPerHour": "",
+      "minimumNumberOfInstancesUsedPerHour": "",
+      "nodeType": "",
+      "paymentOption": "",
+      "platform": "",
+      "productDescription": "",
+      "recommendedNormalizedUnitsToPurchase": "",
+      "recommendedQuantity": "",
+      "recurringStandardMonthlyCost": "",
+      "sizeFlexEligible": "",
+      "tenancy": "",
+      "upfrontCost": "",
+      "resourceType": "",
+      "term": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def aws_rightsize_ec2_instances_underutil(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceID": "",
+      "resourceName": "",
+      "tags": "",
+      "recommendationDetails": "",
+      "resourceType": "",
+      "newResourceType": "",
+      "region": "",
+      "platform": "",
+      "hostname": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "launchTime": "",
+      "cpu_maximum": "",
+      "cpu_minimum": "",
+      "cpu_average": "",
+      "cpu_p99": "",
+      "cpu_p95": "",
+      "cpu_p90": "",
+      "mem_maximum": "",
+      "mem_minimum": "",
+      "mem_average": "",
+      "mem_p99": "",
+      "mem_p95": "",
+      "mem_p90": "",
+      "thresholdType": "",
+      "threshold": "",
+      "memoryThreshold": "",
+      "lookbackPeriod": "",
+      "service": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def aws_rightsize_ec2_instances_idle(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceID": "",
+      "resourceName": "",
+      "tags": "",
+      "recommendationDetails": "",
+      "resourceType": "",
+      "region": "",
+      "platform": "",
+      "hostname": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "launchTime": "",
+      "cpu_maximum": "",
+      "cpu_minimum": "",
+      "cpu_average": "",
+      "cpu_p99": "",
+      "cpu_p95": "",
+      "cpu_p90": "",
+      "mem_maximum": "",
+      "mem_minimum": "",
+      "mem_average": "",
+      "mem_p99": "",
+      "mem_p95": "",
+      "mem_p90": "",
+      "thresholdType": "",
+      "threshold": "",
+      "memoryThreshold": "",
+      "lookbackPeriod": "",
+      "service": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def aws_rightsize_rds_instance_underutil(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceID": "",
+      "resourceName": "",
+      "tags": "",
+      "recommendationDetails": "",
+      "region": "",
+      "availabilityZone": "",
+      "state": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "privateDnsName": "",
+      "resourceType": "",
+      "newResourceType": "",
+      "cpuMaximum": "",
+      "cpuMinimum": "",
+      "cpuAverage": "",
+      "cpuP99": "",
+      "cpuP95": "",
+      "cpuP90": "",
+      "databaseEngine": "",
+      "engineVersion": "",
+      "vcpus": "",
+      "licenseModel": "",
+      "arn": "",
+      "platform": "",
+      "service": "",
+      "lookbackPeriod": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def aws_rightsize_rds_instances_idle(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceID": "",
+      "resourceName": "",
+      "tags": "",
+      "recommendationDetails": "",
+      "region": "",
+      "availabilityZone": "",
+      "state": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "privateDnsName": "",
+      "resourceType": "",
+      "databaseEngine": "",
+      "engineVersion": "",
+      "vcpus": "",
+      "licenseModel": "",
+      "arn": "",
+      "platform": "",
+      "service": "",
+      "lookbackPeriod": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def aws_savings_plan_recommendations(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "region": "",
+      "service": "",
+      "savingsCurrency": "",
+      "savings": "",
+      "estimatedSavingsPercentage": "",
+      "estimatedSavingsPlanCost": "",
+      "lookbackPeriod": "",
+      "paymentOption": "",
+      "recommendedQuantity": "",
+      "upfrontCost": "",
+      "currentAverageHourlyOnDemandSpend": "",
+      "currentMaximumHourlyOnDemandSpend": "",
+      "currentMinimumHourlyOnDemandSpend": "",
+      "offeringId": "",
+      "instanceFamily": "",
+      "resourceType": "",
+      "term": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def aws_unused_ip_addresses(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceID": "",
+      "ipAddress": "",
+      "resourceName": "",
+      "resourceType": "",
+      "recommendationDetails": "",
+      "age": "",
+      "region": "",
+      "tags": "",
+      "allocationID": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "service": "",
+      "domain": "",
+      "lookbackPeriod": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def azure_compute_rightsizing_underutil_data(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceGroup": "",
+      "resourceName": "",
+      "resourceID": "",
+      "tags": "",
+      "recommendationDetails": "",
+      "resourceType": "",
+      "newResourceType": "",
+      "resourceKind": "",
+      "region": "",
+      "osType": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "cpu_maximum": "",
+      "cpu_minimum": "",
+      "cpu_average": "",
+      "mem_maximum": "",
+      "mem_minimum": "",
+      "mem_average": "",
+      "thresholdType": "",
+      "threshold": "",
+      "memoryThreshold": "",
+      "lookbackPeriod": "",
+      "service": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def azure_compute_rightsizing_idle_data(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceGroup": "",
+      "resourceName": "",
+      "resourceID": "",
+      "tags": "",
+      "recommendationDetails": "",
+      "resourceType": "",
+      "resourceKind": "",
+      "region": "",
+      "osType": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "cpu_maximum": "",
+      "cpu_minimum": "",
+      "cpu_average": "",
+      "mem_maximum": "",
+      "mem_minimum": "",
+      "mem_average": "",
+      "thresholdType": "",
+      "threshold": "",
+      "memoryThreshold": "",
+      "lookbackPeriod": "",
+      "service": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def azure_delete_old_snapshots_data(iterations = 50)
+  result = []
 
-end
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceGroup": "",
+      "resourceName": "",
+      "tags": "",
+      "age": "",
+      "size": "",
+      "service": "",
+      "region": "",
+      "recommendationDetails": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "resourceType": "",
+      "lookbackPeriod": "",
+      "resourceID": ""
+    }
 
-def azure_delete_unattached_volumes_data(iterations = 50)
+    result << entry
+  end
 
+  return result
 end
 
 def azure_reserved_instance_recommendations(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "service": "",
+      "resourceType": "",
+      "region": "",
+      "term": "",
+      "recommendedQuantity": "",
+      "savingsCurrency": "",
+      "costWithNoRI": "",
+      "totalCostWithRI": "",
+      "savings": "",
+      "firstUsageDate": "",
+      "id": "",
+      "scope": "",
+      "instanceFlexibilityGroup": "",
+      "instanceFlexibilityRatio": "",
+      "normalizedSize": "",
+      "recommendedQuantityNormalized": "",
+      "lookbackPeriod": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def azure_rightsize_sql_instances_downsize(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceGroup": "",
+      "resourceName": "",
+      "tags": "",
+      "createdTime": "",
+      "recommendationDetails": "",
+      "newResourceType": "",
+      "resourceType": "",
+      "resourceKind": "",
+      "region": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "cpuAverage": "",
+      "service": "",
+      "platform": "",
+      "id": "",
+      "threshold": "",
+      "lookbackPeriod": "",
+      "sku": {
+        "name": "",
+        "tier": "",
+        "capacity": ""
+      }
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def azure_rightsize_sql_instances_unused(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceGroup": "",
+      "resourceName": "",
+      "tags": "",
+      "createdTime": "",
+      "recommendationDetails": "",
+      "resourceType": "",
+      "resourceKind": "",
+      "region": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "service": "",
+      "platform": "",
+      "id": "",
+      "lookbackPeriod": "",
+      "sku": {
+        "name": "",
+        "tier": "",
+        "capacity": ""
+      }
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def azure_savings_plan_recommendations(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "name": "",
+      "resourceType": "",
+      "term": "",
+      "recommendedQuantity": "",
+      "savingsCurrency": "",
+      "costWithoutBenefit": "",
+      "totalCost": "",
+      "savings": "",
+      "savingsPercentage": "",
+      "totalHours": "",
+      "benefitCost": "",
+      "wastageCost": "",
+      "overageCost": "",
+      "coveragePercentage": "",
+      "commitmentGranularity": "",
+      "scope": "",
+      "id": "",
+      "lookbackPeriod": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def azure_unused_ip_addresses(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceGroup": "",
+      "ipAddress": "",
+      "resourceName": "",
+      "resourceType": "",
+      "recommendationDetails": "",
+      "age": "",
+      "region": "",
+      "allocation": "",
+      "tags": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "service": "",
+      "lookbackPeriod": "",
+      "resourceID": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def azure_unused_volumes(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "resourceGroup": "",
+      "resourceName": "",
+      "tags": "",
+      "age": "",
+      "timeCreated": "",
+      "recommendationDetails": "",
+      "resourceType": "",
+      "region": "",
+      "size": "",
+      "state": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "attached_vm": "",
+      "service": "",
+      "resourceID": "",
+      "lookbackPeriod": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def google_committed_use_discount_recommendations(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "projectNumber": "",
+      "resourceID": "",
+      "resourceName": "",
+      "resourceType": "",
+      "resourcesToPurchase": "",
+      "region": "",
+      "term": "",
+      "algorithm": "",
+      "recommendationDetails": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "priority": "",
+      "scope": "",
+      "state": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def google_idle_ip_address_recommendations(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "projectNumber": "",
+      "ipAddress": "",
+      "resourceID": "",
+      "resourceName": "",
+      "resourceType": "",
+      "region": "",
+      "primaryImpactCategory": "",
+      "tags": "",
+      "service": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "priority": "",
+      "recommendationDetails": "",
+      "recommenderSubtype": "",
+      "state": "",
+      "status": "",
+      "selfLink": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def google_idle_persistent_disk_recommendations(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "projectNumber": "",
+      "resourceID": "",
+      "resourceName": "",
+      "resourceType": "",
+      "zone": "",
+      "region": "",
+      "primaryImpactCategory": "",
+      "tags": "",
+      "creationTime": "",
+      "days_unattached": "",
+      "age": "",
+      "size": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "priority": "",
+      "recommendationDetails": "",
+      "recommenderSubtype": "",
+      "state": "",
+      "status": "",
+      "service": "",
+      "selfLink": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def google_rightsize_vm_recommendations_underutil(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "projectNumber": "",
+      "resourceID": "",
+      "resourceName": "",
+      "resourceType": "",
+      "newResourceType": "",
+      "zone": "",
+      "region": "",
+      "hostname": "",
+      "platform": "",
+      "cpuMaximum": "",
+      "cpuMinimum": "",
+      "cpuAverage": "",
+      "primaryImpactCategory": "",
+      "tags": "",
+      "service": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "priority": "",
+      "recommendationDetails": "",
+      "recommenderSubtype": "",
+      "state": "",
+      "status": "",
+      "selfLink": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def google_rightsize_vm_recommendations_idle(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "projectNumber": "",
+      "resourceID": "",
+      "resourceName": "",
+      "resourceType": "",
+      "zone": "",
+      "region": "",
+      "hostname": "",
+      "platform": "",
+      "cpuMaximum": "",
+      "cpuMinimum": "",
+      "cpuAverage": "",
+      "primaryImpactCategory": "",
+      "tags": "",
+      "service": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "priority": "",
+      "recommendationDetails": "",
+      "recommenderSubtype": "",
+      "state": "",
+      "status": "",
+      "selfLink": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 def google_sql_idle_instance_recommendations(iterations = 50)
+  result = []
 
+  for iteration in 1..iterations do
+    entry = {
+      "accountID": "",
+      "accountName": "",
+      "projectNumber": "",
+      "resourceID": "",
+      "resourceType": "",
+      "region": "",
+      "timeCreated": "",
+      "primaryImpactCategory": "",
+      "tags": "",
+      "service": "",
+      "pricingPlan": "",
+      "savings": "",
+      "savingsCurrency": "",
+      "priority": "",
+      "recommendationDetails": "",
+      "recommenderSubtype": "",
+      "platform": "",
+      "diskType": "",
+      "size": "",
+      "availabilityType": "",
+      "replicationType": "",
+      "state": "",
+      "status": "",
+      "resourceName": "",
+      "selfLink": ""
+    }
+
+    result << entry
+  end
+
+  return result
 end
 
 ###############################################################################
@@ -414,7 +1163,6 @@ write_demo_data(aws_unused_ip_addresses, "./flexera/data/aws/aws_unused_ip_addre
 write_demo_data(azure_compute_rightsizing_underutil_data, "./flexera/data/azure/azure_compute_rightsizing_underutil_data.json")
 write_demo_data(azure_compute_rightsizing_idle_data, "./flexera/data/azure/azure_compute_rightsizing_idle_data.json")
 write_demo_data(azure_delete_old_snapshots_data, "./flexera/data/azure/azure_delete_old_snapshots_data.json")
-write_demo_data(azure_delete_unattached_volumes_data, "./flexera/data/azure/azure_delete_unattached_volumes_data.json")
 write_demo_data(azure_reserved_instance_recommendations, "./flexera/data/azure/azure_reserved_instance_recommendations.json")
 write_demo_data(azure_rightsize_sql_instances_downsize, "./flexera/data/azure/azure_rightsize_sql_instances_downsize.json")
 write_demo_data(azure_rightsize_sql_instances_unused, "./flexera/data/azure/azure_rightsize_sql_instances_unused.json")
