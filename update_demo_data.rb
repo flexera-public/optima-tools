@@ -319,13 +319,11 @@ def aws_delete_old_snapshots(iterations = 50)
       "parentId": "",
       "snapshotType": "",
       "description": "",
-      "resourceName": "",
       "resourceType": "",
       "imageId": "",
       "region": "",
       "savings": "",
       "savingsCurrency": "",
-      "resourceType": "",
       "lookbackPeriod": ""
     }
 

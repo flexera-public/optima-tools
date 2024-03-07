@@ -1,955 +1,902 @@
-{
-  "message": "The total estimated monthly savings are US$ 6423.63",
-  "ip_list": [
-    {
-      "properties": {
-        "ipAddress": "43.69.39.39"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "EAGERRABBIT-JOLLYEEL",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/EAGERRABBIT-JOLLYEEL/providers/Microsoft.Network/publicIPAddresses/sillyant",
-      "resourceName": "sillyant",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 19.888,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "excitedpenguin",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "40.47.19.17"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "OBEDIENTSNAKE-NERVOUSKANGAROO",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/OBEDIENTSNAKE-NERVOUSKANGAROO/providers/Microsoft.Network/publicIPAddresses/innocentzebra",
-      "resourceName": "innocentzebra",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 41.136,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "innocentsnake",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "43.35.93.19"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "GENTLEYAK-ZEALOUSOWL",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/GENTLEYAK-ZEALOUSOWL/providers/Microsoft.Network/publicIPAddresses/wittyoctopus",
-      "resourceName": "wittyoctopus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 33.978,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "eagerrabbit",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "52.77.13.14"
-      },
-      "region": "centralindia",
-      "resourceGroup": "OBEDIENTSNAKE-THANKFULQUAIL",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/OBEDIENTSNAKE-THANKFULQUAIL/providers/Microsoft.Network/publicIPAddresses/zealouscat",
-      "resourceName": "zealouscat",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 27.193,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "wittyfox",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "66.19.31.65"
-      },
-      "region": "eastus",
-      "resourceGroup": "DROWSYELEPHANT-DROWSYGOAT",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/DROWSYELEPHANT-DROWSYGOAT/providers/Microsoft.Network/publicIPAddresses/quickhorse",
-      "resourceName": "quickhorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 23.472,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "livelyyak",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "68.34.74.3"
-      },
-      "region": "northeurope",
-      "resourceGroup": "WITTYRABBIT-LAZYGOAT",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/WITTYRABBIT-LAZYGOAT/providers/Microsoft.Network/publicIPAddresses/lazyjaguar",
-      "resourceName": "lazyjaguar",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.814,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "merryzebra",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "88.84.41.82"
-      },
-      "region": "centralindia",
-      "resourceGroup": "KINDZEBRA-PROUDIBIS",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/KINDZEBRA-PROUDIBIS/providers/Microsoft.Network/publicIPAddresses/exciteddog",
-      "resourceName": "exciteddog",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 19.987,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "jovialfox",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "96.40.24.34"
-      },
-      "region": "westus2",
-      "resourceGroup": "EXCITEDTIGER-VIVACIOUSQUAIL",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/EXCITEDTIGER-VIVACIOUSQUAIL/providers/Microsoft.Network/publicIPAddresses/eagerwhale",
-      "resourceName": "eagerwhale",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 13.219,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "lazyrabbit",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "73.11.7.70"
-      },
-      "region": "centralus",
-      "resourceGroup": "PROUDDOG-JOVIALDOG",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/PROUDDOG-JOVIALDOG/providers/Microsoft.Network/publicIPAddresses/lazyant",
-      "resourceName": "lazyant",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 67.525,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "upbeatgiraffe",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "16.17.83.68"
-      },
-      "region": "eastus",
-      "resourceGroup": "LIVELYQUAIL-EXCITEDQUAIL",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/LIVELYQUAIL-EXCITEDQUAIL/providers/Microsoft.Network/publicIPAddresses/wittyoctopus",
-      "resourceName": "wittyoctopus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 27.326,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "youthfulquail",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "85.96.17.43"
-      },
-      "region": "northeurope",
-      "resourceGroup": "QUIRKYGIRAFFE-VIVACIOUSPARROT",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/QUIRKYGIRAFFE-VIVACIOUSPARROT/providers/Microsoft.Network/publicIPAddresses/nervouseel",
-      "resourceName": "nervouseel",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 82.882,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "vivaciousgiraffe",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "87.91.19.28"
-      },
-      "region": "northeurope",
-      "resourceGroup": "WITTYPENGUIN-QUICKGIRAFFE",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/WITTYPENGUIN-QUICKGIRAFFE/providers/Microsoft.Network/publicIPAddresses/drowsyxerus",
-      "resourceName": "drowsyxerus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.178,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "zealouseel",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "22.9.36.99"
-      },
-      "region": "eastus2",
-      "resourceGroup": "ZEALOUSOWL-INNOCENTKANGAROO",
-      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/ZEALOUSOWL-INNOCENTKANGAROO/providers/Microsoft.Network/publicIPAddresses/upbeatbear",
-      "resourceName": "upbeatbear",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 1.117,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "nervouspenguin",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "74.83.82.25"
-      },
-      "region": "northeurope",
-      "resourceGroup": "UPBEATZEBRA-MERRYANT",
-      "resourceId": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/UPBEATZEBRA-MERRYANT/providers/Microsoft.Network/publicIPAddresses/upbeatbear",
-      "resourceName": "upbeatbear",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 25.177,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "sillyowl",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "88.4.21.97"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "JOVIALGIRAFFE-LIVELYKANGAROO",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/JOVIALGIRAFFE-LIVELYKANGAROO/providers/Microsoft.Network/publicIPAddresses/zealousgiraffe",
-      "resourceName": "zealousgiraffe",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 86.143,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "gentlefox",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "61.86.81.35"
-      },
-      "region": "centralindia",
-      "resourceGroup": "JOVIALJAGUAR-ADVENTUROUSCAT",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/JOVIALJAGUAR-ADVENTUROUSCAT/providers/Microsoft.Network/publicIPAddresses/obedienteel",
-      "resourceName": "obedienteel",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 15.029,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "braverabbit",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "98.1.96.95"
-      },
-      "region": "centralus",
-      "resourceGroup": "EAGERELEPHANT-JOVIALOCTOPUS",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/EAGERELEPHANT-JOVIALOCTOPUS/providers/Microsoft.Network/publicIPAddresses/vivaciousbear",
-      "resourceName": "vivaciousbear",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 51.881,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "calmxerus",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "16.86.68.6"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "ZEALOUSURCHIN-KINDYAK",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/ZEALOUSURCHIN-KINDYAK/providers/Microsoft.Network/publicIPAddresses/livelykangaroo",
-      "resourceName": "livelykangaroo",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 29.921,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "jovialviper",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "85.82.0.62"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "EXCITEDKANGAROO-EXCITEDVIPER",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/EXCITEDKANGAROO-EXCITEDVIPER/providers/Microsoft.Network/publicIPAddresses/fiercezebra",
-      "resourceName": "fiercezebra",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 5.784,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "thankfulowl",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "10.49.32.13"
-      },
-      "region": "uksouth",
-      "resourceGroup": "UPBEATEEL-EXCITEDQUAIL",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/UPBEATEEL-EXCITEDQUAIL/providers/Microsoft.Network/publicIPAddresses/obedienthorse",
-      "resourceName": "obedienthorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 34.653,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "quirkytiger",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "75.25.94.37"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "BRAVEBEAR-ZEALOUSJAGUAR",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/BRAVEBEAR-ZEALOUSJAGUAR/providers/Microsoft.Network/publicIPAddresses/proudibis",
-      "resourceName": "proudibis",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.356,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "gentledog",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "46.81.10.95"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "CALMQUAIL-OBEDIENTEEL",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/CALMQUAIL-OBEDIENTEEL/providers/Microsoft.Network/publicIPAddresses/jollyhorse",
-      "resourceName": "jollyhorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 10.235,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "jollyyak",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "84.15.59.51"
-      },
-      "region": "uksouth",
-      "resourceGroup": "JOLLYZEBRA-NERVOUSJAGUAR",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/JOLLYZEBRA-NERVOUSJAGUAR/providers/Microsoft.Network/publicIPAddresses/obedientpenguin",
-      "resourceName": "obedientpenguin",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 22.478,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "upbeathorse",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "82.29.84.69"
-      },
-      "region": "uksouth",
-      "resourceGroup": "UPBEATELEPHANT-VIVACIOUSANT",
-      "resourceId": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/UPBEATELEPHANT-VIVACIOUSANT/providers/Microsoft.Network/publicIPAddresses/nervousnewt",
-      "resourceName": "nervousnewt",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 0.173,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "calmowl",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "31.86.39.71"
-      },
-      "region": "uksouth",
-      "resourceGroup": "UPBEATURCHIN-HAPPYJAGUAR",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/UPBEATURCHIN-HAPPYJAGUAR/providers/Microsoft.Network/publicIPAddresses/merrynewt",
-      "resourceName": "merrynewt",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 33.092,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "obedientviper",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "50.87.50.69"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "EXCITEDPENGUIN-OBEDIENTBEAR",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/EXCITEDPENGUIN-OBEDIENTBEAR/providers/Microsoft.Network/publicIPAddresses/happygoat",
-      "resourceName": "happygoat",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.502,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "youthfulquail",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "84.38.71.11"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "EXCITEDELEPHANT-LAZYPENGUIN",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/EXCITEDELEPHANT-LAZYPENGUIN/providers/Microsoft.Network/publicIPAddresses/livelyviper",
-      "resourceName": "livelyviper",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 52.076,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "gentleelephant",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "46.99.57.55"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "NERVOUSIBIS-RELIEVEDOCTOPUS",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/NERVOUSIBIS-RELIEVEDOCTOPUS/providers/Microsoft.Network/publicIPAddresses/calmquail",
-      "resourceName": "calmquail",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 9.651,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "youthfulelephant",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "34.82.90.74"
-      },
-      "region": "eastus",
-      "resourceGroup": "GENTLEEEL-LAZYXERUS",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/GENTLEEEL-LAZYXERUS/providers/Microsoft.Network/publicIPAddresses/upbeathorse",
-      "resourceName": "upbeathorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.939,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "relievedzebra",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "39.18.16.9"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "OBEDIENTMOUSE-FIERCEOCTOPUS",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/OBEDIENTMOUSE-FIERCEOCTOPUS/providers/Microsoft.Network/publicIPAddresses/proudhorse",
-      "resourceName": "proudhorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 0.907,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "livelypenguin",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "70.1.48.85"
-      },
-      "region": "northeurope",
-      "resourceGroup": "HAPPYVIPER-PROUDCAT",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/HAPPYVIPER-PROUDCAT/providers/Microsoft.Network/publicIPAddresses/relievedparrot",
-      "resourceName": "relievedparrot",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 36.364,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "eagerurchin",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "84.18.91.74"
-      },
-      "region": "westus2",
-      "resourceGroup": "DROWSYURCHIN-ZEALOUSKANGAROO",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/DROWSYURCHIN-ZEALOUSKANGAROO/providers/Microsoft.Network/publicIPAddresses/lazyparrot",
-      "resourceName": "lazyparrot",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.039,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "livelyrabbit",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "61.54.11.69"
-      },
-      "region": "westus2",
-      "resourceGroup": "EXCITEDSNAKE-RELIEVEDYAK",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/EXCITEDSNAKE-RELIEVEDYAK/providers/Microsoft.Network/publicIPAddresses/jovialsnake",
-      "resourceName": "jovialsnake",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 16.907,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "quickwhale",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "15.64.38.70"
-      },
-      "region": "northeurope",
-      "resourceGroup": "THANKFULFOX-RELIEVEDELEPHANT",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/THANKFULFOX-RELIEVEDELEPHANT/providers/Microsoft.Network/publicIPAddresses/braverabbit",
-      "resourceName": "braverabbit",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 5.546,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "quickeel",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "88.47.7.49"
-      },
-      "region": "uksouth",
-      "resourceGroup": "OBEDIENTXERUS-FIERCEQUAIL",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/OBEDIENTXERUS-FIERCEQUAIL/providers/Microsoft.Network/publicIPAddresses/thankfulzebra",
-      "resourceName": "thankfulzebra",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 45.33,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "quicknewt",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "91.18.86.69"
-      },
-      "region": "eastus2",
-      "resourceGroup": "JOVIALPARROT-INNOCENTKANGAROO",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/JOVIALPARROT-INNOCENTKANGAROO/providers/Microsoft.Network/publicIPAddresses/jovialkangaroo",
-      "resourceName": "jovialkangaroo",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 18.669,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "vivaciousxerus",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "14.1.25.22"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "EXCITEDURCHIN-QUIRKYMOUSE",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/EXCITEDURCHIN-QUIRKYMOUSE/providers/Microsoft.Network/publicIPAddresses/bravekangaroo",
-      "resourceName": "bravekangaroo",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 25.358,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "obedientjaguar",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "90.66.27.87"
-      },
-      "region": "centralus",
-      "resourceGroup": "GENTLEIBIS-LIVELYZEBRA",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/GENTLEIBIS-LIVELYZEBRA/providers/Microsoft.Network/publicIPAddresses/thankfulibis",
-      "resourceName": "thankfulibis",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 2.102,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "excitedoctopus",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "87.28.56.51"
-      },
-      "region": "northeurope",
-      "resourceGroup": "LIVELYRABBIT-YOUTHFULQUAIL",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/LIVELYRABBIT-YOUTHFULQUAIL/providers/Microsoft.Network/publicIPAddresses/obedienttiger",
-      "resourceName": "obedienttiger",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 20.57,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "quirkyibis",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "3.28.57.54"
-      },
-      "region": "centralus",
-      "resourceGroup": "OBEDIENTSNAKE-INNOCENTDOG",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/OBEDIENTSNAKE-INNOCENTDOG/providers/Microsoft.Network/publicIPAddresses/adventurousrabbit",
-      "resourceName": "adventurousrabbit",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 42.87,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "bravejaguar",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "32.89.60.46"
-      },
-      "region": "centralindia",
-      "resourceGroup": "JOVIALELEPHANT-QUICKKANGAROO",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/JOVIALELEPHANT-QUICKKANGAROO/providers/Microsoft.Network/publicIPAddresses/wittyrabbit",
-      "resourceName": "wittyrabbit",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 0.15,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "proudrabbit",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "2.69.55.71"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "HAPPYNEWT-PROUDANT",
-      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/HAPPYNEWT-PROUDANT/providers/Microsoft.Network/publicIPAddresses/nervousurchin",
-      "resourceName": "nervousurchin",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.456,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "innocentjaguar",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "48.16.81.21"
-      },
-      "region": "centralindia",
-      "resourceGroup": "ZEALOUSPARROT-EXCITEDPENGUIN",
-      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/ZEALOUSPARROT-EXCITEDPENGUIN/providers/Microsoft.Network/publicIPAddresses/innocentgiraffe",
-      "resourceName": "innocentgiraffe",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.645,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "nervousxerus",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "2.66.72.30"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "YOUTHFULFOX-QUIRKYMOUSE",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/YOUTHFULFOX-QUIRKYMOUSE/providers/Microsoft.Network/publicIPAddresses/nervousoctopus",
-      "resourceName": "nervousoctopus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 47.937,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "proudgoat",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "29.92.42.66"
-      },
-      "region": "uksouth",
-      "resourceGroup": "SILLYQUAIL-OBEDIENTKANGAROO",
-      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/SILLYQUAIL-OBEDIENTKANGAROO/providers/Microsoft.Network/publicIPAddresses/excitedyak",
-      "resourceName": "excitedyak",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 68.756,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "innocentbear",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "85.98.58.87"
-      },
-      "region": "northeurope",
-      "resourceGroup": "ZEALOUSJAGUAR-YOUTHFULGOAT",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/ZEALOUSJAGUAR-YOUTHFULGOAT/providers/Microsoft.Network/publicIPAddresses/bravebear",
-      "resourceName": "bravebear",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 10.461,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "relievedtiger",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "0.65.25.32"
-      },
-      "region": "centralindia",
-      "resourceGroup": "UPBEATIBIS-BRAVEMOUSE",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/UPBEATIBIS-BRAVEMOUSE/providers/Microsoft.Network/publicIPAddresses/quickgiraffe",
-      "resourceName": "quickgiraffe",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 41.484,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "excitedlion",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "17.37.32.59"
-      },
-      "region": "uksouth",
-      "resourceGroup": "INNOCENTOCTOPUS-HAPPYDOG",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/INNOCENTOCTOPUS-HAPPYDOG/providers/Microsoft.Network/publicIPAddresses/lazyxerus",
-      "resourceName": "lazyxerus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 22.305,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "nervouszebra",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "64.92.8.6"
-      },
-      "region": "northeurope",
-      "resourceGroup": "EAGERGIRAFFE-FIERCEOWL",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/EAGERGIRAFFE-FIERCEOWL/providers/Microsoft.Network/publicIPAddresses/kinddog",
-      "resourceName": "kinddog",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 0.586,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "innocentcat",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "77.71.92.9"
-      },
-      "region": "westus2",
-      "resourceGroup": "KINDANT-RELIEVEDGOAT",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/KINDANT-RELIEVEDGOAT/providers/Microsoft.Network/publicIPAddresses/obedientgoat",
-      "resourceName": "obedientgoat",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 17.533,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "nervouslion",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    }
-  ]
-}
+[
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  },
+  {
+    "accountID": "",
+    "accountName": "",
+    "resourceGroup": "",
+    "ipAddress": "",
+    "resourceName": "",
+    "resourceType": "",
+    "recommendationDetails": "",
+    "age": "",
+    "region": "",
+    "allocation": "",
+    "tags": "",
+    "savings": "",
+    "savingsCurrency": "",
+    "service": "",
+    "lookbackPeriod": "",
+    "resourceID": ""
+  }
+]
