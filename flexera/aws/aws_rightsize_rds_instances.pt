@@ -43,13 +43,8 @@ end
 policy "pol_rightsize_rds" do
   validate_each $ds_rds_underutil_incident do
     summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} AWS Underutilized RDS Instances Found"
-    detail_template <<-'EOS'
-    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
-
-    {{ with index data 0 }}{{ .message }}{{ end }}
-    EOS
     check eq(val(item, "resourceID"), "")
-    hash_exclude "tags", "total_savings", "message", "savings", "savingsCurrency"
+    hash_exclude "tags", "savings", "savingsCurrency"
     export do
       resource_level true
       field "accountID" do
@@ -144,13 +139,8 @@ policy "pol_rightsize_rds" do
   end
   validate_each $ds_rds_idle_incident do
     summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} AWS Unused RDS Instances Found"
-    detail_template <<-'EOS'
-    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
-
-    {{ with index data 0 }}{{ .message }}{{ end }}
-    EOS
     check eq(val(item, "resourceID"), "")
-    hash_exclude "tags", "total_savings", "message", "savings", "savingsCurrency"
+    hash_exclude "tags", "savings", "savingsCurrency"
     export do
       resource_level true
       field "accountID" do

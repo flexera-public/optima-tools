@@ -34,11 +34,6 @@ end
 policy "pol_aws_sp_recommendations" do
   validate_each $ds_sp_normalization do
     summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} AWS Savings Plan Purchase Recommendations"
-    detail_template <<-'EOS'
-    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
-
-    {{ with index data 0 }}{{ .message }}{{ end }}
-    EOS
     check lt(val(item, "savings"), 0)
     export do
       resource_level false

@@ -34,11 +34,6 @@ end
 policy "pol_azure_unattached_volumes" do
   validate_each $ds_volume_cost_mapping do
     summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Azure Unused Volumes Found"
-    detail_template <<-'EOS'
-    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
-
-    {{ with index data 0 }}{{ .message }}{{ end }}
-    EOS
     check eq(val(item, "resourceID"), "")
     hash_exclude "savings", "savingsCurrency", "age", "size"
     export do

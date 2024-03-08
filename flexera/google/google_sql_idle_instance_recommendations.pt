@@ -34,13 +34,8 @@ end
 policy "policy_recommendations" do
   validate_each $ds_recommendations_incident do
     summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Google Idle Cloud SQL Instances Found"
-    detail_template <<-'EOS'
-    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
-
-    {{ with index data 0 }}{{ .message }}{{ end }}
-    EOS
     check eq(val(item, "resourceID"), "")
-    hash_exclude "tags", "savings", "savingsCurrency", "total_savings", "message"
+    hash_exclude "tags", "savings", "savingsCurrency"
     export do
       resource_level true
       field "accountID" do

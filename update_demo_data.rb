@@ -169,8 +169,27 @@ def get_random_azure_db_ri_sku
     "SQLDB_GP_Compute_Gen5"
   ]
 
-  return azure_db_ri_sku_list.sample
+  return azure_db_sku_list.sample
 end
+
+def get_random_azure_db_sku
+  azure_db_sku_list = [
+    { "name": "Standard", "tier": "Standard" },
+    { "name": "Standard", "tier": "Standard" },
+    { "name": "Standard", "tier": "Standard" },
+    { "name": "Premium", "tier": "Premium" },
+    { "name": "DataWarehouse", "tier": "DataWarehouse" },
+    { "name": "GP_Gen4", "tier": "GeneralPurpose" },
+    { "name": "GP_Gen5", "tier": "GeneralPurpose" },
+    { "name": "GP_Gen5", "tier": "GeneralPurpose" },
+    { "name": "GP_Gen5", "tier": "GeneralPurpose" },
+    { "name": "HS_Gen5", "tier": "Hyperscale" },
+    { "name": "BC_Gen5", "tier": "BusinessCritical" }
+  ]
+
+  return azure_db_sku_list.sample
+end
+
 
 ###############################################################################
 # Google Data Methods
@@ -287,6 +306,14 @@ def get_random_date(year)
   return random_time.iso8601 # Return the ISO 8601 string representation of the random date
 end
 
+def get_random_string(length = 26, case = "upper")
+  characters = ('A'..'Z').to_a + ('0'..'9').to_a if case == "upper"
+  characters = ('a'..'z').to_a + ('0'..'9').to_a if case == "lower"
+  characters = ('A'..'Z').to_a + ('a'..'z').to_a + ('0'..'9').to_a if case == "all"
+
+  return (0...length).map { characters.sample }.join
+end
+
 def get_random_hex_string(length = 17)
   hex_string = ''
   number_of_bytes = (length + 1) / 2
@@ -300,6 +327,14 @@ end
 
 def get_random_ip_address
   return rand(11..240).to_s + "." + rand(11..240).to_s + "." + rand(11..240).to_s + "." + rand(11..240).to_s
+end
+
+def get_random_savings(minimum = 1, maximum = 1000)
+  return rand(minimum..maximum) + (rand(1..99).to_f / 100)
+end
+
+def get_currency
+  return "US$"
 end
 
 ###############################################################################
@@ -320,16 +355,26 @@ def aws_delete_old_snapshots(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_aws_account
+    accountName = get_random_name
+    resourceID = get_random_name
+    service = "EC2"
+
+    recommendationDetails = [
+      "Delete ", service, " snapshot ", resourceID, " ",
+      "in AWS Account ", accountName, " (", accountID, ")"
+    ].join
+
     entry = {
-      "accountID": get_random_aws_account,
-      "accountName": get_random_name,
-      "resourceID": get_random_name,
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceID": resourceID,
       "resourceName": get_random_name,
       "tags": get_random_tags,
       "age": rand(1..200),
       "size": rand(20..500),
-      "service": "EC2",
-      "recommendationDetails": "",
+      "service": service,
+      "recommendationDetails": recommendationDetails,
       "parentType": "EBS Volume",
       "parentId": "vol-" + get_random_hex_string,
       "snapshotType": "manual",
@@ -337,9 +382,10 @@ def aws_delete_old_snapshots(iterations = 50)
       "resourceType": "Storage Snapshot",
       "imageId": "",
       "region": get_random_aws_region,
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
-      "lookbackPeriod": 30
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
+      "lookbackPeriod": 30,
+      "policy_name": "AWS Old Snapshots"
     }
 
     result << entry
@@ -352,22 +398,33 @@ def aws_delete_unused_volumes(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_aws_account
+    accountName = get_random_name
+    resourceID = "vol-" + get_random_hex_string
+
+    recommendationDetails = [
+      "Delete volume ", resourceID, " ",
+      "in AWS Account ", accountName, " ",
+      "(", accountID, ")"
+    ].join
+
     entry = {
-      "accountID": get_random_aws_account,
-      "accountName": get_random_name,
-      "resourceID": "vol-" + get_random_hex_string,
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceID": resourceID,
       "resourceName": get_random_name,
       "tags": get_random_tags,
       "age": rand(1..200),
-      "recommendationDetails": "",
+      "recommendationDetails": recommendationDetails,
       "resourceType": "gp" + rand(2..3),
       "region": get_random_aws_region,
       "size": rand(20..500),
       "status": "available",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "lookbackPeriod": 30,
-      "service": "EBS"
+      "service": "EBS",
+      "policy_name": "AWS Unused Volumes"
     }
 
     result << entry
@@ -381,15 +438,15 @@ def aws_reserved_instance_recommendations(iterations = 50)
 
   for iteration in 1..iterations do
     instanceType = get_random_aws_ec2_size[rand(0..2)]
-    resourceType = resourceType = instanceType.split('.')[0]
+    resourceType = instanceType.split('.')[0]
 
     entry = {
       "accountID": get_random_aws_account,
       "accountName": get_random_name,
       "region": get_random_aws_region,
       "service": "Elastic Compute Cloud (EC2)",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "scope": "Linked",
       "averageNormalizedUnitsUsedPerHour": rand(1..1000) + (rand(1..99).to_f / 100),
       "averageNumberOfInstancesUsedPerHour": rand(1..1000) + (rand(1..99).to_f / 100),
@@ -422,7 +479,8 @@ def aws_reserved_instance_recommendations(iterations = 50)
       "tenancy": "Shared",
       "upfrontCost": rand(1..1000) + (rand(1..99).to_f / 100),
       "resourceType": resourceType,
-      "term": "1 year"
+      "term": "1 year",
+      "policy_name": "AWS Reserved Instances Recommendations"
     }
 
     result << entry
@@ -435,22 +493,36 @@ def aws_rightsize_ec2_instances_underutil(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_aws_account
+    accountName = get_random_name
+    resourceID = "i-" + get_random_name
+
     type = get_random_aws_ec2_size
+    resourceType = type[0]
+    newResourceType = type[1]
+
+    recommendationDetails = [
+      "Change instance type of EC2 instance ", resourceID, " ",
+      "in AWS Account ", accountName, " ",
+      "(", accountID, ") ",
+      "from ", resourceType, " ",
+      "to ", newResourceType
+    ].join
 
     entry = {
-      "accountID": get_random_aws_account,
-      "accountName": get_random_name,
-      "resourceID": "i-" + get_random_name,
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceID": resourceID,
       "resourceName": get_random_name,
       "tags": get_random_tags,
-      "recommendationDetails": "",
-      "resourceType": type[0],
-      "newResourceType": type[1],
+      "recommendationDetails": recommendationDetails,
+      "resourceType": resourceType,
+      "newResourceType": newResourceType,
       "region": get_random_aws_region,
       "platform": "Linux/UNIX",
       "hostname": get_random_ip_address,
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "launchTime": get_random_date(rand((Time.now.year - 4)..(Time.now.year - 1))),
       "cpu_maximum": rand(60..99) + (rand(1..99).to_f / 100),
       "cpu_minimum": rand(1..10) + (rand(1..99).to_f / 100),
@@ -468,7 +540,8 @@ def aws_rightsize_ec2_instances_underutil(iterations = 50)
       "threshold": 40,
       "memoryThreshold": 40,
       "lookbackPeriod": 30,
-      "service": "EC2"
+      "service": "EC2",
+      "policy_name": "AWS Rightsize EC2 Instances"
     }
 
     result << entry
@@ -481,19 +554,29 @@ def aws_rightsize_ec2_instances_idle(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_aws_account
+    accountName = get_random_name
+    resourceID = "i-" + get_random_name
+
+    recommendationDetails = [
+      "Terminate EC2 instance ", resourceID, " ",
+      "in AWS Account ", accountName, " ",
+      "(", accountID, ")"
+    ].join
+
     entry = {
-      "accountID": get_random_aws_account,
-      "accountName": get_random_name,
-      "resourceID": "i-" + get_random_name,
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceID": resourceID,
       "resourceName": get_random_name,
       "tags": get_random_tags,
-      "recommendationDetails": "",
+      "recommendationDetails": recommendationDetails,
       "resourceType": get_random_aws_ec2_size[rand(0..2)],
       "region": get_random_aws_region,
       "platform": "Linux/UNIX",
       "hostname": get_random_ip_address,
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "launchTime": get_random_date(rand((Time.now.year - 4)..(Time.now.year - 1))),
       "cpu_maximum": rand(5..20) + (rand(1..99).to_f / 100),
       "cpu_minimum": rand(1..2) + (rand(1..99).to_f / 100),
@@ -511,7 +594,8 @@ def aws_rightsize_ec2_instances_idle(iterations = 50)
       "threshold": 5,
       "memoryThreshold": 5,
       "lookbackPeriod": 30,
-      "service": "EC2"
+      "service": "EC2",
+      "policy_name": "AWS Rightsize EC2 Instances"
     }
 
     result << entry
@@ -525,27 +609,40 @@ def aws_rightsize_rds_instance_underutil(iterations = 50)
 
   for iteration in 1..iterations do
     accountID = get_random_aws_account
+    accountName = get_random_name
     region = get_random_aws_region
-    type = get_random_aws_ec2_size
     resourceName = get_random_name
+    resourceID = "db-" + get_random_string
+
+    type = get_random_aws_ec2_size
+    resourceType = "db." + type[0]
+    newResourceType = "db." + type[1]
 
     arn = "arn:aws:rds:" + region + ":" + accountID + ":" + resourceName
 
+    recommendationDetails = [
+      "Downsize AWS RDS instance ", resourceName, " ",
+      "in AWS Account ", accountName, " ",
+      "(", accountID, ") ",
+      "from ", resourceType, " ",
+      "to ", newResourceType
+    ].join
+
     entry = {
       "accountID": accountID,
-      "accountName": get_random_name,
-      "resourceID": "",
+      "accountName": accountName,
+      "resourceID": resourceID,
       "resourceName": resourceName,
       "tags": get_random_tags,
-      "recommendationDetails": "",
+      "recommendationDetails": recommendationDetails,
       "region": region,
       "availabilityZone": region + "a",
       "state": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "privateDnsName": "",
-      "resourceType": "db." + type[0],
-      "newResourceType": "db." + type[1],
+      "resourceType": resourceType,
+      "newResourceType": newResourceType,
       "cpuMaximum": rand(60..99) + (rand(1..99).to_f / 100),
       "cpuMinimum": rand(1..10) + (rand(1..99).to_f / 100),
       "cpuAverage": rand(11..39) + (rand(1..99).to_f / 100),
@@ -559,7 +656,8 @@ def aws_rightsize_rds_instance_underutil(iterations = 50)
       "arn": arn,
       "platform": "aurora-postgresql",
       "service": "AmazonRDS",
-      "lookbackPeriod": 30
+      "lookbackPeriod": 30,
+      "policy_name": "AWS Rightsize RDS Instances"
     }
 
     result << entry
@@ -573,24 +671,31 @@ def aws_rightsize_rds_instances_idle(iterations = 50)
 
   for iteration in 1..iterations do
     accountID = get_random_aws_account
+    accountName = get_random_name
     region = get_random_aws_region
     type = get_random_aws_ec2_size
     resourceName = get_random_name
+    resourceID = "db-" + get_random_string
 
     arn = "arn:aws:rds:" + region + ":" + accountID + ":" + resourceName
 
+    recommendationDetails = [
+      "Terminate RDS instance ", resourceName, " ",
+      "in AWS Account ", accountName, " (", accountID, ")"
+    ].join
+
     entry = {
       "accountID": accountID,
-      "accountName": get_random_name,
-      "resourceID": "",
+      "accountName": accountName,
+      "resourceID": resourceID,
       "resourceName": resourceName,
       "tags": get_random_tags,
-      "recommendationDetails": "",
+      "recommendationDetails": recommendationDetails,
       "region": region,
       "availabilityZone": region + "a",
       "state": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "privateDnsName": "",
       "resourceType": "db." + type[0],
       "databaseEngine": "aurora-postgresql",
@@ -600,7 +705,8 @@ def aws_rightsize_rds_instances_idle(iterations = 50)
       "arn": arn,
       "platform": "aurora-postgresql",
       "service": "AmazonRDS",
-      "lookbackPeriod": 30
+      "lookbackPeriod": 30,
+      "policy_name": "AWS Rightsize RDS Instances"
     }
 
     result << entry
@@ -613,26 +719,29 @@ def aws_savings_plan_recommendations(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    offeringId = get_random_string(9, "lower") + '-' + get_random_string(4, "lower") + '-' + get_random_string(4, "lower") + '-' + get_random_string(4, "lower") + '-' + get_random_string(11, "lower")
+
     entry = {
       "accountID": get_random_aws_account,
       "accountName": get_random_name,
       "region": get_random_aws_region,
-      "service": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
-      "estimatedSavingsPercentage": "",
-      "estimatedSavingsPlanCost": "",
-      "lookbackPeriod": "",
-      "paymentOption": "",
-      "recommendedQuantity": "",
-      "upfrontCost": "",
-      "currentAverageHourlyOnDemandSpend": "",
-      "currentMaximumHourlyOnDemandSpend": "",
-      "currentMinimumHourlyOnDemandSpend": "",
-      "offeringId": "",
+      "service": "Elastic Compute Cloud (EC2)",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
+      "estimatedSavingsPercentage": rand(1..90),
+      "estimatedSavingsPlanCost": rand(1..1000) + (rand(1..99).to_f / 100),
+      "lookbackPeriod": 7,
+      "paymentOption": "No Upfront",
+      "recommendedQuantity": rand(1..10),
+      "upfrontCost": 0,
+      "currentAverageHourlyOnDemandSpend": rand(30..49) + (rand(1..99).to_f / 100),
+      "currentMaximumHourlyOnDemandSpend": rand(50..99) + (rand(1..99).to_f / 100),
+      "currentMinimumHourlyOnDemandSpend": rand(1..29) + (rand(1..99).to_f / 100),
+      "offeringId": offeringId,
       "instanceFamily": "",
-      "resourceType": "",
-      "term": ""
+      "resourceType": "Compute Savings Plan",
+      "term": "1 year",
+      "policy_name": "AWS Savings Plan Recommendations"
     }
 
     result << entry
@@ -645,23 +754,37 @@ def aws_unused_ip_addresses(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_aws_account
+    accountName = get_random_name
+    region = get_random_aws_region
+    resourceID = get_random_ip_address
+    ipAddress = get_random_ip_address
+    resourceName = get_random_name + '/' + get_random_string(4, "lower")
+    allocationID = "eipalloc-" + rand(10000000..99999999).to_s
+
+    recommendationDetails = [
+      "Release IP address ", resourceID, " ",
+      "in AWS Account ", accountName, " (", accountID, ")"
+    ].join
+
     entry = {
-      "accountID": get_random_aws_account,
-      "accountName": get_random_name,
-      "resourceID": "",
-      "ipAddress": "",
-      "resourceName": "",
-      "resourceType": "",
-      "recommendationDetails": "",
-      "age": "",
-      "region": get_random_aws_region,
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceID": resourceID,
+      "ipAddress": ipAddress,
+      "resourceName": resourceName,
+      "resourceType": "IP Address",
+      "recommendationDetails": recommendationDetails,
+      "age": rand(1..80),
+      "region": region,
       "tags": get_random_tags,
-      "allocationID": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
-      "service": "",
-      "domain": "",
-      "lookbackPeriod": ""
+      "allocationID": allocationID,
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
+      "service": "EC2",
+      "domain": "standard",
+      "lookbackPeriod": 30,
+      "policy_name": "AWS Unused IP Addresses"
     }
 
     result << entry
@@ -674,32 +797,50 @@ def azure_compute_rightsizing_underutil_data(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_azure_account
+    accountName = get_random_name
+    resourceGroup = get_random_name
+    resourceName = get_random_name
+    resourceId = "/subscriptions/" + accountID + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Compute/virtualMachines/" + resourceName
+
+    type = get_random_azure_compute_size
+    resourceType = type[0]
+    newResourceType = type[1]
+
+    recommendationDetails = [
+      "Resize Azure virtual machine ", resourceName, " ",
+      "in Azure Subscription ", accountName, " ",
+      "(", accountID, ") ",
+      "from ", resourceType, " to ", newResourceType
+    ].join
+
     entry = {
-      "accountID": get_random_azure_account,
-      "accountName": get_random_name,
-      "resourceGroup": get_random_name,
-      "resourceName": "",
-      "resourceID": "",
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceGroup": resourceGroup,
+      "resourceName": resourceName,
+      "resourceID": resourceId,
       "tags": get_random_tags,
-      "recommendationDetails": "",
-      "resourceType": "",
-      "newResourceType": "",
-      "resourceKind": "",
+      "recommendationDetails": recommendationDetails,
+      "resourceType": resourceType,
+      "newResourceType": newResourceType,
+      "resourceKind": "Microsoft.Compute/virtualMachines",
       "region": get_random_azure_region,
-      "osType": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "osType": "Linux",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "cpu_maximum": rand(60..99) + (rand(1..99).to_f / 100),
       "cpu_minimum": rand(1..10) + (rand(1..99).to_f / 100),
       "cpu_average": rand(11..39) + (rand(1..99).to_f / 100),
       "mem_maximum": rand(60..99) + (rand(1..99).to_f / 100),
       "mem_minimum": rand(1..10) + (rand(1..99).to_f / 100),
       "mem_average": rand(11..39) + (rand(1..99).to_f / 100),
-      "thresholdType": "",
-      "threshold": "",
-      "memoryThreshold": "",
-      "lookbackPeriod": "",
-      "service": ""
+      "thresholdType": "Average",
+      "threshold": 40,
+      "memoryThreshold": 40,
+      "lookbackPeriod": 30,
+      "service": "Microsoft.Compute",
+      "policy_name": "Azure Rightsize Compute Instances"
     }
 
     result << entry
@@ -712,31 +853,45 @@ def azure_compute_rightsizing_idle_data(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_azure_account
+    accountName = get_random_name
+    resourceGroup = get_random_name
+    resourceName = get_random_name
+    resourceId = "/subscriptions/" + accountID + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Compute/virtualMachines/" + resourceName
+    resourceType = get_random_azure_compute_size[rand(0..1)]
+
+    recommendationDetails = [
+      "Delete Azure virtual machine ", resourceName, " ",
+      "in Azure Subscription ", accountName, " ",
+      "(", accountID, ")"
+    ].join
+
     entry = {
-      "accountID": get_random_azure_account,
-      "accountName": get_random_name,
-      "resourceGroup": get_random_name,
-      "resourceName": "",
-      "resourceID": "",
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceGroup": resourceGroup,
+      "resourceName": resourceName,
+      "resourceID": resourceId,
       "tags": get_random_tags,
-      "recommendationDetails": "",
-      "resourceType": "",
-      "resourceKind": "",
+      "recommendationDetails": recommendationDetails,
+      "resourceType": resourceType,
+      "resourceKind": "Microsoft.Compute/virtualMachines",
       "region": get_random_azure_region,
-      "osType": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "osType": "Linux",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "cpu_maximum": rand(5..20) + (rand(1..99).to_f / 100),
       "cpu_minimum": rand(1..2) + (rand(1..99).to_f / 100),
       "cpu_average": rand(3..4) + (rand(1..99).to_f / 100),
       "mem_maximum": rand(5..20) + (rand(1..99).to_f / 100),
       "mem_minimum": rand(1..2) + (rand(1..99).to_f / 100),
       "mem_average": rand(3..4) + (rand(1..99).to_f / 100),
-      "thresholdType": "",
-      "threshold": "",
-      "memoryThreshold": "",
-      "lookbackPeriod": "",
-      "service": ""
+      "thresholdType": "Average",
+      "threshold": 5,
+      "memoryThreshold": 5,
+      "lookbackPeriod": 30,
+      "service": "Microsoft.Compute",
+      "policy_name": "Azure Rightsize Compute Instances"
     }
 
     result << entry
@@ -749,22 +904,35 @@ def azure_delete_old_snapshots_data(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_azure_account
+    accountName = get_random_name
+    resourceGroup = get_random_name
+    resourceName = get_random_name
+    resourceId = "/subscriptions/" + accountID + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Compute/snapshots/" + resourceName
+
+    recommendationDetails = [
+      "Delete Azure snapshot ", resourceName, " ",
+      "in Azure Subscription ", accountName,
+      " (", accountID, ")"
+    ].join
+
     entry = {
-      "accountID": get_random_azure_account,
-      "accountName": get_random_name,
-      "resourceGroup": get_random_name,
-      "resourceName": "",
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceGroup": resourceGroup,
+      "resourceName": resourceName,
       "tags": get_random_tags,
-      "age": "",
-      "size": "",
-      "service": "",
+      "age": rand(30..360),
+      "size": rand(2..500),
+      "service": "Microsoft.Compute",
       "region": get_random_azure_region,
-      "recommendationDetails": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
-      "resourceType": "",
-      "lookbackPeriod": "",
-      "resourceID": ""
+      "recommendationDetails": recommendationDetails,
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
+      "resourceType": "Microsoft.Compute/snapshots",
+      "lookbackPeriod": 30,
+      "resourceID": resourceId,
+      "policy_name": "Azure Old Snapshots"
     }
 
     result << entry
@@ -777,26 +945,36 @@ def azure_reserved_instance_recommendations(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_azure_account
+    accountName = get_random_name
+    resourceType = get_random_azure_compute_size[rand(0..1)]
+    recommendedQuantity = rand(1..10)
+
+    totalCostWithRI = get_random_savings
+    costWithNoRI = totalCostWithRI + get_random_savings(10, 300)
+    savings = costWithNoRI - totalCostWithRI
+
     entry = {
-      "accountID": get_random_azure_account,
-      "accountName": get_random_name,
-      "service": "",
-      "resourceType": "",
+      "accountID": accountID,
+      "accountName": accountName,
+      "service": "Microsoft.Compute",
+      "resourceType": resourceType,
       "region": get_random_azure_region,
-      "term": "",
-      "recommendedQuantity": "",
-      "costWithNoRI": "",
-      "totalCostWithRI": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
-      "firstUsageDate": "",
-      "id": "",
-      "scope": "",
-      "instanceFlexibilityGroup": "",
-      "instanceFlexibilityRatio": "",
-      "normalizedSize": "",
-      "recommendedQuantityNormalized": "",
-      "lookbackPeriod": ""
+      "term": "1 Year",
+      "recommendedQuantity": resourceType,
+      "costWithNoRI": costWithNoRI,
+      "totalCostWithRI": totalCostWithRI,
+      "savings": savings,
+      "savingsCurrency": get_currency,
+      "firstUsageDate": get_random_date(rand((Time.now.year - 4)..(Time.now.year - 1))),
+      "id": get_random_azure_meter,
+      "scope": "Single",
+      "instanceFlexibilityGroup": "NA",
+      "instanceFlexibilityRatio": 1,
+      "normalizedSize": resourceType,
+      "recommendedQuantityNormalized": resourceType,
+      "lookbackPeriod": "Last 7 Days",
+      "policy_name": "Azure Reserved Instances Recommendations"
     }
 
     result << entry
@@ -809,31 +987,47 @@ def azure_rightsize_sql_instances_downsize(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_azure_account
+    accountName = get_random_name
+    resourceGroup = get_random_name
+
+    serverName = get_random_name
+    dbName = get_random_name
+    resourceName = serverName + "/" + dbName
+
+    capacity = rand(500..1000)
+    newResourceType = rand(10..400)
+
+    sku = get_random_azure_db_sku
+
+    resourceID = "/subscriptions/" + accountID + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Sql/servers/" + serverName + "/databases/" + dbName
+
     entry = {
-      "accountID": get_random_azure_account,
-      "accountName": get_random_name,
-      "resourceGroup": get_random_name,
-      "resourceName": "",
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceGroup": resourceGroup,
+      "resourceName": resourceName,
       "tags": get_random_tags,
-      "createdTime": "",
-      "recommendationDetails": "",
-      "newResourceType": "",
-      "resourceType": "",
-      "resourceKind": "",
+      "createdTime": get_random_date(rand((Time.now.year - 4)..(Time.now.year - 1))),
+      "recommendationDetails": recommendationDetails,
+      "newResourceType": newResourceType,
+      "resourceType": "Microsoft.Sql/servers/databases",
+      "resourceKind": "v12.0,user",
       "region": get_random_azure_region,
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
-      "cpuAverage": "",
-      "service": "",
-      "platform": "",
-      "id": "",
-      "threshold": "",
-      "lookbackPeriod": "",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
+      "cpuAverage": rand(11..39) + (rand(1..99).to_f / 100),
+      "service": "Microsoft.Sql/servers/databases",
+      "platform": "Azure SQL Database",
+      "id": resourceID,
+      "threshold": 40,
+      "lookbackPeriod": 30,
       "sku": {
-        "name": "",
-        "tier": "",
-        "capacity": ""
-      }
+        "name": sku["name"],
+        "tier": sku["tier"],
+        "capacity": capacity
+      },
+      "policy_name": "Azure Rightsize SQL Databases"
     }
 
     result << entry
@@ -846,28 +1040,42 @@ def azure_rightsize_sql_instances_unused(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_azure_account
+    accountName = get_random_name
+    resourceGroup = get_random_name
+
+    serverName = get_random_name
+    dbName = get_random_name
+    resourceName = serverName + "/" + dbName
+
+    resourceID = "/subscriptions/" + accountID + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Sql/servers/" + serverName + "/databases/" + dbName
+
+    sku = get_random_azure_db_sku
+    capacity = rand(10..1000)
+
     entry = {
-      "accountID": get_random_azure_account,
-      "accountName": get_random_name,
-      "resourceGroup": get_random_name,
-      "resourceName": "",
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceGroup": resourceGroup,
+      "resourceName": resourceName,
       "tags": get_random_tags,
-      "createdTime": "",
-      "recommendationDetails": "",
-      "resourceType": "",
-      "resourceKind": "",
+      "createdTime": get_random_date(rand((Time.now.year - 4)..(Time.now.year - 1))),
+      "recommendationDetails": recommendationDetails,
+      "resourceType": "Microsoft.Sql/servers/databases",
+      "resourceKind": "v12.0,user",
       "region": get_random_azure_region,
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
-      "service": "",
-      "platform": "",
-      "id": "",
-      "lookbackPeriod": "",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
+      "service": "Microsoft.Sql/servers/databases",
+      "platform": "Azure SQL Database",
+      "id": resourceID,
+      "lookbackPeriod": 30,
       "sku": {
-        "name": "",
-        "tier": "",
-        "capacity": ""
-      }
+        "name": sku["name"],
+        "tier": sku["tier"],
+        "capacity": capacity
+      },
+      "policy_name": "Azure Rightsize SQL Databases"
     }
 
     result << entry
@@ -880,17 +1088,20 @@ def azure_savings_plan_recommendations(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_azure_account
+    accountName = get_random_name
+
     entry = {
-      "accountID": get_random_azure_account,
-      "accountName": get_random_name,
+      "accountID": accountID,
+      "accountName": accountName,
       "name": "",
       "resourceType": "",
       "term": "",
       "recommendedQuantity": "",
       "costWithoutBenefit": "",
       "totalCost": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "savingsPercentage": "",
       "totalHours": "",
       "benefitCost": "",
@@ -913,20 +1124,24 @@ def azure_unused_ip_addresses(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_azure_account
+    accountName = get_random_name
+    resourceGroup = get_random_name
+
     entry = {
-      "accountID": get_random_azure_account,
-      "accountName": get_random_name,
-      "resourceGroup": get_random_name,
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceGroup": resourceGroup,
       "ipAddress": "",
       "resourceName": "",
       "resourceType": "",
-      "recommendationDetails": "",
+      "recommendationDetails": recommendationDetails,
       "age": "",
       "region": get_random_azure_region,
       "allocation": "",
       "tags": get_random_tags,
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "service": "",
       "lookbackPeriod": "",
       "resourceID": ""
@@ -942,21 +1157,25 @@ def azure_unused_volumes(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountID = get_random_azure_account
+    accountName = get_random_name
+    resourceGroup = get_random_name
+
     entry = {
-      "accountID": get_random_azure_account,
-      "accountName": get_random_name,
-      "resourceGroup": get_random_name,
+      "accountID": accountID,
+      "accountName": accountName,
+      "resourceGroup": resourceGroup,
       "resourceName": "",
       "tags": get_random_tags,
       "age": "",
       "timeCreated": "",
-      "recommendationDetails": "",
+      "recommendationDetails": recommendationDetails,
       "resourceType": "",
       "region": get_random_azure_region,
       "size": "",
       "state": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "attached_vm": "",
       "service": "",
       "resourceID": "",
@@ -984,9 +1203,9 @@ def google_committed_use_discount_recommendations(iterations = 50)
       "region": get_random_google_region,
       "term": "",
       "algorithm": "",
-      "recommendationDetails": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "recommendationDetails": recommendationDetails,
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "priority": "",
       "scope": "",
       "state": ""
@@ -1014,10 +1233,10 @@ def google_idle_ip_address_recommendations(iterations = 50)
       "primaryImpactCategory": "",
       "tags": get_random_tags,
       "service": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "priority": "",
-      "recommendationDetails": "",
+      "recommendationDetails": recommendationDetails,
       "recommenderSubtype": "",
       "state": "",
       "status": "",
@@ -1049,10 +1268,10 @@ def google_idle_persistent_disk_recommendations(iterations = 50)
       "days_unattached": "",
       "age": "",
       "size": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "priority": "",
-      "recommendationDetails": "",
+      "recommendationDetails": recommendationDetails,
       "recommenderSubtype": "",
       "state": "",
       "status": "",
@@ -1088,10 +1307,10 @@ def google_rightsize_vm_recommendations_underutil(iterations = 50)
       "primaryImpactCategory": "",
       "tags": get_random_tags,
       "service": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "priority": "",
-      "recommendationDetails": "",
+      "recommendationDetails": recommendationDetails,
       "recommenderSubtype": "",
       "state": "",
       "status": "",
@@ -1125,10 +1344,10 @@ def google_rightsize_vm_recommendations_idle(iterations = 50)
       "primaryImpactCategory": "",
       "tags": get_random_tags,
       "service": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "priority": "",
-      "recommendationDetails": "",
+      "recommendationDetails": recommendationDetails,
       "recommenderSubtype": "",
       "state": "",
       "status": "",
@@ -1157,10 +1376,10 @@ def google_sql_idle_instance_recommendations(iterations = 50)
       "tags": get_random_tags,
       "service": "",
       "pricingPlan": "",
-      "savings": rand(1..1000),
-      "savingsCurrency": "US$",
+      "savings": get_random_savings,
+      "savingsCurrency": get_currency,
       "priority": "",
-      "recommendationDetails": "",
+      "recommendationDetails": recommendationDetails,
       "recommenderSubtype": "",
       "platform": "",
       "diskType": "",

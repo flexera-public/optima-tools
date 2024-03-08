@@ -34,13 +34,8 @@ end
 policy "policy_unused_ips" do
   validate_each $ds_ip_cost_mapping do
     summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} AWS Unused IP Addresses Found"
-    detail_template <<-'EOS'
-    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
-
-    {{ with index data 0 }}{{ .message }}{{ end }}
-    EOS
     check eq(val(item, "publicIp"), "")
-    hash_exclude "age", "tags", "savings", "savingsCurrency", "total_savings", "message"
+    hash_exclude "age", "tags", "savings", "savingsCurrency"
     export do
       resource_level true
       field "accountID" do

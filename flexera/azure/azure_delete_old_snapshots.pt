@@ -33,13 +33,8 @@ end
 policy "pol_azure_old_snapshots" do
   validate_each $ds_azure_snapshots_incident do
     summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Azure Old Snapshots Found"
-    detail_template <<-'EOS'
-    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
-
-    {{ with index data 0 }}{{ .message }}{{ end }}
-    EOS
     check eq(val(item, "resourceID"), "")
-    hash_exclude "total_savings", "message", "tags", "age", "savings", "savingsCurrency"
+    hash_exclude "tags", "age", "savings", "savingsCurrency"
     export do
       resource_level true
       field "accountID" do

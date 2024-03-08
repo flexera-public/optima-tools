@@ -43,13 +43,8 @@ end
 policy "policy_recommendations" do
   validate_each $ds_underutil_incident do
     summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Google Underutilized VM Instances Found"
-    detail_template <<-'EOS'
-    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
-
-    {{ with index data 0 }}{{ .message }}{{ end }}
-    EOS
     check eq(val(item, "resourceID"), "")
-    hash_exclude "tags", "savings", "savingsCurrency", "total_savings", "message", "cpuMaximum", "cpuMinimum", "cpuAverage"
+    hash_exclude "tags", "savings", "savingsCurrency", "cpuMaximum", "cpuMinimum", "cpuAverage"
     export do
       resource_level true
       field "accountID" do
@@ -135,13 +130,8 @@ policy "policy_recommendations" do
   end
   validate_each $ds_idle_incident do
     summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} Google Idle VM Instances Found"
-    detail_template <<-'EOS'
-    **Potential Monthly Savings:** {{ with index data 0 }}{{ .total_savings }}{{ end }}
-
-    {{ with index data 0 }}{{ .message }}{{ end }}
-    EOS
     check eq(val(item, "resourceID"), "")
-    hash_exclude "tags", "savings", "savingsCurrency", "total_savings", "message", "cpuMaximum", "cpuMinimum", "cpuAverage"
+    hash_exclude "tags", "savings", "savingsCurrency", "cpuMaximum", "cpuMinimum", "cpuAverage"
     export do
       resource_level true
       field "accountID" do
