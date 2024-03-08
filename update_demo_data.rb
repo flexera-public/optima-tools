@@ -1091,7 +1091,7 @@ def azure_savings_plan_recommendations(iterations = 50)
     accountID = get_random_azure_account
     accountName = get_random_name
     name = get_random_name + get_random_name
-    sku = "SQL_" + generateRandomName()
+    sku = "SQL_" + get_random_name
 
     id = "/subscriptions/" + accountID + "/providers/Microsoft.CostManagement/benefitRecommendations/" + name
 
@@ -1221,23 +1221,32 @@ def google_committed_use_discount_recommendations(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountId = "rightscale.com:resat-prem"
+    accountName = "RightScale-Resat-Premium"
+    projectNumber = rand(1000000000000..9999999999999).to_s
+    recommendationDetails = get_random_google_cud_description
+    region = get_random_google_region
+    resourceName = "cud-recommendation-" + rand(1000000000..9999999999).to_s
+
+    resourceID = "projects/" + projectNumber + "/locations/" + region + "/recommenders/google.compute.commitment.UsageCommitmentRecommender/recommendations/" + recommendationDetails
+
     entry = {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "projectNumber": rand(1000000000000..9999999999999).to_s,
-      "resourceID": "",
-      "resourceName": "",
-      "resourceType": "",
-      "resourcesToPurchase": "",
-      "region": get_random_google_region,
-      "term": "",
-      "algorithm": "",
+      "accountID": accountId,
+      "accountName": accountName,
+      "projectNumber": projectNumber,
+      "resourceID": resourceID,
+      "resourceName": resourceName,
+      "resourceType": "GENERAL_PURPOSE",
+      "resourcesToPurchase": rand(1..5),
+      "region": region,
+      "term": "1 Year",
+      "algorithm": "Optimal (Break-Even Point)",
       "recommendationDetails": recommendationDetails,
       "savings": get_random_savings,
       "savingsCurrency": get_currency,
-      "priority": "",
-      "scope": "",
-      "state": ""
+      "priority": "P4",
+      "scope": "PROJECT_SCOPED_COMMITMENTS",
+      "state": "ACTIVE"
     }
 
     result << entry
@@ -1250,25 +1259,36 @@ def google_idle_ip_address_recommendations(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountId = "rightscale.com:resat-prem"
+    accountName = "RightScale-Resat-Premium"
+    projectNumber = rand(1000000000000..9999999999999).to_s
+    ipAddress = get_random_ip_address
+    resourceID = rand(10000000000000000000..99999999999999999999).to_s
+    resourceName = get_random_name + + "-public-ip"
+    region = get_random_google_region
+
+    selfLink = "https://www.googleapis.com/compute/v1/projects/" + accountId + "/regions/" + region + "/addresses/" + resourceName
+
+
     entry = {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "projectNumber": rand(1000000000000..9999999999999).to_s,
-      "ipAddress": "",
-      "resourceID": "",
-      "resourceName": "",
-      "resourceType": "",
-      "region": get_random_google_region,
+      "accountID": accountId,
+      "accountName": accountName,
+      "projectNumber": projectNumber,
+      "ipAddress": ipAddress,
+      "resourceID": resourceID,
+      "resourceName": resourceName,
+      "resourceType": "compute#address",
+      "region": region,
       "primaryImpactCategory": "",
       "tags": get_random_tags,
-      "service": "",
+      "service": "Compute Engine",
       "savings": get_random_savings,
       "savingsCurrency": get_currency,
-      "priority": "",
+      "priority": "P4",
       "recommendationDetails": recommendationDetails,
-      "recommenderSubtype": "",
-      "state": "",
-      "status": "",
+      "recommenderSubtype": "DELETE_ADDRESS",
+      "state": "ACTIVE",
+      "status": "RESERVED",
       "selfLink": ""
     }
 
@@ -1282,10 +1302,14 @@ def google_idle_persistent_disk_recommendations(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountId = "rightscale.com:resat-prem"
+    accountName = "RightScale-Resat-Premium"
+    projectNumber = rand(1000000000000..9999999999999).to_s
+
     entry = {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "projectNumber": rand(1000000000000..9999999999999).to_s,
+      "accountID": accountId,
+      "accountName": accountName,
+      "projectNumber": projectNumber,
       "resourceID": "",
       "resourceName": "",
       "resourceType": "",
@@ -1318,10 +1342,14 @@ def google_rightsize_vm_recommendations_underutil(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountId = "rightscale.com:resat-prem"
+    accountName = "RightScale-Resat-Premium"
+    projectNumber = rand(1000000000000..9999999999999).to_s
+
     entry = {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "projectNumber": rand(1000000000000..9999999999999).to_s,
+      "accountID": accountId,
+      "accountName": accountName,
+      "projectNumber": projectNumber,
       "resourceID": "",
       "resourceName": "",
       "resourceType": "",
@@ -1356,10 +1384,14 @@ def google_rightsize_vm_recommendations_idle(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountId = "rightscale.com:resat-prem"
+    accountName = "RightScale-Resat-Premium"
+    projectNumber = rand(1000000000000..9999999999999).to_s
+
     entry = {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "projectNumber": rand(1000000000000..9999999999999).to_s,
+      "accountID": accountId,
+      "accountName": accountName,
+      "projectNumber": projectNumber,
       "resourceID": "",
       "resourceName": "",
       "resourceType": "",
@@ -1393,10 +1425,14 @@ def google_sql_idle_instance_recommendations(iterations = 50)
   result = []
 
   for iteration in 1..iterations do
+    accountId = "rightscale.com:resat-prem"
+    accountName = "RightScale-Resat-Premium"
+    projectNumber = rand(1000000000000..9999999999999).to_s
+
     entry = {
-      "accountID": "rightscale.com:resat-prem",
-      "accountName": "RightScale-Resat-Premium",
-      "projectNumber": rand(1000000000000..9999999999999).to_s,
+      "accountID": accountId,
+      "accountName": accountName,
+      "projectNumber": projectNumber,
       "resourceID": "",
       "resourceType": "",
       "region": get_random_google_region,
