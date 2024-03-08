@@ -1090,28 +1090,38 @@ def azure_savings_plan_recommendations(iterations = 50)
   for iteration in 1..iterations do
     accountID = get_random_azure_account
     accountName = get_random_name
+    name = get_random_name + get_random_name
+    sku = "SQL_" + generateRandomName()
+
+    id = "/subscriptions/" + accountID + "/providers/Microsoft.CostManagement/benefitRecommendations/" + name
+
+    recommendedQuantity = rand(1..10)
+
+    totalCostWithSP = get_random_savings
+    costWithNoSP = totalCostWithRI + get_random_savings(10, 300)
+    savings = costWithNoSP - totalCostWithSP
 
     entry = {
       "accountID": accountID,
       "accountName": accountName,
-      "name": "",
-      "resourceType": "",
-      "term": "",
-      "recommendedQuantity": "",
-      "costWithoutBenefit": "",
-      "totalCost": "",
-      "savings": get_random_savings,
+      "name": name,
+      "resourceType": sku,
+      "term": "1 Year",
+      "recommendedQuantity": recommendedQuantity,
+      "costWithoutBenefit": costWithNoSP,
+      "totalCost": totalCostWithSP,
+      "savings": savings,
       "savingsCurrency": get_currency,
-      "savingsPercentage": "",
-      "totalHours": "",
-      "benefitCost": "",
-      "wastageCost": "",
-      "overageCost": "",
-      "coveragePercentage": "",
-      "commitmentGranularity": "",
-      "scope": "",
-      "id": "",
-      "lookbackPeriod": ""
+      "savingsPercentage": rand(5..20) + (rand(1..99).to_f / 100),
+      "totalHours": 150,
+      "benefitCost": 54,
+      "wastageCost": 23.924,
+      "overageCost": rand(1..20) + (rand(1..99).to_f / 100),
+      "coveragePercentage": rand(1..50) + (rand(1..99).to_f / 100),
+      "commitmentGranularity": "Hourly",
+      "scope": "Single",
+      "id": id,
+      "lookbackPeriod": 30
     }
 
     result << entry
@@ -1127,24 +1137,32 @@ def azure_unused_ip_addresses(iterations = 50)
     accountID = get_random_azure_account
     accountName = get_random_name
     resourceGroup = get_random_name
+    ipAddress = get_random_ip_address
+    resourceName = get_random_name
+    resourceId = "/subscriptions/" + accountID + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Network/publicIPAddresses/" + resourceName
+
+    recommendationDetails = [
+      "Delete IP address ", resourceName, " (", ipAddress, ") ",
+      "in Azure Subscription ", accountName, " (", accountID, ")"
+    ].join
 
     entry = {
       "accountID": accountID,
       "accountName": accountName,
       "resourceGroup": resourceGroup,
-      "ipAddress": "",
-      "resourceName": "",
-      "resourceType": "",
+      "ipAddress": ipAddress,
+      "resourceName": resourceName,
+      "resourceType": "Microsoft.Network/publicIPAddresses",
       "recommendationDetails": recommendationDetails,
-      "age": "",
+      "age": rand(30..360),
       "region": get_random_azure_region,
-      "allocation": "",
+      "allocation": "Static",
       "tags": get_random_tags,
       "savings": get_random_savings,
       "savingsCurrency": get_currency,
-      "service": "",
-      "lookbackPeriod": "",
-      "resourceID": ""
+      "service": "Microsoft.Network",
+      "lookbackPeriod": 30,
+      "resourceID": resourceId
     }
 
     result << entry
@@ -1161,25 +1179,36 @@ def azure_unused_volumes(iterations = 50)
     accountName = get_random_name
     resourceGroup = get_random_name
 
+    resourceName = get_random_name
+    resourceId = "/subscriptions/" + accountID + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Compute/disks/" + resourceName
+
+    attached_vm = "/subscriptions/" + accountID + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Compute/virtualMachines/" + get_random_name
+
+    recommendationDetails = [
+      "Delete unused volume ", resourceName, " ",
+      "in Azure Subscription ", accountName,
+      " (", accountID, ")"
+    ].join
+
     entry = {
       "accountID": accountID,
       "accountName": accountName,
       "resourceGroup": resourceGroup,
-      "resourceName": "",
+      "resourceName": resourceName,
       "tags": get_random_tags,
-      "age": "",
-      "timeCreated": "",
+      "age": rand(30..360),
+      "timeCreated": get_random_time(Time.now.year),
       "recommendationDetails": recommendationDetails,
-      "resourceType": "",
+      "resourceType": "Microsoft.Compute/disks",
       "region": get_random_azure_region,
-      "size": "",
-      "state": "",
+      "size": rand(10..500),
+      "state": "Unattached",
       "savings": get_random_savings,
       "savingsCurrency": get_currency,
-      "attached_vm": "",
-      "service": "",
-      "resourceID": "",
-      "lookbackPeriod": ""
+      "attached_vm": attached_vm,
+      "service": "Microsoft.Compute",
+      "resourceID": resourceId,
+      "lookbackPeriod": 30
     }
 
     result << entry
