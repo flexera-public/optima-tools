@@ -1212,7 +1212,8 @@ def azure_savings_plan_recommendations(iterations = $default_iterations)
       "commitmentGranularity": "Hourly",
       "scope": "Single",
       "id": id,
-      "lookbackPeriod": 30
+      "lookbackPeriod": 30,
+      "policy_name": "Azure Savings Plan Recommendations"
     }
 
     result << entry
@@ -1253,7 +1254,8 @@ def azure_unused_ip_addresses(iterations = $default_iterations)
       "savingsCurrency": get_currency,
       "service": "Microsoft.Network",
       "lookbackPeriod": 30,
-      "resourceID": resourceId
+      "resourceID": resourceId,
+      "policy_name": "Azure Unused IP Addresses"
     }
 
     result << entry
@@ -1299,7 +1301,8 @@ def azure_unused_volumes(iterations = $default_iterations)
       "attached_vm": attached_vm,
       "service": "Microsoft.Compute",
       "resourceID": resourceId,
-      "lookbackPeriod": 30
+      "lookbackPeriod": 30,
+      "policy_name": "Azure Unused Volumes"
     }
 
     result << entry
@@ -1337,7 +1340,8 @@ def google_committed_use_discount_recommendations(iterations = $default_iteratio
       "savingsCurrency": get_currency,
       "priority": "P4",
       "scope": "PROJECT_SCOPED_COMMITMENTS",
-      "state": "ACTIVE"
+      "state": "ACTIVE",
+      "policy_name": "Google Committed Use Discount Recommender"
     }
 
     result << entry
@@ -1381,7 +1385,8 @@ def google_idle_ip_address_recommendations(iterations = $default_iterations)
       "recommenderSubtype": "DELETE_ADDRESS",
       "state": "ACTIVE",
       "status": "RESERVED",
-      "selfLink": selfLink
+      "selfLink": selfLink,
+      "policy_name": "Google Idle IP Address Recommender"
     }
 
     result << entry
@@ -1433,7 +1438,8 @@ def google_idle_persistent_disk_recommendations(iterations = $default_iterations
       "state": "ACTIVE",
       "status": "READY",
       "service": "Compute Engine",
-      "selfLink": selfLink
+      "selfLink": selfLink,
+      "policy_name": "Google Idle Persistent Disk Recommender"
     }
 
     result << entry
@@ -1488,7 +1494,8 @@ def google_rightsize_vm_recommendations_underutil(iterations = $default_iteratio
       "recommenderSubtype": "CHANGE_MACHINE_TYPE",
       "state": "ACTIVE",
       "status": "RUNNING",
-      "selfLink": selfLink
+      "selfLink": selfLink,
+      "policy_name": "Google Rightsize VM Recommender"
     }
 
     result << entry
@@ -1539,7 +1546,8 @@ def google_rightsize_vm_recommendations_idle(iterations = $default_iterations)
       "recommenderSubtype": "STOP_VM",
       "state": "ACTIVE",
       "status": "RUNNING",
-      "selfLink": selfLink
+      "selfLink": selfLink,
+      "policy_name": "Google Rightsize VM Recommender"
     }
 
     result << entry
@@ -1588,7 +1596,8 @@ def google_sql_idle_instance_recommendations(iterations = $default_iterations)
       "state": "ACTIVE",
       "status": "READY",
       "resourceName": resourceName,
-      "selfLink": selfLink
+      "selfLink": selfLink,
+      "policy_name": "Google Cloud SQL Idle Instance Recommender"
     }
 
     result << entry
@@ -1610,9 +1619,9 @@ write_demo_data(aws_rightsize_rds_instance_underutil, "flexera/data/aws/aws_righ
 write_demo_data(aws_rightsize_rds_instances_idle, "flexera/data/aws/aws_rightsize_rds_instances_idle.json")
 write_demo_data(aws_savings_plan_recommendations, "flexera/data/aws/aws_savings_plan_recommendations.json")
 write_demo_data(aws_unused_ip_addresses, "flexera/data/aws/aws_unused_ip_addresses.json")
-write_demo_data(azure_compute_rightsizing_underutil_data, "flexera/data/azure/azure_compute_rightsizing_underutil_data.json")
-write_demo_data(azure_compute_rightsizing_idle_data, "flexera/data/azure/azure_compute_rightsizing_idle_data.json")
-write_demo_data(azure_delete_old_snapshots_data, "flexera/data/azure/azure_delete_old_snapshots_data.json")
+write_demo_data(azure_compute_rightsizing_underutil_data, "flexera/data/azure/azure_compute_rightsizing_underutil.json")
+write_demo_data(azure_compute_rightsizing_idle_data, "flexera/data/azure/azure_compute_rightsizing_idle.json")
+write_demo_data(azure_delete_old_snapshots_data, "flexera/data/azure/azure_delete_old_snapshots.json")
 write_demo_data(azure_reserved_instance_recommendations, "flexera/data/azure/azure_reserved_instance_recommendations.json")
 write_demo_data(azure_rightsize_sql_instances_downsize, "flexera/data/azure/azure_rightsize_sql_instances_downsize.json")
 write_demo_data(azure_rightsize_sql_instances_unused, "flexera/data/azure/azure_rightsize_sql_instances_unused.json")
