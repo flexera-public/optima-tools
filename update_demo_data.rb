@@ -212,6 +212,18 @@ def get_random_google_compute_size
   return google_compute_type_list.sample
 end
 
+def get_random_google_compute_platform
+  google_compute_platform_list = [
+    "Intel Skylake",
+    "Intel Cascade Lake",
+    "Intel Haswell",
+    "Intel Sandy Bridge",
+    "AMD Rome"
+  ]
+
+  return google_compute_platform_list.sample
+end
+
 def get_random_google_region
   google_region_list = [
     "us-central1",
@@ -227,6 +239,37 @@ def get_random_google_region
   ]
 
   return google_region_list.sample
+end
+
+def get_random_google_zone(region)
+  case rand(1..3)
+  when 1
+    zone = region + "-a"
+  when 2
+    zone = region + "-b"
+  when 3
+    zone = region + "-c"
+  end
+
+  return zone
+end
+
+def get_random_google_db_version
+  google_db_version_list = [
+    "MYSQL_5_6",
+    "MYSQL_5_7",
+    "MYSQL_8_0_28",
+    "MYSQL_8_0_30",
+    "MYSQL_8_0_33",
+    "MYSQL_8_0_36",
+    "SQLSERVER_2017_STANDARD",
+    "SQLSERVER_2022_STANDARD",
+    "POSTGRES_13",
+    "POSTGRES_14",
+    "POSTGRES_15"
+  ]
+
+  return google_db_version_list.sample
 end
 
 def get_random_google_cud_description
@@ -1279,7 +1322,7 @@ def google_idle_ip_address_recommendations(iterations = 50)
       "resourceName": resourceName,
       "resourceType": "compute#address",
       "region": region,
-      "primaryImpactCategory": "",
+      "primaryImpactCategory": "COST",
       "tags": get_random_tags,
       "service": "Compute Engine",
       "savings": get_random_savings,
@@ -1289,7 +1332,7 @@ def google_idle_ip_address_recommendations(iterations = 50)
       "recommenderSubtype": "DELETE_ADDRESS",
       "state": "ACTIVE",
       "status": "RESERVED",
-      "selfLink": ""
+      "selfLink": selfLink
     }
 
     result << entry
@@ -1305,31 +1348,41 @@ def google_idle_persistent_disk_recommendations(iterations = 50)
     accountId = "rightscale.com:resat-prem"
     accountName = "RightScale-Resat-Premium"
     projectNumber = rand(1000000000000..9999999999999).to_s
+    region = get_random_google_region
+    zone = get_random_google_zone(region)
+
+    resourceID = rand(10000000000000000000..99999999999999999999).to_s
+    resourceName = get_random_name + "-disk" + rand(1..3).to_s
+
+    days_unattached = rand(30..120)
+    age = days_unattached + rand(1..120)
+
+    selfLink = "https://www.googleapis.com/compute/v1/projects/" + accountId + "/zones/" + zone + "/disks/" + resourceName
 
     entry = {
       "accountID": accountId,
       "accountName": accountName,
       "projectNumber": projectNumber,
-      "resourceID": "",
-      "resourceName": "",
-      "resourceType": "",
-      "zone": "",
-      "region": get_random_google_region,
-      "primaryImpactCategory": "",
+      "resourceID": resourceID,
+      "resourceName": resourceName,
+      "resourceType": "compute#disk",
+      "zone": zone,
+      "region": region,
+      "primaryImpactCategory": "COST",
       "tags": get_random_tags,
-      "creationTime": "",
-      "days_unattached": "",
-      "age": "",
-      "size": "",
+      "creationTime": get_random_date(rand((Time.now.year - 4)..(Time.now.year - 1))),
+      "days_unattached": days_unattached,
+      "age": age,
+      "size": rand(10..512),
       "savings": get_random_savings,
       "savingsCurrency": get_currency,
-      "priority": "",
+      "priority": "P4",
       "recommendationDetails": recommendationDetails,
-      "recommenderSubtype": "",
-      "state": "",
-      "status": "",
-      "service": "",
-      "selfLink": ""
+      "recommenderSubtype": "SNAPSHOT_AND_DELETE_DISK",
+      "state": "ACTIVE",
+      "status": "READY",
+      "service": "Compute Engine",
+      "selfLink": selfLink
     }
 
     result << entry
@@ -1345,33 +1398,44 @@ def google_rightsize_vm_recommendations_underutil(iterations = 50)
     accountId = "rightscale.com:resat-prem"
     accountName = "RightScale-Resat-Premium"
     projectNumber = rand(1000000000000..9999999999999).to_s
+    region = get_random_google_region
+    zone = get_random_google_zone(region)
+
+    resourceID = rand(10000000000000000000..99999999999999999999).to_s
+    resourceName = get_random_name
+
+    type = get_random_google_compute_size
+    resourceType = type[0]
+    newResourceType = type[1]
+
+    selfLink = "https://www.googleapis.com/compute/v1/projects/" + accountId + "/zones/" + zone + "/instances/" + resourceName
 
     entry = {
       "accountID": accountId,
       "accountName": accountName,
       "projectNumber": projectNumber,
-      "resourceID": "",
-      "resourceName": "",
-      "resourceType": "",
-      "newResourceType": "",
-      "zone": "",
-      "region": get_random_google_region,
-      "hostname": "",
-      "platform": "",
+      "resourceID": resourceID,
+      "resourceName": resourceName,
+      "resourceType": resourceType,
+      "newResourceType": newResourceType,
+      "zone": zone,
+      "region": region,
+      "hostname": resourceName,
+      "platform": get_random_google_compute_platform,
       "cpuMaximum": rand(60..99) + (rand(1..99).to_f / 100),
       "cpuMinimum": rand(1..10) + (rand(1..99).to_f / 100),
       "cpuAverage": rand(11..39) + (rand(1..99).to_f / 100),
-      "primaryImpactCategory": "",
+      "primaryImpactCategory": "COST",
       "tags": get_random_tags,
-      "service": "",
+      "service": "Compute Engine",
       "savings": get_random_savings,
       "savingsCurrency": get_currency,
-      "priority": "",
+      "priority": "P4",
       "recommendationDetails": recommendationDetails,
-      "recommenderSubtype": "",
-      "state": "",
-      "status": "",
-      "selfLink": ""
+      "recommenderSubtype": "CHANGE_MACHINE_TYPE",
+      "state": "ACTIVE",
+      "status": "RUNNING",
+      "selfLink": selfLink
     }
 
     result << entry
@@ -1387,32 +1451,40 @@ def google_rightsize_vm_recommendations_idle(iterations = 50)
     accountId = "rightscale.com:resat-prem"
     accountName = "RightScale-Resat-Premium"
     projectNumber = rand(1000000000000..9999999999999).to_s
+    region = get_random_google_region
+    zone = get_random_google_zone(region)
+
+    resourceID = rand(10000000000000000000..99999999999999999999).to_s
+    resourceName = get_random_name
+    resourceType = get_random_google_compute_size[rand(0..1)]
+
+    selfLink = "https://www.googleapis.com/compute/v1/projects/" + accountId + "/zones/" + zone + "/instances/" + resourceName
 
     entry = {
       "accountID": accountId,
       "accountName": accountName,
       "projectNumber": projectNumber,
-      "resourceID": "",
-      "resourceName": "",
-      "resourceType": "",
-      "zone": "",
-      "region": get_random_google_region,
-      "hostname": "",
-      "platform": "",
+      "resourceID": resourceID,
+      "resourceName": resourceName,
+      "resourceType": resourceType,
+      "zone": zone,
+      "region": region,
+      "hostname": resourceName,
+      "platform": get_random_google_compute_platform,
       "cpuMaximum": rand(5..20) + (rand(1..99).to_f / 100),
       "cpuMinimum": rand(1..2) + (rand(1..99).to_f / 100),
       "cpuAverage": rand(3..4) + (rand(1..99).to_f / 100),
-      "primaryImpactCategory": "",
+      "primaryImpactCategory": "COST",
       "tags": get_random_tags,
-      "service": "",
+      "service": "Compute Engine",
       "savings": get_random_savings,
       "savingsCurrency": get_currency,
-      "priority": "",
+      "priority": "P4",
       "recommendationDetails": recommendationDetails,
-      "recommenderSubtype": "",
-      "state": "",
-      "status": "",
-      "selfLink": ""
+      "recommenderSubtype": "STOP_VM",
+      "state": "ACTIVE",
+      "status": "RUNNING",
+      "selfLink": selfLink
     }
 
     result << entry
@@ -1429,32 +1501,37 @@ def google_sql_idle_instance_recommendations(iterations = 50)
     accountName = "RightScale-Resat-Premium"
     projectNumber = rand(1000000000000..9999999999999).to_s
 
+    resourceID = get_random_name
+    resourceName = resourceID
+
+    selfLink = "https://www.googleapis.com/sql/v1beta4/projects/" + accountId + "/instances/" + resourceID
+
     entry = {
       "accountID": accountId,
       "accountName": accountName,
       "projectNumber": projectNumber,
-      "resourceID": "",
-      "resourceType": "",
+      "resourceID": resourceID,
+      "resourceType": "CLOUD_SQL_INSTANCE",
       "region": get_random_google_region,
-      "timeCreated": "",
-      "primaryImpactCategory": "",
+      "timeCreated": get_random_date(rand((Time.now.year - 4)..(Time.now.year - 1))),
+      "primaryImpactCategory": "COST",
       "tags": get_random_tags,
-      "service": "",
-      "pricingPlan": "",
+      "service": "Cloud SQL",
+      "pricingPlan": "PACKAGE",
       "savings": get_random_savings,
       "savingsCurrency": get_currency,
-      "priority": "",
+      "priority": "P4",
       "recommendationDetails": recommendationDetails,
-      "recommenderSubtype": "",
-      "platform": "",
-      "diskType": "",
-      "size": "",
-      "availabilityType": "",
-      "replicationType": "",
-      "state": "",
-      "status": "",
-      "resourceName": "",
-      "selfLink": ""
+      "recommenderSubtype": "DELETE_RESOURCE",
+      "platform": get_random_google_db_version,
+      "diskType": "PD_SSD",
+      "size": rand(10..1024),
+      "availabilityType": "ZONAL",
+      "replicationType": "SYNCHRONOUS",
+      "state": "ACTIVE",
+      "status": "READY",
+      "resourceName": resourceName,
+      "selfLink": selfLink
     }
 
     result << entry
