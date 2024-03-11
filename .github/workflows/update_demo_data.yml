@@ -36,8 +36,7 @@ jobs:
 
       - name: Configure Ruby Environment
         shell: bash -l {0} # https://github.com/actions/virtual-environments/issues/4
-        run: |
-          bundle install --without documentation --path bundle
+        run: bundle install --without documentation --path bundle
 
       - name: Run the update script
         run: ruby ./update_demo_data.rb
