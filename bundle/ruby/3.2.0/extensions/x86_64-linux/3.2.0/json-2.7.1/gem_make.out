@@ -1,0 +1,16 @@
+current directory: /home/runner/work/optima-tools/optima-tools/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+/opt/hostedtoolcache/Ruby/3.2.3/x64/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/runner/work/optima-tools/optima-tools/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240311-1897-fwplit sitelibdir\=./.gem.20240311-1897-fwplit clean
+
+current directory: /home/runner/work/optima-tools/optima-tools/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240311-1897-fwplit sitelibdir\=./.gem.20240311-1897-fwplit
+make: Nothing to be done for 'all'.
+
+current directory: /home/runner/work/optima-tools/optima-tools/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240311-1897-fwplit sitelibdir\=./.gem.20240311-1897-fwplit install
+
+current directory: /home/runner/work/optima-tools/optima-tools/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240311-1897-fwplit sitelibdir\=./.gem.20240311-1897-fwplit clean
