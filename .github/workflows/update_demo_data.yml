@@ -40,7 +40,11 @@ jobs:
         run: bundle install --without documentation --path bundle
 
       - name: Run the update script
-        run: ruby update_demo_data.rb
+        run: |
+          mkdir -p flexera/data/aws
+          mkdir -p flexera/data/azure
+          mkdir -p flexera/data/google
+          ruby update_demo_data.rb
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
