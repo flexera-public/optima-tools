@@ -37,9 +37,6 @@ jobs:
       - name: Configure Ruby Environment
         shell: bash -l {0} # https://github.com/actions/virtual-environments/issues/4
         run: |
-          nvm install
-          nvm use
-          npm install
           bundle install --without documentation --path bundle
 
       - name: Run the update script
