@@ -1,0 +1,215 @@
+name "AWS Rightsize RDS Instances [Demo]"
+rs_pt_ver 20180301
+type "policy"
+short_description "Demo policy for generating recommendations. See [README](https://github.com/flexera-public/optima-tools/tree/master/flexera/) for more information."
+long_description ""
+severity "low"
+category "Cost"
+default_frequency "weekly"
+info(
+  version: "5.1",
+  provider: "AWS",
+  service: "RDS",
+  policy_set: "Rightsize Database Instances",
+  recommendation_type: "Usage Reduction"
+)
+
+###############################################################################
+# Datasources
+###############################################################################
+
+datasource "ds_rds_underutil_incident" do
+  request do
+    verb "GET"
+    host "raw.githubusercontent.com"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/aws/aws_rightsize_rds_instance_underutil.json"
+    header "User-Agent", "RS Policies"
+  end
+end
+
+datasource "ds_rds_idle_incident" do
+  request do
+    verb "GET"
+    host "raw.githubusercontent.com"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/aws/aws_rightsize_rds_instances_idle.json"
+    header "User-Agent", "RS Policies"
+  end
+end
+
+###############################################################################
+# Policy
+###############################################################################
+
+policy "pol_rightsize_rds" do
+  validate_each $ds_rds_underutil_incident do
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} AWS Underutilized RDS Instances Found"
+    check eq(val(item, "resourceID"), "")
+    hash_exclude "tags", "savings", "savingsCurrency"
+    export do
+      resource_level true
+      field "accountID" do
+        label "Account ID"
+      end
+      field "accountName" do
+        label "Account Name"
+      end
+      field "resourceID" do
+        label "Resource ID"
+      end
+      field "resourceName" do
+        label "Resource Name"
+      end
+      field "tags" do
+        label "Resource Tags"
+      end
+      field "recommendationDetails" do
+        label "Recommendation"
+      end
+      field "region" do
+        label "Region"
+      end
+      field "availabilityZone" do
+        label "Availability Zone"
+      end
+      field "state" do
+        label "State"
+      end
+      field "savings" do
+        label "Estimated Monthly Savings"
+      end
+      field "savingsCurrency" do
+        label "Savings Currency"
+      end
+      field "privateDnsName" do
+        label "Private DNS Name"
+      end
+      field "resourceType" do
+        label "Resource Type"
+      end
+      field "newResourceType" do
+        label "Recommended Resource Type"
+      end
+      field "cpuMaximum" do
+        label "CPU Maximum %"
+      end
+      field "cpuMinimum" do
+        label "CPU Minimum %"
+      end
+      field "cpuAverage" do
+        label "CPU Average %"
+      end
+      field "cpuP99" do
+        label "CPU p99"
+      end
+      field "cpuP95" do
+        label "CPU p95"
+      end
+      field "cpuP90" do
+        label "CPU p90"
+      end
+      field "databaseEngine" do
+        label "Database Engine"
+      end
+      field "engineVersion" do
+        label "Engine Version"
+      end
+      field "vcpus" do
+        label "vCPUs"
+      end
+      field "licenseModel" do
+        label "License Model"
+      end
+      field "arn" do
+        label "ARN"
+      end
+      field "platform" do
+        label "Platform"
+      end
+      field "service" do
+        label "Service"
+      end
+      field "lookbackPeriod" do
+        label "Look Back Period (Days)"
+      end
+      field "id" do
+        label "id"
+        path "resourceID"
+      end
+    end
+  end
+  validate_each $ds_rds_idle_incident do
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} AWS Unused RDS Instances Found"
+    check eq(val(item, "resourceID"), "")
+    hash_exclude "tags", "savings", "savingsCurrency"
+    export do
+      resource_level true
+      field "accountID" do
+        label "Account ID"
+      end
+      field "accountName" do
+        label "Account Name"
+      end
+      field "resourceID" do
+        label "Resource ID"
+      end
+      field "resourceName" do
+        label "Resource Name"
+      end
+      field "tags" do
+        label "Resource Tags"
+      end
+      field "recommendationDetails" do
+        label "Recommendation"
+      end
+      field "region" do
+        label "Region"
+      end
+      field "availabilityZone" do
+        label "Availability Zone"
+      end
+      field "state" do
+        label "State"
+      end
+      field "savings" do
+        label "Estimated Monthly Savings"
+      end
+      field "savingsCurrency" do
+        label "Savings Currency"
+      end
+      field "privateDnsName" do
+        label "Private DNS Name"
+      end
+      field "resourceType" do
+        label "Resource Type"
+      end
+      field "databaseEngine" do
+        label "Database Engine"
+      end
+      field "engineVersion" do
+        label "Engine Version"
+      end
+      field "vcpus" do
+        label "vCPUs"
+      end
+      field "licenseModel" do
+        label "License Model"
+      end
+      field "arn" do
+        label "ARN"
+      end
+      field "platform" do
+        label "Platform"
+      end
+      field "service" do
+        label "Service"
+      end
+      field "lookbackPeriod" do
+        label "Look Back Period (Days)"
+      end
+      field "id" do
+        label "id"
+        path "resourceID"
+      end
+    end
+  end
+end

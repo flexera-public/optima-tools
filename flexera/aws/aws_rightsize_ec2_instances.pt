@@ -1,4 +1,4 @@
-name "AWS Rightsize Compute Instances [Demo]"
+name "AWS Rightsize EC2 Instances [Demo]"
 rs_pt_ver 20180301
 type "policy"
 short_description "Demo policy for generating recommendations. See [README](https://github.com/flexera-public/optima-tools/tree/master/flexera/) for more information."
@@ -7,7 +7,7 @@ severity "low"
 category "Cost"
 default_frequency "weekly"
 info(
-  version: "3.4",
+  version: "5.0",
   provider: "AWS",
   service: "Compute",
   policy_set: "Rightsize Compute Instances",
@@ -18,11 +18,11 @@ info(
 # Datasources
 ###############################################################################
 
-datasource "ds_underutilized_instances" do
+datasource "ds_underutil_instances" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/master/flexera/data/aws/aws_compute_rightsizing_underutil.json"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/aws/aws_rightsize_ec2_instances_underutil.json"
     header "User-Agent", "RS Policies"
   end
 end
@@ -31,7 +31,7 @@ datasource "ds_idle_instances" do
   request do
     verb "GET"
     host "raw.githubusercontent.com"
-    path "/flexera-public/optima-tools/master/flexera/data/aws/aws_compute_rightsizing_idle.json"
+    path "/flexera-public/optima-tools/task/update-cco-demo-data/flexera/data/aws/aws_rightsize_ec2_instances_idle.json"
     header "User-Agent", "RS Policies"
   end
 end
@@ -41,14 +41,10 @@ end
 ###############################################################################
 
 policy "pol_utilization" do
-  validate_each $ds_underutilized_instances do
-    summary_template <<-EOS
-    {{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ with index data 0 }}{{ .summaryData.underutilInstanceCount }}{{ end }} AWS underutilized compute instances found
-        EOS
-    detail_template <<-EOS
-    {{ with index data 0 }}{{ .summaryData.underutilMessage }}{{ end }}
-        EOS
-    check eq(1, 0)
+  validate_each $ds_underutil_instances do
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} AWS Underutilized EC2 Instances Found"
+    check ne(val(item, "recommendationType"), "Downsize")
+    hash_exclude "tags", "savings", "savingsCurrency", "cpu_maximum", "cpu_minimum", "cpu_average", "cpu_p99", "cpu_p95", "cpu_p90", "mem_maximum", "mem_minimum", "mem_average", "mem_p99", "mem_p95", "mem_p90"
     export do
       resource_level true
       field "accountID" do
@@ -60,19 +56,20 @@ policy "pol_utilization" do
       field "resourceID" do
         label "Resource ID"
       end
-      field "resourceType" do
-        # label "Resource Type"
-        label "Instance Size"
-      end
       field "resourceName" do
         label "Resource Name"
       end
-      # field "vmSize" do
-      #   label "Instance Size"
-      # end
+      field "tags" do
+        label "Resource Tags"
+      end
+      field "recommendationDetails" do
+        label "Recommendation"
+      end
+      field "resourceType" do
+        label "Instance Size"
+      end
       field "newResourceType" do
         label "Recommended Instance Size"
-        path "recommendedVmSize"
       end
       field "region" do
         label "Region"
@@ -88,9 +85,6 @@ policy "pol_utilization" do
       end
       field "savingsCurrency" do
         label "Savings Currency"
-      end
-      field "privateDnsName" do
-        label "Private DNS Name"
       end
       field "launchTime" do
         label "Launch Time"
@@ -143,11 +137,17 @@ policy "pol_utilization" do
         label "Memory p90"
         path "mem_p90"
       end
-      field "tags" do
-        label "Tags"
+      field "thresholdType" do
+        label "Threshold Statistic"
+      end
+      field "threshold" do
+        label "CPU Threshold"
+      end
+      field "memoryThreshold" do
+        label "Memory Threshold"
       end
       field "lookbackPeriod" do
-        label "Lookback Period"
+        label "Look Back Period (Days)"
       end
       field "service" do
         label "Service"
@@ -155,28 +155,13 @@ policy "pol_utilization" do
       field "id" do
         label "ID"
         path "resourceID"
-      end
-      field "threshold" do
-        label "CPU Threshold"
-        path "underutilThreshold"
-      end
-      field "memoryThreshold" do
-        label "Memory Threshold"
-        path "underutilMemoryThreshold"
-      end
-      field "thresholdType" do
-        label "Threshold Type"
       end
     end
   end
   validate_each $ds_idle_instances do
-    summary_template <<-EOS
-    {{ rs_project_name }} (Account ID: {{ rs_project_id }}): {{ with index data 0 }}{{ .summaryData.idleInstanceCount }}{{end}} AWS idle compute instances found
-    EOS
-    detail_template <<-EOS
-    {{ with index data 0 }}{{ .summaryData.idleMessage }}{{ end }}
-    EOS
-    check eq(1, 0)
+    summary_template "{{ with index data 0 }}{{ .policy_name }}{{ end }}: {{ len data }} AWS Idle EC2 Instances Found"
+    check ne(val(item, "recommendationType"), "Terminate")
+    hash_exclude "tags", "savings", "savingsCurrency", "cpu_maximum", "cpu_minimum", "cpu_average", "cpu_p99", "cpu_p95", "cpu_p90", "mem_maximum", "mem_minimum", "mem_average", "mem_p99", "mem_p95", "mem_p90"
     export do
       resource_level true
       field "accountID" do
@@ -188,18 +173,17 @@ policy "pol_utilization" do
       field "resourceID" do
         label "Resource ID"
       end
-      field "resourceType" do
-        label "Resource Type"
-      end
       field "resourceName" do
         label "Resource Name"
       end
-      field "vmSize" do
-        label "Instance Size"
+      field "tags" do
+        label "Resource Tags"
       end
-      field "newResourceType" do
-        label "Recommended Instance Size"
-        path "recommendedVmSize"
+      field "recommendationDetails" do
+        label "Recommendation"
+      end
+      field "resourceType" do
+        label "Instance Size"
       end
       field "region" do
         label "Region"
@@ -215,9 +199,6 @@ policy "pol_utilization" do
       end
       field "savingsCurrency" do
         label "Savings Currency"
-      end
-      field "privateDnsName" do
-        label "Private DNS Name"
       end
       field "launchTime" do
         label "Launch Time"
@@ -270,11 +251,17 @@ policy "pol_utilization" do
         label "Memory p90"
         path "mem_p90"
       end
-      field "tags" do
-        label "Tags"
+      field "thresholdType" do
+        label "Threshold Statistic"
+      end
+      field "threshold" do
+        label "CPU Threshold"
+      end
+      field "memoryThreshold" do
+        label "Memory Threshold"
       end
       field "lookbackPeriod" do
-        label "Lookback Period"
+        label "Look Back Period (Days)"
       end
       field "service" do
         label "Service"
@@ -282,17 +269,6 @@ policy "pol_utilization" do
       field "id" do
         label "ID"
         path "resourceID"
-      end
-      field "threshold" do
-        label "CPU Threshold"
-        path "idleThreshold"
-      end
-      field "memoryThreshold" do
-        label "Memory Threshold"
-        path "idleMemoryThreshold"
-      end
-      field "thresholdType" do
-        label "Threshold Type"
       end
     end
   end

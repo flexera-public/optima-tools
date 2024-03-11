@@ -1,955 +1,902 @@
-{
-  "message": "The total estimated monthly savings are US$ 6423.63",
-  "ip_list": [
-    {
-      "properties": {
-        "ipAddress": "43.69.39.39"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "EAGERRABBIT-JOLLYEEL",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/EAGERRABBIT-JOLLYEEL/providers/Microsoft.Network/publicIPAddresses/sillyant",
-      "resourceName": "sillyant",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 19.888,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "excitedpenguin",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "40.47.19.17"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "OBEDIENTSNAKE-NERVOUSKANGAROO",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/OBEDIENTSNAKE-NERVOUSKANGAROO/providers/Microsoft.Network/publicIPAddresses/innocentzebra",
-      "resourceName": "innocentzebra",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 41.136,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "innocentsnake",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "43.35.93.19"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "GENTLEYAK-ZEALOUSOWL",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/GENTLEYAK-ZEALOUSOWL/providers/Microsoft.Network/publicIPAddresses/wittyoctopus",
-      "resourceName": "wittyoctopus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 33.978,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "eagerrabbit",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "52.77.13.14"
-      },
-      "region": "centralindia",
-      "resourceGroup": "OBEDIENTSNAKE-THANKFULQUAIL",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/OBEDIENTSNAKE-THANKFULQUAIL/providers/Microsoft.Network/publicIPAddresses/zealouscat",
-      "resourceName": "zealouscat",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 27.193,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "wittyfox",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "66.19.31.65"
-      },
-      "region": "eastus",
-      "resourceGroup": "DROWSYELEPHANT-DROWSYGOAT",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/DROWSYELEPHANT-DROWSYGOAT/providers/Microsoft.Network/publicIPAddresses/quickhorse",
-      "resourceName": "quickhorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 23.472,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "livelyyak",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "68.34.74.3"
-      },
-      "region": "northeurope",
-      "resourceGroup": "WITTYRABBIT-LAZYGOAT",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/WITTYRABBIT-LAZYGOAT/providers/Microsoft.Network/publicIPAddresses/lazyjaguar",
-      "resourceName": "lazyjaguar",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.814,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "merryzebra",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "88.84.41.82"
-      },
-      "region": "centralindia",
-      "resourceGroup": "KINDZEBRA-PROUDIBIS",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/KINDZEBRA-PROUDIBIS/providers/Microsoft.Network/publicIPAddresses/exciteddog",
-      "resourceName": "exciteddog",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 19.987,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "jovialfox",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "96.40.24.34"
-      },
-      "region": "westus2",
-      "resourceGroup": "EXCITEDTIGER-VIVACIOUSQUAIL",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/EXCITEDTIGER-VIVACIOUSQUAIL/providers/Microsoft.Network/publicIPAddresses/eagerwhale",
-      "resourceName": "eagerwhale",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 13.219,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "lazyrabbit",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "73.11.7.70"
-      },
-      "region": "centralus",
-      "resourceGroup": "PROUDDOG-JOVIALDOG",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/PROUDDOG-JOVIALDOG/providers/Microsoft.Network/publicIPAddresses/lazyant",
-      "resourceName": "lazyant",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 67.525,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "upbeatgiraffe",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "16.17.83.68"
-      },
-      "region": "eastus",
-      "resourceGroup": "LIVELYQUAIL-EXCITEDQUAIL",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/LIVELYQUAIL-EXCITEDQUAIL/providers/Microsoft.Network/publicIPAddresses/wittyoctopus",
-      "resourceName": "wittyoctopus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 27.326,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "youthfulquail",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "85.96.17.43"
-      },
-      "region": "northeurope",
-      "resourceGroup": "QUIRKYGIRAFFE-VIVACIOUSPARROT",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/QUIRKYGIRAFFE-VIVACIOUSPARROT/providers/Microsoft.Network/publicIPAddresses/nervouseel",
-      "resourceName": "nervouseel",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 82.882,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "vivaciousgiraffe",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "87.91.19.28"
-      },
-      "region": "northeurope",
-      "resourceGroup": "WITTYPENGUIN-QUICKGIRAFFE",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/WITTYPENGUIN-QUICKGIRAFFE/providers/Microsoft.Network/publicIPAddresses/drowsyxerus",
-      "resourceName": "drowsyxerus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.178,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "zealouseel",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "22.9.36.99"
-      },
-      "region": "eastus2",
-      "resourceGroup": "ZEALOUSOWL-INNOCENTKANGAROO",
-      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/ZEALOUSOWL-INNOCENTKANGAROO/providers/Microsoft.Network/publicIPAddresses/upbeatbear",
-      "resourceName": "upbeatbear",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 1.117,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "nervouspenguin",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "74.83.82.25"
-      },
-      "region": "northeurope",
-      "resourceGroup": "UPBEATZEBRA-MERRYANT",
-      "resourceId": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/UPBEATZEBRA-MERRYANT/providers/Microsoft.Network/publicIPAddresses/upbeatbear",
-      "resourceName": "upbeatbear",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 25.177,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "sillyowl",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "88.4.21.97"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "JOVIALGIRAFFE-LIVELYKANGAROO",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/JOVIALGIRAFFE-LIVELYKANGAROO/providers/Microsoft.Network/publicIPAddresses/zealousgiraffe",
-      "resourceName": "zealousgiraffe",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 86.143,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "gentlefox",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "61.86.81.35"
-      },
-      "region": "centralindia",
-      "resourceGroup": "JOVIALJAGUAR-ADVENTUROUSCAT",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/JOVIALJAGUAR-ADVENTUROUSCAT/providers/Microsoft.Network/publicIPAddresses/obedienteel",
-      "resourceName": "obedienteel",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 15.029,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "braverabbit",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "98.1.96.95"
-      },
-      "region": "centralus",
-      "resourceGroup": "EAGERELEPHANT-JOVIALOCTOPUS",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/EAGERELEPHANT-JOVIALOCTOPUS/providers/Microsoft.Network/publicIPAddresses/vivaciousbear",
-      "resourceName": "vivaciousbear",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 51.881,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "calmxerus",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "16.86.68.6"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "ZEALOUSURCHIN-KINDYAK",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/ZEALOUSURCHIN-KINDYAK/providers/Microsoft.Network/publicIPAddresses/livelykangaroo",
-      "resourceName": "livelykangaroo",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 29.921,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "jovialviper",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "85.82.0.62"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "EXCITEDKANGAROO-EXCITEDVIPER",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/EXCITEDKANGAROO-EXCITEDVIPER/providers/Microsoft.Network/publicIPAddresses/fiercezebra",
-      "resourceName": "fiercezebra",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 5.784,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "thankfulowl",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "10.49.32.13"
-      },
-      "region": "uksouth",
-      "resourceGroup": "UPBEATEEL-EXCITEDQUAIL",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/UPBEATEEL-EXCITEDQUAIL/providers/Microsoft.Network/publicIPAddresses/obedienthorse",
-      "resourceName": "obedienthorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 34.653,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "quirkytiger",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "75.25.94.37"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "BRAVEBEAR-ZEALOUSJAGUAR",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/BRAVEBEAR-ZEALOUSJAGUAR/providers/Microsoft.Network/publicIPAddresses/proudibis",
-      "resourceName": "proudibis",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.356,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "gentledog",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "46.81.10.95"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "CALMQUAIL-OBEDIENTEEL",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/CALMQUAIL-OBEDIENTEEL/providers/Microsoft.Network/publicIPAddresses/jollyhorse",
-      "resourceName": "jollyhorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 10.235,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "jollyyak",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "84.15.59.51"
-      },
-      "region": "uksouth",
-      "resourceGroup": "JOLLYZEBRA-NERVOUSJAGUAR",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/JOLLYZEBRA-NERVOUSJAGUAR/providers/Microsoft.Network/publicIPAddresses/obedientpenguin",
-      "resourceName": "obedientpenguin",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 22.478,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "upbeathorse",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "82.29.84.69"
-      },
-      "region": "uksouth",
-      "resourceGroup": "UPBEATELEPHANT-VIVACIOUSANT",
-      "resourceId": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/UPBEATELEPHANT-VIVACIOUSANT/providers/Microsoft.Network/publicIPAddresses/nervousnewt",
-      "resourceName": "nervousnewt",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 0.173,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
-      "subscriptionName": "calmowl",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "31.86.39.71"
-      },
-      "region": "uksouth",
-      "resourceGroup": "UPBEATURCHIN-HAPPYJAGUAR",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/UPBEATURCHIN-HAPPYJAGUAR/providers/Microsoft.Network/publicIPAddresses/merrynewt",
-      "resourceName": "merrynewt",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 33.092,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "obedientviper",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "50.87.50.69"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "EXCITEDPENGUIN-OBEDIENTBEAR",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/EXCITEDPENGUIN-OBEDIENTBEAR/providers/Microsoft.Network/publicIPAddresses/happygoat",
-      "resourceName": "happygoat",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.502,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "youthfulquail",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "84.38.71.11"
-      },
-      "region": "australiaeast",
-      "resourceGroup": "EXCITEDELEPHANT-LAZYPENGUIN",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/EXCITEDELEPHANT-LAZYPENGUIN/providers/Microsoft.Network/publicIPAddresses/livelyviper",
-      "resourceName": "livelyviper",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 52.076,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "gentleelephant",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "46.99.57.55"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "NERVOUSIBIS-RELIEVEDOCTOPUS",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/NERVOUSIBIS-RELIEVEDOCTOPUS/providers/Microsoft.Network/publicIPAddresses/calmquail",
-      "resourceName": "calmquail",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 9.651,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "youthfulelephant",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "34.82.90.74"
-      },
-      "region": "eastus",
-      "resourceGroup": "GENTLEEEL-LAZYXERUS",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/GENTLEEEL-LAZYXERUS/providers/Microsoft.Network/publicIPAddresses/upbeathorse",
-      "resourceName": "upbeathorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.939,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "relievedzebra",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "39.18.16.9"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "OBEDIENTMOUSE-FIERCEOCTOPUS",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/OBEDIENTMOUSE-FIERCEOCTOPUS/providers/Microsoft.Network/publicIPAddresses/proudhorse",
-      "resourceName": "proudhorse",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 0.907,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "livelypenguin",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "70.1.48.85"
-      },
-      "region": "northeurope",
-      "resourceGroup": "HAPPYVIPER-PROUDCAT",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/HAPPYVIPER-PROUDCAT/providers/Microsoft.Network/publicIPAddresses/relievedparrot",
-      "resourceName": "relievedparrot",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 36.364,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "eagerurchin",
-      "tags": {
-        "environment": "prod",
-        "app": "reportingService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "84.18.91.74"
-      },
-      "region": "westus2",
-      "resourceGroup": "DROWSYURCHIN-ZEALOUSKANGAROO",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/DROWSYURCHIN-ZEALOUSKANGAROO/providers/Microsoft.Network/publicIPAddresses/lazyparrot",
-      "resourceName": "lazyparrot",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.039,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "livelyrabbit",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "61.54.11.69"
-      },
-      "region": "westus2",
-      "resourceGroup": "EXCITEDSNAKE-RELIEVEDYAK",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/EXCITEDSNAKE-RELIEVEDYAK/providers/Microsoft.Network/publicIPAddresses/jovialsnake",
-      "resourceName": "jovialsnake",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 16.907,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "quickwhale",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "15.64.38.70"
-      },
-      "region": "northeurope",
-      "resourceGroup": "THANKFULFOX-RELIEVEDELEPHANT",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/THANKFULFOX-RELIEVEDELEPHANT/providers/Microsoft.Network/publicIPAddresses/braverabbit",
-      "resourceName": "braverabbit",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 5.546,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "quickeel",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "88.47.7.49"
-      },
-      "region": "uksouth",
-      "resourceGroup": "OBEDIENTXERUS-FIERCEQUAIL",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/OBEDIENTXERUS-FIERCEQUAIL/providers/Microsoft.Network/publicIPAddresses/thankfulzebra",
-      "resourceName": "thankfulzebra",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 45.33,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "quicknewt",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "91.18.86.69"
-      },
-      "region": "eastus2",
-      "resourceGroup": "JOVIALPARROT-INNOCENTKANGAROO",
-      "resourceId": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/JOVIALPARROT-INNOCENTKANGAROO/providers/Microsoft.Network/publicIPAddresses/jovialkangaroo",
-      "resourceName": "jovialkangaroo",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 18.669,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
-      "subscriptionName": "vivaciousxerus",
-      "tags": {
-        "environment": "dev",
-        "app": "emailService"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "14.1.25.22"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "EXCITEDURCHIN-QUIRKYMOUSE",
-      "resourceId": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/EXCITEDURCHIN-QUIRKYMOUSE/providers/Microsoft.Network/publicIPAddresses/bravekangaroo",
-      "resourceName": "bravekangaroo",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 25.358,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ceee86e2-a6cf-4a62-8004-1313cc581679",
-      "subscriptionName": "obedientjaguar",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "90.66.27.87"
-      },
-      "region": "centralus",
-      "resourceGroup": "GENTLEIBIS-LIVELYZEBRA",
-      "resourceId": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/GENTLEIBIS-LIVELYZEBRA/providers/Microsoft.Network/publicIPAddresses/thankfulibis",
-      "resourceName": "thankfulibis",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 2.102,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "9c6588cd-ca5e-429d-adc7-5292d3880914",
-      "subscriptionName": "excitedoctopus",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "87.28.56.51"
-      },
-      "region": "northeurope",
-      "resourceGroup": "LIVELYRABBIT-YOUTHFULQUAIL",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/LIVELYRABBIT-YOUTHFULQUAIL/providers/Microsoft.Network/publicIPAddresses/obedienttiger",
-      "resourceName": "obedienttiger",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 20.57,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "quirkyibis",
-      "tags": {
-        "environment": "dev",
-        "app": "dataAnalytics"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "3.28.57.54"
-      },
-      "region": "centralus",
-      "resourceGroup": "OBEDIENTSNAKE-INNOCENTDOG",
-      "resourceId": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/OBEDIENTSNAKE-INNOCENTDOG/providers/Microsoft.Network/publicIPAddresses/adventurousrabbit",
-      "resourceName": "adventurousrabbit",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 42.87,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "912102ae-2e57-4094-bb8a-63a7d1c38207",
-      "subscriptionName": "bravejaguar",
-      "tags": {
-        "environment": "staging",
-        "app": "userManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "32.89.60.46"
-      },
-      "region": "centralindia",
-      "resourceGroup": "JOVIALELEPHANT-QUICKKANGAROO",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/JOVIALELEPHANT-QUICKKANGAROO/providers/Microsoft.Network/publicIPAddresses/wittyrabbit",
-      "resourceName": "wittyrabbit",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 0.15,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "proudrabbit",
-      "tags": {
-        "environment": "prod",
-        "app": "crmModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "2.69.55.71"
-      },
-      "region": "southeastasia",
-      "resourceGroup": "HAPPYNEWT-PROUDANT",
-      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/HAPPYNEWT-PROUDANT/providers/Microsoft.Network/publicIPAddresses/nervousurchin",
-      "resourceName": "nervousurchin",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.456,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "innocentjaguar",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "48.16.81.21"
-      },
-      "region": "centralindia",
-      "resourceGroup": "ZEALOUSPARROT-EXCITEDPENGUIN",
-      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/ZEALOUSPARROT-EXCITEDPENGUIN/providers/Microsoft.Network/publicIPAddresses/innocentgiraffe",
-      "resourceName": "innocentgiraffe",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 3.645,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "nervousxerus",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "2.66.72.30"
-      },
-      "region": "southcentralus",
-      "resourceGroup": "YOUTHFULFOX-QUIRKYMOUSE",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/YOUTHFULFOX-QUIRKYMOUSE/providers/Microsoft.Network/publicIPAddresses/nervousoctopus",
-      "resourceName": "nervousoctopus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 47.937,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "proudgoat",
-      "tags": {
-        "environment": "prod",
-        "app": "inventoryManagement"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "29.92.42.66"
-      },
-      "region": "uksouth",
-      "resourceGroup": "SILLYQUAIL-OBEDIENTKANGAROO",
-      "resourceId": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/SILLYQUAIL-OBEDIENTKANGAROO/providers/Microsoft.Network/publicIPAddresses/excitedyak",
-      "resourceName": "excitedyak",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 68.756,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
-      "subscriptionName": "innocentbear",
-      "tags": {
-        "environment": "staging",
-        "app": "invoiceProcessing"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "85.98.58.87"
-      },
-      "region": "northeurope",
-      "resourceGroup": "ZEALOUSJAGUAR-YOUTHFULGOAT",
-      "resourceId": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/ZEALOUSJAGUAR-YOUTHFULGOAT/providers/Microsoft.Network/publicIPAddresses/bravebear",
-      "resourceName": "bravebear",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 10.461,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
-      "subscriptionName": "relievedtiger",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "0.65.25.32"
-      },
-      "region": "centralindia",
-      "resourceGroup": "UPBEATIBIS-BRAVEMOUSE",
-      "resourceId": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/UPBEATIBIS-BRAVEMOUSE/providers/Microsoft.Network/publicIPAddresses/quickgiraffe",
-      "resourceName": "quickgiraffe",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 41.484,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
-      "subscriptionName": "excitedlion",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "17.37.32.59"
-      },
-      "region": "uksouth",
-      "resourceGroup": "INNOCENTOCTOPUS-HAPPYDOG",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/INNOCENTOCTOPUS-HAPPYDOG/providers/Microsoft.Network/publicIPAddresses/lazyxerus",
-      "resourceName": "lazyxerus",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 22.305,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "nervouszebra",
-      "tags": {
-        "environment": "dev",
-        "app": "customerSupport"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "64.92.8.6"
-      },
-      "region": "northeurope",
-      "resourceGroup": "EAGERGIRAFFE-FIERCEOWL",
-      "resourceId": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/EAGERGIRAFFE-FIERCEOWL/providers/Microsoft.Network/publicIPAddresses/kinddog",
-      "resourceName": "kinddog",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 0.586,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
-      "subscriptionName": "innocentcat",
-      "tags": {
-        "environment": "prod",
-        "app": "paymentGateway"
-      }
-    },
-    {
-      "properties": {
-        "ipAddress": "77.71.92.9"
-      },
-      "region": "westus2",
-      "resourceGroup": "KINDANT-RELIEVEDGOAT",
-      "resourceId": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/KINDANT-RELIEVEDGOAT/providers/Microsoft.Network/publicIPAddresses/obedientgoat",
-      "resourceName": "obedientgoat",
-      "resourceType": "Microsoft.Network/publicIPAddresses",
-      "savings": 17.533,
-      "savingsCurrency": "US$",
-      "service": "Microsoft.Network",
-      "subscriptionId": "ca1eeeca-231f-4a91-a740-04eaeb043516",
-      "subscriptionName": "nervouslion",
-      "tags": {
-        "environment": "prod",
-        "app": "securityModule"
-      }
-    }
-  ]
-}
+[
+  {
+    "accountID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+    "accountName": "upbeaturchin",
+    "resourceGroup": "flatbanana",
+    "ipAddress": "239.57.70.116",
+    "resourceName": "darkdione",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address darkdione (239.57.70.116) in Azure Subscription upbeaturchin (1aec08f2-c15d-4c32-919c-4bab940f69f3)",
+    "age": 100,
+    "region": "uksouth",
+    "allocation": "Static",
+    "tags": "environment=dev, app=reportingService, tier=web",
+    "savings": 982.18,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/flatbanana/providers/Microsoft.Network/publicIPAddresses/darkdione"
+  },
+  {
+    "accountID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "accountName": "greenaubergine",
+    "resourceGroup": "happycharon",
+    "ipAddress": "95.48.217.73",
+    "resourceName": "braveeunomia",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address braveeunomia (95.48.217.73) in Azure Subscription greenaubergine (ca1eeeca-231f-4a91-a740-04eaeb043516)",
+    "age": 136,
+    "region": "uksouth",
+    "allocation": "Static",
+    "tags": "environment=prod, app=reportingService, team=backend, tier=web",
+    "savings": 115.78,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/happycharon/providers/Microsoft.Network/publicIPAddresses/braveeunomia"
+  },
+  {
+    "accountID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "accountName": "whiteparrot",
+    "resourceGroup": "darkchariklo",
+    "ipAddress": "230.227.96.171",
+    "resourceName": "giganticlime",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address giganticlime (230.227.96.171) in Azure Subscription whiteparrot (57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec)",
+    "age": 172,
+    "region": "northeurope",
+    "allocation": "Static",
+    "tags": "environment=dev, app=securityModule, team=infra",
+    "savings": 639.97,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/darkchariklo/providers/Microsoft.Network/publicIPAddresses/giganticlime"
+  },
+  {
+    "accountID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+    "accountName": "sillymouse",
+    "resourceGroup": "adventurouskangaroo",
+    "ipAddress": "68.135.150.128",
+    "resourceName": "rotundjupiter",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address rotundjupiter (68.135.150.128) in Azure Subscription sillymouse (6383b3a2-a8c4-4c07-8acf-f38e08fc7622)",
+    "age": 45,
+    "region": "australiaeast",
+    "allocation": "Static",
+    "tags": "environment=prod, app=customerSupport",
+    "savings": 488.16,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/adventurouskangaroo/providers/Microsoft.Network/publicIPAddresses/rotundjupiter"
+  },
+  {
+    "accountID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+    "accountName": "calmgrape",
+    "resourceGroup": "mattestrawberry",
+    "ipAddress": "95.195.33.200",
+    "resourceName": "shinycallisto",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address shinycallisto (95.195.33.200) in Azure Subscription calmgrape (912102ae-2e57-4094-bb8a-63a7d1c38207)",
+    "age": 186,
+    "region": "centralus",
+    "allocation": "Static",
+    "tags": "environment=staging, app=invoiceProcessing",
+    "savings": 227.92,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/mattestrawberry/providers/Microsoft.Network/publicIPAddresses/shinycallisto"
+  },
+  {
+    "accountID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+    "accountName": "squareblackberry",
+    "resourceGroup": "whiteapple",
+    "ipAddress": "226.14.24.45",
+    "resourceName": "rotundtomato",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address rotundtomato (226.14.24.45) in Azure Subscription squareblackberry (1af450b2-ce7a-4af5-9ebc-a13461fe1e32)",
+    "age": 136,
+    "region": "eastus2",
+    "allocation": "Static",
+    "tags": "environment=prod, app=userManagement",
+    "savings": 1000.97,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/whiteapple/providers/Microsoft.Network/publicIPAddresses/rotundtomato"
+  },
+  {
+    "accountID": "f048a88c-9bc9-43cf-a30d-f48c94708866",
+    "accountName": "largedog",
+    "resourceGroup": "jollyorcus",
+    "ipAddress": "205.231.196.86",
+    "resourceName": "purplepumpkin",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address purplepumpkin (205.231.196.86) in Azure Subscription largedog (f048a88c-9bc9-43cf-a30d-f48c94708866)",
+    "age": 128,
+    "region": "eastus",
+    "allocation": "Static",
+    "tags": "environment=dev, app=inventoryManagement",
+    "savings": 268.72,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/f048a88c-9bc9-43cf-a30d-f48c94708866/resourceGroups/jollyorcus/providers/Microsoft.Network/publicIPAddresses/purplepumpkin"
+  },
+  {
+    "accountID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+    "accountName": "gentleorcus",
+    "resourceGroup": "narrowchariklo",
+    "ipAddress": "119.153.88.234",
+    "resourceName": "fluorescentmars",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address fluorescentmars (119.153.88.234) in Azure Subscription gentleorcus (13e8d4fc-8226-45a0-88cf-2979d3e9eba9)",
+    "age": 243,
+    "region": "uksouth",
+    "allocation": "Static",
+    "tags": "environment=prod, app=customerSupport, team=security, tier=web",
+    "savings": 865.93,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/narrowchariklo/providers/Microsoft.Network/publicIPAddresses/fluorescentmars"
+  },
+  {
+    "accountID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+    "accountName": "thankfulgoat",
+    "resourceGroup": "lazyhaumea",
+    "ipAddress": "66.101.154.167",
+    "resourceName": "merryibis",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address merryibis (66.101.154.167) in Azure Subscription thankfulgoat (8752afcb-f9b4-453b-b34c-cb9f3a9a0247)",
+    "age": 107,
+    "region": "southcentralus",
+    "allocation": "Static",
+    "tags": "environment=test, app=billingService, team=backend",
+    "savings": 595.6,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/lazyhaumea/providers/Microsoft.Network/publicIPAddresses/merryibis"
+  },
+  {
+    "accountID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+    "accountName": "merryzucchini",
+    "resourceGroup": "ovalspinach",
+    "ipAddress": "225.156.172.25",
+    "resourceName": "sphericalkiwi",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address sphericalkiwi (225.156.172.25) in Azure Subscription merryzucchini (9c6588cd-ca5e-429d-adc7-5292d3880914)",
+    "age": 135,
+    "region": "eastus2",
+    "allocation": "Static",
+    "tags": "environment=staging, app=crmModule",
+    "savings": 710.69,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/ovalspinach/providers/Microsoft.Network/publicIPAddresses/sphericalkiwi"
+  },
+  {
+    "accountID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+    "accountName": "fierceio",
+    "resourceGroup": "adventurousjaguar",
+    "ipAddress": "136.54.138.192",
+    "resourceName": "thankfulcoconut",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address thankfulcoconut (136.54.138.192) in Azure Subscription fierceio (1aec08f2-c15d-4c32-919c-4bab940f69f3)",
+    "age": 136,
+    "region": "uksouth",
+    "allocation": "Static",
+    "tags": "environment=dev, app=customerSupport, tier=application",
+    "savings": 171.46,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/adventurousjaguar/providers/Microsoft.Network/publicIPAddresses/thankfulcoconut"
+  },
+  {
+    "accountID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "accountName": "narrowkiwi",
+    "resourceGroup": "brightsun",
+    "ipAddress": "91.108.193.26",
+    "resourceName": "greenceres",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address greenceres (91.108.193.26) in Azure Subscription narrowkiwi (ca1eeeca-231f-4a91-a740-04eaeb043516)",
+    "age": 322,
+    "region": "southcentralus",
+    "allocation": "Static",
+    "tags": "environment=qa, app=customerSupport, tier=application",
+    "savings": 754.73,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/brightsun/providers/Microsoft.Network/publicIPAddresses/greenceres"
+  },
+  {
+    "accountID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+    "accountName": "ovalpotato",
+    "resourceGroup": "flateris",
+    "ipAddress": "34.140.25.62",
+    "resourceName": "quirkyceres",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address quirkyceres (34.140.25.62) in Azure Subscription ovalpotato (13e8d4fc-8226-45a0-88cf-2979d3e9eba9)",
+    "age": 30,
+    "region": "westus2",
+    "allocation": "Static",
+    "tags": "environment=dev, app=customerSupport, tier=application",
+    "savings": 958.58,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/flateris/providers/Microsoft.Network/publicIPAddresses/quirkyceres"
+  },
+  {
+    "accountID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+    "accountName": "orangecoconut",
+    "resourceGroup": "vibrantaubergine",
+    "ipAddress": "236.160.191.108",
+    "resourceName": "blackzebra",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address blackzebra (236.160.191.108) in Azure Subscription orangecoconut (8752afcb-f9b4-453b-b34c-cb9f3a9a0247)",
+    "age": 234,
+    "region": "eastus2",
+    "allocation": "Static",
+    "tags": "environment=staging, app=crmModule",
+    "savings": 940.48,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/vibrantaubergine/providers/Microsoft.Network/publicIPAddresses/blackzebra"
+  },
+  {
+    "accountID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+    "accountName": "rectangulardog",
+    "resourceGroup": "adventurousvesta",
+    "ipAddress": "131.78.211.141",
+    "resourceName": "circularbroccoli",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address circularbroccoli (131.78.211.141) in Azure Subscription rectangulardog (8752afcb-f9b4-453b-b34c-cb9f3a9a0247)",
+    "age": 225,
+    "region": "eastus2",
+    "allocation": "Static",
+    "tags": "environment=prod, app=userManagement",
+    "savings": 192.18,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/adventurousvesta/providers/Microsoft.Network/publicIPAddresses/circularbroccoli"
+  },
+  {
+    "accountID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "accountName": "obedientnewt",
+    "resourceGroup": "mattelion",
+    "ipAddress": "239.109.154.160",
+    "resourceName": "wittypineapple",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address wittypineapple (239.109.154.160) in Azure Subscription obedientnewt (57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec)",
+    "age": 311,
+    "region": "eastus",
+    "allocation": "Static",
+    "tags": "environment=test, app=paymentGateway, tier=application",
+    "savings": 834.21,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/mattelion/providers/Microsoft.Network/publicIPAddresses/wittypineapple"
+  },
+  {
+    "accountID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+    "accountName": "transparentpear",
+    "resourceGroup": "jollyearth",
+    "ipAddress": "168.41.163.151",
+    "resourceName": "gentlespinach",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address gentlespinach (168.41.163.151) in Azure Subscription transparentpear (912102ae-2e57-4094-bb8a-63a7d1c38207)",
+    "age": 122,
+    "region": "westus2",
+    "allocation": "Static",
+    "tags": "environment=prod, app=customerSupport, team=security, tier=web",
+    "savings": 765.81,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/jollyearth/providers/Microsoft.Network/publicIPAddresses/gentlespinach"
+  },
+  {
+    "accountID": "f048a88c-9bc9-43cf-a30d-f48c94708866",
+    "accountName": "whitepumpkin",
+    "resourceGroup": "lazycallisto",
+    "ipAddress": "219.139.195.189",
+    "resourceName": "adventurouseunomia",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address adventurouseunomia (219.139.195.189) in Azure Subscription whitepumpkin (f048a88c-9bc9-43cf-a30d-f48c94708866)",
+    "age": 349,
+    "region": "southeastasia",
+    "allocation": "Static",
+    "tags": "environment=staging, app=invoiceProcessing",
+    "savings": 631.86,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/f048a88c-9bc9-43cf-a30d-f48c94708866/resourceGroups/lazycallisto/providers/Microsoft.Network/publicIPAddresses/adventurouseunomia"
+  },
+  {
+    "accountID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+    "accountName": "greengonggong",
+    "resourceGroup": "squaremakemake",
+    "ipAddress": "135.110.188.162",
+    "resourceName": "excitedpepper",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address excitedpepper (135.110.188.162) in Azure Subscription greengonggong (1aec08f2-c15d-4c32-919c-4bab940f69f3)",
+    "age": 235,
+    "region": "uksouth",
+    "allocation": "Static",
+    "tags": "environment=prod, app=customerSupport, team=security, tier=web",
+    "savings": 573.21,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/squaremakemake/providers/Microsoft.Network/publicIPAddresses/excitedpepper"
+  },
+  {
+    "accountID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "accountName": "happychiron",
+    "resourceGroup": "sillypluto",
+    "ipAddress": "225.47.213.56",
+    "resourceName": "metallicpepper",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address metallicpepper (225.47.213.56) in Azure Subscription happychiron (ca1eeeca-231f-4a91-a740-04eaeb043516)",
+    "age": 334,
+    "region": "centralus",
+    "allocation": "Static",
+    "tags": "environment=prod, app=securityModule",
+    "savings": 105.25,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/sillypluto/providers/Microsoft.Network/publicIPAddresses/metallicpepper"
+  },
+  {
+    "accountID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+    "accountName": "flatoctopus",
+    "resourceGroup": "thankfulganymede",
+    "ipAddress": "116.33.223.118",
+    "resourceName": "eageruranus",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address eageruranus (116.33.223.118) in Azure Subscription flatoctopus (1aec08f2-c15d-4c32-919c-4bab940f69f3)",
+    "age": 325,
+    "region": "westus2",
+    "allocation": "Static",
+    "tags": "environment=prod, app=userManagement",
+    "savings": 215.89,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/thankfulganymede/providers/Microsoft.Network/publicIPAddresses/eageruranus"
+  },
+  {
+    "accountID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+    "accountName": "ovalorcus",
+    "resourceGroup": "massiveeel",
+    "ipAddress": "100.95.151.92",
+    "resourceName": "fluorescentlettuce",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address fluorescentlettuce (100.95.151.92) in Azure Subscription ovalorcus (6383b3a2-a8c4-4c07-8acf-f38e08fc7622)",
+    "age": 349,
+    "region": "westus2",
+    "allocation": "Static",
+    "tags": "environment=prod, app=securityModule",
+    "savings": 959.78,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/massiveeel/providers/Microsoft.Network/publicIPAddresses/fluorescentlettuce"
+  },
+  {
+    "accountID": "1af450b2-ce7a-4af5-9ebc-a13461fe1e32",
+    "accountName": "metalliclime",
+    "resourceGroup": "jovialcarrot",
+    "ipAddress": "189.53.32.71",
+    "resourceName": "calmbear",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address calmbear (189.53.32.71) in Azure Subscription metalliclime (1af450b2-ce7a-4af5-9ebc-a13461fe1e32)",
+    "age": 91,
+    "region": "northeurope",
+    "allocation": "Static",
+    "tags": "environment=prod, app=emailService",
+    "savings": 263.31,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/1af450b2-ce7a-4af5-9ebc-a13461fe1e32/resourceGroups/jovialcarrot/providers/Microsoft.Network/publicIPAddresses/calmbear"
+  },
+  {
+    "accountID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "accountName": "gentlecarrot",
+    "resourceGroup": "jollycat",
+    "ipAddress": "104.78.129.232",
+    "resourceName": "vivaciousonion",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address vivaciousonion (104.78.129.232) in Azure Subscription gentlecarrot (ca1eeeca-231f-4a91-a740-04eaeb043516)",
+    "age": 312,
+    "region": "southcentralus",
+    "allocation": "Static",
+    "tags": "environment=prod, app=emailService",
+    "savings": 884.31,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/jollycat/providers/Microsoft.Network/publicIPAddresses/vivaciousonion"
+  },
+  {
+    "accountID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+    "accountName": "vibrantonion",
+    "resourceGroup": "excitedceres",
+    "ipAddress": "208.26.111.135",
+    "resourceName": "jovialtiger",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address jovialtiger (208.26.111.135) in Azure Subscription vibrantonion (912102ae-2e57-4094-bb8a-63a7d1c38207)",
+    "age": 136,
+    "region": "southeastasia",
+    "allocation": "Static",
+    "tags": "environment=prod, app=securityModule",
+    "savings": 248.22,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/excitedceres/providers/Microsoft.Network/publicIPAddresses/jovialtiger"
+  },
+  {
+    "accountID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+    "accountName": "sillypenguin",
+    "resourceGroup": "kindzucchini",
+    "ipAddress": "49.20.119.23",
+    "resourceName": "orangeradish",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address orangeradish (49.20.119.23) in Azure Subscription sillypenguin (ceee86e2-a6cf-4a62-8004-1313cc581679)",
+    "age": 218,
+    "region": "southcentralus",
+    "allocation": "Static",
+    "tags": "environment=prod, app=reportingService, team=backend, tier=web",
+    "savings": 367.87,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/kindzucchini/providers/Microsoft.Network/publicIPAddresses/orangeradish"
+  },
+  {
+    "accountID": "f048a88c-9bc9-43cf-a30d-f48c94708866",
+    "accountName": "jovialearth",
+    "resourceGroup": "nervouscharon",
+    "ipAddress": "69.17.106.82",
+    "resourceName": "metalliczucchini",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address metalliczucchini (69.17.106.82) in Azure Subscription jovialearth (f048a88c-9bc9-43cf-a30d-f48c94708866)",
+    "age": 232,
+    "region": "centralus",
+    "allocation": "Static",
+    "tags": "environment=prod, app=securityModule",
+    "savings": 3.46,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/f048a88c-9bc9-43cf-a30d-f48c94708866/resourceGroups/nervouscharon/providers/Microsoft.Network/publicIPAddresses/metalliczucchini"
+  },
+  {
+    "accountID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+    "accountName": "transparentant",
+    "resourceGroup": "youthfuluranus",
+    "ipAddress": "151.211.79.188",
+    "resourceName": "greenavocado",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address greenavocado (151.211.79.188) in Azure Subscription transparentant (13e8d4fc-8226-45a0-88cf-2979d3e9eba9)",
+    "age": 207,
+    "region": "southcentralus",
+    "allocation": "Static",
+    "tags": "environment=prod, app=customerSupport",
+    "savings": 392.9,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/youthfuluranus/providers/Microsoft.Network/publicIPAddresses/greenavocado"
+  },
+  {
+    "accountID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "accountName": "largedog",
+    "resourceGroup": "translucentiapetus",
+    "ipAddress": "51.170.97.233",
+    "resourceName": "purplegoat",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address purplegoat (51.170.97.233) in Azure Subscription largedog (57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec)",
+    "age": 356,
+    "region": "westus2",
+    "allocation": "Static",
+    "tags": "environment=dev, app=inventoryManagement",
+    "savings": 624.68,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/translucentiapetus/providers/Microsoft.Network/publicIPAddresses/purplegoat"
+  },
+  {
+    "accountID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+    "accountName": "yellowneptune",
+    "resourceGroup": "adventurousplum",
+    "ipAddress": "156.184.32.35",
+    "resourceName": "fierceonion",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address fierceonion (156.184.32.35) in Azure Subscription yellowneptune (ceee86e2-a6cf-4a62-8004-1313cc581679)",
+    "age": 313,
+    "region": "southcentralus",
+    "allocation": "Static",
+    "tags": "environment=prod, app=emailService",
+    "savings": 811.8,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/adventurousplum/providers/Microsoft.Network/publicIPAddresses/fierceonion"
+  },
+  {
+    "accountID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+    "accountName": "cylindricalbanana",
+    "resourceGroup": "innocentaubergine",
+    "ipAddress": "105.175.28.98",
+    "resourceName": "roundorange",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address roundorange (105.175.28.98) in Azure Subscription cylindricalbanana (ceee86e2-a6cf-4a62-8004-1313cc581679)",
+    "age": 276,
+    "region": "centralindia",
+    "allocation": "Static",
+    "tags": "environment=prod, app=securityModule",
+    "savings": 454.75,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/innocentaubergine/providers/Microsoft.Network/publicIPAddresses/roundorange"
+  },
+  {
+    "accountID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "accountName": "ellipticalphobos",
+    "resourceGroup": "metalliccat",
+    "ipAddress": "146.70.194.18",
+    "resourceName": "jollylemon",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address jollylemon (146.70.194.18) in Azure Subscription ellipticalphobos (ca1eeeca-231f-4a91-a740-04eaeb043516)",
+    "age": 184,
+    "region": "australiaeast",
+    "allocation": "Static",
+    "tags": "environment=dev, app=reportingService, tier=web",
+    "savings": 291.93,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/metalliccat/providers/Microsoft.Network/publicIPAddresses/jollylemon"
+  },
+  {
+    "accountID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+    "accountName": "youthfulsaturn",
+    "resourceGroup": "gentleeunomia",
+    "ipAddress": "190.20.55.42",
+    "resourceName": "kindstrawberry",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address kindstrawberry (190.20.55.42) in Azure Subscription youthfulsaturn (ceee86e2-a6cf-4a62-8004-1313cc581679)",
+    "age": 86,
+    "region": "uksouth",
+    "allocation": "Static",
+    "tags": "environment=prod, app=customerSupport",
+    "savings": 312.16,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/gentleeunomia/providers/Microsoft.Network/publicIPAddresses/kindstrawberry"
+  },
+  {
+    "accountID": "f048a88c-9bc9-43cf-a30d-f48c94708866",
+    "accountName": "purplegarlic",
+    "resourceGroup": "relievedcarrot",
+    "ipAddress": "89.127.54.42",
+    "resourceName": "redvenus",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address redvenus (89.127.54.42) in Azure Subscription purplegarlic (f048a88c-9bc9-43cf-a30d-f48c94708866)",
+    "age": 205,
+    "region": "southeastasia",
+    "allocation": "Static",
+    "tags": "environment=test, app=dataWarehouse",
+    "savings": 732.55,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/f048a88c-9bc9-43cf-a30d-f48c94708866/resourceGroups/relievedcarrot/providers/Microsoft.Network/publicIPAddresses/redvenus"
+  },
+  {
+    "accountID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+    "accountName": "jollyhygiea",
+    "resourceGroup": "fluorescentchariklo",
+    "ipAddress": "204.108.190.121",
+    "resourceName": "giganticmakemake",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address giganticmakemake (204.108.190.121) in Azure Subscription jollyhygiea (1aec08f2-c15d-4c32-919c-4bab940f69f3)",
+    "age": 129,
+    "region": "australiaeast",
+    "allocation": "Static",
+    "tags": "environment=prod, app=reportingService, team=backend, tier=web",
+    "savings": 757.02,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/fluorescentchariklo/providers/Microsoft.Network/publicIPAddresses/giganticmakemake"
+  },
+  {
+    "accountID": "f048a88c-9bc9-43cf-a30d-f48c94708866",
+    "accountName": "brightearth",
+    "resourceGroup": "sillyceres",
+    "ipAddress": "116.48.41.128",
+    "resourceName": "excitedtomato",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address excitedtomato (116.48.41.128) in Azure Subscription brightearth (f048a88c-9bc9-43cf-a30d-f48c94708866)",
+    "age": 320,
+    "region": "centralindia",
+    "allocation": "Static",
+    "tags": "environment=staging, app=invoiceProcessing",
+    "savings": 104.41,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/f048a88c-9bc9-43cf-a30d-f48c94708866/resourceGroups/sillyceres/providers/Microsoft.Network/publicIPAddresses/excitedtomato"
+  },
+  {
+    "accountID": "8752afcb-f9b4-453b-b34c-cb9f3a9a0247",
+    "accountName": "purpleavocado",
+    "resourceGroup": "jovialcorn",
+    "ipAddress": "19.22.59.69",
+    "resourceName": "thincarrot",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address thincarrot (19.22.59.69) in Azure Subscription purpleavocado (8752afcb-f9b4-453b-b34c-cb9f3a9a0247)",
+    "age": 98,
+    "region": "westus2",
+    "allocation": "Static",
+    "tags": "environment=prod, app=userManagement",
+    "savings": 185.44,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/8752afcb-f9b4-453b-b34c-cb9f3a9a0247/resourceGroups/jovialcorn/providers/Microsoft.Network/publicIPAddresses/thincarrot"
+  },
+  {
+    "accountID": "13e8d4fc-8226-45a0-88cf-2979d3e9eba9",
+    "accountName": "shortwatermelon",
+    "resourceGroup": "shinyeuropa",
+    "ipAddress": "213.214.58.121",
+    "resourceName": "translucentibis",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address translucentibis (213.214.58.121) in Azure Subscription shortwatermelon (13e8d4fc-8226-45a0-88cf-2979d3e9eba9)",
+    "age": 265,
+    "region": "northeurope",
+    "allocation": "Static",
+    "tags": "environment=prod, app=userManagement",
+    "savings": 272.69,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/13e8d4fc-8226-45a0-88cf-2979d3e9eba9/resourceGroups/shinyeuropa/providers/Microsoft.Network/publicIPAddresses/translucentibis"
+  },
+  {
+    "accountID": "1aec08f2-c15d-4c32-919c-4bab940f69f3",
+    "accountName": "mattefox",
+    "resourceGroup": "drowsyquaoar",
+    "ipAddress": "11.16.129.58",
+    "resourceName": "smallturnip",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address smallturnip (11.16.129.58) in Azure Subscription mattefox (1aec08f2-c15d-4c32-919c-4bab940f69f3)",
+    "age": 311,
+    "region": "eastus",
+    "allocation": "Static",
+    "tags": "environment=dev, app=customerSupport, tier=application",
+    "savings": 307.77,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/1aec08f2-c15d-4c32-919c-4bab940f69f3/resourceGroups/drowsyquaoar/providers/Microsoft.Network/publicIPAddresses/smallturnip"
+  },
+  {
+    "accountID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "accountName": "rotundturnip",
+    "resourceGroup": "vivaciousgiraffe",
+    "ipAddress": "26.212.26.43",
+    "resourceName": "roundkale",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address roundkale (26.212.26.43) in Azure Subscription rotundturnip (57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec)",
+    "age": 97,
+    "region": "uksouth",
+    "allocation": "Static",
+    "tags": "environment=prod, app=emailService",
+    "savings": 934.79,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/vivaciousgiraffe/providers/Microsoft.Network/publicIPAddresses/roundkale"
+  },
+  {
+    "accountID": "912102ae-2e57-4094-bb8a-63a7d1c38207",
+    "accountName": "sphericaljuno",
+    "resourceGroup": "flatpapaya",
+    "ipAddress": "30.98.177.115",
+    "resourceName": "vivaciouseuropa",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address vivaciouseuropa (30.98.177.115) in Azure Subscription sphericaljuno (912102ae-2e57-4094-bb8a-63a7d1c38207)",
+    "age": 201,
+    "region": "eastus",
+    "allocation": "Static",
+    "tags": "environment=prod, app=userManagement",
+    "savings": 630.76,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/912102ae-2e57-4094-bb8a-63a7d1c38207/resourceGroups/flatpapaya/providers/Microsoft.Network/publicIPAddresses/vivaciouseuropa"
+  },
+  {
+    "accountID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+    "accountName": "nervouspluto",
+    "resourceGroup": "braveurchin",
+    "ipAddress": "240.228.216.53",
+    "resourceName": "innocentspinach",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address innocentspinach (240.228.216.53) in Azure Subscription nervouspluto (9c6588cd-ca5e-429d-adc7-5292d3880914)",
+    "age": 88,
+    "region": "westus2",
+    "allocation": "Static",
+    "tags": "environment=staging, app=crmModule",
+    "savings": 360.43,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/braveurchin/providers/Microsoft.Network/publicIPAddresses/innocentspinach"
+  },
+  {
+    "accountID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "accountName": "opaquecorn",
+    "resourceGroup": "ovalrabbit",
+    "ipAddress": "155.234.14.59",
+    "resourceName": "dullavocado",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address dullavocado (155.234.14.59) in Azure Subscription opaquecorn (57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec)",
+    "age": 221,
+    "region": "centralus",
+    "allocation": "Static",
+    "tags": "environment=prod, app=userManagement",
+    "savings": 601.84,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/ovalrabbit/providers/Microsoft.Network/publicIPAddresses/dullavocado"
+  },
+  {
+    "accountID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "accountName": "mattetomato",
+    "resourceGroup": "sphericalmoon",
+    "ipAddress": "145.159.212.84",
+    "resourceName": "bravekangaroo",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address bravekangaroo (145.159.212.84) in Azure Subscription mattetomato (ca1eeeca-231f-4a91-a740-04eaeb043516)",
+    "age": 177,
+    "region": "centralindia",
+    "allocation": "Static",
+    "tags": "environment=dev, app=securityModule, team=infra",
+    "savings": 2.27,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/sphericalmoon/providers/Microsoft.Network/publicIPAddresses/bravekangaroo"
+  },
+  {
+    "accountID": "57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec",
+    "accountName": "livelypumpkin",
+    "resourceGroup": "bravebroccoli",
+    "ipAddress": "158.126.17.67",
+    "resourceName": "orangexerus",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address orangexerus (158.126.17.67) in Azure Subscription livelypumpkin (57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec)",
+    "age": 194,
+    "region": "australiaeast",
+    "allocation": "Static",
+    "tags": "environment=dev, app=inventoryManagement",
+    "savings": 951.58,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/57e25d4f-1ba6-4ac3-8ae9-455e3f0236ec/resourceGroups/bravebroccoli/providers/Microsoft.Network/publicIPAddresses/orangexerus"
+  },
+  {
+    "accountID": "9c6588cd-ca5e-429d-adc7-5292d3880914",
+    "accountName": "thankfulbanana",
+    "resourceGroup": "narrowkiwi",
+    "ipAddress": "64.119.121.54",
+    "resourceName": "tinyhygiea",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address tinyhygiea (64.119.121.54) in Azure Subscription thankfulbanana (9c6588cd-ca5e-429d-adc7-5292d3880914)",
+    "age": 52,
+    "region": "centralus",
+    "allocation": "Static",
+    "tags": "environment=dev, app=customerSupport, tier=application",
+    "savings": 405.19,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/9c6588cd-ca5e-429d-adc7-5292d3880914/resourceGroups/narrowkiwi/providers/Microsoft.Network/publicIPAddresses/tinyhygiea"
+  },
+  {
+    "accountID": "ca1eeeca-231f-4a91-a740-04eaeb043516",
+    "accountName": "sphericalmouse",
+    "resourceGroup": "proudganymede",
+    "ipAddress": "89.31.159.87",
+    "resourceName": "darkpenguin",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address darkpenguin (89.31.159.87) in Azure Subscription sphericalmouse (ca1eeeca-231f-4a91-a740-04eaeb043516)",
+    "age": 217,
+    "region": "southeastasia",
+    "allocation": "Static",
+    "tags": "environment=test, app=dataWarehouse",
+    "savings": 845.87,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ca1eeeca-231f-4a91-a740-04eaeb043516/resourceGroups/proudganymede/providers/Microsoft.Network/publicIPAddresses/darkpenguin"
+  },
+  {
+    "accountID": "ceee86e2-a6cf-4a62-8004-1313cc581679",
+    "accountName": "roundhygiea",
+    "resourceGroup": "kindpineapple",
+    "ipAddress": "192.28.227.19",
+    "resourceName": "whitejaguar",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address whitejaguar (192.28.227.19) in Azure Subscription roundhygiea (ceee86e2-a6cf-4a62-8004-1313cc581679)",
+    "age": 318,
+    "region": "southeastasia",
+    "allocation": "Static",
+    "tags": "environment=prod, app=reportingService, team=backend, tier=web",
+    "savings": 91.89,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/ceee86e2-a6cf-4a62-8004-1313cc581679/resourceGroups/kindpineapple/providers/Microsoft.Network/publicIPAddresses/whitejaguar"
+  },
+  {
+    "accountID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+    "accountName": "shinyyam",
+    "resourceGroup": "shinybear",
+    "ipAddress": "197.56.221.106",
+    "resourceName": "massivehaumea",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address massivehaumea (197.56.221.106) in Azure Subscription shinyyam (6383b3a2-a8c4-4c07-8acf-f38e08fc7622)",
+    "age": 294,
+    "region": "eastus",
+    "allocation": "Static",
+    "tags": "environment=prod, app=customerSupport, team=security, tier=web",
+    "savings": 663.74,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/shinybear/providers/Microsoft.Network/publicIPAddresses/massivehaumea"
+  },
+  {
+    "accountID": "6383b3a2-a8c4-4c07-8acf-f38e08fc7622",
+    "accountName": "yellowlime",
+    "resourceGroup": "vibrantmango",
+    "ipAddress": "194.233.170.135",
+    "resourceName": "fluorescentgoat",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "recommendationDetails": "Delete IP address fluorescentgoat (194.233.170.135) in Azure Subscription yellowlime (6383b3a2-a8c4-4c07-8acf-f38e08fc7622)",
+    "age": 182,
+    "region": "centralindia",
+    "allocation": "Static",
+    "tags": "environment=test, app=dataWarehouse",
+    "savings": 508.32,
+    "savingsCurrency": "US$",
+    "service": "Microsoft.Network",
+    "lookbackPeriod": 30,
+    "resourceID": "/subscriptions/6383b3a2-a8c4-4c07-8acf-f38e08fc7622/resourceGroups/vibrantmango/providers/Microsoft.Network/publicIPAddresses/fluorescentgoat"
+  }
+]

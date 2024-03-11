@@ -6,7 +6,7 @@ These policies are intended to emulate their counterparts in the policy catalog 
 
 ## How To Use
 
-Upload the desired policies to your demo environment in Flexera One and apply. The policies require no credentials and will automatically pull demo data from this repository. Allow ~24 hours for this demo data to be reflected in Flexera One.
+Upload the desired policies to your demo environment in Flexera One and apply. The policies require no credentials and will automatically pull demo data from this repository's `./flexera/data` directory in the `task/update-cco-demo-data` branch. Allow ~24 hours for this demo data to be reflected in Flexera One.
 
 ## Technical Details
 
@@ -17,5 +17,5 @@ Upload the desired policies to your demo environment in Flexera One and apply. T
 
 ## Data Generation
 
-- The same-named .js files in the data folder were used to generate the demo data and can be modified and used to generate new data as needed.
-- The update_all.sh bash script in the data folder can be run to update the demo data all at once. This script requires that the user have node.js installed so that the node command can be used to run the scripts.
+- The `./update_demo_data.rb` script is used to generate the demo data.
+- The `Update Demo Data` Github workflow runs on a weekly cadence to execute the script and update the demo data.

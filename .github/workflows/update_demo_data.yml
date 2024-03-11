@@ -19,39 +19,33 @@ on:
 
 jobs:
   update-demo-data:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          ref: task/update-cco-demo-data
 
       - name: Set up local Git config
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: Install underscore library
-        run: npm install underscore --legacy-peer-deps
+      - name: Configure Ruby Environment
+        run: bundle install --without documentation --path bundle
 
       - name: Run the update script
-        run: bash ./update_demo_data.sh
-
-      - name: Create Pull Request
-        id: cpr
-        uses: peter-evans/create-pull-request@v4
-        with:
-          commit-message: "Update CCO Demo Data"
-          title: "Update CCO Demo Data"
-          body: "Updated CCO Demo from GitHub Actions Workflow [${{ github.workflow }}](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
-          branch: "task/update-cco-demo-data"
-          delete-branch: true
-          labels: "automation, data"
-
-      - name: Check outputs
-        if: ${{ steps.cpr.outputs.pull-request-number }}
         run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
+          mkdir -p flexera/data/aws
+          mkdir -p flexera/data/azure
+          mkdir -p flexera/data/google
+          ruby update_demo_data.rb
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: 'flexera/data/aws/*.json flexera/data/azure/*.json flexera/data/google/*.json'
