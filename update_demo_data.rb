@@ -593,6 +593,7 @@ def aws_rightsize_ec2_instances_underutil(iterations = $default_iterations)
       "resourceName": get_random_name,
       "tags": get_random_tags,
       "recommendationDetails": recommendationDetails,
+      "recommendationType": "Downsize",
       "resourceType": resourceType,
       "newResourceType": newResourceType,
       "region": get_random_aws_region,
@@ -648,6 +649,7 @@ def aws_rightsize_ec2_instances_idle(iterations = $default_iterations)
       "resourceName": get_random_name,
       "tags": get_random_tags,
       "recommendationDetails": recommendationDetails,
+      "recommendationType": "Terminate",
       "resourceType": get_random_aws_ec2_size[rand(0..2)],
       "region": get_random_aws_region,
       "platform": "Linux/UNIX",
@@ -1105,6 +1107,7 @@ def azure_rightsize_sql_instances_downsize(iterations = $default_iterations)
       "service": "Microsoft.Sql/servers/databases",
       "platform": "Azure SQL Database",
       "id": resourceID,
+      "resourceID": resourceID,
       "threshold": 40,
       "lookbackPeriod": 30,
       "sku": {
@@ -1160,6 +1163,7 @@ def azure_rightsize_sql_instances_unused(iterations = $default_iterations)
       "service": "Microsoft.Sql/servers/databases",
       "platform": "Azure SQL Database",
       "id": resourceID,
+      "resourceID": resourceID,
       "lookbackPeriod": 30,
       "sku": {
         "name": sku[:name],
