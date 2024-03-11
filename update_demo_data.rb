@@ -349,10 +349,10 @@ def get_random_date(year)
   return random_time.iso8601 # Return the ISO 8601 string representation of the random date
 end
 
-def get_random_string(length = 26, case = "upper")
-  characters = ('A'..'Z').to_a + ('0'..'9').to_a if case == "upper"
-  characters = ('a'..'z').to_a + ('0'..'9').to_a if case == "lower"
-  characters = ('A'..'Z').to_a + ('a'..'z').to_a + ('0'..'9').to_a if case == "all"
+def get_random_string(length = 26, casing = "upper")
+  characters = ('A'..'Z').to_a + ('0'..'9').to_a if casing == "upper"
+  characters = ('a'..'z').to_a + ('0'..'9').to_a if casing == "lower"
+  characters = ('A'..'Z').to_a + ('a'..'z').to_a + ('0'..'9').to_a if casing == "all"
 
   return (0...length).map { characters.sample }.join
 end
@@ -459,7 +459,7 @@ def aws_delete_unused_volumes(iterations = 50)
       "tags": get_random_tags,
       "age": rand(1..200),
       "recommendationDetails": recommendationDetails,
-      "resourceType": "gp" + rand(2..3),
+      "resourceType": "gp" + rand(2..3).to_s,
       "region": get_random_aws_region,
       "size": rand(20..500),
       "status": "available",
@@ -1045,6 +1045,14 @@ def azure_rightsize_sql_instances_downsize(iterations = 50)
 
     resourceID = "/subscriptions/" + accountID + "/resourceGroups/" + resourceGroup + "/providers/Microsoft.Sql/servers/" + serverName + "/databases/" + dbName
 
+    recommendationDetails = [
+      "Downsize Azure SQL database ", resourceName, " ",
+      "in Azure Subscription ", accountName, " ",
+      "(", accountID, ") ",
+      "from ", capacity, " capacity ",
+      "to ", newResourceType, " capacity"
+    ].join
+
     entry = {
       "accountID": accountID,
       "accountName": accountName,
@@ -1096,6 +1104,12 @@ def azure_rightsize_sql_instances_unused(iterations = 50)
     sku = get_random_azure_db_sku
     capacity = rand(10..1000)
 
+    recommendationDetails = [
+      "Delete Azure SQL database ", resourceName, " ",
+      "in Azure Subscription ", accountName, " ",
+      "(", accountID, ")"
+    ].join
+
     entry = {
       "accountID": accountID,
       "accountName": accountName,
@@ -1141,7 +1155,7 @@ def azure_savings_plan_recommendations(iterations = 50)
     recommendedQuantity = rand(1..10)
 
     totalCostWithSP = get_random_savings
-    costWithNoSP = totalCostWithRI + get_random_savings(10, 300)
+    costWithNoSP = totalCostWithSP + get_random_savings(10, 300)
     savings = costWithNoSP - totalCostWithSP
 
     entry = {
@@ -1240,7 +1254,7 @@ def azure_unused_volumes(iterations = 50)
       "resourceName": resourceName,
       "tags": get_random_tags,
       "age": rand(30..360),
-      "timeCreated": get_random_time(Time.now.year),
+      "timeCreated": get_random_date(Time.now.year),
       "recommendationDetails": recommendationDetails,
       "resourceType": "Microsoft.Compute/disks",
       "region": get_random_azure_region,
@@ -1312,6 +1326,7 @@ def google_idle_ip_address_recommendations(iterations = 50)
 
     selfLink = "https://www.googleapis.com/compute/v1/projects/" + accountId + "/regions/" + region + "/addresses/" + resourceName
 
+    recommendationDetails = "Save cost by deleting idle IP address '" + resourceName + "'."
 
     entry = {
       "accountID": accountId,
@@ -1358,6 +1373,8 @@ def google_idle_persistent_disk_recommendations(iterations = 50)
     age = days_unattached + rand(1..120)
 
     selfLink = "https://www.googleapis.com/compute/v1/projects/" + accountId + "/zones/" + zone + "/disks/" + resourceName
+
+    recommendationDetails = "Save cost by snapshotting and then deleting idle persistent disk '" + resourceName + "'.",
 
     entry = {
       "accountID": accountId,
@@ -1410,6 +1427,8 @@ def google_rightsize_vm_recommendations_underutil(iterations = 50)
 
     selfLink = "https://www.googleapis.com/compute/v1/projects/" + accountId + "/zones/" + zone + "/instances/" + resourceName
 
+    recommendationDetails = "Save cost by changing machine type of Underutilized VM '" + resourceName + "'.",
+
     entry = {
       "accountID": accountId,
       "accountName": accountName,
@@ -1460,6 +1479,8 @@ def google_rightsize_vm_recommendations_idle(iterations = 50)
 
     selfLink = "https://www.googleapis.com/compute/v1/projects/" + accountId + "/zones/" + zone + "/instances/" + resourceName
 
+    recommendationDetails = "Save cost by stopping Idle VM '" + resourceName + "'.",
+
     entry = {
       "accountID": accountId,
       "accountName": accountName,
@@ -1505,6 +1526,8 @@ def google_sql_idle_instance_recommendations(iterations = 50)
     resourceName = resourceID
 
     selfLink = "https://www.googleapis.com/sql/v1beta4/projects/" + accountId + "/instances/" + resourceID
+
+    recommendationDetails = "Save cost by stopping Idle Cloud SQL '" + resourceName + "'.",
 
     entry = {
       "accountID": accountId,
