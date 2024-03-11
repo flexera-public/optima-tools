@@ -48,4 +48,4 @@ jobs:
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          file_pattern: '*.json'
+          file_pattern: 'flexera/data/aws/*.json flexera/data/azure/*.json flexera/data/google/*.json'
