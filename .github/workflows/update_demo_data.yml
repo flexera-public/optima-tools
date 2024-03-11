@@ -31,14 +31,12 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-          cd /home/runner/work/optima-tools/optima-tools
 
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
       - name: Configure Ruby Environment
-        shell: bash -l {0} # https://github.com/actions/virtual-environments/issues/4
         run: bundle install --without documentation --path bundle
 
       - name: Run the update script
