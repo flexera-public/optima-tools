@@ -10,6 +10,13 @@ require 'json'
 require 'time'
 
 ###############################################################################
+# Global Variables/Settings
+###############################################################################
+
+# Default number of recommendations to produce for each policy
+$default_iterations = 50
+
+###############################################################################
 # AWS Data Methods
 ###############################################################################
 
@@ -304,7 +311,20 @@ def get_random_tags
     "environment=prod, app=securityModule",
     "environment=dev, app=inventoryManagement",
     "environment=prod, app=customerSupport",
-    "environment=staging, app=crmModule"
+    "environment=staging, app=crmModule",
+    "environment=prod, app=customerSupport, team=security, tier=web",
+    "environment=dev, app=reportingService, tier=web",
+    "environment=test, app=billingService, team=backend",
+    "environment=qa, app=customerSupport, tier=application",
+    "environment=staging, app=invoiceProcessing",
+    "environment=prod, app=securityModule",
+    "environment=test, app=dataWarehouse",
+    "environment=staging, app=dataAnalytics, team=backend, tier=web",
+    "environment=prod, app=userManagement",
+    "environment=dev, app=securityModule, team=infra",
+    "environment=dev, app=customerSupport, tier=application",
+    "environment=prod, app=reportingService, team=backend, tier=web",
+    "environment=test, app=paymentGateway, tier=application"
   ]
 
   return tag_list.sample
@@ -315,20 +335,34 @@ def get_random_name
     "quick", "lazy", "drowsy", "excited", "adventurous", "jolly", "brave", "calm",
     "eager", "fierce", "gentle", "happy", "innocent", "jovial", "kind", "lively",
     "merry", "nervous", "obedient", "proud", "relieved", "silly", "thankful",
-    "upbeat", "vivacious", "witty", "excited", "youthful", "zealous", "quirky"
+    "upbeat", "vivacious", "witty", "excited", "youthful", "zealous", "quirky",
+    "red", "large", "rotund", "small", "blue", "green", "yellow", "oval", "square",
+    "rectangular", "circular", "tall", "short", "massive", "tiny", "gigantic",
+    "purple", "orange", "black", "white", "thin", "wide", "narrow", "flat", "round",
+    "cylindrical", "spherical", "elliptical", "bright", "dark", "vibrant", "dull",
+    "shiny", "matte", "translucent", "transparent", "opaque", "metallic",
+    "fluorescent", "glossy"
   ]
 
-  animals = [
+  nouns = [
     "ant", "bear", "cat", "dog", "eel", "fox", "goat", "horse", "ibis", "jaguar",
     "kangaroo", "lion", "mouse", "newt", "owl", "penguin", "quail", "rabbit",
     "snake", "tiger", "urchin", "viper", "whale", "xerus", "yak", "zebra", "parrot",
-    "octopus", "giraffe", "elephant"
+    "octopus", "giraffe", "elephant", "apple", "banana", "aubergine", "orange",
+    "strawberry", "grape", "mango", "peach", "pear", "watermelon", "tomato",
+    "cucumber", "carrot", "lettuce", "broccoli", "spinach", "potato", "onion",
+    "garlic", "pepper", "zucchini", "corn", "pineapple", "kiwi", "lemon", "lime",
+    "blueberry", "raspberry", "blackberry", "cherry", "melon", "papaya", "plum",
+    "pomegranate", "avocado", "coconut", "grapefruit", "kale", "mushroom", "olive",
+    "peas", "pumpkin", "radish", "yam", "turnip", "Eris", "Jupiter",
+    "Phobos", "Mars", "Venus", "Saturn", "Mercury", "Neptune", "Uranus", "Pluto",
+    "Earth", "Moon", "Sun", "Callisto", "Europa", "Ganymede", "Io", "Titan",
+    "Iapetus", "Dione", "Triton", "Charon", "Ceres", "Pallas", "Vesta", "Hygiea",
+    "Orcus", "Haumea", "Makemake", "Sedna", "Quaoar", "Gonggong", "Eunomia", "Juno",
+    "Psyche", "Chiron", "Chariklo", "Eris", "Nessus"
   ]
 
-  random_adjective = adjectives[rand(adjectives.length)]
-  random_animal = animals[rand(animals.length)]
-
-  return "#{random_adjective}#{random_animal}"
+  return "#{adjectives.sample}#{nouns.sample}".downcase
 end
 
 def get_random_time
@@ -394,7 +428,7 @@ end
 # Demo Data Generation Methods
 ###############################################################################
 
-def aws_delete_old_snapshots(iterations = 50)
+def aws_delete_old_snapshots(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -437,7 +471,7 @@ def aws_delete_old_snapshots(iterations = 50)
   return result
 end
 
-def aws_delete_unused_volumes(iterations = 50)
+def aws_delete_unused_volumes(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -476,7 +510,7 @@ def aws_delete_unused_volumes(iterations = 50)
   return result
 end
 
-def aws_reserved_instance_recommendations(iterations = 50)
+def aws_reserved_instance_recommendations(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -532,13 +566,13 @@ def aws_reserved_instance_recommendations(iterations = 50)
   return result
 end
 
-def aws_rightsize_ec2_instances_underutil(iterations = 50)
+def aws_rightsize_ec2_instances_underutil(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
     accountID = get_random_aws_account
     accountName = get_random_name
-    resourceID = "i-" + get_random_name
+    resourceID = "i-" + get_random_hex_string
 
     type = get_random_aws_ec2_size
     resourceType = type[0]
@@ -593,13 +627,13 @@ def aws_rightsize_ec2_instances_underutil(iterations = 50)
   return result
 end
 
-def aws_rightsize_ec2_instances_idle(iterations = 50)
+def aws_rightsize_ec2_instances_idle(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
     accountID = get_random_aws_account
     accountName = get_random_name
-    resourceID = "i-" + get_random_name
+    resourceID = "i-" + get_random_hex_string
 
     recommendationDetails = [
       "Terminate EC2 instance ", resourceID, " ",
@@ -647,7 +681,7 @@ def aws_rightsize_ec2_instances_idle(iterations = 50)
   return result
 end
 
-def aws_rightsize_rds_instance_underutil(iterations = 50)
+def aws_rightsize_rds_instance_underutil(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -709,7 +743,7 @@ def aws_rightsize_rds_instance_underutil(iterations = 50)
   return result
 end
 
-def aws_rightsize_rds_instances_idle(iterations = 50)
+def aws_rightsize_rds_instances_idle(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -758,7 +792,7 @@ def aws_rightsize_rds_instances_idle(iterations = 50)
   return result
 end
 
-def aws_savings_plan_recommendations(iterations = 50)
+def aws_savings_plan_recommendations(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -793,7 +827,7 @@ def aws_savings_plan_recommendations(iterations = 50)
   return result
 end
 
-def aws_unused_ip_addresses(iterations = 50)
+def aws_unused_ip_addresses(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -836,7 +870,7 @@ def aws_unused_ip_addresses(iterations = 50)
   return result
 end
 
-def azure_compute_rightsizing_underutil_data(iterations = 50)
+def azure_compute_rightsizing_underutil_data(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -892,7 +926,7 @@ def azure_compute_rightsizing_underutil_data(iterations = 50)
   return result
 end
 
-def azure_compute_rightsizing_idle_data(iterations = 50)
+def azure_compute_rightsizing_idle_data(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -943,7 +977,7 @@ def azure_compute_rightsizing_idle_data(iterations = 50)
   return result
 end
 
-def azure_delete_old_snapshots_data(iterations = 50)
+def azure_delete_old_snapshots_data(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -984,7 +1018,7 @@ def azure_delete_old_snapshots_data(iterations = 50)
   return result
 end
 
-def azure_reserved_instance_recommendations(iterations = 50)
+def azure_reserved_instance_recommendations(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1026,7 +1060,7 @@ def azure_reserved_instance_recommendations(iterations = 50)
   return result
 end
 
-def azure_rightsize_sql_instances_downsize(iterations = 50)
+def azure_rightsize_sql_instances_downsize(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1074,8 +1108,8 @@ def azure_rightsize_sql_instances_downsize(iterations = 50)
       "threshold": 40,
       "lookbackPeriod": 30,
       "sku": {
-        "name": sku["name"],
-        "tier": sku["tier"],
+        "name": sku[:name],
+        "tier": sku[:tier],
         "capacity": capacity
       },
       "policy_name": "Azure Rightsize SQL Databases"
@@ -1087,7 +1121,7 @@ def azure_rightsize_sql_instances_downsize(iterations = 50)
   return result
 end
 
-def azure_rightsize_sql_instances_unused(iterations = 50)
+def azure_rightsize_sql_instances_unused(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1128,8 +1162,8 @@ def azure_rightsize_sql_instances_unused(iterations = 50)
       "id": resourceID,
       "lookbackPeriod": 30,
       "sku": {
-        "name": sku["name"],
-        "tier": sku["tier"],
+        "name": sku[:name],
+        "tier": sku[:tier],
         "capacity": capacity
       },
       "policy_name": "Azure Rightsize SQL Databases"
@@ -1141,7 +1175,7 @@ def azure_rightsize_sql_instances_unused(iterations = 50)
   return result
 end
 
-def azure_savings_plan_recommendations(iterations = 50)
+def azure_savings_plan_recommendations(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1187,7 +1221,7 @@ def azure_savings_plan_recommendations(iterations = 50)
   return result
 end
 
-def azure_unused_ip_addresses(iterations = 50)
+def azure_unused_ip_addresses(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1228,7 +1262,7 @@ def azure_unused_ip_addresses(iterations = 50)
   return result
 end
 
-def azure_unused_volumes(iterations = 50)
+def azure_unused_volumes(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1274,7 +1308,7 @@ def azure_unused_volumes(iterations = 50)
   return result
 end
 
-def google_committed_use_discount_recommendations(iterations = 50)
+def google_committed_use_discount_recommendations(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1312,7 +1346,7 @@ def google_committed_use_discount_recommendations(iterations = 50)
   return result
 end
 
-def google_idle_ip_address_recommendations(iterations = 50)
+def google_idle_ip_address_recommendations(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1356,7 +1390,7 @@ def google_idle_ip_address_recommendations(iterations = 50)
   return result
 end
 
-def google_idle_persistent_disk_recommendations(iterations = 50)
+def google_idle_persistent_disk_recommendations(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1408,7 +1442,7 @@ def google_idle_persistent_disk_recommendations(iterations = 50)
   return result
 end
 
-def google_rightsize_vm_recommendations_underutil(iterations = 50)
+def google_rightsize_vm_recommendations_underutil(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1427,7 +1461,7 @@ def google_rightsize_vm_recommendations_underutil(iterations = 50)
 
     selfLink = "https://www.googleapis.com/compute/v1/projects/" + accountId + "/zones/" + zone + "/instances/" + resourceName
 
-    recommendationDetails = "Save cost by changing machine type of Underutilized VM '" + resourceName + "'.",
+    recommendationDetails = "Save cost by changing machine type of Underutilized VM '" + resourceName + "'."
 
     entry = {
       "accountID": accountId,
@@ -1463,7 +1497,7 @@ def google_rightsize_vm_recommendations_underutil(iterations = 50)
   return result
 end
 
-def google_rightsize_vm_recommendations_idle(iterations = 50)
+def google_rightsize_vm_recommendations_idle(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1479,7 +1513,7 @@ def google_rightsize_vm_recommendations_idle(iterations = 50)
 
     selfLink = "https://www.googleapis.com/compute/v1/projects/" + accountId + "/zones/" + zone + "/instances/" + resourceName
 
-    recommendationDetails = "Save cost by stopping Idle VM '" + resourceName + "'.",
+    recommendationDetails = "Save cost by stopping Idle VM '" + resourceName + "'."
 
     entry = {
       "accountID": accountId,
@@ -1514,7 +1548,7 @@ def google_rightsize_vm_recommendations_idle(iterations = 50)
   return result
 end
 
-def google_sql_idle_instance_recommendations(iterations = 50)
+def google_sql_idle_instance_recommendations(iterations = $default_iterations)
   result = []
 
   for iteration in 1..iterations do
@@ -1527,7 +1561,7 @@ def google_sql_idle_instance_recommendations(iterations = 50)
 
     selfLink = "https://www.googleapis.com/sql/v1beta4/projects/" + accountId + "/instances/" + resourceID
 
-    recommendationDetails = "Save cost by stopping Idle Cloud SQL '" + resourceName + "'.",
+    recommendationDetails = "Save cost by stopping Idle Cloud SQL '" + resourceName + "'."
 
     entry = {
       "accountID": accountId,
